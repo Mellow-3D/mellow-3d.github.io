@@ -44,19 +44,23 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: Release Notes
+  - title: Fly Controller Boards
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: Fly RRF E3 Pro V3.0
+      url: /fly_rrf_e3_pro_v3.html
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: Fly Super 8
+      url: /fly_super8.html
       output: web, pdf
 
-  - title: Installation
+    - title: Fly CDY V3
+      url: /fly-cdy_v3.html
+      output: web, pdf
+
+  - title: Fly CANbus Boards
     output: web, pdf
     folderitems:
 
