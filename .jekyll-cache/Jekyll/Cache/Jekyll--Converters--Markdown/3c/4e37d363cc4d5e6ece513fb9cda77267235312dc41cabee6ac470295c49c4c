@@ -1,0 +1,175 @@
+I"y$<h2 id="sht-36-configuration-guide">SHT-36 COnfiguration guide</h2>
+<h1 id="howto-for-configuring-the-mellow-sht-36-and-sht_42-canbus-tool-boards-for-klipper">HowTo for configuring the Mellow SHT-36 and SHT_42 CANBUS tool boards for Klipper.</h1>
+
+<p><strong>This guide assumes you alreay have a working Klipper installation</strong></p>
+
+<h2 id="setup-steps">Setup Steps</h2>
+
+<h3 id="compile-toolboard-firmware">Compile Toolboard Firmware</h3>
+<ul>
+  <li>ssh to your pi console</li>
+  <li>CD to the klipper directory
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd klipper
+</code></pre></div>    </div>
+  </li>
+  <li>Run MAKE Clean
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+</code></pre></div>    </div>
+  </li>
+  <li>open menuconfig
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make menuconfig
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set the following options for CANBUS connection   <br />
+<img src="./images/makemenuconfig_screenshot.png" alt="Menu Config CANBUS" /></p>
+  </li>
+  <li>Set the following for USB Connection
+<img src="./images/makemenuconfig_screenshot_USB.png" alt="Menu Config USB" /></li>
+  <li>compile the firmware
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div>    </div>
+  </li>
+  <li>You should now have a klipper.bin file at ~/klipper/out/</li>
+</ul>
+
+<h3 id="burn-firmware-to-tool-board">Burn Firmware to Tool Board</h3>
+
+<ul>
+  <li>
+    <p>Install the boot jumper to the Boot0 pin and 3.3v pin as pictured. 
+<img src="https://mellow.klipper.cn/images/boards/fly_sht36_42/usbflash.png" alt="SHT burn jumper placement" /></p>
+  </li>
+  <li>Install the burning utility to your klipper host system
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install dfu-util -y
+</code></pre></div>    </div>
+  </li>
+  <li>Use USB-C data cable to connect the SHT board to the klipper host, Make sure that the jumper is installed before connecting the USB cable.</li>
+  <li>Run LSUSB to see if the connection is successful, copy the USB ID in the blue box. Note that the board is in DFU mode.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsusb
+</code></pre></div>    </div>
+    <p><img src="https://mellow.klipper.cn/images/boards/fly_sht36_42/6.png" alt="USUSB Results" /></p>
+  </li>
+  <li>Burn the firmware , replace 0483:df11 in the following command with the USB ID copied earlier
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000 -D ~/klipper/out/klipper.bin
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>You should get a download progress bar and File downloaded successfuly when the burning is complete. 
+<img src="https://mellow.klipper.cn/images/boards/fly_sht36_42/7.png" alt="burn complete" /></p>
+  </li>
+  <li>If the burn was sucessful remove the USB cable and the jumper from the Boot0 pin</li>
+  <li>The tool board is now ready to install as a klipper MCU. 
+**Repeat these steps if a klipper update requires flashing new firmware to the MCU.</li>
+</ul>
+
+<h3 id="klipper-host-configuration">Klipper Host configuration</h3>
+
+<ul>
+  <li>Klipper Host configuration</li>
+  <li>Create a new file named /etc/network/interfaces.d/can0 with the following contents or read below to download a copy.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auto can0
+iface can0 can static
+  bitrate 250000
+  up ifconfig $IFACE txqueuelen 1024
+</code></pre></div>    </div>
+    <p>A copy of this file can be downlaoded <a href="./can0">here</a>. SFTP this file to your Klipper host /home/pi directory and run this line from the ssh console to move it to the correct directory.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cp /home/pi/can0 /etc/network/interfaces.d/
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Waveshare RP485 CAN Hats will need further configuration - More on this section soon.     <br />
+ <a href="https://www.waveshare.com/wiki/RS485_CAN_HAT">Waveshare instructions</a></p>
+  </li>
+  <li>Klipper CANBUS configuration</li>
+  <li>Finding the canbus_uuid for new micro-controllers¶
+  Each micro-controller on the CAN bus is assigned a unique id based on the factory chip identifier encoded into each micro-controller. To find each micro-controller     device id, make sure the hardware is powered and wired correctly, and then run:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+</code></pre></div></div>
+<p>If uninitialized CAN devices are detected the above command will report lines like the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Found canbus_uuid=11aa22bb33cc
+</code></pre></div></div>
+<p>Each device will have a unique identifier. In the above example, 11aa22bb33cc is the micro-controller’s “canbus_uuid”.</p>
+
+<p>Note that the canbus_query.py tool will only report uninitialized devices - if Klipper (or a similar tool) configures the device then it will no longer appear in      the list.</p>
+
+<ul>
+  <li>Configuring Klipper¶
+  Update the Klipper mcu configuration to use the CAN bus to communicate with the device - for example:</li>
+</ul>
+
+<p>Add the following lines to your printer.cfg file using your canbus_uuid</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mcu sht36]
+canbus_uuid: 11aa22bb33cc
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>more needed here for configuring Can bus network settings.</p>
+  </li>
+  <li>
+    <p>USB Configuration</p>
+    <ul>
+      <li>Run the following command at the Klipper host SSH console to get the serial path for the SHT board.
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l /dev/serial/by-id/
+</code></pre></div>        </div>
+      </li>
+      <li>Note the ID containing ‘stm32f072xb’</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Add the following lines to your printer.cfg file replacing the USB ID with the one you copied in the last section.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[mcu sht36]
+serial: /dev/serial/by-id/usb-Klipper_stm32f072xb_240024001757425835303220-if00
+</code></pre></div></div>
+
+<p>Impoprtant: THe SHT-36 has 120 ohm jumpers. If you board is the last device on the CAN bus it needs to have the jumpers installed.     <br />
+THe CANBUS needs to red 60 ohms across the L and H wires.</p>
+
+<p><img src="https://images-ext-2.discordapp.net/external/AhDBNpPmY22nRogGiSHUVf7SwN5Kett6VqNQmTyCJAs/https/ae01.alicdn.com/kf/S5f3ad70f268b49789afed9aa07f0cf78H.jpg?width=331&amp;height=662" alt="120ohmjumpers" /></p>
+
+<h3 id="flashing-utoc-if-needed-not-required">Flashing UTOC if needed.. Not required</h3>
+<p>Upload the utoc_firmware.bin file to a folder on your Pi.     <br />
+<a href="./firmware/UTOC/utoc_firmware.bin">Mellow UTOC firmware</a>    <br />
+install the DFU mode Jumper         <br />
+<img src="./images/UTOC_DFU_Jumper.jpg" alt="UTOC DFU Jumper" />
+Connect the UTOC by USB to the Pi    <br />
+From the Pi command line run</p>
+<pre><code class="language-lsusb```">You should see           
+```pi@VZero:~ $ lsusb
+Bus 001 Device 004: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
+</code></pre>
+<p>Run the following to flash the board<br />
+<code class="language-plaintext highlighter-rouge">sudo dfu-util --dfuse-address -d 0483:df11 -c 1 -i 0 -a 0 -s 0x08000000 -D ~/CanBoot/utoc/utoc_firmware.bin</code></p>
+
+<h2 id="relevent-links">Relevent links</h2>
+<h3 id="mellow-tool-board-documentation">Mellow tool board documentation</h3>
+<p>https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.17.566a6b5carjmy3#/board/fly_sht36_42/pins</p>
+
+<h3 id="pin-assignments">Pin assignments</h3>
+<p>https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.17.566a6b5carjmy3#/board/fly_sht36_42/pins</p>
+
+<h3 id="mellow-schematics">Mellow Schematics</h3>
+<p>https://github.com/Mellow-3D/Klipper-CAN-Toolboards</p>
+
+<h3 id="mellow-can-advanced-settings">Mellow CAN Advanced Settings</h3>
+<p>https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.17.566a6b5cQK0pdg#/advanced/can</p>
+
+<h3 id="mellow-canboot-setup">Mellow CANBoot setup</h3>
+<p>https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.17.566a6b5cQK0pdg#/advanced/canboot</p>
+
+<h3 id="klipper-canbus-documentation">Klipper CANBUS Documentation</h3>
+<p>https://www.klipper3d.org/CANBUS.html</p>
+
+<h3 id="waveshare-rs485-canhat">Waveshare RS485 CANHAT</h3>
+<p>https://www.waveshare.com/wiki/RS485_CAN_HAT</p>
+
+<h2 id="sht-36--files">SHT-36  Files</h2>
+
+<p>Add SHT_36 information here</p>
+
+<p><a href="pdf\sht36\Schematic_36-42 Klipper CAN Boards_2022-04-14.pdf"><i class="fa fa-car"></i> SHT-36 Schematic</a></p>
+:ET
