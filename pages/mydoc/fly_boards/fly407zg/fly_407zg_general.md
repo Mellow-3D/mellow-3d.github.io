@@ -5,7 +5,7 @@ keywords:
 last_updated: 15/06/2022
 summary: "General information regarding the Fly-407ZG"
 sidebar: mydoc_sidebar
-permalink: fly_407zg_general.html
+permalink: fly_407zg.html
 folder: mydoc
 comments: false
 toc: false

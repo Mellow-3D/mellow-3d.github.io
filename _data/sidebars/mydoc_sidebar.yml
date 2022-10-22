@@ -60,6 +60,22 @@ entries:
       url: /fly-cdy_v3.html
       output: web, pdf
 
+     - title: Fly Gemini V2
+      url: /fly-gemini-v2.html
+      output: web, pdf
+
+    - title: Fly Puppet
+      url: /fly-puppet.html
+      output: web, pdf
+
+    - title: Fly RPFMEX
+      url: /fly-rpfmex.html
+      output: web, pdf
+
+    - title: Fly 407G
+      url: /fly_407zg.html
+      output: web, pdf     
+
   - title: Fly CANbus Boards
     output: web, pdf
     folderitems:
