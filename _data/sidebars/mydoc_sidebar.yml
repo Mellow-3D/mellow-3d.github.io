@@ -82,15 +82,15 @@ entries:
 
     - title: Fly Can Hat
       url: /fly-can_hat_v1.html
-      output: web, pdf
+      output: web, pdf   
 
     - title: Fly SB2040 V1
-      url: /fly-sb2040_v1.html
+      url: /fly-sb2040_v1_general.html
       output: web, pdf
 
     - title: Fly SHT 36-42
-      url: /fly-sht36-42.html
-      output: web, pdf
+      url: /fly-sht36-42_general.html
+      output: web, pdf                
 
     - title: Fly SHT 36 V2
       url: /fly-sht36_v2.html
