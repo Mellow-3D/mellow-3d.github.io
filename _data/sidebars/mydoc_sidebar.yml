@@ -60,7 +60,7 @@ entries:
       url: /fly-cdy_v3.html
       output: web, pdf
 
-     - title: Fly Gemini V2
+    - title: Fly Gemini V2
       url: /fly-gemini-v2.html
       output: web, pdf
 
@@ -72,9 +72,9 @@ entries:
       url: /fly-rpfmex.html
       output: web, pdf
 
-    - title: Fly 407G
+    - title: Fly 407ZG
       url: /fly_407zg.html
-      output: web, pdf     
+      output: web, pdf              
 
   - title: Fly CANbus Boards
     output: web, pdf
@@ -108,8 +108,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Fly SBC
-      url: /fly_sbc.html
+    - title: Fly Pi
+      url: /fly_pi.html
       output: web, pdf
     
   - title: Tag archives
