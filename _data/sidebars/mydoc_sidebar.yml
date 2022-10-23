@@ -78,8 +78,8 @@ entries:
 
   - title: Fly CANbus Boards
     output: web, pdf
-    folderitems:
 
+    folderitems:
     - title: Fly Can Hat
       url: /fly-can_hat_v1.html
       output: web, pdf   
@@ -88,13 +88,34 @@ entries:
       url: /fly-sb2040_v1_general.html
       output: web, pdf
 
-    - title: Fly SHT 36-42
-      url: /fly-sht36-42_general.html
-      output: web, pdf                
+      subfolders:
+      - title: Fly SHT 36-42
+        output: web
+        subfolderitems:  
 
-    - title: Fly SHT 36 V2
-      url: /fly-sht36_v2.html
-      output: web, pdf
+        - title: Overview
+          url: /fly-sht36-42_general.html
+          output: web, pdf         
+
+        - title: USB Cofiguration
+          url: /fly-sht36-42_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus Cofiguration
+          url: /fly-sht36-42_klipper_can.html
+          output: web, pdf     
+
+        - title: Klipper printer Cofiguration
+          url: /fly-sht36-42_klipper_config.html
+          output: web, pdf
+  
+        - title: Pin diagrams
+          url: /fly-sht36-42_pins.html
+          output: web, pdf        
+
+    - title: Fly SHT-36 V2
+      url: //fly-sht36_v2.html
+      output: web, pdf   
 
   - title: Fly ERCF Easy Board
     output: web, pdf
