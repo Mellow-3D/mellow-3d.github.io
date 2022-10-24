@@ -1,15 +1,15 @@
 ---
-title: Fly SB2040 V1 General Information
+title: Fly SHT 42 General Information
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration the Fly SB2040 V1"
+summary: "General information regarding the Fly SHT 42"
 sidebar: mydoc_sidebar
-permalink: fly-sht36-42_klipper.html
+permalink: fly-sht42_general.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 ## Overview 
-Fly SB2040 V1
+fly-sht42

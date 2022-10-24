@@ -1,18 +1,18 @@
 ---
-title: Fly SB2040 V1 General Information
+title: Fly SHT36 V1 General Information
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration the Fly SHT-36 and SHT-42 V1 on CANBus"
+summary: "Klipper Configuration the Fly SHT-36 V1 on CANBus"
 sidebar: mydoc_sidebar
-permalink: fly-sht36-42_klipper_can.html
+permalink: fly-sht36_klipper_can.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 
-## Configuring the Mellow SHT-36 and SHT_42 CANBUS tool boards for Klipper. 
+## Configuring the Mellow SHT-36 CANBUS tool boards for Klipper. 
 
 
 

@@ -89,29 +89,63 @@ entries:
       output: web, pdf
 
       subfolders:
-      - title: Fly SHT 36-42
+      - title: Fly SHT 36
         output: web
         subfolderitems:  
 
         - title: Overview
-          url: /fly-sht36-42_general.html
+          url: /fly-sht36_general.html
           output: web, pdf         
 
         - title: USB Cofiguration
-          url: /fly-sht36-42_klipper_usb.html
+          url: /fly-sht36_klipper_usb.html
           output: web, pdf     
 
         - title: CANBus Cofiguration
-          url: /fly-sht36-42_klipper_can.html
+          url: /fly-sht36_klipper_can.html
           output: web, pdf     
 
         - title: Klipper printer Cofiguration
-          url: /fly-sht36-42_klipper_config.html
+          url: /fly-sht36_klipper_config.html
           output: web, pdf
   
         - title: Pin diagrams
-          url: /fly-sht36-42_pins.html
+          url: /fly-sht36_pins.html
           output: web, pdf        
+
+      subfolders:
+      - title: Fly SHT 42
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly-sht42_general.html
+          output: web, pdf         
+
+        - title: USB Cofiguration
+          url: /fly-sht42_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus Cofiguration
+          url: /fly-sht42_klipper_can.html
+          output: web, pdf     
+
+        - title: Klipper printer Cofiguration
+          url: /fly-sht42_klipper_config.html
+          output: web, pdf
+  
+        - title: Pin diagrams
+          url: /fly-sht42_pins.html
+          output: web, pdf        
+
+      subfolders:
+      - title: Fly UTOC-1 and UTOC-3
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly-utoc_general.html
+          output: web, pdf         
 
     - title: Fly SHT-36 V2
       url: //fly-sht36_v2.html
