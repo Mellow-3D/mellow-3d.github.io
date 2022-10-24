@@ -1,140 +1,141 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
-entries:
-- title: sidebar
-  product: Mellow Products
-  version: 
-  folders:
+title: Mellow Products
+product: 
+version: 
+children:
+
+- title:
+  output: pdf
+  type: frontmatter
+  children:
 
   - title:
+    url: /titlepage.html
     output: pdf
     type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage.html
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage.html
-      output: pdf
-      type: frontmatter
 
-  - title: Overview
+  - title:
+    url: /tocpage.html
+    output: pdf
+    type: frontmatter
+
+- title: Overview
+  output: web, pdf
+  children:
+
+  - title: Get started
+    url: /index.html
     output: web, pdf
-    folderitems:
+    type: homepage
 
-    - title: Get started
-      url: /index.html
-      output: web, pdf
-      type: homepage
-
-    - title: Introduction
-      url: /mydoc_introduction.html
-      output: web, pdf
-
-    - title: Supported features
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
-    - title: About the theme author
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: Support
-      url: /mydoc_support.html
-      output: web, pdf
-
-  - title: Fly Controller Boards
+  - title: Introduction
+    url: /mydoc_introduction.html
     output: web, pdf
-    folderitems:
 
-    - title: Fly RRF E3 Pro V3.0
-      url: /fly_rrf_e3_pro_v3.html
-      output: web, pdf
-
-    - title: Fly Super 8
-      url: /fly_super8.html
-      output: web, pdf
-
-    - title: Fly CDY V3
-      url: /fly-cdy_v3.html
-      output: web, pdf
-
-  - title: Fly CANbus Boards
+  - title: Supported features
+    url: /mydoc_supported_features.html
     output: web, pdf
-    folderitems:
 
-    - title: Fly Can Hat
-      url: /fly-can_hat_v1.html
-      output: web, pdf
+  - title: About the theme author
+    url: /mydoc_about.html
+    output: web, pdf
 
-    - title: Fly SB2040 V1
-      url: /fly-sb2040_v1.html
-      output: web, pdf
+  - title: Support
+    url: /mydoc_support.html
+    output: web, pdf
 
-    - title: Fly SHT 36-42
-      url: /fly-sht36-42.html
-      output: web, pdf
+- title: Fly Controller Boards
+  output: web, pdf
+  children:
 
-    - title: Fly SHT 36 V2
-      url: /fly-sht36_v2.html
-      output: web, pdf
+  - title: Fly RRF E3 Pro V3.0
+    url: /fly_rrf_e3_pro_v3.html
+    output: web, pdf
+
+  - title: Fly Super 8
+    url: /fly_super8.html
+    output: web, pdf
+
+  - title: Fly CDY V3
+    url: /fly-cdy_v3.html
+    output: web, pdf
+
+- title: Fly CANbus Boards
+  output: web, pdf
+  children:
+
+  - title: Fly Can Hat
+    url: /fly-can_hat_v1.html
+    output: web, pdf
+
+  - title: Fly SB2040 V1
+    url: /fly-sb2040_v1.html
+    output: web, pdf
+
+  - title: Fly SHT 36-42
+    url: /fly-sht36-42.html
+    output: web, pdf
+
+  - title: Fly SHT 36 V2
+    url: /fly-sht36_v2.html
+    output: web, pdf
+
+- title: Fly ERCF Easy Board
+  output: web, pdf
+  children:
 
   - title: Fly ERCF Easy Board
+    url: /ercf_easy-brd_v1_1.html
     output: web, pdf
 
-    folderitems:
-    - title: Fly ERCF Easy Board
-      url: /ercf_easy-brd_v1_1.html
-      output: web, pdf
+- title: Fly SBC
+  output: web, pdf
+  children:
 
   - title: Fly SBC
+    url: /fly_sbc.html
     output: web, pdf
-
-    folderitems:
-    - title: Fly SBC
-      url: /fly_sbc.html
-      output: web, pdf
     
-  - title: Tag archives
+- title: Tag archives
+  output: web
+  children:
+
+  - title: Tag archives overview
+    url: /mydoc_tag_archives_overview.html
     output: web
-    folderitems:
-
-    - title: Tag archives overview
-      url: /mydoc_tag_archives_overview.html
+    children:
+ 
+    - title: Tag archive pages
       output: web
+      children:
 
-      subfolders:
-      - title: Tag archive pages
+      - title: Formatting pages
+        url: /tag_formatting.html
         output: web
-        subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web
+      - title: Navigation pages
+        url: /tag_navigation.html
+        output: web
 
-        - title: Navigation pages
-          url: /tag_navigation.html
-          output: web
+      - title: Content types pages
+        url: /tag_content_types.html
+        output: web
 
-        - title: Content types pages
-          url: /tag_content_types.html
-          output: web
+      - title: Publishing pages
+        url: /tag_publishing.html
+        output: web
 
-        - title: Publishing pages
-          url: /tag_publishing.html
-          output: web
+      - title: Special layout pages
+        url: /tag_special_layouts.html
+        output: web
 
-        - title: Special layout pages
-          url: /tag_special_layouts.html
-          output: web
+      - title: Collaboration pages
+        url: /tag_collaboration.html
+        output: web
 
-        - title: Collaboration pages
-          url: /tag_collaboration.html
-          output: web
-
-        - title: Troubleshooting pages
-          url: /tag_troubleshooting.html
-          output: web
+      - title: Troubleshooting pages
+        url: /tag_troubleshooting.html
+        output: web
 
 # Copyright 2021 Google LLC
