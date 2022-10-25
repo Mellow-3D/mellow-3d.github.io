@@ -1,15 +1,15 @@
 ---
-title: Fly SHT36 pin diagrams
+title: Fly Pi Pro general information
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly SHT36 pin diagrams"
+summary: "General information regarding the Fly Pi Pro"
 sidebar: mydoc_sidebar
-permalink: fly-sht36_pins.html
+permalink: fly_pi_pro.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 ## Overview 
-Fly SHT42 pin diagrams
+fly pi pro

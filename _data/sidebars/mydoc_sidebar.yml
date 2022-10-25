@@ -6,6 +6,8 @@ entries:
   version: 
   folders:
 
+# General Mellow information
+
   - title:
     output: pdf
     type: frontmatter
@@ -44,6 +46,8 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
+#Fly Control Board section
+
   - title: Fly Controller Boards
     output: web, pdf
     folderitems:
@@ -76,17 +80,36 @@ entries:
       url: /fly_407zg.html
       output: web, pdf              
 
+#FLy CAN Section
+
   - title: Fly CANbus Boards
     output: web, pdf
-
     folderitems:
-    - title: Fly Can Hat
-      url: /fly-can_hat_v1.html
-      output: web, pdf   
+    - title:
+      url:
+      output: web
 
-    - title: Fly SB2040 V1
-      url: /fly-sb2040_v1_general.html
-      output: web, pdf
+      subfolders:
+      - title: Fly Can Hat
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly-can_hat_v1.html
+          output: web, pdf   
+
+    - title:
+      url: 
+      output: web
+
+      subfolders:
+      - title: Fly SB2040 V1
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly-sb2040_v1_general.html
+          output: web, pdf   
 
     - title: 
       url: 
@@ -186,63 +209,57 @@ entries:
 
         - title: Overview
           url: /fly-utoc_general.html
-          output: web, pdf         
+          output: web, pdf  
 
-  - title: Fly ERCF Easy Board
+#ERCF Board section
+
+  - title: Fly ERCF Easy Board 
     output: web, pdf
-
-    folderitems:
-    - title: Fly ERCF Easy Board
-      url: /ercf_easy-brd_v1_1.html
-      output: web, pdf
-
-  - title: Fly SBC
-    output: web, pdf
-
-    folderitems:
-    - title: Fly Pi
-      url: /fly_pi.html
-      output: web, pdf
-    
-  - title: Tag archives
-    output: web
     folderitems:
 
-    - title: Tag archives overview
-      url: /mydoc_tag_archives_overview.html
+    - title:
+      url:
       output: web
 
       subfolders:
-      - title: Tag archive pages
+      - title: Fly ERCF Easy Board
         output: web
-        subfolderitems:
+        subfolderitems:  
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web
+        - title: Overview
+          url: /ercf_easy-brd_v1_1.html
+          output: web, pdf 
 
-        - title: Navigation pages
-          url: /tag_navigation.html
-          output: web
+#SBC Section
 
-        - title: Content types pages
-          url: /tag_content_types.html
-          output: web
+  - title: Fly Small Board Computers 
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web
 
-        - title: Publishing pages
-          url: /tag_publishing.html
-          output: web
+      subfolders:
+      - title: Fly Pi
+        output: web
+        subfolderitems:  
 
-        - title: Special layout pages
-          url: /tag_special_layouts.html
-          output: web
+        - title: Overview
+          url: /fly_pi.html
+          output: web, pdf   
 
-        - title: Collaboration pages
-          url: /tag_collaboration.html
-          output: web
+    - title:
+      url: 
+      output: web
 
-        - title: Troubleshooting pages
-          url: /tag_troubleshooting.html
-          output: web
+      subfolders:
+      - title: Fly Pi Pro
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly_pi_pro.html
+          output: web, pdf   
+
 
 # Copyright 2021 Google LLC
