@@ -88,6 +88,10 @@ entries:
       url: /fly-sb2040_v1_general.html
       output: web, pdf
 
+    - title: 
+      url: 
+      output: web
+
       subfolders:
       - title: Fly SHT 36
         output: web
@@ -113,6 +117,39 @@ entries:
           url: /fly-sht36_pins.html
           output: web, pdf        
 
+    - title: 
+      url: 
+      output: web
+
+      subfolders:
+      - title: Fly SHT 36 V2
+        output: web
+        subfolderitems:  
+
+        - title: Overview
+          url: /fly-sht36_v2_general.html
+          output: web, pdf         
+
+        - title: USB Cofiguration
+          url: /fly-sht36_v2_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus Cofiguration
+          url: /fly-sht36_v2_klipper_can.html
+          output: web, pdf     
+
+        - title: Klipper printer Cofiguration
+          url: /fly-sht36_v2_klipper_config.html
+          output: web, pdf
+  
+        - title: Pin diagrams
+          url: /fly-sht36_v2_pins.html
+          output: web, pdf        
+
+    - title: 
+      url: 
+      output: web
+
       subfolders:
       - title: Fly SHT 42
         output: web
@@ -136,7 +173,11 @@ entries:
   
         - title: Pin diagrams
           url: /fly-sht42_pins.html
-          output: web, pdf        
+          output: web, pdf               
+
+    - title: 
+      url: 
+      output: web
 
       subfolders:
       - title: Fly UTOC-1 and UTOC-3
@@ -146,10 +187,6 @@ entries:
         - title: Overview
           url: /fly-utoc_general.html
           output: web, pdf         
-
-    - title: Fly SHT-36 V2
-      url: //fly-sht36_v2.html
-      output: web, pdf   
 
   - title: Fly ERCF Easy Board
     output: web, pdf
