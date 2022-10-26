@@ -1,0 +1,59 @@
+#### Compile Klipper firmware and flash with CanBoot  
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+
+{% if page.firmware == "usb" %}
+- Set the following options for USB connection 
+    {% 
+    include image.html 
+    file="fly-sht36-42\sht_36_42_klipper_fw_usb_config.png"
+    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_usb_config.png" 
+    alt="Menu Config USB"
+    caption="CanBoot Menu Config USB - update this image" 
+    %}
+{% elsif page.firmware == "can" %}
+- Set the following options for CAN connection 
+    {% 
+    include image.html 
+    file="fly-sht36-42\sht_36_42_klipper_fw_can_config.png"
+    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_can_config.png" 
+    alt="Menu Config CAN"
+    caption="CanBoot Menu Config CAN - update this image" 
+    %}
+{% endif %}
+
+- Quit and save the configuration
+
+- Find the Serial ID
+```
+ls -l /dev/serial/by-id/
+```
+- Copy the ID containing 'stm32f072xb'
+
+- Run the make flash command to compile the firmware
+```
+make flash FLASH_DEVICE={paste your serial by id here}
+```
+
+{% if page.boardname == "sht36" %}
+
+- Your SHT-36 should now have klipper firmware loaded and be ready to use. 
+
+{% elsif page.boardname == "sht42" %}
+
+- Your SHT-42 should now have klipper firmware loaded and be ready to use. 
+
+{% endif %}
