@@ -1,0 +1,55 @@
+#### Compile CanBoot firmware
+
+- ssh to your klipper host console
+
+- Install the burning utility to your klipper host system
+```
+sudo apt install dfu-util -y
+```
+
+- Clone the CanBoot firmware to your Klipper Host
+```
+cd ~/
+git clone https://github.com/Arksine/CanBoot
+```
+
+- cd to the Canboot directory
+```
+cd Canboot
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+
+{% if page.firmware == "usb" %}
+- Set the following options for USB connection 
+    {% 
+    include image.html 
+    file="fly-sht36-42\sht_36_42_canbus_fw_usb_config.png"
+    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_usb_config.png" 
+    alt="Menu Config USB"
+    caption="CanBoot Menu Config USB - update this image" 
+    %}
+{% elsif page.firmware == "can" %}
+- Set the following options for CAN connection 
+    {% 
+    include image.html 
+    file="fly-sht36-42\sht_36_42_canbus_fw_can_config.png"
+    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_can_config.png" 
+    alt="Menu Config CAN"
+    caption="CanBoot Menu Config CAN - update this image" 
+    %}
+{% endif %}
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+```
+make
+```
+- You should now have a canboot.bin file at ~/CanBoot/out/
