@@ -1,3 +1,11 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+
 #### Compile CanBoot firmware
 
 - ssh to your klipper host console
@@ -26,25 +34,13 @@ make clean
 make menuconfig
 ```
 
-{% if page.firmware == "usb" %}
-- Set the following options for USB connection 
     {% 
     include image.html 
-    file="fly-sht36-42\sht_36_42_canbus_fw_usb_config.png"
-    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_usb_config.png" 
-    alt="Menu Config USB"
-    caption="CanBoot Menu Config USB - update this image" 
+    file=cancom_img1
+    url=cancom_url1
+    alt=cancom_cap1
+    caption=cancom_cap1
     %}
-{% elsif page.firmware == "can" %}
-- Set the following options for CAN connection 
-    {% 
-    include image.html 
-    file="fly-sht36-42\sht_36_42_canbus_fw_can_config.png"
-    url=".\images\fly-sht36-42\sht_36_42_klipper_fw_can_config.png" 
-    alt="Menu Config CAN"
-    caption="CanBoot Menu Config CAN - update this image" 
-    %}
-{% endif %}
 
 - Quit and save the configuration
 
