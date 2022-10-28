@@ -1,0 +1,26 @@
+{% if page.firmware == "usb" %}
+
+### USB configuration
+- Run the following command at the Klipper host SSH console to get the serial path for the SHT board.
+
+```
+ls -l /dev/serial/by-id/
+```
+- Note the ID containing 'stm32f072xb'
+
+*add screen shot here*
+
+- Add the following lines to your printer.cfg file replacing the USB ID with the one you copied in the last section. 
+```
+[mcu sht]
+serial: /dev/serial/by-id/{copy usb serial ID here}
+```
+
+{% elsif page.firmware == "can" %}
+
+Write some can stuff
+
+{% endif %}
+
+
+

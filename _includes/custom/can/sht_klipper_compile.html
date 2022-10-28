@@ -1,0 +1,50 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img1 %}{{page.klipcom_img1 }}{% endcapture %}
+    {% capture klipcom_cap1 %}{{page.klipcom_cap1 }}{% endcapture %}
+    {% capture klipcom_url1 %} .\images\{{ page.klipcom_img1 }} {% endcapture %}
+
+
+#### Compile Klipper firmware and flash with CanBoot  
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+
+    {% 
+    include image.html 
+    file=klipcom_img1
+    url=klipcom_url1
+    alt=klipcom_cap1
+    caption=klipcom_cap1
+    %}
+
+
+- Quit and save the configuration
+
+- Find the Serial ID
+```
+ls -l /dev/serial/by-id/
+```
+- Copy the ID containing 'stm32f072xb'
+
+- Run the make flash command to compile the firmware
+```
+make flash FLASH_DEVICE={paste your serial by id here}
+```
+
+- Your {{ mcu }} should now have klipper firmware loaded and be ready to use. 
+
