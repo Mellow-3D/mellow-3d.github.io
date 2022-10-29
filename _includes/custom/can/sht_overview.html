@@ -1,20 +1,16 @@
     {% capture mcu %}{{ page.mcu }}{% endcapture %}
-
     {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
-
     {% capture overimg1 %}{{page.overview_img1}}{% endcapture %}
     {% capture overcap1 %}{{page.overview_cap1}}{% endcapture %}
     {% capture overurl1 %}.\images\{{page.overview_img1}}{% endcapture %}
-
     {% capture overimg2 %}{{page.overview_img2}}{% endcapture %}
     {% capture overcap2 %}{{page.overview_cap2}}{% endcapture %}
-    {% capture overurl2 %}.\images\{{page.overview_img2}}{% endcapture %}        
-
+    {% capture overurl2 %}.\images\{{page.overview_img2}}{% endcapture %}       
 
 #### Description
 
-The {{ mcu }} board uses can communication to connect the host computer with the UTOC board, other USB to Can adapters, Pi Hats or USB.  For USB use it is recommended to not to use a cable that exceeds 1 meter ( 3.2 feet )
-The {{ mcu }} can come eqiped with an optional 31865 chip to support pt100 temperature sensors. 
+    The {{ mcu }} board uses can communication to connect the host computer with the UTOC board, other USB to Can adapters, Pi Hats or USB.  For USB use it is recommended to not to use a cable that exceeds 1 meter ( 3.2 feet )
+    The {{ mcu }} can come eqiped with an optional 31865 chip to support pt100 temperature sensors. 
 
     {% 
     include image.html 
@@ -24,20 +20,19 @@ The {{ mcu }} can come eqiped with an optional 31865 chip to support pt100 tempe
     caption=overcap1
     %}
 
-#### Product  Features
+#### Product Features
 
-    - SHT36 adopts a 6-layer board design
-- CAN bus connection for stable data transmission over long distaces. 
+    CAN bus connection for stable data transmission over long distaces. 
 
-    - Onboard a TMC2209 driver for the extruder
+    Onboard a TMC2209 driver for the extruder
 
-    -  Onboard ADXL345 accelerometer to measure resonance for input shaper.
+    Onboard ADXL345 accelerometer to measure resonance for input shaper.
 
-    -  Support PT100 (MAX31865)
+    Support PT100 (MAX31865)
 
-    -  Replaceble fan MOS that supports 2 CNC fans. 
+    Replaceble fan MOS that supports 2 CNC fans. 
 
-    - Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
+    Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
 
 
 #### BOM
@@ -51,13 +46,13 @@ The {{ mcu }} can come eqiped with an optional 31865 chip to support pt100 tempe
     %}
 
     #### Included parts
-    - {{ mcu }} Board
-    - Heatsink for 2209 driver   
-    - Jumpers * 3
-    - JST-XH plug and Female Crimp Terminals
-    - JST-PH plugs and Female Crimp Terminals
-    - Microfit 3.0 4 position plug and Female Crimp Terminals
-    - Fan MOS
-    - USB-A to USB-C Cable
+    {{ mcu }} Board
+    Heatsink for 2209 driver   
+    Jumpers * 3
+    JST-XH plug and Female Crimp Terminals
+    JST-PH plugs and Female Crimp Terminals
+    Microfit 3.0 4 position plug and Female Crimp Terminals
+    Fan MOS
+    USB-A to USB-C Cable
 
 

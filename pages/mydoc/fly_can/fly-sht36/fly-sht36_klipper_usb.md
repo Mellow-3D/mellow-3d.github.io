@@ -1,4 +1,5 @@
 ---
+
 title: Configuring the Mellow SHT-36 canbus tool boards for Klipper on USB
 tags: [content_types]
 keywords: 
@@ -8,7 +9,7 @@ sidebar: mydoc_sidebar
 permalink: fly-sht36_klipper_usb.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 boardname: sht36
 firmware: usb
@@ -41,10 +42,7 @@ burn_cap4: "CanBoot burn complete - update this image"
 {% include important.html content="This guide assumes you have a working Klipper host installation on a Raspberry Pi or compatible device" %}
 
 
-* TOC
-{:toc}
-
-## Setup steps
+# Setup steps
 
 ### Toolboard firmware
 
@@ -56,5 +54,5 @@ burn_cap4: "CanBoot burn complete - update this image"
 
 {% include custom/can/sht_klipper_configure.html %}
 
-
+{% include custom/can/sht_links.html %}
 
