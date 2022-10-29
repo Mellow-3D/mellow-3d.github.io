@@ -13,3 +13,5 @@ datatable: true
 ---
 ## Overview 
 Fly SHT36 klipper configuration
+
+{% include custom/can/sht_links.html %}

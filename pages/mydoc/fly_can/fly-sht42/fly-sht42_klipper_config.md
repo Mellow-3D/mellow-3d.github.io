@@ -13,3 +13,5 @@ datatable: true
 ---
 ## Overview 
 Fly SHT42
+
+{% include custom/can/sht_links.html %}

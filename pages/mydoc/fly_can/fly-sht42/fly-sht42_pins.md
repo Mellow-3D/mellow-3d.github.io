@@ -13,3 +13,5 @@ datatable: true
 ---
 ## Overview 
 Fly SHT42 pin documents
+
+{% include custom/can/sht_links.html %}
