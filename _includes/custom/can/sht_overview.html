@@ -1,0 +1,59 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture overimg1 %}{{page.overview_img1}}{% endcapture %}
+    {% capture overcap1 %}{{page.overview_cap1}}{% endcapture %}
+    {% capture overurl1 %}.\images\{{page.overview_img1}}{% endcapture %}
+    {% capture overimg2 %}{{page.overview_img2}}{% endcapture %}
+    {% capture overcap2 %}{{page.overview_cap2}}{% endcapture %}
+    {% capture overurl2 %}.\images\{{page.overview_img2}}{% endcapture %}       
+
+### Description
+
+The {{ mcu }} board uses can communication to connect the host computer with the UTOC board, other USB to Can adapters, Pi Hats or USB.  For USB use it is recommended to not to use a cable that exceeds 1 meter ( 3.2 feet )
+The optional 31865 chip supports pt100 temperature sensors for improved accuracy. 
+
+{% 
+include image.html 
+file=overimg1
+url=overurl1 
+alt=overcap1
+caption=overcap1
+%}
+
+### Product Features
+
+ - CAN bus connection for stable data transmission over long distaces. 
+
+ - Onboard a TMC2209 driver for the extruder
+
+ - Onboard ADXL345 accelerometer to measure resonance for input shaper.
+
+ - Support PT100 (MAX31865)
+
+ - Replaceble fan MOS that supports 2 CNC fans. 
+
+ - Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
+
+
+### BOM
+
+{% 
+include image.html 
+file=overimg2
+url=overurl2
+alt=overcap2
+caption=overcap2
+%}
+
+### Included parts
+ - {{ mcu }} Board
+ - Heatsink for 2209 driver   
+ - Jumpers * 3
+ - JST-XH plug and Female Crimp Terminals
+ - JST-PH plugs and Female Crimp Terminals
+ - Microfit 3.0 4 position plug and Female Crimp Terminals
+ - Fan MOS
+ - USB-A to USB-C Cable
+
+
