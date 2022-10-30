@@ -1,15 +1,16 @@
 ---
-title: Fly SHT36 klipper configuration
+title: Klipper Host configuration
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration the Fly SHT36 V1"
+summary: "Klipper Host Configuration"
 sidebar: mydoc_sidebar
 permalink: fly-sht36_klipper.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 ---
-## Overview 
-Fly SHT42 klipper configuration
+{% include custom/can/klipper_host.html %}
+
+{% include custom/can/sht_links.html %}
