@@ -1,9 +1,9 @@
 ---
-title: Fly SHT-36 canbus tool overview
+title: Fly SHT-42 canbus tool overview
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly SHT-36 canbus tool overview"
+summary: "Fly SHT-42 canbus tool overview"
 sidebar: mydoc_sidebar
 permalink: fly-sht42_general.html
 folder: mydoc
@@ -18,7 +18,7 @@ version: v1
 mcu: "SHT-42"
 
 mcustep: "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/raw/main/FLY-SHT42/STEP%20File/42CAN.step"
-mcusch:  "h"
+mcusch:  ""
 
 overview_img1: "fly-sht36-42/sht_42_front_back.png"
 overview_cap1: "Fly SHT-42 Front and Rear view"
