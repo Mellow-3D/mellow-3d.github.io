@@ -17,13 +17,17 @@ version: v1
 
 mcu: "SHT-42"
 
-mcufile: "SHT-42"
+mcustep: "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/raw/main/FLY-SHT42/STEP%20File/42CAN.step"
+mcusch:  "h"
 
 overview_img1: "fly-sht36-42/sht_42_front_back.png"
 overview_cap1: "Fly SHT-42 Front and Rear view"
 
-overview_img2: "fly-sht36-42/sht_42_bom.png"
-overview_cap2: "Fly SHT-42 BOM"
+overview_img2: "fly-sht36-42/sht_42_size.png"
+overview_cap2: "Fly SHT-42 dimensions"
+
+overview_img3: "fly-sht36-42/sht_42_bom.png"
+overview_cap3: "Fly SHT-42 BOM"
 
 
 ---

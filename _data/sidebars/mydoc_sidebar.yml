@@ -119,7 +119,7 @@ children:
       children:  
 
       - title: Klipper host
-        url: fly-sht36_klipper_usb.html
+        url: fly-sht36_klipper.html
         output: web, pdf 
 
       - title: Firmware

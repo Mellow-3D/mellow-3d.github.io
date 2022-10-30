@@ -1,12 +1,15 @@
     {% capture mcu %}{{ page.mcu }}{% endcapture %}
-    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
-
+    {% capture mcustep %}{{ page.mcustep }}{% endcapture %}
+    {% capture mcusch %}{{ page.mcusch }}{% endcapture %}
     {% capture overimg1 %}{{page.overview_img1}}{% endcapture %}
     {% capture overcap1 %}{{page.overview_cap1}}{% endcapture %}
     {% capture overurl1 %}.\images\{{page.overview_img1}}{% endcapture %}
     {% capture overimg2 %}{{page.overview_img2}}{% endcapture %}
     {% capture overcap2 %}{{page.overview_cap2}}{% endcapture %}
     {% capture overurl2 %}.\images\{{page.overview_img2}}{% endcapture %}       
+    {% capture overimg3 %}{{page.overview_img3}}{% endcapture %}
+    {% capture overcap3 %}{{page.overview_cap3}}{% endcapture %}
+    {% capture overurl3 %}.\images\{{page.overview_img3}}{% endcapture %}    
 
 ### Description
 
@@ -25,6 +28,10 @@ caption=overcap1
 
  - CAN bus connection for stable data transmission over long distaces. 
 
+ - 24 volt max input
+
+ - 5 amp mosfet for heater control
+
  - Onboard a TMC2209 driver for the extruder
 
  - Onboard ADXL345 accelerometer to measure resonance for input shaper.
@@ -33,17 +40,25 @@ caption=overcap1
 
  - Replaceble fan MOS that supports 2 CNC fans. 
 
- - Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
+ - RGB Led control
 
+ - Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
+{% 
+include image.html 
+file=overimg2
+url=overurl2 
+alt=overcap2
+caption=overcap2
+%}
 
 ### BOM
 
 {% 
 include image.html 
-file=overimg2
-url=overurl2
-alt=overcap2
-caption=overcap2
+file=overimg3
+url=overurl3
+alt=overcap3
+caption=overcap3
 %}
 
 ### Included parts
@@ -57,3 +72,21 @@ caption=overcap2
  - USB-A to USB-C Cable
 
 
+### Files
+
+{% if mcustep != "" %}
+
+- Cad .step file for the {{ mcu }} : [{{ mcu }}.step]({{mcustep}})
+
+{% elsif mcustep == "" %}
+ - No Step file Currently avaliable for the {{mcu}}
+{% endif %}
+
+{% if mcusch != "" %}
+
+- Schematic pdf file for the {{ mcu }} : [{{ mcu }}.step]({{mcusch}})
+
+{% elsif mcusch == "" %}
+ - No schematic file Currently avaliable for the {{mcu}}
+{% endif %}
+    
