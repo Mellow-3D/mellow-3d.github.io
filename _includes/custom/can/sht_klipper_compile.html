@@ -23,6 +23,13 @@ make clean
 ```
 make menuconfig
 ```
+- Set the following settings
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: stm32f072
+  - Build: 8 Kib bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  - Application Offset 8 Kib
 
     {% 
     include image.html 
@@ -35,16 +42,28 @@ make menuconfig
 
 - Quit and save the configuration
 
+{% if page.firmware == "usb" %}
+
 - Find the Serial ID
 ```
 ls -l /dev/serial/by-id/
 ```
+
 - Copy the ID containing 'stm32f072xb'
 
 - Run the make flash command to compile the firmware
 ```
-make flash FLASH_DEVICE={paste your serial by id here}
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
 ```
 
+ - Example
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f072xb_170038000650314D35323820-if00 
+```
 - Your {{ mcu }} should now have klipper firmware loaded and be ready to use. 
 
+{% elsif page.firmware == "can" %}
+
+ write some can stuff
+
+{% endif %}
