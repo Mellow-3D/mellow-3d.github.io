@@ -18,7 +18,35 @@ serial: /dev/serial/by-id/{copy usb serial ID here}
 
 {% elsif page.firmware == "can" %}
 
-Write some can stuff
+### CAN configuration
+- Run one the following commands at the Klipper host SSH console to get the UUID for the {{mcu}} tool board.
+
+```
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+```
+ or
+
+ ```
+~/CanBoot/scripts/flash_can.py -i can0 -q
+ ```
+
+ - If uninitialized CAN devices are detected the above command will report lines like the following:
+```
+Found canbus_uuid=11aa22bb33cc
+```
+ - Each device will have a unique identifier. In the above example, 11aa22bb33cc is the micro-controller’s “canbus_uuid”.
+
+{% include note.html content="The canbus_query.py tool will only report uninitialized devices - if Klipper (or a similar tool) configures the device then it will no longer appear in the list. " %} 
+
+*add screen shot here*
+
+- Add the following lines to your printer.cfg file replacing the UUID with the one you copied in the last section. 
+
+```
+[mcu {{mcu}}]      
+canbus_uuid: { your UUID here } 
+# run the following command to locate the uuid >   ~/CanBoot/scripts/flash_can.py -i can0 -q
+```
 
 {% endif %}
 

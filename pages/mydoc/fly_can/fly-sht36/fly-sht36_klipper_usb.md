@@ -18,6 +18,7 @@ version: v1
 mcu: "SHT-36"
 
 mcufile: "SHT-36"
+com: "USB on PA11/PA12"
 
 klipcom_img1: "fly-sht36-42/sht_36_42_klipper_fw_usb_config.png"
 klipcom_cap1: "Klipper Menu Config USB - update this image"
@@ -34,8 +35,8 @@ burn_cap2:  "DFU jumper location"
 burn_img3: "fly-sht36-42/sht-36_42_lsusb_screenshot.png"
 burn_cap3: "lsusb Results"
 
-burn_img4: "fly-sht36-42/sht-36_42_fw_burning_screenshot.png"
-burn_cap4: "CanBoot burn complete - update this image"
+burn_img4: "fly-sht36-42/sht_36_42_canbus_usb_flash.png"
+burn_cap4: "CanBoot burn complete"
 
 ---
 
