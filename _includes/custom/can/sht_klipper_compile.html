@@ -1,0 +1,69 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img1 %}{{page.klipcom_img1 }}{% endcapture %}
+    {% capture klipcom_cap1 %}{{page.klipcom_cap1 }}{% endcapture %}
+    {% capture klipcom_url1 %} .\images\{{ page.klipcom_img1 }} {% endcapture %}
+
+
+#### Compile Klipper firmware and flash with CanBoot  
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: stm32f072
+  - Build: 8 Kib bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  - Application Offset 8 Kib
+
+    {% 
+    include image.html 
+    file=klipcom_img1
+    url=klipcom_url1
+    alt=klipcom_cap1
+    caption=klipcom_cap1
+    %}
+
+
+- Quit and save the configuration
+
+{% if page.firmware == "usb" %}
+
+- Find the Serial ID
+```
+ls -l /dev/serial/by-id/
+```
+
+- Copy the ID containing 'stm32f072xb'
+
+- Run the make flash command to compile the firmware
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+```
+
+ - Example
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f072xb_170038000650314D35323820-if00 
+```
+- Your {{ mcu }} should now have klipper firmware loaded and be ready to use. 
+
+{% elsif page.firmware == "can" %}
+
+ write some can stuff
+
+{% endif %}

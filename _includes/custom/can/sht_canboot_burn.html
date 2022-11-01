@@ -1,0 +1,73 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture img1 %}{{page.burn_img1 }}{% endcapture %}
+    {% capture cap1 %}{{page.burn_cap1 }}{% endcapture %}
+    {% capture url1 %} .\images\{{ page.burn_img1 }} {% endcapture %}
+
+    {% capture img2 %}{{page.burn_img2 }}{% endcapture %}
+    {% capture cap2 %}{{page.burn_cap2 }}{% endcapture %}
+    {% capture url2 %} .\images\{{ page.burn_img2 }} {% endcapture %}
+
+    {% capture img3 %}{{page.burn_img3 }}{% endcapture %}
+    {% capture cap3 %}{{page.burn_cap3 }}{% endcapture %}
+    {% capture url3 %} .\images\{{ page.burn_img3 }} {% endcapture %}
+
+    {% capture img4 %}{{page.burn_img4 }}{% endcapture %}
+    {% capture cap4 %}{{page.burn_cap4 }}{% endcapture %}
+    {% capture url4 %} .\images\{{ page.burn_img4 }} {% endcapture %}    
+
+#### Burn CanBoot firmware to tool board
+
+- Install the boot jumper to the Boot0 pin and 3.3v pin as pictured. 
+
+    {% 
+    include image.html 
+    file=img1
+    url=url1 
+    alt=cap1
+    caption=cap1
+    %}
+
+    {% 
+    include image.html 
+    file=img2
+    url=url2 
+    alt=cap2
+    caption=cap2
+    %}
+
+
+- Use a USB-C data cable to connect the {{ mcu }} board to the klipper host, Make sure that the dfu jumper is installed before connecting the USB cable.      
+- Run lsusb to see if the connection is successful, copy the USB ID in the blue box. Note that the board is in DFU mode. 
+```
+lsusb
+```
+    {% 
+    include image.html 
+    file=img3
+    url=url3 
+    alt=cap3
+    caption=cap3
+    %}
+
+- Erase and Burn the firmware , replace 0483:df11 in the following command with the USB ID copied earlier
+```
+sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
+```
+
+- You should get a download progress bar and File downloaded successfuly when the burning is complete. 
+
+
+    {% 
+    include image.html 
+    file=img4
+    url=url4 
+    alt=cap4
+    caption=cap4
+    %}
+
+- If the burn was sucessful remove the jumper from the Boot0 pin and power cycle the printer. 
+- The tool board is now ready to install as a klipper MCU. 
+ 

@@ -1,0 +1,31 @@
+## Klipper Host configuration
+
+{% include important.html content="This guide assumes you have a working Klipper host installation on a Raspberry Pi or compatible device" %}
+ 
+
+
+ - SSH to your Klipper host and create a new can0 file in the /ect/network/interfaces.d folder
+
+ ```
+ sudo nano /etc/network/interfaces.d/can0
+ ```
+
+ - Enter the following information. 
+
+``` 
+auto can0
+iface can0 can static
+ bitrate 500000
+ up ifconfig $IFACE txqueuelen 1024
+ pre-up ip link set can0 type can bitrate 500000
+ pre-up ip link set can0 txqueuelen 1024
+ ```
+{% include note.html content="Use the same bitrate you use on your can tool boards. This can be 250000, 500000 or 1000000. Bitrates of 500000 and 1000000 are prefered. " %}
+ 
+
+ - enter Ctrl+X to save the can0 file
+
+ - Reboot your klipper host. 
+
+ - THis should be all you need to do if you are iusing a Fly U2C-1, U2C-3 or Mellow Pi hat for the Gemini and Fly Pi. 
+ Other Canbus adapters may need aditional configuration steps. 

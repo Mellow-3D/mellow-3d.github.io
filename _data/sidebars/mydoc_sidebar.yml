@@ -1,7 +1,6 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 title: Mellow Products
-product: 
 version: 
 children:
 
@@ -20,32 +19,34 @@ children:
     output: pdf
     type: frontmatter
 
-- title: Overview
+- title: General Information
   output: web, pdf
   children:
 
-  - title: Get started
+  - title: Homepage
     url: index.html
     output: web, pdf
     type: homepage
 
-  - title: Introduction
-    url: mydoc_introduction.html
+  - title: About Mellow
+    url: getting_started.html
     output: web, pdf
 
-  - title: Supported features
-    url: mydoc_supported_features.html
+  - title: Supported Boards and Drivers
+    url: supported_boards.html
     output: web, pdf
 
-  - title: About the theme author
-    url: mydoc_about.html
+  - title: Getting Support
+    url: support.html
     output: web, pdf
 
-  - title: Support
-    url: mydoc_support.html
+  - title: FAQ
+    url: faq.html
     output: web, pdf
 
-- title: Fly Controller Boards
+#Fly Control Board section
+
+- title: Fly control boards
   output: web, pdf
   children:
 
@@ -61,81 +62,173 @@ children:
     url: fly-cdy_v3.html
     output: web, pdf
 
+  - title: Fly Gemini V2
+    url: fly-gemini-v2.html
+    output: web, pdf
+
+  - title: Fly Puppet
+    url: fly-puppet.html
+    output: web, pdf
+
+  - title: Fly RPFMEX
+    url: fly-rpfmex.html
+    output: web, pdf
+
+  - title: Fly 407ZG
+    url: fly_407zg.html
+    output: web, pdf    
+
+#Fly CAN Section
+
 - title: Fly CANbus Boards
   output: web, pdf
   children:
 
   - title: Fly Can Hat
-    url: fly-can_hat_v1.html
-    output: web, pdf
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-can_hat_v1.html
+      output: web, pdf   
+
 
   - title: Fly SB2040 V1
-    url: fly-sb2040_v1.html
-    output: web, pdf
+    output: web
+    children:  
 
-  - title: Fly SHT 36-42
-    url: fly-sht36-42.html
-    output: web, pdf
+    - title: Overview
+      url: fly-sb2040_v1_general.html
+      output: web, pdf   
+
+
+  - title: Fly SHT 36
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-sht36_general.html
+      output: web, pdf         
+
+    - title: Pin diagrams
+      url: fly-sht36_pins.html
+      output: web, pdf   
+
+    - title: Klipper cofiguration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly-sht36_klipper.html
+        output: web, pdf 
+
+      - title: Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht36_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus
+          url: fly-sht36_klipper_can.html
+          output: web, pdf     
+
+      - title: Configuration file settings
+        url: fly-sht36_klipper_config.html
+        output: web, pdf
+  
+     
+
 
   - title: Fly SHT 36 V2
-    url: fly-sht36_v2.html
-    output: web, pdf
+    output: web
+    children:  
 
-- title: Fly ERCF Easy Board
+    - title: Overview
+      url: fly-sht36_v2_general.html
+      output: web, pdf         
+
+    - title: USB Cofiguration
+      url: fly-sht36_v2_klipper_usb.html
+      output: web, pdf     
+
+    - title: CANBus Cofiguration
+      url: fly-sht36_v2_klipper_can.html
+      output: web, pdf     
+
+    - title: Klipper printer Cofiguration
+      url: fly-sht36_v2_klipper_config.html
+      output: web, pdf
+  
+    - title: Pin diagrams
+      url: fly-sht36_v2_pins.html
+      output: web, pdf        
+
+  - title: Fly SHT 42
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-sht42_general.html
+      output: web, pdf         
+
+    - title: USB Cofiguration
+      url: fly-sht42_klipper_usb.html
+      output: web, pdf     
+
+    - title: CANBus Cofiguration
+      url: fly-sht42_klipper_can.html
+      output: web, pdf     
+
+    - title: Klipper printer Cofiguration
+      url: fly-sht42_klipper_config.html
+      output: web, pdf
+  
+    - title: Pin diagrams
+      url: fly-sht42_pins.html
+      output: web, pdf               
+
+  - title: Fly UTOC-1 and UTOC-3
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-utoc_general.html
+      output: web, pdf  
+
+#ERCF Board section
+- title: Fly ERCF Easy Board 
   output: web, pdf
   children:
 
   - title: Fly ERCF Easy Board
-    url: ercf_easy-brd_v1_1.html
-    output: web, pdf
+    output: web
+    children:  
 
-- title: Fly SBC
+    - title: Overview
+      url: ercf_easy-brd_v1_1.html
+      output: web, pdf 
+
+#SBC Section
+
+- title: Fly Small Board Computers 
   output: web, pdf
   children:
 
-  - title: Fly SBC
-    url: fly_sbc.html
-    output: web, pdf
-    
-- title: Tag archives
-  output: web
-  children:
-
-  - title: Tag archives overview
-    url: mydoc_tag_archives_overview.html
+  - title: Fly Pi
     output: web
-    children:
- 
-    - title: Tag archive pages
-      output: web
-      children:
+    children:  
 
-      - title: Formatting pages
-        url: tag_formatting.html
-        output: web
+    - title: Overview
+      url: fly_pi.html
+      output: web, pdf   
 
-      - title: Navigation pages
-        url: tag_navigation.html
-        output: web
 
-      - title: Content types pages
-        url: tag_content_types.html
-        output: web
+  - title: Fly Pi Pro
+    output: web
+    children:  
 
-      - title: Publishing pages
-        url: tag_publishing.html
-        output: web
-
-      - title: Special layout pages
-        url: tag_special_layouts.html
-        output: web
-
-      - title: Collaboration pages
-        url: tag_collaboration.html
-        output: web
-
-      - title: Troubleshooting pages
-        url: tag_troubleshooting.html
-        output: web
-
-# Copyright 2021 Google LLC
+    - title: Overview
+      url: fly_pi_pro.html
+      output: web, pdf   

@@ -1,0 +1,58 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+
+#### Compile CanBoot firmware
+
+- ssh to your klipper host console
+
+- Install the burning utility to your klipper host system
+```
+sudo apt install dfu-util -y
+```
+
+- Clone the CanBoot firmware to your Klipper Host
+```
+cd ~/
+git clone https://github.com/Arksine/CanBoot
+```
+
+- cd to the Canboot directory
+```
+cd Canboot
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: stm32f072
+  - Build: 8 Kib bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  - Application Offset 8 Kib
+
+    {% 
+    include image.html 
+    file=cancom_img1
+    url=cancom_url1
+    alt=cancom_cap1
+    caption=cancom_cap1
+    %}
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+```
+make
+```
+- You should now have a canboot.bin file at ~/CanBoot/out/
