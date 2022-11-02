@@ -17,7 +17,7 @@ version: v1
 mcu: "SHT-36"
 
 mcufile: "SHT-36"
-com: "Canbus on PA8/PA9"
+com: "CAN bus on PA8/PA9"
 
 cancom_img1: "fly-sht36-42/sht_36_42_canbus_fw_can_config.png"
 cancom_cap1: "CanBoot Menu Config CAN - update this image"
