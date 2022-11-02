@@ -1,0 +1,14 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+_pdf
+.DS_Store
+.idea
+vendor/
+.bundle/
+<<<<<<< HEAD
+.jekyll-cache/
+=======
+.jekyll-cache
+.jekyll-cache/Jekyll/
+>>>>>>> 58da4bb3e7f4df14610d09a97bd7738680200f66
