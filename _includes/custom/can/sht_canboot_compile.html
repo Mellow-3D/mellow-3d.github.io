@@ -40,9 +40,7 @@ make menuconfig
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
   - Application Offset 8 Kib
-  {% if page.firmware == "can" %}
-  - CanBus Speed: 500000
-  {% endif %}
+
     {% 
     include image.html 
     file=cancom_img1
