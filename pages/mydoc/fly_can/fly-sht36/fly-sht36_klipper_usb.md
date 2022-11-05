@@ -1,10 +1,10 @@
 ---
 
-title: Configuring the Mellow SHT-36 canbus tool boards for Klipper on USB
+title: Configuring the Mellow SHT-36 CAN bus tool boards for Klipper on USB
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration for the Fly SHT-36 V1 on USB"
+summary: "Klipper Configuration for the Fly SHT-36 V1 CAN bus tool board on USB"
 sidebar: mydoc_sidebar
 permalink: fly-sht36_klipper_usb.html
 folder: mydoc
@@ -42,10 +42,10 @@ klipcom_img2: "fly-sht36-42/sht_36_42_klipper_usb_flash.png"
 klipcom_cap2: "Klipper USB burn complete"
 
 klipcom_img3: "fly-sht36-42/sht_36_42_klipper_can_flash.png"
-klipcom_cap3: "Klipper verify Canbus UUID"
+klipcom_cap3: "Klipper verify CAN bus UUID"
 
 klipcom_img4: "fly-sht36-42/sht_36_42_klipper_can_flash.png"
-klipcom_cap4: "Klipper CANbus burn complete"
+klipcom_cap4: "Klipper CAN bus burn complete"
 
 ---
 

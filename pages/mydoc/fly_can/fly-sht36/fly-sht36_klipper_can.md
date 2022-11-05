@@ -1,9 +1,9 @@
 ---
-title: Fly SHT 36 Klipper configuration for CANBus
+title: Fly SHT 36 Klipper configuration for CAN bus
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper configuration on the Fly SHT-36 V1 for CANBus"
+summary: "Klipper configuration on the Fly SHT-36 V1 for CAN bus"
 sidebar: mydoc_sidebar
 permalink: fly-sht36_klipper_can.html
 folder: mydoc
@@ -17,7 +17,7 @@ version: v1
 mcu: "SHT-36"
 
 mcufile: "SHT-36"
-com: "Canbus on PA8/PA9"
+com: "CAN bus on PA8/PA9"
 
 cancom_img1: "fly-sht36-42/sht_36_42_canbus_fw_can_config.png"
 cancom_cap1: "CanBoot Menu Config CAN - update this image"
@@ -38,7 +38,7 @@ klipcom_img1: "fly-sht36-42/sht_36_42_klipper_fw_can_config.png"
 klipcom_cap1: "Klipper Menu Config CAN - update this image"
 
 klipcom_img4: "fly-sht36-42/sht_36_42_klipper_can_flash.png"
-klipcom_cap4: "Klipper FW burn over can"
+klipcom_cap4: "Klipper FW burn over CAN"
 
 ---
 
