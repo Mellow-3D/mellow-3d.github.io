@@ -8,10 +8,13 @@ sidebar: mydoc_sidebar
 permalink: fly-sht36_pins.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
+
+sht36pins_img1:  "fly-sht36-42/fly-SHT-36_pins.webp"
+sht36pins_cap1:  "Fly SHT-36 pin locations" 
 ---
-## Overview 
-Fly SHT42 pin diagrams
+
+{% include custom/can/sht_pins.html %}
 
 {% include custom/can/sht_links.html %}

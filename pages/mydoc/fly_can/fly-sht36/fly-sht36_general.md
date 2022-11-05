@@ -18,7 +18,7 @@ version: v1
 mcu: "SHT-36"
 
 mcustep: "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/raw/main/FLY-SHT36/STEP%20File/36.step"
-mcusch:  ""
+mcusch:  "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/blob/main/Schematic_36-42%20Klipper%20CAN%20Boards_2022-04-14.pdf"
 
 overview_img1: "fly-sht36-42/sht_36_front_back.png"
 overview_cap1: "Fly SHT-36 Front and Rear view"
