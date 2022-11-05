@@ -13,65 +13,34 @@
   caption=klipcom_cap1
   %}
 
-### CANBUS & USB
+<div class="datatable-begin"></div>
 
-| **Function** | **Pin number** |
-|-------------------------------|
-|CAN-RX | **PB8**  |
-|CAN-TX | **PB9**  |
-|USB-DM | **PA11** |
-|USB-DP | **PA12** |
+| **Device** |  **Function** | **Pin number** | **Alias** |
+|:-----------|:--------------|:---------------|:----------|
+|**CANBUS** |CAN-RX | **PB8**  | |
+|**CANBUS** |CAN-TX | **PB9**  | |
+|**USB** |USB-DM | **PA11** | |
+|**USB** |USB-DP | **PA12** | |
+|**Extruder** |EN | **PA15** |EXT_EN |
+|**Extruder** |STEP | **PB4**  | EXT_STEP |
+|**Extruder** |DIR  | **PB3**  | EXT_DIR |
+|**Extruder** |UART | **PB5**  | EXT_UART |
+|**Endstop** |1| **PA0** | LIMIT_X|
+|**Endstop** |2| **PA1** | LIMIT_Y|
+|**Endstop** |3| **PA2** | LIMIT_Z|
+|**Hotend**  |Heater	| **PA8** | HE0 |
+|**Hotend**  |Temperature | **PB0** | TH0 |
+|**Hotend**  |PT100 | **PA3** | PT100 |
+|**Probe** |Servo position | **PB1** | PROBE_2 |
+|**probe** |Probe | **PC15** | PROBE_1 |
+|**Fans** |Fan 0	| **PB10** | FAN0 |
+|**Fans** |Fan 1	| **PB11** | FAN1 |
+|**SPI** |SPI bus | **spi1** | |
+|**SPI** |MISO | **PA6** | |
+|**SPI** |MOSI | **PA7** | |
+|**SPI** |CLK | **PA5** | |
+|**SPI** |ADXL345-CS | **PA4** | ADXL |
+|**SPI** |MAX31865-CS | **PA3** | 
+|**LED** |RGB LED | **PB15** | RGBLED | 
 
-### Extruder Stepper Driver 
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| EN | **PA15** |
-| STEP | **PB4**  |
-| DIR  | **PB3**  |
-| UART | **PB5**  |
-
-### Limit Switches
-
-| |**Limit** | **Pin number** |
-|---------------------|
-| | 1| **PA0** |
-| | 2| **PA1** |
-| | 3| **PA2** |
-
-### Heating Control
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| Hotend heater	| **PA8** |
-
-### Temperature Sensor
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| Hotend temperature | **PB0** |
-
-### Servo and probe
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| Servo position | **PB1** |
-| probe | **PC15** |
-
-### Fans
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| fan 0	| **PB10** |
-| fan 1	| **PB11** |
-
-### SPI device
- - spi_bus: **spi1**
-
-| **Function** | **Pin number** |
-|-------------------------------|
-| MISO | **PA6** |
-| MOSI | **PA7** |
-| CLK | **PA5** |
-| ADXL345-CS | **PA4** |
-| MAX31865-CS | **PA3** |
+<div class="datatable-end"></div>

@@ -8,7 +8,7 @@ sidebar: mydoc_sidebar
 permalink: fly-sht42_pins.html
 folder: mydoc
 comments: false
-toc: true
+toc: false
 datatable: true
 
 sht36pins_img1:  "fly-sht36-42/sht_42_pins.webp"
