@@ -138,7 +138,9 @@ children:
         url: fly-sht36_klipper_config.html
         output: web, pdf
   
-     
+    - title: CANbus troubelhooting
+      url: fly-sht36_trouble.html
+      output: web, pdf     
 
 
   - title: Fly SHT 36 V2
@@ -173,21 +175,37 @@ children:
       url: fly-sht42_general.html
       output: web, pdf         
 
-    - title: USB Cofiguration
-      url: fly-sht42_klipper_usb.html
-      output: web, pdf     
-
-    - title: CANBus Cofiguration
-      url: fly-sht42_klipper_can.html
-      output: web, pdf     
-
-    - title: Klipper printer Cofiguration
-      url: fly-sht42_klipper_config.html
-      output: web, pdf
-  
     - title: Pin diagrams
       url: fly-sht42_pins.html
-      output: web, pdf               
+      output: web, pdf   
+
+    - title: Klipper cofiguration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly-sht42_klipper.html
+        output: web, pdf 
+
+      - title: Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht42_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus
+          url: fly-sht42_klipper_can.html
+          output: web, pdf     
+
+      - title: Configuration file settings
+        url: fly-sht42_klipper_config.html
+        output: web, pdf
+  
+    - title: CANbus troubelhooting
+      url: fly-sht42_trouble.html
+      output: web, pdf              
 
   - title: Fly UTOC-1 and UTOC-3
     output: web
