@@ -1,0 +1,45 @@
+## CAN bus troubleshooting
+
+### Terminating resistors
+ - CAN bus requires a 120 ohm resistor at each end of the bus.  You want to bus to measure 60 ohms between the CAN H and CAN L terminals with all can boards connected and the system powered off. The UTOC and SHT boards have bult in resistors that can be enabled by installing the termination jumpers. With only 2 devices on the bus such as a UTOC and an SHT board both boards would need to have the jumpers installed.  If you have more than 2 CAN devices on the bus you will only want to have the devices at the start and far end of the bus to have its resistors jumpered in. 
+
+### Signal wire twisting
+ - For the wires carrying the CAN H and CAN L signals it is recomended to twist the wires together with 1 twist every 24mm. 
+
+### How to bring the CAN bus up and down
+ - Bring the CAN bus up, run the following. Use the bitrate your device firmware is compiled for.
+ ```
+ sudo ip link set can0 up type can bitrate 500000
+ ```
+ -  Bring the CAN bus down, run the following.
+ ```
+ sudo ip link set can0 down type can
+ ```
+
+### How to view the CAN bus status
+ - Run the ifconfig command
+ ```
+ ifconfig -a can0
+ ```
+
+### How to get the UUIDs of devices on the CAN bus. 
+ - Run one of the following ocmmand to retrieve the UUID of devices on teh CAN bus.
+ ```
+ ~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+ ```
+   or use the CanBoot utility
+ ```
+ python3 ~/CanBoot/scripts/flash_can.py -q
+ ```
+
+### CAN-utils
+ - CAN-utils is a collection of extremely useful debugging tools using the SocketCAN interface. It includes applications such as:
+   - candump – Dump can packets – display, filter and log to disk.
+   - canplayer – Replay CAN log files.
+   - cansend – Send a single frame.
+   - cangen – Generate random traffic.
+   - canbusload – display the current CAN bus utilisation.
+ - CAN-utils source can be obtained from the GitHub repository: https://github.com/linux-can/can-utils or by runnign the following command. 
+ ```
+ sudo apt-get install can-utils 
+ ```
