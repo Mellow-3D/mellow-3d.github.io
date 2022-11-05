@@ -11,7 +11,7 @@ comments: false
 toc: true
 datatable: true
 
-sht36pins_img1:  "fly-sht36-42/fly-SHT-36_pins.webp"
+sht36pins_img1:  "fly-sht36-42/fly-sht-36_pins.webp"
 sht36pins_cap1:  "Fly SHT-36 pin locations" 
 ---
 
