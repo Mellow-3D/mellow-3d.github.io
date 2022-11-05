@@ -8,10 +8,10 @@ sidebar: mydoc_sidebar
 permalink: fly-sht36_klipper_config.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 ---
-## Overview 
-Fly SHT36 klipper configuration
+
+{% include custom/can/sht_klipper_config_file.html %}
 
 {% include custom/can/sht_links.html %}
