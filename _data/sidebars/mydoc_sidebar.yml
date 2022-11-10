@@ -101,6 +101,37 @@ children:
       url: fly-sb2040_v1_general.html
       output: web, pdf   
 
+    - title: Pin diagrams
+      url: fly-sb2040_pins.html
+      output: web, pdf   
+
+    - title: Klipper cofiguration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly-sb2040_klipper.html
+        output: web, pdf 
+
+      - title: Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sb2040_klipper_usb.html
+          output: web, pdf     
+
+        - title: CANBus
+          url: fly-sb2040_klipper_can.html
+          output: web, pdf     
+
+      - title: Configuration file settings
+        url: fly-sb2040_klipper_config.html
+        output: web, pdf
+  
+    - title: CANbus troubelhooting
+      url: fly-sb2040_trouble.html
+      output: web, pdf   
 
   - title: Fly SHT 36
     output: web

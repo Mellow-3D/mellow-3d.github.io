@@ -29,14 +29,6 @@
     caption=canburn_cap1
     %}
 
-    {% 
-    include image.html 
-    file=canburn_img2
-    url=canburn_url2 
-    alt=canburn_cap2
-    caption=canburn_cap2
-    %}
-
 - Run lsusb to see if the connection is successful. 
 ```
 lsusb
@@ -54,7 +46,7 @@ lsusb
 sudo mount /dev/sda1 /mnt
 ```
 
-- Copy Canboot.uf2 to the Pico
+- Copy Canboot.uf2 to the {{mcu}}
 ```
 sudo cp ~/CanBoot/out/canboot.uf2 /mnt
 ```
