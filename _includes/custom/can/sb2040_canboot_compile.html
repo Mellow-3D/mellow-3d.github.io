@@ -10,11 +10,6 @@
 
 - ssh to your klipper host console
 
-- Install the burning utility to your klipper host system
-```
-sudo apt install dfu-util -y
-```
-
 - Clone the CanBoot firmware to your Klipper Host
 ```
 cd ~/
@@ -42,15 +37,14 @@ make clean
 make menuconfig
 ```
 - Set the following settings
-  - Micro Controller : STMicroelectronics STM32
-  - Processor Model: stm32f072
-  - Build: 8 Kib bootloader
-  - Clock Ref: 8 MHz crystal
+  - Micro Controller : Raspberry Pi RP2040
+  - Buildcanboot deployment: 16 Kib bootloader
   - Comm Interface - {{page.com}}
-  - Application Offset 8 Kib
-  {% if page.firmware == "can" %}
-  - CanBus Speed: 500000
+  {% if page.firmware == "CAN bus" %}
+  - CAN Rx: GPIO 1
+  - CAN Tx: GPIO 0
   {% endif %}
+
     {% 
     include image.html 
     file=cancom_img1

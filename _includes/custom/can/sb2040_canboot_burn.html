@@ -1,0 +1,64 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture canburn_img1 %}{{page.canburn_img1 }}{% endcapture %}
+    {% capture canburn_cap1 %}{{page.canburn_cap1 }}{% endcapture %}
+    {% capture canburn_url1 %} .\images\{{ page.canburn_img1 }} {% endcapture %}
+
+    {% capture canburn_img2 %}{{page.canburn_img2 }}{% endcapture %}
+    {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
+    {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
+
+    {% capture canburn_img3 %}{{page.canburn_img3 }}{% endcapture %}
+    {% capture canburn_cap3 %}{{page.canburn_cap3 }}{% endcapture %}
+    {% capture canburn_url3 %} .\images\{{ page.canburn_img3 }} {% endcapture %}
+
+
+#### Burn CanBoot firmware to the {{mcu}}
+
+- Use a USB-C data cable to connect the {{ mcu }} board to the klipper host. 
+
+- Press the boot button to put the {{mcu}} into boot mode. 
+
+    {% 
+    include image.html 
+    file=canburn_img1
+    url=canburn_url1 
+    alt=canburn_cap1
+    caption=canburn_cap1
+    %}
+
+    {% 
+    include image.html 
+    file=canburn_img2
+    url=canburn_url2 
+    alt=canburn_cap2
+    caption=canburn_cap2
+    %}
+
+- Run lsusb to see if the connection is successful. 
+```
+lsusb
+```
+    {% 
+    include image.html 
+    file=canburn_img3
+    url=canburn_url3 
+    alt=canburn_cap3
+    caption=canburn_cap3
+    %}
+
+- Mount the {{mcu}} file system
+```
+sudo mount /dev/sda1 /mnt
+```
+
+- Copy Canboot.uf2 to the Pico
+```
+sudo cp ~/CanBoot/out/canboot.uf2 /mnt
+```
+
+- This will copy the firmware image we compiled earlier onto the {{mcu}} storage and it will be flashed automatically.
+
+- When the /mnt unmounts remove the USB cable, Reboot and continue to compiling Klipper firmware.
