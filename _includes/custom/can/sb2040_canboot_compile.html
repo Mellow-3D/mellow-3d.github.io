@@ -43,6 +43,8 @@ make menuconfig
   {% if page.firmware == "CAN bus" %}
   - CAN Rx: GPIO 4
   - CAN Tx: GPIO 5
+  - set Enable Status LED
+  - Status LED pin: gpio24
   {% endif %}
 
     {% 
@@ -57,6 +59,6 @@ make menuconfig
 
 - Run the make command to compile the firmware
 ```
-make
+make -j 4
 ```
 - You should now have a canboot.bin file at ~/CanBoot/out/

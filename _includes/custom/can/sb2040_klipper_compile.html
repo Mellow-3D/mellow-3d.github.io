@@ -36,6 +36,7 @@ make clean
 make menuconfig
 ```
 - Set the following settings
+  - Enable low lever configuration options
   - Micro Controller : Raspberry Pi RP2040
    - Build: 16 Kib bootloader
    - Comm Interface - {{page.com}}
@@ -44,6 +45,7 @@ make menuconfig
   - CAN Rx: GPIO 4
   - CAN Tx: GPIO 5
   {% endif %}
+  - GPIO Pins to set at Startup: gpio24
   {% 
   include image.html 
   file=klipcom_img1
@@ -55,6 +57,11 @@ make menuconfig
 
 - Quit and save the configuration
 
+- Run the make command to compile the firmware
+```
+make -j 4
+```
+
 {% if page.firmware == "usb" %}
 
 #### Flash Klipper firmware with CanBoot over USB
@@ -65,7 +72,7 @@ ls -l /dev/serial/by-id/
 
 - Copy the ID containing 'sb2040'
 
-- Run the make flash command to compile the firmware
+- Run the flash command to compile the firmware
 ```
 python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
 ```

@@ -19,7 +19,7 @@
 
 - Use a USB-C data cable to connect the {{ mcu }} board to the klipper host. 
 
-- Press the boot button to put the {{mcu}} into boot mode. 
+- Press the boot button while inserting the USB cable to put the {{mcu}} into boot mode. 
 
     {% 
     include image.html 
@@ -41,16 +41,11 @@ lsusb
     caption=canburn_cap3
     %}
 
-- Mount the {{mcu}} file system
+- Flash the {{mcu}}
 ```
-sudo mount /dev/sda1 /mnt
-```
-
-- Copy Canboot.uf2 to the {{mcu}}
-```
-sudo cp ~/CanBoot/out/canboot.uf2 /mnt
+sudo make flash FLASH_DEVICE=2e8a:0003
 ```
 
-- This will copy the firmware image we compiled earlier onto the {{mcu}} storage and it will be flashed automatically.
+- This will flash the CanBoot firmware image and restart the {{mcu}}.
 
-- When the /mnt unmounts remove the USB cable, Reboot and continue to compiling Klipper firmware.
+- When the status LED starts blinking, Reboot and continue to compiling Klipper firmware.
