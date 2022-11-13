@@ -39,6 +39,9 @@ klipcom_cap1: "Klipper Menu Config on CAN bus"
 
 klipcom_img4: "fly-sb2040_v1/sb2040_klipper_canboot_can_burn.png"
 klipcom_cap4: "Klipper FW burn over CAN"
+
+klipcom_img5: "fly-sb2040_v1/sb2040_120.png"
+klipcom_cap5: "SB2040 120R jumper location"
 ---
 {% include important.html content="This guide assumes you have a working Klipper host installation on a Raspberry Pi or compatible device" %}
 

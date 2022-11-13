@@ -18,6 +18,9 @@
     {% capture klipcom_cap4 %}{{page.klipcom_cap4 }}{% endcapture %}
     {% capture klipcom_url4 %} .\images\{{ page.klipcom_img4 }} {% endcapture %}
 
+    {% capture klipcom_img5 %}{{page.klipcom_img5 }}{% endcapture %}
+    {% capture klipcom_cap5 %}{{page.klipcom_cap5 }}{% endcapture %}
+    {% capture klipcom_url5 %} .\images\{{ page.klipcom_img5 }} {% endcapture %}
 
 #### Compile Klipper firmware for {{page.firmware}}
 {% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
@@ -71,16 +74,20 @@ ls -l /dev/serial/by-id/
 ```
 
 - Copy the ID containing 'sb2040'
+  - Example
+  ```
+  usb-CanBoot_rp2040_45503571279020E8-if00
+  ```
 
 - Run the flash command to compile the firmware
 ```
 python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
 ```
 
- - Example
-```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f072xb_170038000650314D35323820-if00 
-```
+  - Example
+  ```
+  python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_rp2040_45503571279020E8-if00 
+  ```
 
   {% 
   include image.html 
@@ -92,16 +99,59 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/seri
 
 - Your {{ mcu }} should now have klipper firmware loaded and be ready to use. 
 
+#### Re-Flashing Klipper
+
+If you are updating an existing klipper build on your {{mcu}} follow these steps
+
+- Get the klipper firmware serial ID
+```
+ls -l /dev/serial/by-id/
+```
+- Run the klipper flash_usb.py script to call the Canboot Bootloader. 
+```
+python3 ~/klipper/scripts/flash_usb.py -t rp2040 -d /dev/serial/by-id/{your serial id} ~/klipper/out/klipper.bin
+```
+It will throw an error but that can be ignored. 
+
+- The status LED should start blinking after executing the Flash_usb script. 
+
+- Check the Serial ID
+```
+ls -l /dev/serial/by-id/
+```
+
+- Verify the Serial ID now contains usb-CanBoot_rp2040
+- Example
+```
+usb-CanBoot_rp2040_45503571279020E8-if00
+```
+
+- Repeat the section [Flash Klipper firmware with CanBoot over USB](./fly-sb2040_klipper_usb.html#flash-klipper-firmware-with-canboot-over-usb) to flash with CanBoot.
+
 {% elsif page.firmware == "CAN bus" %}
 
 #### Flash Klipper firmware with CanBoot over CANbus
 
-
- - Start by Connecting the XT30+2 harness
+ - Connecting the XT30+2 harness
    - Red  wire to 12v or 24v
    - Black wire to ground.
    - Yellow ( CAN H ) and White (CAN L) CAN bus wires to the host CAN bus device
+ 
  - Insert the XT30+2 harness plug into the {{mcu}} socket. 
+ 
+ - Install the 120ohm jumper if this is the only MCU on your CAN bus other than the CAN adapter used by the klipper host. 
+
+  {% 
+  include image.html 
+  file=klipcom_img5
+  url=klipcom_url5
+  alt=klipcom_cap5
+  caption=klipcom_cap5
+  %}
+
+{% include note.html content="You want the CAN bus to measure 60 ohms betweel the H and L lines while the bus is powered off." %}
+    
+
  - Get the {{ mcu }} UUID buy running the following script. 
  ```
  ~/CanBoot/scripts/flash_can.py -i can0 -q

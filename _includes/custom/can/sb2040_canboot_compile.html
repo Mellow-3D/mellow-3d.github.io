@@ -6,7 +6,9 @@
     {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
     {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
 
-#### Compile CanBoot firmware
+#### Install CanBoot on your Klipper host.
+
+If you have not already done so follow these steps to clone the CanBoot repository to your klipper host and configure the Moonraker update manager. 
 
 - ssh to your klipper host console
 
@@ -23,6 +25,8 @@ git clone https://github.com/Arksine/CanBoot
  origin: https://github.com/Arksine/CanBoot.git
  is_system_service: False
  ```
+
+#### Compile CanBoot firmware
 
 - cd to the Canboot directory
 ```
@@ -43,9 +47,9 @@ make menuconfig
   {% if page.firmware == "CAN bus" %}
   - CAN Rx: GPIO 4
   - CAN Tx: GPIO 5
-  - set Enable Status LED
-  - Status LED pin: gpio24
   {% endif %}
+  - Set Enable Status LED
+  - Status LED pin: gpio24
 
     {% 
     include image.html 
