@@ -13,6 +13,8 @@
   caption=sb2040pins_cap1
   %}
 
+### Table of pin functions
+
 <div class="datatable-begin"></div>
 
 | **Device** |  **Function** | **Pin number** | **Alias** |
@@ -23,22 +25,24 @@
 |**Extruder** |STEP | **gpio9**  | EXT_STEP |
 |**Extruder** |DIR  | **gpio10**  | EXT_DIR |
 |**Extruder** |UART | **gpio8**  | EXT_UART |
-|**Endstop** |HV| **gpio25** | LIMIT_HV|
-|**Endstop** |1| **gpio28** | LIMIT_Y|
-|**Endstop** |2| **gpio29** | LIMIT_Z|
+|**Endstop** |HV 1| **gpio25** | LIMIT_1|
+|**Endstop** |2| **gpio28** | LIMIT_2|
+|**Endstop** |3| **gpio29** | LIMIT_3|
 |**Hotend**  |Heater	| **gpio6** | HE0 |
-|**Hotend**  |Temperature | **gpio27** | TH0 |
-|**Chamber** |PT100 | **gpio26** | PT100 |
+|**Hotend**  |Tempreture | **gpio27** | TH0 |
+|**Chamber** |Tempreture | **gpio26** | TH1 |
 |**Fans** |Fan 0	| **gpio13** | FAN0 |
 |**Fans** |Fan 1	| **gpio14** | FAN1 |
 |**Fans** |Fan 2	| **gpio15** | FAN2 |
-|**SPI** |SCK | **gpio0** | |
+|**SPI** |CLK | **gpio0** | |
 |**SPI** |MISO | **gpio2** | |
 |**SPI** |MOSI | **gpio3** | |
-|**SPI** |CS | **gpio1** | ADXL |
-|**SPI** |INT1 | **gpio21** |  |
-|**SPI** |INT2 | **gpio20** |  |
+|**SPI** |ADXL-CS | **gpio1** | ADXL |
+|**SPI** |ADXL-INT1 | **gpio21** |  |
+|**SPI** |ADXL-INT2 | **gpio20** |  |
 |**LED** |RGB LED | **gpio12** | RGBLED | 
 |**LED** |Status LED| **gpio25** | | 
 
 <div class="datatable-end"></div>
+
+### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sb2040_cfg}})

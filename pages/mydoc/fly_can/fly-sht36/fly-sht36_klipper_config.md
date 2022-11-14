@@ -1,5 +1,5 @@
 ---
-title: Fly SHT36 klipper configuration
+title: Fly SHT36 Klipper configuration
 tags: []
 keywords: 
 last_updated: 20/10/2022
