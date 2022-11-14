@@ -11,7 +11,7 @@ comments: false
 toc: true
 datatable: true
 
-mcu: "Fly-SB2040"
+mcu: "SHT-36"
 
 sht36pins_img1:  "fly-sht36-42/fly-sht-36_pins.webp"
 sht36pins_cap1:  "Fly SHT-36 pin locations" 
