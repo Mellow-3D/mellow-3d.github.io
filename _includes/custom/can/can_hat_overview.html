@@ -1,0 +1,65 @@
+    {% capture can_hat_img1 %}{{page.can_hat_img1 }}{% endcapture %}
+    {% capture can_hat_cap1 %}{{page.can_hat_cap1 }}{% endcapture %}
+    {% capture can_hat_url1 %} .\images\{{ page.can_hat_img1 }} {% endcapture %}
+
+    {% capture can_hat_img2 %}{{page.can_hat_img2 }}{% endcapture %}
+    {% capture can_hat_cap2 %}{{page.can_hat_cap2 }}{% endcapture %}
+    {% capture can_hat_url2 %} .\images\{{ page.can_hat_img2 }} {% endcapture %}
+
+    {% capture can_hat_img3 %}{{page.can_hat_img3 }}{% endcapture %}
+    {% capture can_hat_cap3 %}{{page.can_hat_cap3 }}{% endcapture %}
+    {% capture can_hat_url3 %} .\images\{{ page.can_hat_img3 }} {% endcapture %}
+
+    {% capture can_hat_img4 %}{{page.can_hat_img4 }}{% endcapture %}
+    {% capture can_hat_cap4 %}{{page.can_hat_cap4 }}{% endcapture %}
+    {% capture can_hat_url4 %} .\images\{{ page.can_hat_img4 }} {% endcapture %}
+
+## {{page.summary}}
+
+  {% 
+  include image.html 
+  file=can_hat_img1
+  url=can_hat_url1
+  alt=can_hat_cap1
+  caption=can_hat_cap1
+  %}
+
+### Overview
+
+The Fly Can Hat board was made to perform the same functions as the UTOC board, allowing the Fly-Pi/Fly-Gemini V1.1/V2.0 to directly connect to CAN bus boards for Can communication.
+- Compatilbe Boards
+    - [Gemini V1.1/2 .0](https://mellow.klipper.cn/#/board/fly_gemini_v2/canhat)
+    - [Fly- Pi](https://mellow.klipper.cn/#/board/fly_pi/canhat)
+
+### Dimensions
+
+  {% 
+  include image.html 
+  file=can_hat_img2
+  url=can_hat_url2
+  alt=can_hat_cap2
+  caption=can_hat_cap2
+  %}
+
+### Top and Bottom View
+
+  {% 
+  include image.html 
+  file=can_hat_img3
+  url=can_hat_url3
+  alt=can_hat_cap3
+  caption=can_hat_cap3
+  %}
+
+### Installation
+
+- On the Fly Pi and Gemini align the Red pin header on the Can Hat with the blue socket on the main board. The black pin header should aligh to the black socket. 
+{% include warning.html content="Inserting the CAN Hat backwards can shortboard components causing damage." %}
+
+   {% 
+  include image.html 
+  file=can_hat_img4
+  url=can_hat_url4
+  alt=can_hat_cap4
+  caption=can_hat_cap4
+  %}
