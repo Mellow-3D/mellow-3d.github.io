@@ -1,0 +1,44 @@
+
+    {% capture sb2040pins_img1 %}{{page.sb2040pins_img1 }}{% endcapture %}
+    {% capture sb2040pins_cap1 %}{{page.sb2040pins_cap1 }}{% endcapture %}
+    {% capture sb2040pins_url1 %} .\images\{{ page.sb2040pins_img1 }} {% endcapture %}
+
+## {{page.summary}}
+
+  {% 
+  include image.html 
+  file=sb2040pins_img1
+  url=sb2040pins_url1
+  alt=sb2040pins_cap1
+  caption=sb2040pins_cap1
+  %}
+
+<div class="datatable-begin"></div>
+
+| **Device** |  **Function** | **Pin number** | **Alias** |
+|:-----------|:--------------|:---------------|:----------|
+|**CANBUS** |CAN-RX | **gpio4**  | |
+|**CANBUS** |CAN-TX | **gpio5**  | |
+|**Extruder** |EN | **gpio7** |EXT_EN |
+|**Extruder** |STEP | **gpio9**  | EXT_STEP |
+|**Extruder** |DIR  | **gpio10**  | EXT_DIR |
+|**Extruder** |UART | **gpio8**  | EXT_UART |
+|**Endstop** |HV| **gpio25** | LIMIT_HV|
+|**Endstop** |1| **gpio28** | LIMIT_Y|
+|**Endstop** |2| **gpio29** | LIMIT_Z|
+|**Hotend**  |Heater	| **gpio6** | HE0 |
+|**Hotend**  |Temperature | **gpio27** | TH0 |
+|**Chamber** |PT100 | **gpio26** | PT100 |
+|**Fans** |Fan 0	| **gpio13** | FAN0 |
+|**Fans** |Fan 1	| **gpio14** | FAN1 |
+|**Fans** |Fan 2	| **gpio15** | FAN2 |
+|**SPI** |SCK | **gpio0** | |
+|**SPI** |MISO | **gpio2** | |
+|**SPI** |MOSI | **gpio3** | |
+|**SPI** |CS | **gpio1** | ADXL |
+|**SPI** |INT1 | **gpio21** |  |
+|**SPI** |INT2 | **gpio20** |  |
+|**LED** |RGB LED | **gpio12** | RGBLED | 
+|**LED** |Status LED| **gpio25** | | 
+
+<div class="datatable-end"></div>
