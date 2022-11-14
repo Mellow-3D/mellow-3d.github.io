@@ -1,5 +1,5 @@
 ---
-title: Fly SB2040 V1 Pin Definitions
+title: Fly SHT-36 Pin Definitions
 tags: []
 keywords: 
 last_updated: 20/10/2022
