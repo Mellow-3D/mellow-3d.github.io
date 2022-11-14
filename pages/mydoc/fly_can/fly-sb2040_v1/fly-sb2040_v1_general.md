@@ -17,8 +17,9 @@ version: v1
 
 mcu: "Fly-SB2040"
 
-mcustep: "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/raw/main/FLY-SHT36/STEP%20File/36.step"
-mcusch:  "https://github.com/Mellow-3D/Klipper-CAN-Toolboards/blob/main/Schematic_36-42%20Klipper%20CAN%20Boards_2022-04-14.pdf"
+mcustep: "https://github.com/Mellow-3D/Fly-SB2040/blob/main/Hardware/SB2040.step"
+mcustep2: "https://github.com/Mellow-3D/Fly-SB2040/blob/main/Hardware/SB2040-F.step"
+mcusch:  "https://github.com/Mellow-3D/Fly-SB2040/blob/main/Hardware/SB2040_Schematic.pdf"
 
 overview_img1: "fly-sb2040_v1/sb2040.png"
 overview_cap1: "Fly-SB2040 Front and Rear view"

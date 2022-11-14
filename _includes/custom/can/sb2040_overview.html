@@ -1,5 +1,6 @@
     {% capture mcu %}{{ page.mcu }}{% endcapture %}
     {% capture mcustep %}{{ page.mcustep }}{% endcapture %}
+    {% capture mcustep2 %}{{ page.mcustep2 }}{% endcapture %}
     {% capture mcusch %}{{ page.mcusch }}{% endcapture %}
     {% capture overimg1 %}{{page.overview_img1}}{% endcapture %}
     {% capture overcap1 %}{{page.overview_cap1}}{% endcapture %}
@@ -78,6 +79,12 @@ caption=overcap3
 
 {% elsif mcustep == "" %}
  - No Step file Currently avaliable for the {{mcu}}
+{% endif %}
+
+{% if mcustep2 != "" %}
+
+- Cad .step file for the {{ mcu }} fan board : [{{ mcu }}-F.step]({{mcustep2}})
+
 {% endif %}
 
 {% if mcusch != "" %}
