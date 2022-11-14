@@ -44,7 +44,7 @@ make menuconfig
    - Build: 16 Kib bootloader
    - Comm Interface - {{page.com}}
   {% if page.firmware == "CAN bus" %}
-  - CanBus Speed: 500000
+  - Can bus Speed: 500000
   - CAN Rx: GPIO 4
   - CAN Tx: GPIO 5
   {% endif %}
@@ -130,7 +130,7 @@ usb-CanBoot_rp2040_45503571279020E8-if00
 
 {% elsif page.firmware == "CAN bus" %}
 
-#### Flash Klipper firmware with CanBoot over CANbus
+#### Flash Klipper firmware with CanBoot over CAN bus
 
  - Connecting the XT30+2 harness
    - Red  wire to 12v or 24v

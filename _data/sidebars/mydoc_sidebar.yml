@@ -80,18 +80,9 @@ children:
 
 #Fly CAN Section
 
-- title: Fly CANbus Boards
+- title: Fly CAN bus Boards
   output: web, pdf
   children:
-
-  - title: Fly Can Hat
-    output: web
-    children:  
-
-    - title: Overview
-      url: fly-can_hat_v1.html
-      output: web, pdf   
-
 
   - title: Fly SB2040 V1
     output: web
@@ -105,7 +96,7 @@ children:
       url: fly-sb2040_pins.html
       output: web, pdf   
 
-    - title: Klipper cofiguration
+    - title: Klipper configuration
       output: web
       children:  
 
@@ -121,7 +112,7 @@ children:
           url: fly-sb2040_klipper_usb.html
           output: web, pdf     
 
-        - title: CANBus
+        - title: CAN bus
           url: fly-sb2040_klipper_can.html
           output: web, pdf     
 
@@ -129,7 +120,7 @@ children:
         url: fly-sb2040_klipper_config.html
         output: web, pdf
   
-    - title: CANbus troubelhooting
+    - title: CAN bus trouble shooting
       url: fly-sb2040_trouble.html
       output: web, pdf   
 
@@ -145,7 +136,7 @@ children:
       url: fly-sht36_pins.html
       output: web, pdf   
 
-    - title: Klipper cofiguration
+    - title: Klipper configuration
       output: web
       children:  
 
@@ -161,7 +152,7 @@ children:
           url: fly-sht36_klipper_usb.html
           output: web, pdf     
 
-        - title: CANBus
+        - title: CAN bus
           url: fly-sht36_klipper_can.html
           output: web, pdf     
 
@@ -169,7 +160,7 @@ children:
         url: fly-sht36_klipper_config.html
         output: web, pdf
   
-    - title: CANbus troubelhooting
+    - title: CAN bus trouble shooting
       url: fly-sht36_trouble.html
       output: web, pdf     
 
@@ -182,15 +173,15 @@ children:
       url: fly-sht36_v2_general.html
       output: web, pdf         
 
-    - title: USB Cofiguration
+    - title: USB Configuration
       url: fly-sht36_v2_klipper_usb.html
       output: web, pdf     
 
-    - title: CANBus Cofiguration
+    - title: CAN bus Configuration
       url: fly-sht36_v2_klipper_can.html
       output: web, pdf     
 
-    - title: Klipper printer Cofiguration
+    - title: Klipper printer Configuration
       url: fly-sht36_v2_klipper_config.html
       output: web, pdf
   
@@ -210,7 +201,7 @@ children:
       url: fly-sht42_pins.html
       output: web, pdf   
 
-    - title: Klipper cofiguration
+    - title: Klipper configuration
       output: web
       children:  
 
@@ -226,7 +217,7 @@ children:
           url: fly-sht42_klipper_usb.html
           output: web, pdf     
 
-        - title: CANBus
+        - title: CAN bus
           url: fly-sht42_klipper_can.html
           output: web, pdf     
 
@@ -234,7 +225,7 @@ children:
         url: fly-sht42_klipper_config.html
         output: web, pdf
   
-    - title: CANbus troubelhooting
+    - title: CAN bus trouble shooting
       url: fly-sht42_trouble.html
       output: web, pdf              
 
@@ -273,7 +264,6 @@ children:
       url: fly_pi.html
       output: web, pdf   
 
-
   - title: Fly Pi Pro
     output: web
     children:  
@@ -281,3 +271,12 @@ children:
     - title: Overview
       url: fly_pi_pro.html
       output: web, pdf   
+
+  - title: Fly Can Hat
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-can_hat_v1.html
+      output: web, pdf   
+

@@ -1,9 +1,9 @@
 ---
-title: Fly SHT-36 canbus troubleshooting
+title: Fly SHT-36 CAN bus troubleshooting
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly SHT-36 canbus troubleshooting"
+summary: "Fly SHT-36 CAN bus troubleshooting"
 sidebar: mydoc_sidebar
 permalink: fly-sht36_trouble.html
 folder: mydoc

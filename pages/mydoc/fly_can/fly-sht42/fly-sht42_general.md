@@ -1,9 +1,9 @@
 ---
-title: Fly SHT-42 canbus tool overview
+title: Fly SHT-42 CAN bus tool overview
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly SHT-42 canbus tool overview"
+summary: "Fly SHT-42 CAN bus tool overview"
 sidebar: mydoc_sidebar
 permalink: fly-sht42_general.html
 folder: mydoc

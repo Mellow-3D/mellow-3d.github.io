@@ -3,7 +3,7 @@ title: Fly-SB2040 canbus troubleshooting
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly-SB2040 canbus troubleshooting"
+summary: "Fly-SB2040 CAN bus troubleshooting"
 sidebar: mydoc_sidebar
 permalink: fly-sb2040_trouble.html
 folder: mydoc
