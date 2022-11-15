@@ -1,9 +1,9 @@
 ---
-title: Fly SB2040 V1 General Information
+title: Klipper Configuration for the Fly SB2040 V1 on USB
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration the Fly SB2040 V1 on USB"
+summary: "Klipper Configuration for the Fly SB2040 V1 on USB"
 sidebar: mydoc_sidebar
 permalink: fly-sb2040_klipper_usb.html
 folder: mydoc
