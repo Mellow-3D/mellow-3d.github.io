@@ -137,6 +137,8 @@ usb-CanBoot_rp2040_45503571279020E8-if00
    - Black wire to ground.
    - Yellow ( CAN H ) and White (CAN L) CAN bus wires to the host CAN bus device
  
+ - Power off the printer before connecting the XT30+2 Harness
+
  - Insert the XT30+2 harness plug into the {{mcu}} socket. 
  
  - Install the 120ohm jumper if this is the only MCU on your CAN bus other than the CAN adapter used by the klipper host. 
@@ -149,8 +151,9 @@ usb-CanBoot_rp2040_45503571279020E8-if00
   caption=klipcom_cap5
   %}
 
-{% include note.html content="You want the CAN bus to measure 60 ohms betweel the H and L lines while the bus is powered off." %}
+{% include note.html content="You want the CAN bus to measure 60 ohms betweel the H and L lines while the printer is powered off." %}
     
+ - Power the printer back on and SSH to the klipper host. 
 
  - Get the {{ mcu }} UUID buy running the following script. 
  ```
@@ -159,7 +162,7 @@ usb-CanBoot_rp2040_45503571279020E8-if00
 
  - If CAN devices are detected the above command will return the following.
 ```
-Found canbus_uuid=6248a4b16ede
+Detected UUID: 6248a4b16ede
 ```
  - Each device will have a unique uuid. In the above example, 6248a4b16ede is the micro-controller’s canbus uuid.
 
