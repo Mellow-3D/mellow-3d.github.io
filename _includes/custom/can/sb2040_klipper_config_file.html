@@ -85,11 +85,9 @@ run_current: 0.30
 ```
 [adxl345]
 cs_pin: SB2040:ADXL
-spi_bus: spi1
 
-
-[resonance_test]
-accel_chip: SB2040:adxl345
+[resonance_tester]
+accel_chip:adxl345
 probe_points:
     165,165,20  # an example for a VZ330 printer
 ```
