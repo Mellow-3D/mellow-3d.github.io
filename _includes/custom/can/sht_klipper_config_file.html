@@ -1,9 +1,122 @@
 ## {{mcu}} Configuration file
 
- ### Sample Fly {{mcu}} klipper configuration
- - Download a copy of this file [here](./files/fly-sht.cfg)
+## Sample Fly {{mcu}} klipper configuration
+Download a copy of this file [here](./files/fly-sht.cfg)
 
 ```
 {% include custom/can/fly-sht_cfg.html %}
 ```
 
+### MCU UUID
+```
+[mcu sht]
+canbus_uuid: 6248a4b16ede # <-- replace with your UUID
+```
+
+### SHT CPU Temp
+```
+[temperature_sensor SHT]
+sensor_type: temperature_mcu
+sensor_mcu: sht
+```
+
+### HOT END FAN
+```
+[heater_fan hotend_fan]
+pin: sht:FAN0
+max_power: 1.0
+kick_start_time: 0.5
+heater: extruder
+heater_temp: 50.0
+```
+
+### PART COOLING
+```
+[fan]
+pin: sht:FAN1
+kick_start_time: 0.25
+cycle_time: 0.15
+off_below: 0.10
+```
+
+### ENDSTOP
+```
+[stepper_x]
+endstop_pin:sht:LIMIT_0
+```
+
+### EXTRUDER 
+```
+[extruder]
+step_pin: sht:EXT_STEP
+dir_pin: !sht:EXT_DIR
+enable_pin: !sht:EXT_EN
+rotation_distance: 22.67895 # VZHextrudort, Mini SHerpa and other BMG based extruders
+gear_ratio: 50:10 
+microsteps: 16
+full_steps_per_rotation: 200
+max_extrude_only_distance: 1000.0
+max_extrude_only_velocity: 50.0
+max_extrude_only_accel: 1500
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: sht:HE0
+sensor_pin: sht:TH0
+sensor_type: ATC Semitec 104GT-2  # this is the default for the Revo heater
+pullup_resistor: 2200             # this is the default for the Revo heater
+control = pid # Sample PID - perform your own PID tuning for accurate results. 
+pid_kp = 26.213
+pid_ki = 1.304
+pid_kd = 131.721
+min_temp: 0
+max_temp: 275
+min_extrude_temp: 160
+```
+
+### EXTRUDER MOTOR
+```
+[tmc2209 extruder]
+uart_pin: sht:EXT_UART
+stealthchop_threshold: 0
+run_current: 0.30
+```
+
+### ADXL345
+```
+[adxl345]
+cs_pin: sht:ADXL
+spi_bus: spi1
+
+[resonance_test]
+accel_chip: adxl345
+probe_points:
+    150,150,20  
+```
+
+### RGB
+```
+#[neopixel sht_led]
+pin: sht:RGBLED
+chain_count: 8
+color_order: GRB
+initial_RED: 0.0
+initial_GREEN: 0.0
+initial_BLUE: 0.0
+```
+
+### PT100 ( optional ) 
+```
+[temperature_sensor PT100]
+sensor_type: MAX31865
+sensor_pin: sht:PT100
+spi_bus: spi1
+min_temp: -50
+max_temp: 350
+rtd_reference_r: 430
+```
+
+### Z Probe
+```
+[probe]
+pin: ^sht:LIMIT_2 # ^ pullup for limit switches like Klicky 
+```
