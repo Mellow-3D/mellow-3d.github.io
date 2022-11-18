@@ -13,9 +13,9 @@ Download a copy of this file [here](./files/fly-sht.cfg)
 canbus_uuid: 6248a4b16ede # <-- replace with your UUID
 ```
 
-### SHT CPU Temp
+### sht CPU Temp
 ```
-[temperature_sensor SHT]
+[temperature_sensor sht]
 sensor_type: temperature_mcu
 sensor_mcu: sht
 ```
@@ -87,7 +87,7 @@ run_current: 0.30
 cs_pin: sht:ADXL
 spi_bus: spi1
 
-[resonance_test]
+[resonance_tester]
 accel_chip: adxl345
 probe_points:
     150,150,20  
