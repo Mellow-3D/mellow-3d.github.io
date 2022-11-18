@@ -27,7 +27,7 @@ overview_cap1: "Fly-SB2040 Front and Rear view"
 overview_img2: "fly-sb2040_v1/sb2040_size.jpg"
 overview_cap2: "Fly-SB2040 dimensions"
 
-overview_img3: "fly-sb2040_v1/sb2040_bom.jpg"
+overview_img3: "fly-sb2040_v1/sb2040_bom.png"
 overview_cap3: "Fly-SB2040 BOM"
 ---
 # {{ page.mcu }} Overview
