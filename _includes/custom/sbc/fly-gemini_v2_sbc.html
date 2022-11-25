@@ -1,0 +1,52 @@
+    {% capture title %}{{ page.title }}{% endcapture %}
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+
+    {% capture belana_img1 %}{{page.belana_img1 }}{% endcapture %}
+    {% capture belana_cap1 %}{{page.belana_cap1 }}{% endcapture %}
+    {% capture belana_url1 %} .\images\{{ page.belana_img1 }} {% endcapture %}
+
+    {% capture belana_img2 %}{{page.belana_img2 }}{% endcapture %}
+    {% capture belana_cap2 %}{{page.belana_cap2 }}{% endcapture %}
+    {% capture belana_url2 %} .\images\{{ page.belana_img2 }} {% endcapture %}
+
+## Preparing the SD Card
+
+
+### Tools and software needed
+ - [Balena Etcher](https://www.balena.io/etcher/)
+ - [Fly OS Image](https://mellow.klipper.cn/#/introduction/downloadimg)
+ - Mini SD card - Minimum size: 8GB, Maximum size: 32GB
+ - Mini SD card reader
+
+### Writing the image
+- If have not already done so install the Balena Etcher software.
+- Download the FlyOS image from [https://mellow.klipper.cn](https://mellow.klipper.cn/#/introduction/downloadimg)
+- Attach the SD card reader and insert the Mini SD card. 
+- Open Belana Etcher, click "Flash from file" to select the system image file downloaded earlier.
+
+ {%   
+ include image.html 
+ file=belana_img1
+ url=belana_url1
+ alt=belana_cap1
+ caption=belana_cap1
+ %}
+
+- Under "Select target" check the boxto select the SD card then click "Select", the size should be about the same as the capacity of the SD card. If you are unsure open the resource manager to view the drive letter of the SD card
+
+ {%   
+ include image.html 
+ file=belana_img2
+ url=belana_url2
+ alt=belana_cap2
+ caption=belana_cap2
+ %}
+
+ - Click "Flash", when the progress bar appears it will start writing the system image to the SD card
+
+ - Wait for the flash to complete, you can skip the verification step and eject the SD card
+
+ - The SD card can now be inserted into the {{boardname}}
+ - Your {{boardname}} is ready to start up. 
