@@ -16,10 +16,20 @@ datatable: true
 {% 
 include image.html 
 file="fly-gemini-v2/gemini_v2_pins.png" 
-url="fly-gemini-v2/gemini_v2_pins.png" 
+url="images\fly-gemini-v2/gemini_v2_pins.png" 
 alt="Fly-Gemini-V2 pins" 
 caption="Fly-Gemini-V2 Pinout" 
 %}
+
+
+{% 
+include image.html 
+file="fly-gemini-v2/PCB_Geminiv2_2022-11-23.svg" 
+url="images\fly-gemini-v2/PCB_Geminiv2_2022-11-23.svg" 
+alt="Fly-Gemini-V2 pins" 
+caption="Fly-Gemini-V2 Pins" 
+%}
+
 
 ## Fly-Gemini-V2 Driver Pins in Firmware
 
