@@ -70,6 +70,10 @@ children:
       url: fly-gemini_v2_general.html
       output: web, pdf
 
+    - title: Supported WiFi chipsets
+      url: fly-gemini_v2_wifi.html
+      output: web, pdf
+
     - title: Pin diagrams
       url: fly-gemini_v2_pins.html
       output: web, pdf
