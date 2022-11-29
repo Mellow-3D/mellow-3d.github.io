@@ -15,13 +15,13 @@ datatable: true
 boardname: "Fly-Gemini V2" 
 
 sbc_setup_img1: "fly-gemini-v2/CH340_win_ports.png"
-sbc_setup_cap1: "Find the port with CH340"
+sbc_setup_cap1: "Find the port number for the CH340 device."
 
 sbc_setup_img2: "fly-gemini-v2/putty_telnet.png"
-sbc_setup_cap2: "Configure Putty for telnet"
+sbc_setup_cap2: "Configure Putty for serial"
 
 sbc_setup_img3: "fly-gemini-v2/putty_telnet_session.png"
-sbc_setup_cap3: "Connect to the Gemini over telnet."
+sbc_setup_cap3: "Connect to the Gemini over serial."
 
 sbc_setup_img4: "fly-gemini-v2/nmtui_activate.png"
 sbc_setup_cap4: "Select activate"
@@ -48,7 +48,7 @@ sbc_setup_img10: "fly-gemini-v2/putty_ssh_session.png"
 sbc_setup_cap10: "Configure Putty for SSH to your Gemini"
 
 sbc_setup_img10: "fly-gemini-v2/fly_pi_ssh.png"
-sbc_setup_cap10: "SSH to your Gemini"
+sbc_setup_cap10: "SSH to the Gemini"
 
 sbc_setup_img11: "fly-gemini-v2/apt-get-update.png"
 sbc_setup_cap11: "Run apt-get-update"

@@ -31,28 +31,153 @@
     {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap7 }}{% endcapture %}
     {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img7 }} {% endcapture %}
 
-    {% capture sbc_setup_img7 %}{{page.sbc_setup_img8 }}{% endcapture %}
-    {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap8 }}{% endcapture %}
-    {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img8 }} {% endcapture %}
+    {% capture sbc_setup_img8 %}{{page.sbc_setup_img8 }}{% endcapture %}
+    {% capture sbc_setup_cap8 %}{{page.sbc_setup_cap8 }}{% endcapture %}
+    {% capture sbc_setup_url8 %} .\images\{{ page.sbc_setup_img8 }} {% endcapture %}
     
-    {% capture sbc_setup_img7 %}{{page.sbc_setup_img9 }}{% endcapture %}
-    {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap9 }}{% endcapture %}
-    {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img9 }} {% endcapture %}
+    {% capture sbc_setup_img9 %}{{page.sbc_setup_img9 }}{% endcapture %}
+    {% capture sbc_setup_cap9 %}{{page.sbc_setup_cap9 }}{% endcapture %}
+    {% capture sbc_setup_url9 %} .\images\{{ page.sbc_setup_img9 }} {% endcapture %}
     
-    {% capture sbc_setup_img7 %}{{page.sbc_setup_img10 }}{% endcapture %}
-    {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap10 }}{% endcapture %}
-    {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img10 }} {% endcapture %}
+    {% capture sbc_setup_img10 %}{{page.sbc_setup_img10 }}{% endcapture %}
+    {% capture sbc_setup_cap10 %}{{page.sbc_setup_cap10 }}{% endcapture %}
+    {% capture sbc_setup_url10 %} .\images\{{ page.sbc_setup_img10 }} {% endcapture %}
     
-    {% capture sbc_setup_img7 %}{{page.sbc_setup_img11 }}{% endcapture %}
-    {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap11 }}{% endcapture %}
-    {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img11 }} {% endcapture %}
+    {% capture sbc_setup_img11 %}{{page.sbc_setup_img11 }}{% endcapture %}
+    {% capture sbc_setup_cap11 %}{{page.sbc_setup_cap11 }}{% endcapture %}
+    {% capture sbc_setup_url11 %} .\images\{{ page.sbc_setup_img11 }} {% endcapture %}
     
-    {% capture sbc_setup_img7 %}{{page.sbc_setup_img12 }}{% endcapture %}
-    {% capture sbc_setup_cap7 %}{{page.sbc_setup_cap12}}{% endcapture %}
-    {% capture sbc_setup_url7 %} .\images\{{ page.sbc_setup_img12 }} {% endcapture %}
+    {% capture sbc_setup_img12 %}{{page.sbc_setup_img12 }}{% endcapture %}
+    {% capture sbc_setup_cap12 %}{{page.sbc_setup_cap12}}{% endcapture %}
+    {% capture sbc_setup_url12 %} .\images\{{ page.sbc_setup_img12 }} {% endcapture %}
 
 ## {{boardname}} initial setup
 
-### Install CH340 driver
- - Download and install the CH340 driver from Mellow 
+### Connect to the {{boardname}} by serial over USB 
+#### Install CH340 driver
+ - Download and install the [CH340 driver](http://www.wch-ic.com/downloads/CH341SER_ZIP.html). 
  - Connect the {{boardname}} by USB to your PC.
+ - Open device manager, expand ports, and note the com port number of the device labeld CH340
+
+{%   
+ include image.html 
+ file=sbc_setup_img1
+ url=sbc_setup_url1
+ alt=sbc_setup_cap1
+ caption=sbc_setup_cap1
+ %}
+
+#### Connect to the {{boardname}} over serial.
+ - Open [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and configure a session as follows
+  - Serial line: Use COM port from the CH340 device listed in  device manager. 
+  - Speed: 115200
+  - Connection type: serial
+
+{%   
+ include image.html 
+ file=sbc_setup_img2
+ url=sbc_setup_url2
+ alt=sbc_setup_cap2
+ caption=sbc_setup_cap2
+ %}
+
+ - Click 'Open' to start the session. 
+
+{%   
+ include image.html 
+ file=sbc_setup_img3
+ url=sbc_setup_url3
+ alt=sbc_setup_cap3
+ caption=sbc_setup_cap3
+ %} 
+
+#### Configure Wifi using nmtui
+ - Run the following command to start the Network Manager TUI
+ ```
+ nmtui
+ ```
+ -  Select 'Activate a connection'
+ {%   
+ include image.html 
+ file=sbc_setup_img4
+ url=sbc_setup_url4
+ alt=sbc_setup_cap4
+ caption=sbc_setup_cap4
+ %} 
+
+ - Select your WiFi network from the list of discovered networks. 
+
+{%   
+ include image.html 
+ file=sbc_setup_img5
+ url=sbc_setup_url5
+ alt=sbc_setup_cap5
+ caption=sbc_setup_cap5
+ %} 
+
+  - Enter your WiFi password
+
+{%   
+ include image.html 
+ file=sbc_setup_img6
+ url=sbc_setup_url6
+ alt=sbc_setup_cap6
+ caption=sbc_setup_cap6
+ %} 
+
+  - Exit nmtui 
+  
+#### Find the IP address
+  - Run IP to get the {{boardname}} IP address.
+```
+ip address show wlan0
+```
+
+ {%   
+ include image.html 
+ file=sbc_setup_img9
+ url=sbc_setup_url9
+ alt=sbc_setup_cap9
+ caption=sbc_setup_cap9
+ %} 
+
+ - Note the IP for the next step.
+
+#### Connect to the {{boardname}} over SSH.
+ - Open Putty and configure a new session
+   - Host name: Use the IP listed in the last step. 
+   - Port: 22
+   - Connection type: ssh
+ 
+ - Click 'open' to start the session.
+ - Log on with the username 'Fly' and the password 'mellow'
+
+ {%   
+ include image.html 
+ file=sbc_setup_img10
+ url=sbc_setup_url10
+ alt=sbc_setup_cap10
+ caption=sbc_setup_cap10
+ %}
+
+#### Install Bonjour support  
+ Bonjour will allow the {{boardname}} to respond to it's hostname.
+ The defaut hostname is 'flygemini.local'
+ - Run the following commands to update and install Bonjour support. 
+  
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get updgrade
+```
+
+```
+sudo apt-get install avahi-daemon
+```
+
+- When complete your {{boardname}} will respond to local dns queries for it's hostname.
+
+#### Setup is now complete
+ Continue on to the next section [Configuring Klipper](fly-gemini_v2_klipper.html)
