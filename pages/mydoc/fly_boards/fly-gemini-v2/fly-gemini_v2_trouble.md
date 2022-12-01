@@ -8,8 +8,13 @@ sidebar: mydoc_sidebar
 permalink: fly-gemini_v2_can_trouble.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
+
+boardname: "Fly-Gemini V2" 
 ---
-## Overview
-CAN bus Troubleshooting
+# {{page.boardname}} troubleshooting
+
+{% include custom/can/can_troubleshooting.html %}
+
+{% include custom/can/sht_links.html %}
