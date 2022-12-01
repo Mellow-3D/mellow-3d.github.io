@@ -1,0 +1,52 @@
+    {% capture title %}{{ page.title }}{% endcapture %}
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+
+## {{boardname}} klipper host installation
+
+In this section we will cover installing & updating [Klipper](https://github.com/Klipper3d/klipper), [Moonraker](https://github.com/Arksine/moonraker), [Mainsail](https://github.com/mainsail-crew/mainsail) and [Fluidd](https://github.com/fluidd-core/fluidd). 
+Fly OS comes with those services pre installed. 
+You will want to update these installations to the latest versions after installing Kiauh. 
+
+###  Kiauah
+Klipper Installation And Update Helper ([Kiauh](https://github.com/th33xitus/kiauh))
+
+#### Install Kiauh 
+
+ - Run the following commands. 
+```
+cd ~
+git clone https://github.com/th33xitus/kiauh.git
+```
+With Fly OS you can skip ahead to [updating](./fly-gemini_v2_klipper.html#updating-services-with-kiauh) but we will cover installing services with Kiauh first. 
+
+#### Installing services with Kiauh
+
+- Start Kiauh
+```
+./kiauh/kiauh.sh
+```
+ - Press '1' to enter the Installation menu
+ - Press '1' to install Klipper, wait for the update to complete
+ - Press '2' to install Moonraker, wait for the update to complete
+ - Press '3' to install Mainsail, wait for the update to complete
+ - Press '4' to install FLuidd, wait for the update to complete
+ - Press '5' to install Klipper screen, wait for the update to complete
+ - Press 'B' to return to the main menu
+ - The first time you run Kiauh on Fly OS it will show the Mainsail and Fluidd installations are incomplete.
+
+#### Updating services with Kiauh
+
+- Start Kiauh
+```
+./kiauh/kiauh.sh
+```
+
+- Press '2' to enter the Update menu
+- Press '1' to update Klipper, wait for the update to complete
+- Press '2' to update Moonraker, wait for the update to complete
+- Press '3' to update Mainsail, wait for the update to complete
+- Press '4' to udpate FLuidd, wait for the update to complete
+- Press '5' to update Klipper screen, wait for the update to complete
+- Press 'B' to return to the main menu

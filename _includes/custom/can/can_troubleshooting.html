@@ -1,7 +1,7 @@
 ## CAN bus troubleshooting
 
 ### Terminating resistors
- - CAN bus requires a 120 ohm resistor at each end of the bus.  You want to bus to measure 60 ohms between the CAN H and CAN L terminals with all can boards connected and the system powered off. The UTOC and SHT boards have bult in resistors that can be enabled by installing the termination jumpers. With only 2 devices on the bus such as a UTOC and an SHT board both boards would need to have the jumpers installed.  If you have more than 2 CAN devices on the bus you will only want to have the devices at the start and far end of the bus to have its resistors jumpered in. 
+ - CAN bus requires a 120 ohm resistor at each end of the bus.  You want the bus to measure 60 ohms between the CAN H and CAN L terminals with all can boards connected and the system powered off. The UTOC and SHT boards have bult in resistors that can be enabled by installing the termination jumpers. With only 2 devices on the bus such as a UTOC and an SHT board both boards would need to have the jumpers installed. The Fly Gemini board with CAN hat has both terminating resistors permantenly wired in. Any additional CAN devices on a Gemini CAN bus will not need to have the 120 ohm resistor jumpered.  If you have more than 2 CAN devices on the bus you will only want to have the devices at the start and far end of the bus to have its resistors jumpered in. 
 
 ### Signal wire twisting
  - For the wires carrying the CAN H and CAN L signals it is recomended to twist the wires together with 1 twist every 24mm. 
