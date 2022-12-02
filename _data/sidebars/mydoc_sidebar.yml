@@ -321,8 +321,44 @@ children:
     children:  
 
     - title: Overview
-      url: fly_pi.html
-      output: web, pdf   
+      url: fly_pi_general.html
+      output: web, pdf
+
+    - title: Supported WiFi chipsets
+      url: fly_pi_wifi.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly_pi_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_pi_files.html
+      output: web, pdf
+
+    - title: Fly OS Configuration
+      output: web
+      children:
+
+      - title: Preparing the SD Card
+        url: fly_pi_sbc.html
+        output: web, pdf
+
+      - title: Preparing the M2WE Flash drive
+        url: fly_pi_m2we.html
+        output: web, pdf
+
+      - title: Installing the CAN hat
+        url: fly_pi_canhat.html
+        output: web, pdf
+
+      - title: Fly OS Initial setup
+        url: fly_pi_sbc_setup.html
+        output: web, pdf
+
+      - title: Klipper host configuration
+        url: fly_pi_klipper.html
+        output: web, pdf
 
   - title: Fly Pi Pro
     output: web

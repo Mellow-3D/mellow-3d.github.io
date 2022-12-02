@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "General information regarding the Fly Pi"
 sidebar: mydoc_sidebar
-permalink: fly_pi.html
+permalink: fly_pi_general.html
 folder: mydoc
 comments: false
 toc: false
