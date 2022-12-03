@@ -1,11 +1,11 @@
 ---
-title: Fly Gemini V2 CAN hat installation.
+title: Fly Pi CAN hat installation.
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly Gemini V2 CAN hat"
+summary: "Fly Pi CAN hat"
 sidebar: mydoc_sidebar
-permalink: fly-gemini_v2_canhat.html
+permalink: fly_pi_canhat.html
 folder: mydoc
 comments: false
 toc: true
