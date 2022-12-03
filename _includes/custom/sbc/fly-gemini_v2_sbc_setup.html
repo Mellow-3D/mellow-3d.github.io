@@ -51,12 +51,25 @@
     {% capture sbc_setup_cap12 %}{{page.sbc_setup_cap12}}{% endcapture %}
     {% capture sbc_setup_url12 %} .\images\{{ page.sbc_setup_img12 }} {% endcapture %}
 
+    {% capture sbc_setup_img13 %}{{page.sbc_setup_img13 }}{% endcapture %}
+    {% capture sbc_setup_cap13 %}{{page.sbc_setup_cap13}}{% endcapture %}
+    {% capture sbc_setup_url13 %} .\images\{{ page.sbc_setup_img13 }} {% endcapture %}
+
 ## {{boardname}} initial setup
 
 ### Connect to the {{boardname}} by serial over USB 
 #### Install CH340 driver
  - Download and install the [CH340 driver](http://www.wch-ic.com/downloads/CH341SER_ZIP.html). 
- - Connect the {{boardname}} by USB to your PC.
+ - Connect the {{boardname}} by USB to your PC using the USB C port marked in red.
+
+{%   
+ include image.html 
+ file=sbc_setup_img13
+ url=sbc_setup_url13
+ alt=sbc_setup_cap13
+ caption=sbc_setup_cap13
+ %} 
+
  - Open device manager, expand ports, and note the com port number of the device labeld CH340
 
 {%   
@@ -160,12 +173,16 @@ ip address show wlan0
  caption=sbc_setup_cap10
  %}
 
-#### Install git
- - Run the following command to install git. 
+#### Set the password
+ - Run the following command to reset the default password
  
  ```
- sudo apt-get install git -y
+ passwd
  ```
+ 
+ - Enter the current password you used to log on.
+ - Enter your new password.
+ - Confirm your new password
 
 #### Install Bonjour support  
  Bonjour will allow the {{boardname}} to respond to it's hostname.
@@ -173,15 +190,11 @@ ip address show wlan0
  - Run the following commands to update and install Bonjour support. 
   
 ```
-sudo apt-get update
+sudo apt update && sudo apt upgrade -y
 ```
 
 ```
-sudo apt-get updgrade
-```
-
-```
-sudo apt-get install avahi-daemon
+sudo apt install avahi-daemon
 ```
 
 - When complete your {{boardname}} will respond to local dns queries for it's hostname.

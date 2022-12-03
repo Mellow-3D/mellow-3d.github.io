@@ -58,6 +58,9 @@ sbc_setup_cap12: "Run apt-get-upgrade"
 
 sbc_setup_img12: "fly-gemini-v2/avahi-daemon.png"
 sbc_setup_cap12: "Install Avahi Daemon for Bonjour support"
+
+sbc_setup_img13: "fly-gemini-v2/gemini_v2_sbc_usb.png"
+sbc_setup_cap13: "USB port for SBC side."
 ---
 
 {% include custom/sbc/fly-gemini_v2_sbc_setup.html %}
