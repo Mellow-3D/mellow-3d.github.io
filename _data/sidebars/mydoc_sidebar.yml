@@ -114,14 +114,6 @@ children:
       output: web
       children:
 
-      - title: Serial cable
-        url: fly-gemini_v2_boot_serial.html
-        output: web, pdf 
-
-      - title: Restore Factory Bootloader
-        url: fly-gemini_v2_boot_oem.html
-        output: web, pdf 
-
       - title: CanBoot on USB
         url: fly-gemini_v2_canboot_usb.html
         output: web, pdf     
@@ -129,6 +121,18 @@ children:
       - title: CanBoot on CAN bus
         url: fly-gemini_v2_canboot_can.html
         output: web, pdf   
+
+      - title: Restore OEM Bootloader
+        output: web 
+        children:
+        
+        - title: Serial cable
+          url: fly-gemini_v2_boot_serial.html
+          output: web, pdf 
+
+        - title: Flash Bootloader
+          url: fly-gemini_v2_boot_oem.html
+          output: web, pdf 
 
     - title: MCU Firmware
       output: web
