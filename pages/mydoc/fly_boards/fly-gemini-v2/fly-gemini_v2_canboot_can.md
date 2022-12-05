@@ -18,6 +18,10 @@ version: v1
 
 com: "CAN bus on PA11/PA12"
 
+
+cancom_img1: "fly-gemini-v2/fly_gemini_canboot_menuconfig_can.png"
+cancom_cap1: "CanBoot Menu Config CAN"
+
 ---
 
 ## Configuring and installing CanBoot bootloader for CAN bus

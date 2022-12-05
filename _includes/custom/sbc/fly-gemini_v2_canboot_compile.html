@@ -40,7 +40,7 @@ make menuconfig
 ```
 - Set the following settings
   - Micro Controller : STMicroelectronics STM32
-  - Processor Model: stm32f407
+  - Processor Model: STM32F405
   - Build: 32 Kib bootloader
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
@@ -48,6 +48,7 @@ make menuconfig
   {% if page.firmware == "can" %}
   - Can bus Speed: 500000
   {% endif %}
+
     {% 
     include image.html 
     file=cancom_img1
@@ -98,6 +99,8 @@ make
 - run lsusb to verify the MCU has been discovered as a USB device
   - add screen shot
 
+  - Continue to the [Klipper for USB configuration section](./fly-gemini_v2_klipper_mcu_usb.html)
+
 {% elsif page.firmware == "can" %}
 
 - run canboot query verify the MCU is up on the CAN bus
@@ -106,6 +109,6 @@ make
 ~/CanBoot/scripts/flash_can.py -i can0 -q
 ```
 
-- Note the UUID for flashing klipper with CanBoot in the following steps. 
+- Note the UUID for flashing klipper with CanBoot in the [Klipper for CAN bus configuration section](./fly-gemini_v2_klipper_mcu_can.html). 
 
 {% endif %}

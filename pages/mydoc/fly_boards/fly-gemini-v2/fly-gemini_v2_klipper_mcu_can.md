@@ -10,6 +10,30 @@ folder: mydoc
 comments: false
 toc: false
 datatable: true
+
+
+boardname: Fly Gemini V2
+firmware: can
+version: v1
+
+
+com: "CAN on PA11/PA12"
+
+
+klipcom_img1: "fly-gemini-v2/fly_gemini_klipper_menuconfig_can.png"
+klipcom_cap1: "Klipper Menu Config CAN"
+
+klipcom_img2: "fly-gemini-v2/fly_gemini_klipper_canboot_burn.png"
+klipcom_cap2: "Burn Klipper firmware over CAN bus"
+
+klipcom_img3: "fly-gemini-v2/flash-can_query.png"
+klipcom_cap3: "Flash Can Query"
+
 ---
-## Pins
-Fly Gemini V2 MCU Klipper CAN bus firmware
+
+## Configuring and installing Klipper for CAN bus
+
+{% include custom/sbc/fly-gemini_v2_klipper_compile.html %}
+
+{% include custom/can/sht_links.html %}
+
