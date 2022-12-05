@@ -12,11 +12,10 @@ toc: true
 datatable: true
 
 boardname: Fly Gemini V2
-firmware: can
+firmware: usb
 version: v1
 
-
-com: "CAN bus on PA11/PA12"
+com: "USB on PA11/PA12"
 
 ---
 

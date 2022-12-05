@@ -10,8 +10,18 @@ folder: mydoc
 comments: false
 toc: true
 datatable: true
+
+boardname: Fly Gemini V2
+firmware: can
+version: v1
+
+
+com: "CAN bus on PA11/PA12"
+
 ---
 
 ## Configuring and installing CanBoot bootloader for CAN bus
+
+{% include custom/sbc/fly-gemini_v2_canboot_compile.html %}
 
 {% include custom/can/sht_links.html %}

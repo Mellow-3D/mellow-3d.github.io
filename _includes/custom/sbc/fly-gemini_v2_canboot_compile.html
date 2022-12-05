@@ -6,7 +6,7 @@
     {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
     {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
 
-### Compile CanBoot firmware
+### Install CanBoot package
 
 - ssh to your klipper host console
 
@@ -23,6 +23,8 @@ path: ~/CanBoot
 origin: https://github.com/Arksine/CanBoot.git
 is_system_service: False
 ```
+
+### Compile CanBoot firmware
 
 - cd to the Canboot directory
 ```
