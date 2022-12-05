@@ -36,6 +36,7 @@ make clean
 make menuconfig
 ```
 - Set the following settings
+  - Enable extra Low Level configuration options : Checked
   - Micro Controller : STMicroelectronics STM32
   - Processor Model: stm32f072
   - Build: 8 Kib bootloader
@@ -55,6 +56,12 @@ make menuconfig
 
 
 - Quit and save the configuration
+
+- Run Make to compile the firmware
+
+```
+make -j 4
+```
 
 {% if page.firmware == "usb" %}
 

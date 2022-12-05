@@ -98,6 +98,10 @@ children:
         url: fly-gemini_v2_canhat.html
         output: web, pdf
 
+      - title: Installing the TFT display
+        url: fly-gemini_v2_tft.html
+        output: web, pdf
+
       - title: SBC Initial setup
         url: fly-gemini_v2_sbc_setup.html
         output: web, pdf
@@ -106,7 +110,31 @@ children:
         url: fly-gemini_v2_klipper.html
         output: web, pdf
 
-    - title: MCU
+    - title: MCU Bootloader
+      output: web
+      children:
+
+      - title: CanBoot on USB
+        url: fly-gemini_v2_canboot_usb.html
+        output: web, pdf     
+
+      - title: CanBoot on CAN bus
+        url: fly-gemini_v2_canboot_can.html
+        output: web, pdf   
+
+      - title: Restore OEM Bootloader
+        output: web 
+        children:
+        
+        - title: Serial cable
+          url: fly-gemini_v2_boot_serial.html
+          output: web, pdf 
+
+        - title: Flash Bootloader
+          url: fly-gemini_v2_boot_oem.html
+          output: web, pdf 
+
+    - title: MCU Firmware
       output: web
       children:
 
