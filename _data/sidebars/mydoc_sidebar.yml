@@ -158,6 +158,10 @@ children:
       output: web, pdf
       children:
 
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
     - title: RepRapFirmware
       output: web, pdf
       children:
