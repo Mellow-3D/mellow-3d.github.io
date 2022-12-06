@@ -150,9 +150,9 @@ children:
           url: fly-gemini_v2_klipper_mcu_can.html
           output: web, pdf
 
-        - title: Configuration file settings
-          url: fly-gemini_v2_klipper_mcu_config.html
-          output: web, pdf
+      - title: Configuration file settings
+        url: fly-gemini_v2_klipper_mcu_config.html
+        output: web, pdf
 
     - title: Marlin
       output: web, pdf

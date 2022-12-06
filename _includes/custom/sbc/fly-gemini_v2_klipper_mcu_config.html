@@ -1,0 +1,179 @@
+# Fly Gemini V2 Configuration files
+
+## Fly Gemini V2 aliases file
+- [Download a copy of the aliases file](./file/gemini_v2/FLY_GEMINI_V2.cfg)
+
+```
+{% include custom/sbc/fly-gemini_v2_cfg.html %}
+```
+## Printer.cfg file
+- Fly OS comes with a pre configured printer.cfg file
+- Edit the following sections of the included printer.cfg file.
+- [Download a sample file containing these sections](./file/gemini_v2/printer.cfg)
+
+### Uncomment the include for the Fly Gemini V2 aliases file
+```
+[include fly_macros.cfg]
+
+########################################
+# Motherboard model
+# Please modify it based on your motherboard model
+########################################
+#[include boards/FLY_GEMINI_V1.cfg]
+#[include boards/FLY_GEMINI_V1.1.cfg]
+[include boards/FLY_GEMINI_V2.cfg]
+```
+
+### MCU
+```
+[mcu]
+#serial: /dev/serial/by-id/usb-Klipper_stm32f405xx_340029000E47323032383135-if00
+canbus_uuid: b5f0ccdb8bd3
+```
+### MCU Host
+```
+[mcu host]
+serial: /tmp/klipper_host_mcu
+```
+
+### Virtual SD Card
+```
+[virtual_sdcard]
+path: /home/fly/printer_data/gcodes
+```
+
+### Printer
+```
+[printer]
+kinematics: corexy
+max_velocity: 300
+max_accel: 3000
+max_z_velocity: 5
+max_z_accel: 100
+```
+### Temp
+```
+########################################
+# Temp
+########################################
+#[temperature_sensor FLY-Gemini]
+#sensor_type: temperature_host
+
+[temperature_sensor FLY-MCU]
+sensor_type: temperature_mcu
+
+
+min_temp: -50
+max_temp: 1000
+```
+### Stepper X
+```
+[stepper_x]
+step_pin: X_STEP
+dir_pin: !X_DIR
+enable_pin: !X_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: ^X_STOP
+position_endstop: 0
+position_max: 235
+homing_speed: 50
+
+[tmc2209 stepper_x]
+uart_pin: X_CS
+uart_address: 0
+run_current: 0.580
+stealthchop_threshold: 999999
+```
+### Stepper Y
+```
+[stepper_y]
+step_pin: Y_STEP
+dir_pin: !Y_DIR
+enable_pin: !Y_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: ^Y_STOP
+position_endstop: 0
+position_max: 235
+homing_speed: 50
+
+[tmc2209 stepper_y]
+uart_pin: Y_CS
+uart_address: 2
+run_current: 0.580
+stealthchop_threshold: 999999
+```
+### Stepper Z
+```
+[stepper_z]
+step_pin: Z_STEP
+dir_pin: Z_DIR
+enable_pin: !Z_EN
+microsteps: 16
+rotation_distance: 8
+endstop_pin: ^Z_STOP
+position_endstop: 0.0
+position_max: 250
+
+[tmc2209 stepper_z]
+uart_pin: Z_CS
+uart_address: 1
+run_current: 0.580
+stealthchop_threshold: 999999
+```
+### Extruder
+```
+[extruder]
+step_pin: E_STEP
+dir_pin: !E_DIR
+enable_pin: !E_EN
+microsteps: 16
+rotation_distance: 33.500
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: HEAT
+sensor_type: EPCOS 100K B57560G104F
+sensor_pin: HEAT_TEMP
+control: pid
+pid_Kp: 21.527
+pid_Ki: 1.063
+pid_Kd: 108.982
+min_temp: 0
+max_temp: 1000
+
+[tmc2209 extruder]
+uart_pin: E_CS
+uart_address: 3
+run_current: 0.650
+stealthchop_threshold: 999999
+```
+### Heater Bed
+```
+[heater_bed]
+heater_pin: BED_OUT
+sensor_type: ATC Semitec 104GT-2
+sensor_pin: BED_TEMP
+control: pid
+pid_Kp: 54.027
+pid_Ki: 0.770
+pid_Kd: 948.182
+min_temp: 0
+max_temp: 1000
+```
+### Heater Fan
+```
+[heater_fan heatbreak_cooling_fan]
+pin: FAN1
+```
+### Fan
+```
+[fan]
+pin: FAN0
+```
+
+### Static Output
+```
+[static_digital_output usb_pullup_enable]
+pins: !PA14
+```
