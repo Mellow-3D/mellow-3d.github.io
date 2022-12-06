@@ -15,7 +15,17 @@ boardname: Fly Gemini V2
 firmware: usb
 version: v1
 
+
 com: "USB on PA11/PA12"
+
+cancom_img1: "fly-gemini-v2/fly_gemini_canboot_menuconfig_usb.png"
+cancom_cap1: "CanBoot Menu Config USB"
+
+cancom_img2: "fly-gemini-v2/gemini_v2_mcu_sd.png"
+cancom_cap2: "MCU SD card slot"
+
+cancom_img3: "fly-gemini-v2/gemini_v2_mcu_reset.png"
+cancom_cap3: "MCU reset button"
 
 ---
 

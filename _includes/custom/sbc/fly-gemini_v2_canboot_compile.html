@@ -6,6 +6,14 @@
     {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
     {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
 
+    {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
+    {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
+    {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
+
+    {% capture cancom_img3 %}{{page.cancom_img3 }}{% endcapture %}
+    {% capture cancom_cap3 %}{{page.cancom_cap3 }}{% endcapture %}
+    {% capture cancom_url3 %} .\images\{{ page.cancom_img3 }} {% endcapture %}
+
 ### Install CanBoot package
 
 - ssh to your klipper host console
@@ -85,10 +93,24 @@ make
 - Eject the SD card from the PC
 
 - Insert the SD card into the MCU SD card Slot.
-  - Add screenshot here 
+    
+  {% 
+  include image.html 
+  file=cancom_img2
+  url=cancom_url2
+  alt=cancom_cap2
+  caption=cancom_cap1
+  %} 
 
 - Press the MCU reboot button
-  - Add screen shot of reboot button
+    
+    {% 
+    include image.html 
+    file=cancom_img3
+    url=cancom_url3
+    alt=cancom_cap3
+    caption=cancom_cap1
+    %}
 
 - Wait a few minutes
 

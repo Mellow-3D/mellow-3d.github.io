@@ -8,7 +8,7 @@ sidebar: mydoc_sidebar
 permalink: fly-gemini_v2_klipper_mcu_can.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 
 
@@ -28,6 +28,7 @@ klipcom_cap2: "Burn Klipper firmware over CAN bus"
 
 klipcom_img3: "fly-gemini-v2/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
+
 
 ---
 

@@ -14,7 +14,9 @@
     {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
 
-#### Compile Klipper firmware for {{page.firmware}}
+
+### Compile Klipper firmware for {{page.firmware}}
+
 {% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
 
 - ssh to your klipper host console
@@ -61,7 +63,7 @@ make -j 4
 
 {% if page.firmware == "usb" %}
 
-#### Flash Klipper firmware with CanBoot over USB
+### Flash Klipper firmware with CanBoot over USB
 - Find the Serial ID
 ```
 ls -l /dev/serial/by-id/
@@ -91,7 +93,7 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/seri
 
 {% elsif page.firmware == "can" %}
 
-#### Flash Klipper firmware with CanBoot over CAN bus
+### Flash Klipper firmware with CanBoot over CAN bus
 
  - Get the {{ boardname }} UUID buy running the following script. 
  ```

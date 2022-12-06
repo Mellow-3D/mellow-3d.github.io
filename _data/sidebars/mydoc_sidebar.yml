@@ -82,74 +82,90 @@ children:
       url: fly-gemini_v2_files.html
       output: web, pdf
 
-    - title: Small Board Computer
+    - title: Klipper
       output: web
       children:
 
-      - title: Preparing the SD Card
-        url: fly-gemini_v2_sbc.html
-        output: web, pdf
-
-      - title: Preparing the M2WE Flash drive
-        url: fly-gemini_v2_m2we.html
-        output: web, pdf
-
-      - title: Installing the CAN hat
-        url: fly-gemini_v2_canhat.html
-        output: web, pdf
-
-      - title: Installing the TFT display
-        url: fly-gemini_v2_tft.html
-        output: web, pdf
-
-      - title: SBC Initial setup
-        url: fly-gemini_v2_sbc_setup.html
-        output: web, pdf
-
-      - title: Klipper host configuration
-        url: fly-gemini_v2_klipper.html
-        output: web, pdf
-
-    - title: MCU Bootloader
-      output: web
-      children:
-
-      - title: CanBoot on USB
-        url: fly-gemini_v2_canboot_usb.html
-        output: web, pdf     
-
-      - title: CanBoot on CAN bus
-        url: fly-gemini_v2_canboot_can.html
-        output: web, pdf   
-
-      - title: Restore OEM Bootloader
-        output: web 
+      - title: Small Board Computer
+        output: web
         children:
+
+        - title: Preparing the SD Card
+          url: fly-gemini_v2_sbc.html
+          output: web, pdf
+
+        - title: Preparing the M2WE Flash drive
+          url: fly-gemini_v2_m2we.html
+          output: web, pdf
+
+        - title: Installing the CAN hat
+          url: fly-gemini_v2_canhat.html
+          output: web, pdf
+
+        - title: Installing the TFT display
+          url: fly-gemini_v2_tft.html
+          output: web, pdf
+
+        - title: SBC Initial setup
+          url: fly-gemini_v2_sbc_setup.html
+          output: web, pdf
+
+        - title: Klipper host configuration
+          url: fly-gemini_v2_klipper.html
+          output: web, pdf
+
+      - title: MCU Bootloader
+        output: web
+        children:
+
+        - title: CanBoot on USB
+          url: fly-gemini_v2_canboot_usb.html
+          output: web, pdf     
+
+        - title: CanBoot on CAN bus
+          url: fly-gemini_v2_canboot_can.html
+          output: web, pdf   
+
+        - title: Restore OEM Bootloader
+          output: web 
+          children:
         
-        - title: Serial cable
-          url: fly-gemini_v2_boot_serial.html
-          output: web, pdf 
+          - title: Serial cable
+            url: fly-gemini_v2_boot_serial.html
+            output: web, pdf 
 
-        - title: Flash Bootloader
-          url: fly-gemini_v2_boot_oem.html
-          output: web, pdf 
+          - title: Flash Bootloader
+            url: fly-gemini_v2_boot_oem.html
+            output: web, pdf 
 
-    - title: MCU Firmware
-      output: web
+      - title: MCU Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly-gemini_v2_klipper_mcu_usb.html
+          output: web, pdf
+
+        - title: CAN bus
+          url: fly-gemini_v2_klipper_mcu_can.html
+          output: web, pdf
+
+        - title: Configuration file settings
+          url: fly-gemini_v2_klipper_mcu_config.html
+          output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
       children:
 
-      - title: USB
-        url: fly-gemini_v2_klipper_mcu_usb.html
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly Gemini V2
+        url: "https://teamgloomy.github.io/fly_gemini_v2_general.html"
         output: web, pdf
 
-      - title: CAN bus
-        url: fly-gemini_v2_klipper_mcu_can.html
-        output: web, pdf
-
-      - title: Configuration file settings
-        url: fly-gemini_v2_klipper_mcu_config.html
-        output: web, pdf
-  
     - title: CAN bus trouble shooting
       url: fly-gemini_v2_can_trouble.html
       output: web, pdf
