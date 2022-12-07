@@ -6,7 +6,15 @@
     {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
     {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
 
-### Compile CanBoot firmware
+    {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
+    {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
+    {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
+
+    {% capture cancom_img3 %}{{page.cancom_img3 }}{% endcapture %}
+    {% capture cancom_cap3 %}{{page.cancom_cap3 }}{% endcapture %}
+    {% capture cancom_url3 %} .\images\{{ page.cancom_img3 }} {% endcapture %}
+
+### Install CanBoot package
 
 - ssh to your klipper host console
 
@@ -24,6 +32,8 @@ origin: https://github.com/Arksine/CanBoot.git
 is_system_service: False
 ```
 
+### Compile CanBoot firmware
+
 - cd to the Canboot directory
 ```
 cd CanBoot
@@ -38,7 +48,7 @@ make menuconfig
 ```
 - Set the following settings
   - Micro Controller : STMicroelectronics STM32
-  - Processor Model: stm32f407
+  - Processor Model: STM32F405
   - Build: 32 Kib bootloader
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
@@ -46,6 +56,7 @@ make menuconfig
   {% if page.firmware == "can" %}
   - Can bus Speed: 500000
   {% endif %}
+
     {% 
     include image.html 
     file=cancom_img1
@@ -82,10 +93,24 @@ make
 - Eject the SD card from the PC
 
 - Insert the SD card into the MCU SD card Slot.
-  - Add screenshot here 
+    
+  {% 
+  include image.html 
+  file=cancom_img2
+  url=cancom_url2
+  alt=cancom_cap2
+  caption=cancom_cap1
+  %} 
 
 - Press the MCU reboot button
-  - Add screen shot of reboot button
+    
+    {% 
+    include image.html 
+    file=cancom_img3
+    url=cancom_url3
+    alt=cancom_cap3
+    caption=cancom_cap1
+    %}
 
 - Wait a few minutes
 
@@ -96,6 +121,8 @@ make
 - run lsusb to verify the MCU has been discovered as a USB device
   - add screen shot
 
+  - Continue to the [Klipper for USB configuration section](./fly-gemini_v2_klipper_mcu_usb.html)
+
 {% elsif page.firmware == "can" %}
 
 - run canboot query verify the MCU is up on the CAN bus
@@ -104,6 +131,6 @@ make
 ~/CanBoot/scripts/flash_can.py -i can0 -q
 ```
 
-- Note the UUID for flashing klipper with CanBoot in the following steps. 
+- Note the UUID for flashing klipper with CanBoot in the [Klipper for CAN bus configuration section](./fly-gemini_v2_klipper_mcu_can.html). 
 
 {% endif %}
