@@ -10,6 +10,18 @@ folder: mydoc
 comments: false
 toc: true
 datatable: true
+
+boardname: "Fly-Gemini V2" 
+
+klipper_display_img1: "fly-gemini-v2/kiauh_menu.png"
+klipper_display_cap1: "Kiauh start Screen"
+
+klipper_display_img2: "fly-gemini-v2/kiauh_install.png"
+klipper_display_cap2: "Kiauh Install Screen"
+
+klipper_display_img3: "fly-gemini-v2/kiauh_update.png"
+klipper_display_cap3: "Kiauh update Screen"
+
 ---
 
 {% include custom/sbc/fly-gemini_v2_klipper.html %}

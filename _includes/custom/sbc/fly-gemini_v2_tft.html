@@ -1,0 +1,119 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture tft_display_img1 %}{{page.tft_display_img1 }}{% endcapture %}
+    {% capture tft_display_cap1 %}{{page.tft_display_cap1 }}{% endcapture %}
+    {% capture tft_display_url1 %} .\images\{{ page.tft_display_img1 }} {% endcapture %}
+
+    {% capture tft_display_img2 %}{{page.tft_display_img2 }}{% endcapture %}
+    {% capture tft_display_cap2 %}{{page.tft_display_cap2 }}{% endcapture %}
+    {% capture tft_display_url2 %} .\images\{{ page.tft_display_img2 }} {% endcapture %}
+
+    {% capture tft_display_img3 %}{{page.tft_display_img3 }}{% endcapture %}
+    {% capture tft_display_cap3 %}{{page.tft_display_cap3 }}{% endcapture %}
+    {% capture tft_display_url3 %} .\images\{{ page.tft_display_img3 }} {% endcapture %}
+
+    {% capture tft_display_img4 %}{{page.tft_display_img4 }}{% endcapture %}
+    {% capture tft_display_cap4 %}{{page.tft_display_cap4 }}{% endcapture %}
+    {% capture tft_display_url4 %} .\images\{{ page.tft_display_img4 }} {% endcapture %}
+
+    {% capture tft_display_img5 %}{{page.tft_display_img5 }}{% endcapture %}
+    {% capture tft_display_cap5 %}{{page.tft_display_cap5 }}{% endcapture %}
+    {% capture tft_display_url5 %} .\images\{{ page.tft_display_img5 }} {% endcapture %}    
+
+    {% capture tft_display_img6 %}{{page.tft_display_img6 }}{% endcapture %}
+    {% capture tft_display_cap6 %}{{page.tft_display_cap6 }}{% endcapture %}
+    {% capture tft_display_url6 %} .\images\{{ page.tft_display_img6 }} {% endcapture %}   
+
+
+## Dimensions
+
+{% 
+include image.html 
+file=tft_display_img6
+url=tft_display_url6
+alt=tft_display_cap6
+caption=tft_display_cap6
+%}
+
+## Installing the TFT Display
+
+{% include note.html content="Before starting to set up the TFT display, confirm that you have read and completed the [Fly OS system setup](./fly-gemini_v2_sbc_setup.html)" %}
+
+### Edit the FLY-config.conf file
+
+  - Open an SSH or telnet session to your {{boardname}} 
+
+  - CD to the /boot folder
+
+    ```
+    cd /boot
+    ```
+  - Edit the FLY-config.conf file
+ 
+    ```
+    sudo nano FLY-Config.conf
+    ```
+  - Find the line ```KlipperScreen=false``` and change it to ```KlipperScreen=true```
+
+    {% 
+    include image.html 
+    file=tft_display_img1
+    url=tft_display_url1
+    alt=tft_display_cap1
+    caption=tft_display_cap1
+    %}
+
+  - Find the line ```Display=NONE``` and change it to ```Display=FBTFT```
+
+    {% 
+    include image.html 
+    file=tft_display_img2
+    url=tft_display_url2
+    alt=tft_display_cap2
+    caption=tft_display_cap2
+    %}
+
+  - Press CTRL + X and save the changes to the FLY-config.conf file
+
+### Assemble the TFT wiring harness
+
+{% 
+include image.html 
+file=tft_display_img5
+url=tft_display_url5
+alt=tft_display_cap5
+caption=tft_display_cap5
+%}
+
+  - The SBC plugs need to be added to the wiring harness.  Follow the wiring diagram for your board. 
+   
+    
+    - {{boardname}} TFT wiring diagram
+
+      {% 
+      include image.html 
+      file=tft_display_img3
+      url=tft_display_url3
+      alt=tft_display_cap3
+      caption=tft_display_cap3
+      %}
+
+### Connect the TFT wiring harness to the {{boardname}}
+
+  - Insert the 3 TFT wiring harness connectors to the {{boardname}} as shown.
+
+    {% 
+    include image.html 
+    file=tft_display_img4
+    url=tft_display_url4
+    alt=tft_display_cap4
+    caption=tft_display_cap4
+    %}
+
+
+ - Power on the {{boardname}} and wait for the display to start. 
+
+{% include note.html content="It will take few minutes to boot up for the first time after modifying Display settings. Give it time for the system to configure the display and start up." %}
+
