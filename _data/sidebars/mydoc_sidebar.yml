@@ -281,20 +281,32 @@ children:
       url: fly-sht36_v2_general.html
       output: web, pdf         
 
-    - title: USB Configuration
-      url: fly-sht36_v2_klipper_usb.html
-      output: web, pdf     
-
-    - title: CAN bus Configuration
-      url: fly-sht36_v2_klipper_can.html
-      output: web, pdf     
-
-    - title: Klipper printer Configuration
-      url: fly-sht36_v2_klipper_config.html
-      output: web, pdf
-  
     - title: Pin diagrams
       url: fly-sht36_v2_pins.html
+      output: web, pdf   
+
+    - title: Klipper configuration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly-sht36_v2_klipper.html
+        output: web, pdf 
+
+      - title: Firmware
+        output: web
+        children: 
+
+        - title: CAN bus Configuration
+          url: fly-sht36_v2_klipper_can.html
+          output: web, pdf     
+
+      - title: Klipper printer Configuration
+        url: fly-sht36_v2_klipper_config.html
+        output: web, pdf
+  
+    - title: CAN bus trouble shooting
+      url: fly-sht36_v2_trouble.html
       output: web, pdf        
 
   - title: Fly SHT 42

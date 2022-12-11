@@ -1,0 +1,97 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+
+    {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
+    {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
+    {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
+
+{% include note.html content="The SHT36 V2 shipps with CanBoot firmware installed. You can skip to the Klipper section. This section is only needed for re-installing CanBoot" %}
+
+#### Compile CanBoot firmware
+
+- ssh to your klipper host console
+
+- Install the burning utility to your klipper host system
+```
+sudo apt install dfu-util -y
+```
+
+- Clone the CanBoot firmware to your Klipper Host
+```
+cd ~/
+git clone https://github.com/Arksine/CanBoot
+```
+- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the CAN bus software. 
+```
+[update_manager CanBoot]
+type: git_repo
+path: ~/CanBoot
+origin: https://github.com/Arksine/CanBoot.git
+is_system_service: False
+```
+
+- cd to the Canboot directory
+```
+cd CanBoot
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+{% include note.html content="Note,  SHT-36 V2 units shipped before 2022-10-18 will use the GD32F103 CPU,  later shipments will use the APM32F072 CPU" %}
+
+- Set the following settings for the APM32F072 CPU
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: stm32f072
+  - Build: 8 Kib bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  - Application Offset 8 Kib
+    {% if page.firmware == "can" %}
+  - Can bus Speed: 500000
+  {% endif %}
+  - Status LED GPIO pin: PC13
+  
+    {% 
+    include image.html 
+    file=cancom_img1
+    url=cancom_url1
+    alt=cancom_cap1
+    caption=cancom_cap1
+    %}
+
+- Set the following settings for the GD32F103 CPU
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: stm32f103
+  - Build: 8 Kib bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  - Application Offset 8 Kib
+  {% if page.firmware == "can" %}
+  - Can bus Speed: 500000
+  {% endif %}
+  - Status LED GPIO pin: PC13
+    {% 
+    include image.html 
+    file=cancom_img2
+    url=cancom_url2
+    alt=cancom_cap2
+    caption=cancom_cap2
+    %}
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+```
+make
+```
+- You should now have a canboot.bin file at ~/CanBoot/out/
