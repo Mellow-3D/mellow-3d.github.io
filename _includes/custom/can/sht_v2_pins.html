@@ -27,9 +27,9 @@
 |**Extruder** |STEP | **PB4**  | EXT_STEP |
 |**Extruder** |DIR  | **PB3**  | EXT_DIR |
 |**Extruder** |UART | **PB5**  | EXT_UART |
-|**Endstop** |1| **PA0** | LIMIT_0|
-|**Endstop** |2| **PA1** | LIMIT_1|
-|**Endstop** |3| **PA2** | LIMIT_2|
+|**Extruder** |DIAG | **PB6**  | EXT_DIAG |
+|**Endstop** |0| **PA1** | LIMIT_0|
+|**Endstop** |1| **PA2** | LIMIT_1|
 |**Hotend**  |Heater	| **PA8** | HE0 |
 |**Hotend**  |Temperature | **PB0** | TH0 |
 |**Hotend**  |PT100 | **PA3** | PT100 |
@@ -37,14 +37,18 @@
 |**probe** |Probe | **PC15** | PROBE_1 |
 |**Fans** |Fan 0	| **PB10** | FAN0 |
 |**Fans** |Fan 1	| **PB11** | FAN1 |
-|**SPI** |SPI bus | **spi1** | |
-|**SPI** |MISO | **PA6** | |
-|**SPI** |MOSI | **PA7** | |
-|**SPI** |CLK | **PA5** | |
-|**SPI** |ADXL345-CS | **PA4** | ADXL |
-|**SPI** |MAX31865-CS | **PA3** | 
-|**LED** |RGB LED | **PB15** | RGBLED | 
+|**SPI1** |MISO | **PA6** | |
+|**SPI1** |MOSI | **PA7** | |
+|**SPI1** |CLK | **PA5** | |
+|**SPI1** |AS5047D-CS | **PC14** | |
+|**SPI2** |MISO | **PB14** | |
+|**SPI2** |MOSI | **PB15** | |
+|**SPI2** |CLK | **PB13** | |
+|**SPI2** |ADXL345-CS | **PA9** | ADXL |
+|**SPI2** |MAX31865-CS | **PB12** | MAX |
+|**LED** |RGB LED | **PB0** | RGBLED | 
+|**Chamber** |Temp Sensor | **PA4** | TC0 | 
 
 <div class="datatable-end"></div>
 
-### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sb2040_cfg}})
+### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sht_cfg}})

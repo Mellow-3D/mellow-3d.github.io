@@ -30,7 +30,11 @@ caption=overcap1
 
  - 24 volt max input
 
+{% if mcu == "SHT-36 V2" %}
+ - 10 amp mosfet for heater control
+{% else %}
  - 5 amp mosfet for heater control
+{% endif %}
 
  - Onboard TMC2209 driver for the extruder
 
@@ -38,8 +42,16 @@ caption=overcap1
 
  - Support PT100 (MAX31865)
 
+{% if mcu == "SHT-36 V2" %}
+- AS5047D magnetic encoder for motion analysis.
+{% endif %}
+
  - Replaceble fan MOS that supports 2 controllable fans. 
 
+{% if mcu == "SHT-36 V2" %}
+- 5/12/24V fan voltage adjustable.
+
+{% endif %}
  - RGB Led control
 
  - Peripheral interface:USB*1, CAN*1, FAN*2, RGB*1, Servo*1, Probe*1, EndStop*3, PT100 4 line*1(optional), Thermal*1, Heater*1
@@ -61,6 +73,20 @@ alt=overcap3
 caption=overcap3
 %}
 
+{% if mcu == "SHT-36 V2" %}
+
+### Included parts
+ - {{ mcu }} Board
+ - Heatsink for 2209 driver   
+ - Jumpers * 3
+ - JST-XH plug and Female Crimp Terminals
+ - JST-PH plugs and Female Crimp Terminals
+ - XT30+2 1m wiring harness
+ - Fan MOS
+ - USB-A to USB-C Cable
+
+{% else %}
+
 ### Included parts
  - {{ mcu }} Board
  - Heatsink for 2209 driver   
@@ -71,6 +97,7 @@ caption=overcap3
  - Fan MOS
  - USB-A to USB-C Cable
 
+{% endif %}
 
 ### Files
 

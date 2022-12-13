@@ -3,13 +3,25 @@
 
     {% capture boardname %}{{ page.boardname }}{% endcapture %}
 
+    {% capture klipper_display_img1 %}{{page.klipper_display_img1 }}{% endcapture %}
+    {% capture klipper_display_cap1 %}{{page.klipper_display_cap1 }}{% endcapture %}
+    {% capture klipper_display_url1 %} .\images\{{ page.klipper_display_img1 }} {% endcapture %}
+
+    {% capture klipper_display_img2 %}{{page.klipper_display_img2 }}{% endcapture %}
+    {% capture klipper_display_cap2 %}{{page.klipper_display_cap2 }}{% endcapture %}
+    {% capture klipper_display_url2 %} .\images\{{ page.klipper_display_img2 }} {% endcapture %}
+
+    {% capture klipper_display_img3 %}{{page.klipper_display_img3 }}{% endcapture %}
+    {% capture klipper_display_cap3 %}{{page.klipper_display_cap3 }}{% endcapture %}
+    {% capture klipper_display_url3 %} .\images\{{ page.klipper_display_img3 }} {% endcapture %}
+
 ## {{boardname}} klipper host installation
 
 In this section we will cover installing & updating [Klipper](https://github.com/Klipper3d/klipper), [Moonraker](https://github.com/Arksine/moonraker), [Mainsail](https://github.com/mainsail-crew/mainsail) and [Fluidd](https://github.com/fluidd-core/fluidd). 
 Fly OS comes with those services pre installed. 
 You will want to update these installations to the latest versions after installing Kiauh. 
 
-###  Kiauah
+###  Kiauh
 Klipper Installation And Update Helper ([Kiauh](https://github.com/th33xitus/kiauh))
 
 #### Install Kiauh 
@@ -22,12 +34,31 @@ git clone https://github.com/th33xitus/kiauh.git
 With Fly OS you should run install for Moonraker or Fluidd before skipping ahead to [updating](./fly-gemini_v2_klipper.html#updating-services-with-kiauh).  You can run the uninstall process ( Option 3) for the interface you choose to not keep.  You have the option to keep both Mainsail and Fluidd but the one you install 2nd will need to be configured on a port other than 80. 
 
 #### Installing services with Kiauh
+Of the services listed here you only need to run the install for Mainsail or Fluidd. The rest of these services will already be installed on Fly OS.  
 
 - Start Kiauh
 ```
 ./kiauh/kiauh.sh
 ```
+
+{% 
+include image.html 
+file=klipper_display_img1
+url=klipper_display_url1
+alt=klipper_display_cap1
+caption=klipper_display_cap1
+%}
+
  - Press '1' to enter the Installation menu
+
+{% 
+include image.html 
+file=klipper_display_img2
+url=klipper_display_url2
+alt=klipper_display_cap2
+caption=klipper_display_cap2
+%}
+
  - Press '1' to install Klipper, wait for the update to complete
  - Press '2' to install Moonraker, wait for the update to complete
  - Press '3' to install Mainsail, wait for the update to complete
@@ -37,16 +68,27 @@ With Fly OS you should run install for Moonraker or Fluidd before skipping ahead
  - The first time you run Kiauh on Fly OS it will show the Mainsail and Fluidd installations are incomplete.
 
 #### Updating services with Kiauh
+It's not required to update the services but it is a good practice to update the service installations to the current release version. 
 
 - Start Kiauh
+
 ```
 ./kiauh/kiauh.sh
 ```
 
 - Press '2' to enter the Update menu
+
+{% 
+include image.html 
+file=klipper_display_img3
+url=klipper_display_url3
+alt=klipper_display_cap3
+caption=klipper_display_cap3
+%}
+
 - Press '1' to update Klipper, wait for the update to complete
 - Press '2' to update Moonraker, wait for the update to complete
-- Press '3' to update Mainsail, wait for the update to complete
-- Press '4' to udpate FLuidd, wait for the update to complete
+- Press '3' to update Mainsail if installed, wait for the update to complete
+- Press '4' to udpate FLuidd in installed, wait for the update to complete
 - Press '5' to update Klipper screen, wait for the update to complete
 - Press 'B' to return to the main menu
