@@ -357,6 +357,22 @@ children:
       url: fly-utoc_general.html
       output: web, pdf  
 
+    - title: Pin diagrams
+      url: fly-utoc_pins.html
+      output: web, pdf   
+
+    - title: Files
+      url: fly-utoc_files.html
+      output: web, pdf 
+
+    - title: Firmware
+      url: fly-utoc_firmware.html
+      output: web, pdf 
+
+    - title: Klipper host
+      url: fly-utoc_klipper.html
+      output: web, pdf      
+
 #ERCF Board section
 - title: Fly ERCF Easy Board 
   output: web, pdf
