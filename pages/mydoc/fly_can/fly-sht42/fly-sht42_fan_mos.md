@@ -24,7 +24,7 @@ fanmos_img2: "fly-fan_mos/sht_42_fan_mos.png"
 fanmos_cap2: "Fly SHT-42 Fan MOS socket"
 
 ---
-# {{ page.mcu }} Overview
+# {{ page.mcu }} fan module
 
 {% include custom/can/sht_fan_mos.html %}
 
