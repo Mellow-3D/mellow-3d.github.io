@@ -204,6 +204,10 @@ children:
       url: fly-sb2040_pins.html
       output: web, pdf   
 
+    - title: Files
+      url: fly-sb2040_files.html
+      output: web, pdf   
+
     - title: Klipper configuration
       output: web
       children:  
@@ -242,6 +246,14 @@ children:
 
     - title: Pin diagrams
       url: fly-sht36_pins.html
+      output: web, pdf   
+
+    - title: Fan MOSFET
+      url: fly-sht36_fan_mos.html
+      output: web, pdf   
+
+    - title: Files
+      url: fly-sht36_files.html
       output: web, pdf   
 
     - title: Klipper configuration
@@ -285,6 +297,14 @@ children:
       url: fly-sht36_v2_pins.html
       output: web, pdf   
 
+    - title: Fan MOSFET
+      url: fly-sht36_v2_fan_mos.html
+      output: web, pdf   
+
+    - title: Files
+      url: fly-sht36_v2_files.html
+      output: web, pdf   
+
     - title: Klipper configuration
       output: web
       children:  
@@ -319,6 +339,14 @@ children:
 
     - title: Pin diagrams
       url: fly-sht42_pins.html
+      output: web, pdf   
+
+    - title: Fan MOSFET
+      url: fly-sht42_fan_mos.html
+      output: web, pdf   
+
+    - title: Files
+      url: fly-sht42_files.html
       output: web, pdf   
 
     - title: Klipper configuration

@@ -70,26 +70,3 @@ caption=overcap3
  - USB-A to USB-C Cable
 
 
-### Files
-
-{% if mcustep != "" %}
-
-- Cad .step file for the {{ mcu }} : [{{ mcu }}.step]({{mcustep}})
-
-{% elsif mcustep == "" %}
- - No Step file Currently avaliable for the {{mcu}}
-{% endif %}
-
-{% if mcustep2 != "" %}
-
-- Cad .step file for the {{ mcu }} fan board : [{{ mcu }}-F.step]({{mcustep2}})
-
-{% endif %}
-
-{% if mcusch != "" %}
-
-- Schematic pdf file for the {{ mcu }} : [{{ mcu }}.pdf]({{mcusch}})
-
-{% elsif mcusch == "" %}
- - No schematic file Currently avaliable for the {{mcu}}
-{% endif %}
