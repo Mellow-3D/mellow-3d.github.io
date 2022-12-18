@@ -24,6 +24,7 @@ can_hat_img4: "fly-can_hat_v1.0/can_hat_install_gemini.webp"
 can_hat_cap4: "CAN Hat installation"
 
 mcu: "can-hat"
+sbc: "gemini"
 
 ---
 
