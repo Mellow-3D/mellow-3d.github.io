@@ -1,11 +1,11 @@
 ---
-title: Fly Gemini V2 M2WE Setup
+title: Fly Gemini V2 M2WE install module
 tags: []
 keywords: 
 last_updated: 20/10/2022
 summary: "Fly Gemini V2 M2WE"
 sidebar: mydoc_sidebar
-permalink: fly-gemini_v2_m2we.html
+permalink: fly-gemini_v2_m2we_install.html
 folder: mydoc
 comments: false
 toc: true
@@ -37,10 +37,11 @@ m2we_cap7: "Progress bar"
 m2we_img8: "fly-gemini-v2/emmc_install_5.png"
 m2we_cap8: "press the Enter key and wait for the device to completely shut down."
 
-
+m2we_img9: "fly-gemini-v2/gemini_v2_sdcards.png"
+m2we_cap9: "Locations of the SD card slots for the SBC and MCU."
 
 ---
 
-{% include custom/sbc/m2we_setup.html %}
+{% include custom/sbc/m2we_install.html %}
 
 {% include custom/can/sht_links.html %}

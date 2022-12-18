@@ -53,10 +53,21 @@ The Fly Can Hat board was made to perform the same functions as the UTOC board, 
 
 ### Installation
 
+{% if page.sbc == "gemini" %}
+- Just below the CAN hat header is a set of 8 DIP switches.  
+- Set switches 1,2,5 and 6 to the ON position when using the CAN Hat to connect the SBC to the STM32F405 over the internal CAN connection.  
+  {% 
+  include image.html 
+  file="fly-gemini-v2\fly_gemini_dip_can_internal.png" 
+  alt="Fly-Gemini V2 DIP Switches set for internal CAN bus link to the STM32F405 MCU" 
+  caption="Fly-Gemini V2 DIP Switches set for internal CAN bus link to the STM32F405 MCU" 
+  %}
+{% endif %}
+
 - On the Fly Pi and Gemini align the Red pin header on the Can Hat with the red socket on the main board. The black pin header should align to the black socket. 
 {% include warning.html content="Inserting the CAN Hat backwards can short board components causing damage." %}
 
-   {% 
+  {% 
   include image.html 
   file=can_hat_img4
   url=can_hat_url4

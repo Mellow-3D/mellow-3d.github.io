@@ -1,0 +1,136 @@
+    {% capture title %}{{ page.title }}{% endcapture %}
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+
+    {% capture m2we_img1 %}{{page.m2we_img1 }}{% endcapture %}
+    {% capture m2we_cap1 %}{{page.m2we_cap1 }}{% endcapture %}
+    {% capture m2we_url1 %} .\images\{{ page.m2we_img1 }} {% endcapture %}
+
+    {% capture m2we_img2 %}{{page.m2we_img2 }}{% endcapture %}
+    {% capture m2we_cap2 %}{{page.m2we_cap2 }}{% endcapture %}
+    {% capture m2we_url2 %} .\images\{{ page.m2we_img2 }} {% endcapture %}
+
+    {% capture m2we_img3 %}{{page.m2we_img3 }}{% endcapture %}
+    {% capture m2we_cap3 %}{{page.m2we_cap3 }}{% endcapture %}
+    {% capture m2we_url3 %} .\images\{{ page.m2we_img3 }} {% endcapture %}
+
+    {% capture m2we_img4 %}{{page.m2we_img4 }}{% endcapture %}
+    {% capture m2we_cap4 %}{{page.m2we_cap4 }}{% endcapture %}
+    {% capture m2we_url4 %} .\images\{{ page.m2we_img4 }} {% endcapture %}
+
+    {% capture m2we_img5 %}{{page.m2we_img5 }}{% endcapture %}
+    {% capture m2we_cap5 %}{{page.m2we_cap5 }}{% endcapture %}
+    {% capture m2we_url5 %} .\images\{{ page.m2we_img5 }} {% endcapture %}
+
+    {% capture m2we_img6 %}{{page.m2we_img6 }}{% endcapture %}
+    {% capture m2we_cap6 %}{{page.m2we_cap6 }}{% endcapture %}
+    {% capture m2we_url6 %} .\images\{{ page.m2we_img6 }} {% endcapture %}
+
+    {% capture m2we_img7 %}{{page.m2we_img7 }}{% endcapture %}
+    {% capture m2we_cap7 %}{{page.m2we_cap7 }}{% endcapture %}
+    {% capture m2we_url7 %} .\images\{{ page.m2we_img7 }} {% endcapture %}
+
+    {% capture m2we_img8 %}{{page.m2we_img8 }}{% endcapture %}
+    {% capture m2we_cap8 %}{{page.m2we_cap8 }}{% endcapture %}
+    {% capture m2we_url8 %} .\images\{{ page.m2we_img8 }} {% endcapture %}
+
+    {% capture m2we_img9 %}{{page.m2we_img9 }}{% endcapture %}
+    {% capture m2we_cap9 %}{{page.m2we_cap9 }}{% endcapture %}
+    {% capture m2we_url9 %} .\images\{{ page.m2we_img9 }} {% endcapture %}
+
+## {{title}}
+
+
+### Copy the SD card files to the M2WE flash storage.
+
+{% include warning.html content="This process will completly overwrite the M2WE eMMC with the contents of the SD card. Be sure to back up any files you wish to save before proceeding. " %}
+
+
+{% include note.html content="The M2WE comes with the FlyOS and WiFI driver pre-installed. You only need to perform the following tasks if you want to return to the original base OS configuration." %}
+
+ {% include note.html content="The following instructions require that you have already performed the [ initial setup procedure.](./fly-gemini_v2_sbc_setup.html)" %}
+
+- Prepare an SD card as directed in the section [Preparing the SD Card](./fly-gemini_v2_sbc.html)
+
+- Insert the SD card into the SBC SD card slot. 
+{% include note.html content="The Fly Gemini V2 and Fly Pi with the M2WE module installed will boot to the SD card instead of the M2WE if one is inserted in the SBC SD Card slot." %}
+
+{%   
+include image.html 
+file=m2we_img9
+url=m2we_url9
+alt=m2we_cap9
+caption=m2we_cap9
+%}
+
+- Power on the {{boardname}} and wait a minute for the OS to boot. You may notice the status light on the M2WE module blinking. 
+
+-  Using a terminal program like putty SSH to the {{boardname}} and log on. 
+
+- Execute the following command, you may be prompted to enter a password, enter "mellow" and press Enter.
+
+```
+sudo nand-sata-install
+```
+
+- Press the Enter key after selecting Boot from eMMC - system on eMMC.
+{% include note.html content="If you don't see the 2 Boot from eMMC option your system has not booted from the SD card. Verify your SD card was prepared properly and is inserted in the correct SD card slot. " %}
+
+
+  {%   
+  include image.html 
+  file=m2we_img4
+  url=m2we_url4
+  alt=m2we_cap4
+  caption=m2we_cap4
+  %}
+
+
+
+
+- When it this screen appears 'This script will erase your eMMC. Continue?', Select 'yes' and Press the Enter key  
+
+  {%   
+  include image.html 
+  file=m2we_img5
+  url=m2we_url5
+  alt=m2we_cap5
+  caption=m2we_cap5
+  %}
+
+
+- Select file system type 'ext4', select 'yes' and and press the Enter key.
+
+
+  {%   
+  include image.html 
+  file=m2we_img6
+  url=m2we_url6
+  alt=m2we_cap6
+  caption=m2we_cap6
+  %}
+
+  {% include note.html content="If the progress bar  does not appear after waiting for 2 minutes, press CTRL+C to terminate the operation, then restart the device and try again" %}
+
+  {%   
+  include image.html 
+  file=m2we_img7
+  url=m2we_url7
+  alt=m2we_cap7
+  caption=m2we_cap7
+  %}
+
+  {% include warning.html content="Do not power off or perform other operations during system migration until the migration is complete." %}
+
+- After the migration is complete, select 'power off' and press the Enter key.  Wait for the device to completely shut down.
+
+  {%   
+  include image.html 
+  file=m2we_img8
+  url=m2we_url8
+  alt=m2we_cap8
+  caption=m2we_cap8
+  %}
+
+- After the {{boardname}} shuts down, remove the SD card, and turn on the power again. The {{boardname}} should now boot from M2WE eMMC.

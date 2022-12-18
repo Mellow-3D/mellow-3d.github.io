@@ -31,6 +31,34 @@ alt="Fly-Gemini V2 Driver Jumpers"
 caption="Fly-Gemini V2 Driver Jumper Locations" 
 %}
 
+### USB-CAN bus DIP Switches
+The Fly Gemini V2 has DIP switches that configure the internal link between the SBC and MCU sides of the board. When the switches are enabled for internal USB or CAN bus the lower right USB-A port will be disabled.  The USB-A port wil be enabled when the switches are all in the off position OR if switches 7 and 8 are on to connect the MCU to it's USB C port.  
+
+Set Switches 3 and 4 to the ON position to connect the SBC to the STM32F405 MCU over the internal USB connection. 
+{% 
+include image.html 
+file="fly-gemini-v2\fly_gemini_dip_usb_internal.png" 
+alt="Fly-Gemini V2 DIP Switches set for internal USB link to the STM32F405 MCU" 
+caption="Fly-Gemini V2 DIP Switches set for internal USB link to the STM32F405 MCU" 
+%}
+
+Set Switches 1,2,5 and 6 to the ON position when using the optional [CAN hat](./fly-gemini_v2_canhat.html) to connect the SBC to the STM32F405 over the internal CAN connection.  
+{% 
+include image.html 
+file="fly-gemini-v2\fly_gemini_dip_can_internal.png" 
+alt="Fly-Gemini V2 DIP Switches set for internal CAN bus link to the STM32F405 MCU" 
+caption="Fly-Gemini V2 DIP Switches set for internal CAN bus link to the STM32F405 MCU" 
+%}
+
+Set Switches 7 and 8 to the ON position to connect the STM32F405 to the external USB C port. 
+{% 
+include image.html 
+file="fly-gemini-v2\fly_gemini_dip_usb_external.png" 
+alt="Fly-Gemini V2 DIP Switches set for connecting the external USB-C port to the STM32F405 MCU" 
+caption="Fly-Gemini V2 DIP Switches set for connecting the external USB-C port to the STM32F405 MCU" 
+%}
+
+
 ### Driver Diag Pin
 
 The driver diag pin is used for sensorless homing and stall detection.  
