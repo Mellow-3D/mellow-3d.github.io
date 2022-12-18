@@ -1,0 +1,22 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture mcustep %}{{ page.mcustep }}{% endcapture %}
+    {% capture mcusch %}{{ page.mcusch }}{% endcapture %}
+
+
+## Files
+
+{% if mcustep != "" %}
+
+- Cad .step file for the {{ mcu }} : [{{ mcu }}.step]({{mcustep}})
+
+{% elsif mcustep == "" %}
+ - No Step file Currently avaliable for the {{mcu}}
+{% endif %}
+
+{% if mcusch != "" %}
+
+- Schematic pdf file for the {{ mcu }} : [{{ mcu }}.pdf]({{mcusch}})
+
+{% elsif mcusch == "" %}
+ - No schematic file Currently avaliable for the {{mcu}}
+{% endif %}

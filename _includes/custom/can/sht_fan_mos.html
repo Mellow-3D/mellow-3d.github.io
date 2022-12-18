@@ -1,0 +1,44 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture mcustep %}{{ page.mcustep }}{% endcapture %}
+    {% capture mcusch %}{{ page.mcusch }}{% endcapture %}
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+
+    {% capture fanmos_img1 %}{{page.fanmos_img1}}{% endcapture %}
+    {% capture fanmos_cap1 %}{{page.fanmos_cap1}}{% endcapture %}
+    {% capture fanmos_url1 %}.\images\{{page.fanmos_img1}}{% endcapture %}
+    {% capture fanmos_img2 %}{{page.fanmos_img2}}{% endcapture %}
+    {% capture fanmos_cap2 %}{{page.fanmos_cap2}}{% endcapture %}
+    {% capture fanmos_url2 %}.\images\{{page.fanmos_img2}}{% endcapture %}       
+ 
+
+## Fan Mosfet
+
+The {{ mcu }} board uses a Fly Fan MOS module to control the 2 fan ports. 
+If the MOSFET is damaged by an accidental short circuit it can easily be replaced. 
+New Fly-MOS modules can be purchased from the [Mellow store](https://www.aliexpress.us/item/3256803593540212.html)
+
+{% 
+include image.html 
+file=fanmos_img1
+url=fanmos_url1 
+alt=fanmos_cap1
+caption=fanmos_cap1
+%}
+
+### Installing the Fan MOS
+
+- Install the Fly Fan MOS modue into the 6 pin socket on the {{boardname}}
+- The Fan MOS design allows it to be inserted in either orientation. 
+
+{% 
+include image.html 
+file=fanmos_img2
+url=fanmos_url2 
+alt=fanmos_cap2
+caption=fanmos_cap2
+%}
+
+
+
+
+    

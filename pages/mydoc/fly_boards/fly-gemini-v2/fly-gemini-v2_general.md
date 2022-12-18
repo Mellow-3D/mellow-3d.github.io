@@ -39,9 +39,12 @@ If you plan on using endstops rather than sensorless homing and do not have the 
 
 ### Fan Mosfets
 
-The Fly-Gemini-V2 fan mosfets are replaceable.
-Each mosfet (VS3622e) controls two of the fan outputs.
-The orientation that the fan mostfet is plugged into the board doesn't matter.
+The Fly-Gemini-V2 features a replacable fan mosfet module (VS3622e) that controls the two fan outputs.
+
+If the MOSFET is damaged by an accidental short circuit it can easily be replaced. 
+New Fly-MOS modules can be purchased from the [Mellow store](https://www.aliexpress.us/item/3256803593540212.html)
+
+The Fan MOS design allows it to be inserted in either orientation. 
 
 {% 
 include image.html 
