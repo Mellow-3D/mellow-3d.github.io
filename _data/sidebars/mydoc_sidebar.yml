@@ -55,8 +55,81 @@ children:
     output: web, pdf
 
   - title: Fly Super 8
-    url: fly_super8.html
     output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly_super8_general.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly_super8_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_super8_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: MCU Bootloader
+        output: web
+        children:
+
+        - title: CanBoot on USB
+          url: fly_super8_canboot_usb.html
+          output: web, pdf     
+
+        - title: CanBoot on CAN bus
+          url: fly_super8_canboot_can.html
+          output: web, pdf   
+
+        - title: Restore OEM Bootloader
+          output: web 
+          children:
+        
+          - title: Flash Bootloader
+            url: fly_super8_boot_oem.html
+            output: web, pdf 
+
+      - title: MCU Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly_super8_klipper_mcu_usb.html
+          output: web, pdf
+
+        - title: CAN bus
+          url: fly_super8_klipper_mcu_can.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_super8_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly Super 8
+        url: "https://teamgloomy.github.io/fly_super8_general.html"
+        output: web, pdf
+
+    - title: CAN bus trouble shooting
+      url: fly_super8_can_trouble.html
+      output: web, pdf
+
 
   - title: Fly CDY V3
     url: fly-cdy_v3.html
