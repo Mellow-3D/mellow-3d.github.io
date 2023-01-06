@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "General information regarding the FlyRRF Super 8"
 sidebar: mydoc_sidebar
-permalink: fly_super8.html
+permalink: fly-super8.html
 folder: mydoc
 comments: false
 toc: false

@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Fly Super 8 files"
 sidebar: mydoc_sidebar
-permalink: fly_super8_files.html
+permalink: fly-super8_files.html
 folder: mydoc
 comments: false
 toc: false

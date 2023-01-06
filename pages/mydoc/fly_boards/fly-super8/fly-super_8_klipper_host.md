@@ -1,11 +1,11 @@
 ---
-title: Fly-Super 8 General Information
+title: Fly-Super 8 Klipper host CAN bus configuration
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "General information for the Fly-Super 8 Versions 1, 1.1, and 1.2"
+summary: "Fly-Super 8 Klipper host CAN bus configuration"
 sidebar: mydoc_sidebar
-permalink: fly_super8_general.html
+permalink: fly-super8_klipper_host.html
 folder: mydoc
 comments: false
 toc: true
@@ -13,9 +13,10 @@ datatable: true
 
 boardname: "Fly-Super 8" 
 ver: "V 1.2" 
+
+
 ---
 
-
-{% include custom/mcu/super8/super8_general.html %}
+{% include custom/mcu/super8/klipper_host.html %}
 
 {% include custom/can/sht_links.html %}
