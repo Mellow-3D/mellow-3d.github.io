@@ -10,9 +10,11 @@ folder: mydoc
 comments: false
 toc: false
 datatable: true
----
-## Fly Super 8 files
 
-- Fly Super 8 Pin Diagram: [Super8_pinout.svg](https://github.com/Mellow-3D/Fly-Super8/blob/main/Hardware/Pins.svg)
-- Fly Super 8 Schematic PDF: [Schematic_Super8.pdf](https://github.com/Mellow-3D/Fly-Super8/blob/main/Hardware/Schematic.pdf)
-- STM f407 Bootloader - [Link to Mellow F407 bootloader github](hhttps://github.com/Mellow-3D/f407bootloader/releases)
+boardname: "Fly-Super 8" 
+ver: "V 1.2" 
+
+---
+{% include custom/mcu/super8/super_8_files.html %}
+
+{% include custom/can/sht_links.html %}

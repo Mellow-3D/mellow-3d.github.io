@@ -54,7 +54,7 @@ children:
     url: fly_rrf_e3_pro_v3.html
     output: web, pdf
 
-  - title: Fly Super 8
+  - title: Fly Super 8 Versions 1, 1.1, and 1.2
     output: web, pdf
     children:
 
