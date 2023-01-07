@@ -78,7 +78,7 @@ children:
         url: fly-super8_klipper_host.html
         output: web, pdf
 
-      - title: MCU Bootloader
+      - title: CanBoot Bootloader
         output: web
         children:
 
@@ -90,16 +90,20 @@ children:
           url: fly-super8_canboot_can.html
           output: web, pdf   
 
-      - title: MCU Firmware
+      - title: Klipper Firmware
         output: web
         children:
 
         - title: USB
-          url: fly-super8_klipper_mcu_usb.html
+          url: fly-super8_klipper_usb.html
           output: web, pdf
 
         - title: CAN bus
-          url: fly-super8_klipper_mcu_can.html
+          url: fly-super8_klipper_can.html
+          output: web, pdf
+
+        - title: USB to CAN bridge
+          url: fly-super8_klipper_usbtocan.html
           output: web, pdf
 
       - title: Configuration file settings

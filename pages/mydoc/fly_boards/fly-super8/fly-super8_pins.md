@@ -15,6 +15,6 @@ boardname: "Fly-Super 8"
 ver: "V 1.2" 
 
 ---
-{% include custom/mcu/super8/super_8_pins.html %}
+{% include custom/mcu/super8/super8_pins.html %}
 
 {% include custom/can/sht_links.html %}
