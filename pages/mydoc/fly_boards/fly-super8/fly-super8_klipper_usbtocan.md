@@ -34,6 +34,8 @@ klipcom_cap3: "Flash Can Query"
 
 ## Configuring and installing Klipper for USB to CAN bridge mode
 
+{% include warning.html content="Super 8 Version 1.0 does not support USB to CAN bridge mode." %}
+
 {% include note.html content="If you are planning to use CANBoot bootloader with Klipper in USB to CAN bridge mode you will want to configure [CanBoot in USB mode](./fly-super8_canboot_usb.html)" %}
 
 {% include custom/mcu/super8/super8_klipper_compile.html %}
