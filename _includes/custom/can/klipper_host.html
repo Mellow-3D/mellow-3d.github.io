@@ -15,7 +15,7 @@ The Fly Gemini and Fly Pi operating system ships with a CAN0 file pre configured
  - Enter the following information. 
 
 ``` 
-auto can0
+allow-hotplug can0
 iface can0 can static
  bitrate 500000
  up ifconfig $IFACE txqueuelen 1024

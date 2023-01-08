@@ -168,5 +168,26 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/seri
 
 - Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
 
+### Re-Flashing klipper with CanBoot in USB to CAN bride mode.
+{% include note.html content="This is only for updating Klipper firmware on boards flashed with Klipper in USB to can bridge mode." %}
+
+- Run the canboot flash by UUID to enable CanBoot on USB firmware.
+
+```
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u { your uuid}
+```
+
+- Canboot will throw an error but will now appear as a USB device.
+- Get the Canboot serial ID
+```
+ls /dev/serial/by-id
+```
+- Build klipper as before ( see above )
+
+- Flash your new klipper bin via Canbus by serial ID
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/{your serial id}
+```
+- Reboot
 
 {% endif %}
