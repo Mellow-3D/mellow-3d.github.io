@@ -14,7 +14,7 @@ datatable: true
 
 boardname: Fly-Super 8
 firmware: usb
-version: v1
+version: "V 1.2"
 
 
 com: "USB on PA11/PA12"
