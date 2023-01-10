@@ -36,10 +36,9 @@ make menuconfig
   - Enable extra Low Level configuration options : Checked
   - Micro Controller : STMicroelectronics STM32
   - Processor Model: STM32F405
-  - Build: 8 Kib bootloader
+  - Bootloader Offset: 32 Kib bootloader
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
-  - Application Offset 32 Kib
   {% if page.firmware == "can" %}
   - CanBus Speed: 500000
   {% endif %}
@@ -58,7 +57,7 @@ make menuconfig
 - Run Make to compile the firmware
 
 ```
-make -j 4
+make -j4
 ```
 
 {% if page.firmware == "usb" %}
@@ -97,7 +96,7 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/seri
 
  - Get the {{ boardname }} UUID buy running the following script. 
  ```
- ~/CanBoot/scripts/flash_can.py -i can0 -q
+~/CanBoot/scripts/flash_can.py -i can0 -q
  ```
 
  - If CAN devices are detected the above command will return the following.
