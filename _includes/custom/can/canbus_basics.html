@@ -1,0 +1,70 @@
+## CAN bus basics
+Controller Area Network (CAN bus) is a serial bus standard for connecting multiple electronic control units ( ECUs ) kown as nodes. CAN nodes comunicate over a 2 wire bus at distances of up to 40 meters.
+CAN bus was originaly created to reduce wiring in automotive systmes but is now applied across a wide range of transportation and automations applications. For this article we will keep to the 2 CAN bus protocols used in 3D printing. CAN 2.0 used by Klipper and CAN-FD used by RepRap Firmware.
+This is intended as a high level review of CAN for 3D printing. Refer to the specific board configuration pages for detailed instructions on configuring firmware. 
+### History
+ - CAN bus was devloped by BOSCH in 1983 and released in 1986
+ - Released as CAN standard ISO 11898 in 1993
+ - CAN-FD was released by BOSCH in 2012
+
+### Applications
+ - CAN bus can be found in many applications.
+	- Automotive
+	- Aviation
+	- Agraculture
+	- Industrial automation	
+	- Building automation
+	- Medical Devices
+	- Marine appplications
+	- Lighting Control
+	- Elevators
+	- and yes 3d printers
+
+### Physical Components
+- The CAN bus will consist of 2 or more noodes connected over a 2 wire bus. 
+
+- For our use in a 3d printer the typical wiring harness will consist of  a V+ power wire, a Ground, CAN H line and CAN L line. 
+ 
+- The CAN H and L wires should be twisted at 1 twist pr inch to reduce electrical interference. 
+ 
+- The CAN protocol supports up to 64 nodes on the bus but for our uses the bus will run out of bandwidth long before you reached the node limit.
+
+- Each node of the CAN bus needs to be terminiated with a 120 ohm resistor places as close to the ends on the bus as is practical. 
+
+- The termination resistors dampen electrical ringing on the bus lines and reduce unwanted electrical noise. 
+
+- For 3D printers each node will have a terminiation resistor built in either hard wired in line or enabled with 1 or 2 jumpers. 
+
+- The termination resistors link the CAN H and CAN L wires. With the system powered off and the 2 required resistors enabled you should read 60 ohms measuring from CAN H to CAN L. 
+
+- You should never have more or less than 2 - 120 ohm termination resistors on the bus.  60 ohms measured across the bus is the goal. 
+
+- Bridging devices: Devices such as the Waveshare CAN Hat, CANable, CandleLight ( Fly UTOC and Pi Hat are candleLight devices)  and others allows the Klipper Host ( Pi or Pi alternative) to act as a node on the CAN bus. 
+
+- Klipper also provides a USB to CAN bridge mode that allows boards like the SUper 8 and E3-v2 with built in CAN bus transcievers to work as the CAN bride for the Klipper host elimatning the need for a bridging device like the UTOC. 
+
+- Tool boards and other devices: boards like the SHT-36, SHT-42, SB2040, the ERCF CAN board, CAN enabled main boards like Super 8, and many others function as nodes on the can bus. All nodes connect to the same CAN H and CAN L lines by either a daisy chain or hub and spoke wiring layout. 
+
+### Node IDs and bit rates
+
+- CAN 2.0 supports bit rates up to 1MBit/s. Typical speeds are 250000, 500000 and 1000000. 
+
+- CAN-FD supports rates up to 8MBit/s but at this time only Reprap supports CAN-FD
+
+- For either CAN 2.0 or CAN-FD protocals all nodes on the bus including the Klipper host need to be configured for the same bit rate. 
+
+- Each CAN node will have a unique ID. All the common CAN 2.0 devices used for klipper have their ID set in the transciever and it cann't be changed.  Reprap tool boards by Duet do provice a confogurable CAN ID.
+
+- The lowerst numerical CAN ID will have priority on the bus. I can't say how important that is for our uses in #D printing. 
+
+### Common Klipper device configurations
+
+ - Klipper host(Pi) --USB--> UTOC --CAN--> SHT-36
+
+ - Klipper host(Pi) --USB_CAN_Bridge--> Super 8 --CAN--> SHT-36
+
+### Advanced reading
+
+ - [CAN_bus Wiki](https://en.wikipedia.org/wiki/CAN_bus)
+ - [Intrduction to CAN bus](https://www.ni.com/en-us/innovations/white-papers/06/controller-area-network--can--overview.html)
+ - [Klipper CAN bus Documentation](https://www.klipper3d.org/CANBUS.html)

@@ -29,7 +29,7 @@ children:
     type: homepage
 
   - title: About Mellow
-    url: getting_started.html
+    url: mellow_about.html
     output: web, pdf
 
   - title: Supported Boards and Drivers
@@ -42,6 +42,10 @@ children:
 
   - title: FAQ
     url: faq.html
+    output: web, pdf
+
+  - title: CAN bus basics
+    url: can_basics.html
     output: web, pdf
 
 #Fly Control Board section
