@@ -26,24 +26,28 @@ This is intended as a high level review of CAN for 3D printing. Refer to the spe
 - For our use in a 3d printer the typical wiring harness will consist of  a V+ power wire, a Ground, CAN H line and CAN L line. 
  
 - The CAN H and L wires should be twisted at 1 twist pr inch to reduce electrical interference. 
- 
+
 - The CAN protocol supports up to 64 nodes on the bus but for our uses the bus will run out of bandwidth long before you reached the node limit.
 
-- Each node of the CAN bus needs to be terminiated with a 120 ohm resistor places as close to the ends on the bus as is practical. 
+- Each end of the CAN bus needs to be terminiated with a 120 ohm resistor placed as close to the ends of the bus as is practical. 
 
-- The termination resistors dampen electrical ringing on the bus lines and reduce unwanted electrical noise. 
+- The termination resistors dampen electrical ringing on the bus lines reducing unwanted electrical noise. 
 
-- For 3D printers each node will have a terminiation resistor built in either hard wired in line or enabled with 1 or 2 jumpers. 
+- For 3D printers each node will usualy have a terminiation resistor built in either hard wired in line or enabled with 1 or 2 jumpers. 
 
 - The termination resistors link the CAN H and CAN L wires. With the system powered off and the 2 required resistors enabled you should read 60 ohms measuring from CAN H to CAN L. 
 
-- You should never have more or less than 2 - 120 ohm termination resistors on the bus.  60 ohms measured across the bus is the goal. 
+- You should never have more or less than 2 - 120 ohm termination resistors enabled on the bus.  60 ohms measured across the bus is the goal. 
 
-- Bridging devices: Devices such as the Waveshare CAN Hat, CANable, CandleLight ( Fly UTOC and Pi Hat are candleLight devices)  and others allows the Klipper Host ( Pi or Pi alternative) to act as a node on the CAN bus. 
+- Bridging devices: Devices such as the Waveshare CAN Hat, CANable, CandleLight ( Fly UTOC and Pi Hat are candleLight devices)  and others allow the Klipper Host ( Pi or Pi alternative) to act as a node on the CAN bus. 
 
-- Klipper also provides a USB to CAN bridge mode that allows boards like the SUper 8 and E3-v2 with built in CAN bus transcievers to work as the CAN bride for the Klipper host elimatning the need for a bridging device like the UTOC. 
+- Klipper also provides a USB to CAN bridge mode that allows boards like the SUper 8 and E3-v2 with built in CAN bus transcievers to work as the CAN bridge for the Klipper host elimatning the need for a bridging device like the UTOC. 
 
-- Tool boards and other devices: boards like the SHT-36, SHT-42, SB2040, the ERCF CAN board, CAN enabled main boards like Super 8, and many others function as nodes on the can bus. All nodes connect to the same CAN H and CAN L lines by either a daisy chain or hub and spoke wiring layout. 
+- Tool boards and other devices: boards like the SHT-36, SHT-42, SB2040, the ERCF CAN board, CAN enabled main boards like Super 8, and many others function as nodes on the can bus. 
+
+- Unlike serial connection where TX and RX are crossed evey node on the bus connects to the same CAN H and CAN L line. 
+
+- All nodes connect to the CAN H and CAN L lines by either a daisy chain or hub and spoke wiring layout. 
 
 ### Node IDs and bit rates
 
