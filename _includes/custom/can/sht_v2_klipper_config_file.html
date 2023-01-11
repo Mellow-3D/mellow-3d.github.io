@@ -43,7 +43,7 @@ off_below: 0.10
 ### ENDSTOP
 ```
 [stepper_x]
-endstop_pin:sht:LIMIT_0
+endstop_pin:sht:!LIMIT_0
 ```
 
 ### EXTRUDER 
@@ -64,7 +64,7 @@ filament_diameter: 1.750
 heater_pin: sht:HE0
 sensor_pin: sht:TH0
 sensor_type: ATC Semitec 104GT-2  # this is the default for the Revo heater
-pullup_resistor: 2200             # this is the default for the Revo heater
+pullup_resistor: 4700           # No jumper=4700 ohms for NTC thermistor. Add jumper to set to 1100 ohms for PT1000 thermistor.
 control = pid # Sample PID - perform your own PID tuning for accurate results. 
 pid_kp = 26.213
 pid_ki = 1.304
