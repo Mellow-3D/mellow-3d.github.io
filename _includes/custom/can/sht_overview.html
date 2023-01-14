@@ -24,6 +24,10 @@ alt=overcap1
 caption=overcap1
 %}
 
+{% if mcu == "SHT-36 V2" %}
+ {% include important.html content="There is an error in the SHT-36 V2 silk screen. FAN 0 is PB11 and FAN1 is PB10 " %}
+{% endif %}
+
 ### Product Features
 
  - CAN bus connection for stable data transmission over long distaces. 
