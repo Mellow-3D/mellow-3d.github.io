@@ -40,10 +40,6 @@ children:
     url: support.html
     output: web, pdf
 
-  - title: FAQ
-    url: faq.html
-    output: web, pdf
-
   - title: CAN bus basics
     url: can_basics.html
     output: web, pdf
