@@ -50,6 +50,10 @@ children:
   output: web, pdf
   children:
 
+  - title: Fly RRF E3 V2
+    url: fly-e3_v2.html
+    output: web, pdf
+
   - title: Fly RRF E3 Pro V3.0
     url: fly_rrf_e3_pro_v3.html
     output: web, pdf
