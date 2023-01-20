@@ -517,6 +517,14 @@ children:
       url: fly_pi_wifi.html
       output: web, pdf
 
+    - title: CANhat setup
+      url: fly_pi_canhat.html
+      output: web, pdf
+
+    - title: TFT Display
+      url: fly-pi_tft.html
+      output: web, pdf      
+
     - title: Pin diagrams
       url: fly_pi_pins.html
       output: web, pdf
