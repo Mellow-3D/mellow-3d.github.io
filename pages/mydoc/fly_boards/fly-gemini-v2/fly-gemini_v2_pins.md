@@ -8,7 +8,7 @@ sidebar: mydoc_sidebar
 permalink: fly-gemini_v2_pins.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 ---
 ## Fly-Gemini-V2 Pinout Diagram
@@ -80,3 +80,7 @@ If the pins aren't in the table (due to not having a special name), then the pin
 |C.7|fan1||FAN1|Timer 3|
 
 <div class="datatable-end"></div>
+
+## ZH TFT Headers
+
+{% include custom/sbc/zh_sockets_datatable.html %}
