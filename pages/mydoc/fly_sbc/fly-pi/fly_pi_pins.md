@@ -97,7 +97,7 @@ caption=fly_pi_cap2
 {% include custom/sbc/zh_sockets_datatable.html %}
 
 ### Core Fan Header
-- The Fl Pi Fan header supplies +5v for a CPU cooling fan.
+- The Fly Pi Fan header supplies +5v for a CPU cooling fan.
 
 {% 
 include image.html 
