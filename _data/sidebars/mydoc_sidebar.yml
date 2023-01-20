@@ -40,10 +40,6 @@ children:
     url: support.html
     output: web, pdf
 
-  - title: FAQ
-    url: faq.html
-    output: web, pdf
-
   - title: CAN bus basics
     url: can_basics.html
     output: web, pdf
@@ -53,6 +49,10 @@ children:
 - title: Fly control boards
   output: web, pdf
   children:
+
+  - title: Fly RRF E3 V2
+    url: fly-e3_v2.html
+    output: web, pdf
 
   - title: Fly RRF E3 Pro V3.0
     url: fly_rrf_e3_pro_v3.html
