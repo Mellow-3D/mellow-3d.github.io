@@ -58,7 +58,8 @@ caption=fly_e3_v2_cap1
 This page covers any general information for the Fly-E3-v2 board.
 It is currently available through AliExpress.
 
- Tip: You need to also buy the WiFi module from Mellow to be able to use RRF with this board.
+{% include tip.html content="You need to also buy the WiFi module from Mellow to be able to use RRF with this board." %}
+
 
 ### Features
  - 32-bit ARM Cortex-M4 series 168 MHz, STM32F407ZGT6 chip
