@@ -51,8 +51,81 @@ children:
   children:
 
   - title: Fly RRF E3 V2
-    url: fly-e3_v2.html
     output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly-e3_v2.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-e3_v2_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-e3_v2_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper host CAN bus configuration
+        url: fly-e3_v2_klipper_host.html
+        output: web, pdf
+
+      - title: CanBoot Bootloader
+        output: web
+        children:
+
+        - title: CanBoot on USB
+          url: fly-e3_v2_canboot_usb.html
+          output: web, pdf     
+
+        - title: CanBoot on CAN bus
+          url: fly-e3_v2_canboot_can.html
+          output: web, pdf   
+
+      - title: Klipper Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly-e3_v2_klipper_usb.html
+          output: web, pdf
+
+        - title: CAN bus
+          url: fly-e3_v2_klipper_can.html
+          output: web, pdf
+
+        - title: USB to CAN bridge
+          url: fly-e3_v2_klipper_usbtocan.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-e3_v2_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly e3 V2
+        url: "https://teamgloomy.github.io/fly_e3_v2_general.html"
+        output: web, pdf
+
+    - title: CAN bus trouble shooting
+      url: fly-e3_v2_can_trouble.html
+      output: web, pdf
+
 
   - title: Fly RRF E3 Pro V3.0
     url: fly_rrf_e3_pro_v3.html
