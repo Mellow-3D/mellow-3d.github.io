@@ -21,10 +21,18 @@ can_hat_img3: "fly-can_hat_v1.0/can_hat_top.webp"
 can_hat_cap3: "CAN Hat Top and Bottom"
 
 can_hat_img4: "fly-can_hat_v1.0/can_hat_install_gemini.webp"
-can_hat_cap4: "CAN Hat installation"
+can_hat_cap4: "Gemini CAN Hat installation"
+
+can_hat_img6: "fly-pi/fly_pi_canhat_sockets.jpg"
+can_hat_cap6: "Fly_Pi CAN bus headers"
+
+can_hat_img5: "fly-pi/canhat.png"
+can_hat_cap5: "Fly_Pi CAN bus socket pins"
+
+
 
 mcu: "can-hat"
-
+sbc: "canhat"
 ---
 
 {% include custom/can/can_hat_overview.html %}

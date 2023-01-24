@@ -1,3 +1,6 @@
+    
+    {% capture sbc %}{{page.sbc }}{% endcapture %}
+
     {% capture can_hat_img1 %}{{page.can_hat_img1 }}{% endcapture %}
     {% capture can_hat_cap1 %}{{page.can_hat_cap1 }}{% endcapture %}
     {% capture can_hat_url1 %} .\images\{{ page.can_hat_img1 }} {% endcapture %}
@@ -13,6 +16,14 @@
     {% capture can_hat_img4 %}{{page.can_hat_img4 }}{% endcapture %}
     {% capture can_hat_cap4 %}{{page.can_hat_cap4 }}{% endcapture %}
     {% capture can_hat_url4 %} .\images\{{ page.can_hat_img4 }} {% endcapture %}
+
+    {% capture can_hat_img5 %}{{page.can_hat_img5 }}{% endcapture %}
+    {% capture can_hat_cap5 %}{{page.can_hat_cap5 }}{% endcapture %}
+    {% capture can_hat_url5 %} .\images\{{ page.can_hat_img5 }} {% endcapture %}
+
+    {% capture can_hat_img6 %}{{page.can_hat_img6 }}{% endcapture %}
+    {% capture can_hat_cap6 %}{{page.can_hat_cap6 }}{% endcapture %}
+    {% capture can_hat_url6 %} .\images\{{ page.can_hat_img6 }} {% endcapture %}
 
 ## {{page.summary}}
 
@@ -64,8 +75,28 @@ The Fly Can Hat board was made to perform the same functions as the UTOC board, 
   %}
 {% endif %}
 
-- On the Fly Pi and Gemini align the Red pin header on the Can Hat with the red socket on the main board. The black pin header should align to the black socket. 
+{% if sbc == "gemini"  %}
+
+- On Gemini align the Red pin header on the Can Hat with the red socket on the main board. The black pin header should align to the black socket. 
+
+ {% endif %}
+
+
+{% if sbc == "fly-pi"  %}
+
+- On the Fly Pi align the Red pin header on the Can Hat with the blue socket on the main board. The black pin header should align to the black socket. 
+
+{% endif %}
+
+
+
 {% include warning.html content="Inserting the CAN Hat backwards can short board components causing damage." %}
+
+{% if sbc == "canhat"  %}
+
+- On Gemini align the Red pin header on the Can Hat with the red socket on the main board. The black pin header should align to the black socket. 
+
+{% endif %}
 
   {% 
   include image.html 
@@ -74,3 +105,36 @@ The Fly Can Hat board was made to perform the same functions as the UTOC board, 
   alt=can_hat_cap4
   caption=can_hat_cap4
   %}
+
+{% if sbc == "canhat"  %}
+
+- On the Fly Pi align the Red pin header on the Can Hat with the blue socket on the main board. The black pin header should align to the black socket. 
+
+{% endif %}
+
+  {% if sbc == "canhat" %}
+
+  {% 
+  include image.html 
+  file=can_hat_img6
+  url=can_hat_url6
+  alt=can_hat_cap6
+  caption=can_hat_cap6
+  %}
+
+  {% endif %}
+
+{% if sbc == "fly-pi" or == "canhat" %}
+
+{% include note.html content="The CAN interface of FLY-Pi has an incorrect silk screen, please connect according to the figure below." %}
+
+
+  {% 
+  include image.html 
+  file=can_hat_img5
+  url=can_hat_url5
+  alt=can_hat_cap5
+  caption=can_hat_cap5
+  %}
+
+ {% endif %}

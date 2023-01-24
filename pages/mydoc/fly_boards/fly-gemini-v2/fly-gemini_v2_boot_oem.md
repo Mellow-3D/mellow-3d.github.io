@@ -50,6 +50,8 @@ mcu_oem_bootloader_cap4: "Connect USB cable to the USB C port in the red box"
 
 ## Restoring the factory bootloader
 
+{% include note.html content="You will need to have the [CH340 driver](./fly-gemini_v2_sbc_setup.html#install-ch340-driver) installed to perform this process" %}
+
 ###  Install the serial cable 
 
 - Install the serial cable as pictured connecting header ZH2 RX and TX to header Screen1 TX and RX
