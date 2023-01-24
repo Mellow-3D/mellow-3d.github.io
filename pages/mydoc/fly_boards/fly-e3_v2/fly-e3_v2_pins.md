@@ -51,8 +51,8 @@ Driver pin numbers. They are separated into driver number.
 
 <div class="datatable-begin"></div>
 
-|Pin Type|0 (X)|1 (Y)|2 (Z)|3 (E0)|4 (E1)|
-| :------------- |:-------------|:-------------|:-------------|:-------------|:-------------|
+|Pin Type||0 (X)|1 (Y)|2 (Z)|3 (E0)|4 (E1)|
+| :------------- ||:-------------|:-------------|:-------------|:-------------|:-------------|
 |Step Pins||PE_5| PE_4| PE_1| PE_2| PE_0|
 |Direction Pins||PC_0| PC_13| PB_7| PD_5| PD_1 |
 |Enable Pins||PC_1| PC_14| PE_3| PD_6 |PD_3|
