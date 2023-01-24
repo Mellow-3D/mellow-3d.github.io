@@ -16,7 +16,7 @@ version: v2
 
 mcu: "fly-e3_v2"
 
-fly_e3_v2_img1: "fly-e3_v2/fly-e3_v2_pins.webp"
+fly_e3_v2_img1: "fly-e3_v2/fly-e3_v2_pins.png"
 fly_e3_v2_cap1: "Fly-E3 V2 Pin Diagram"
 ---
 
@@ -69,6 +69,7 @@ If the pins aren't in the table (due to not having a special name), then the pin
 
 |Pin Number|Pin Name 1|Pin Name 2|PWM Hardware Timer|
 | :------------- |:-------------|:-------------|:-------------|
+|PC_4|e0temp|t0||
 |PC_5|e1temp|t1||
 |PB_1|bedtemp|tb|Timer 3|
 |PE_7|xmin|xstop||
