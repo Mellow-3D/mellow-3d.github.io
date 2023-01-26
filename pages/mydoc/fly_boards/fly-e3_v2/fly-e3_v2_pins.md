@@ -69,43 +69,43 @@ If the pins aren't in the table (due to not having a special name), then the pin
 
 <div class="datatable-begin"></div>
 
-|Pin Number|Pin Name 1|Pin Name 2|PWM Hardware Timer|
-| :------------- |:-------------|:-------------|:-------------|
-|PC_4|e0temp|t0||
-|PC_5|e1temp|t1||
-|PB_1|bedtemp|tb|Timer 3|
-|PE_7|xmin|xstop||
-|PE_8|ymin|ystop||
-|PE_9|zmin|zstop||
-|PE_6|servo0||Timer 9|
-|PC_2|probe|||
-|PB_0|bed|hbed|Timer 3|
-|PC_6|e0heat|he0|Timer 8|
-|PC_7|e1heat|he1|Timer 3|
-|PA_0|fan0|fan|Timer 2|
-|PA_1|fan1||Timer 2|
-|PA_2|fan2||Timer 2|
-|PA_3|fan3||Timer 2|
-|PD_10|BEEP|||
-|PA_8|LCDEN|||
-|PE_14|LCDD5|||
-|PA_14|LCDD6|||
-|PA_6|LCDMISO||Timer 13|
-|PB_11|BTNEN2||Timer 2|
-|PB_10|BTNEN1||Timer 2|
-|PE_13|TFCD|LCDCD||
-|PC_9|SDD1||Timer 8|
-|PC_8|SDD0||Timer 8|
-|PC_12|SDSCK|||
-|PD_2|SDCMD|||
-|PC_11|SDD3|||
-|PC_10|SDD2|||
-|PA_9|TX1|BTNENC||
-|PA_10|RX1|LCDRS||
-|PE_15|LCDD4|||
-|PA_13|LCDD7|||
-|PA_5|LCDSCK||Timer 2|
-|PA_4|LCDSS|||
-|PA_7|LCDMOSI|||
+|Pin Number|Pin Name 1|Pin Name 2|
+| :------------- |:-------------|:-------------|
+|PC_4|e0temp|t0|
+|PC_5|e1temp|t1|
+|PB_1|bedtemp|tb|
+|PE_7|xmin|xstop|
+|PE_8|ymin|ystop|
+|PE_9|zmin|zstop|
+|PE_6|servo0||
+|PC_2|probe||
+|PB_0|bed|hbed|
+|PC_6|e0heat|he0|
+|PC_7|e1heat|he1|
+|PA_0|fan0|fan|
+|PA_1|fan1||
+|PA_2|fan2||
+|PA_3|fan3||
+|PD_10|BEEP||
+|PA_8|LCDEN||
+|PE_14|LCDD5||
+|PA_14|LCDD6||
+|PA_6|LCDMISO||
+|PB_11|BTNEN2||
+|PB_10|BTNEN1||
+|PE_13|TFCD|LCDCD|
+|PC_9|SDD1||
+|PC_8|SDD0||
+|PC_12|SDSCK||
+|PD_2|SDCMD||
+|PC_11|SDD3||
+|PC_10|SDD2||
+|PA_9|TX1|BTNENC|
+|PA_10|RX1|LCDRS|
+|PE_15|LCDD4||
+|PA_13|LCDD7||
+|PA_5|LCDSCK||
+|PA_4|LCDSS||
+|PA_7|LCDMOSI||
 
 <div class="datatable-end"></div>
