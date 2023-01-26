@@ -74,10 +74,6 @@ It is currently available through AliExpress.
  - Optional  WiFi module supported with Reprap firmware.
  - PWM Fan MOS boards can be directly replaced in case of damage.
 
-
-### Board.txt Name
-The board name in board.txt is fly_e3_v2.
-
 ### Driver Jumpers
 The jumpers should be installed as below. “Common Interpolation” should be used for standalone drivers. “SPI mode Interpolation” is supported for TMC5160 drivers. “UART mode Interpolation” should be used when using smart drivers (i.e. TMC2208, TMC2209, TMC2225 and TMC2226)
 
