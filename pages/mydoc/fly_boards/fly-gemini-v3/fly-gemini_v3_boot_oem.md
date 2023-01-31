@@ -64,7 +64,7 @@ mcu_oem_bootloader_cap4: "Connect USB cable to the USB C port in the red box"
 
 ### Upload the HID Bootloader
 - power on the {{boardname}}
-- Download the hid_bootloader.bin file from the Mellow github.
+- Download the [hid_bootloader.bin](https://github.com/Mellow-3D/Fly-Gemini-V3/tree/main/Bootloader) file from the Mellow github.
 - Use an FTP client to upload the hid_bootloader.bin file to the Fly home folder /home/fly/ on the Gemini V3 klipper host. 
 
 ### Flash the bootloader
