@@ -1,0 +1,83 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img1 %}{{page.klipcom_img1 }}{% endcapture %}
+    {% capture klipcom_cap1 %}{{page.klipcom_cap1 }}{% endcapture %}
+    {% capture klipcom_url1 %} .\images\{{ page.klipcom_img1 }} {% endcapture %}
+
+    {% capture klipcom_img2 %}{{page.klipcom_img2 }}{% endcapture %}
+    {% capture klipcom_cap2 %}{{page.klipcom_cap2 }}{% endcapture %}
+    {% capture klipcom_url2 %} .\images\{{ page.klipcom_img2 }} {% endcapture %}
+
+    {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
+    {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
+    {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
+
+
+### Compile Klipper firmware for {{page.firmware}}
+
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Enable extra Low Level configuration options : Checked
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: STM32F407
+  - Bootloader offset: 32 KiB bootloader
+  - Clock Ref: 8 MHz crystal
+  - Comm Interface - {{page.com}}
+  {% if page.firmware == "usbtocan" %}
+  - CAN bus Interface: PB8/PB9
+  - CanBus Speed: 500000
+  {% endif %}
+
+    {% 
+    include image.html 
+    file=klipcom_img1
+    url=klipcom_url1
+    alt=klipcom_cap1
+    caption=klipcom_cap1
+    %}
+
+
+- Quit and save the configuration
+
+- Run Make to compile the firmware
+
+```
+make -j 4
+```
+
+### Flash Klipper firmware the GeminiV3-Flash script.
+
+- Remove the boot0 and boot1 jumpers if installed.
+
+- Download the script with the following command. 
+```
+sudo wget https://cdn.mellow.klipper.cn/shell/geminiv3-flash -O /usr/bin/geminiv3-flash > /dev/null 2>&1 && sudo chmod +x /usr/bin/geminiv3-flash || echo "The operation failed
+```
+
+- Run the make flash command to install the firmware ~/klipper/out/klipper.bin
+```
+sudo geminiv3-flash
+```
+
+- Re-install the boot0 jumper on the boot0 and GND pins to force the board to boot into the klipper firmware. . If you skip this step  the MCU will boot back into the HID loader on the next boot.
+
+
+- Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
+
+- Reboot

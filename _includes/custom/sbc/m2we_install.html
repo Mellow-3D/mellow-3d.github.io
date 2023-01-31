@@ -62,6 +62,10 @@
 
  - Secure the M2WE with the included screw using a 1.5mm hex key.
 
+{% if mcu == "geminiv3" %}
+{% include tip.html content="On Gemini V3 it may be necessary to file or cut the retaining screw hole longer to allow the M2WE to fully seat in the socket. " %}
+{% endif %}
+
  {%   
  include image.html 
  file=m2we_img3

@@ -385,6 +385,106 @@ children:
       url: fly-gemini_v2_can_trouble.html
       output: web, pdf
 
+  - title: Fly Gemini V3
+    output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly-gemini_v3_general.html
+      output: web, pdf
+
+    - title: Supported WiFi chipsets
+      url: fly-gemini_v3_wifi.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-gemini_v3_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-gemini_v3_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Small Board Computer
+        output: web
+        children:
+
+        - title: Preparing the SD Card
+          url: fly-gemini_v3_sbc.html
+          output: web, pdf
+
+        - title: M2WE Module
+          output: web
+          children:
+
+          - title: Installing the M2WE module
+            url: fly-gemini_v3_m2we_install.html
+            output: web, pdf
+
+          - title: Updating Fly OS on the M2WE Flash drive
+            url: fly-gemini_v3_m2we_writeos.html
+            output: web, pdf
+
+        - title: Installing the TFT display
+          url: fly-gemini_v3_tft.html
+          output: web, pdf
+
+        - title: SBC Initial setup
+          url: fly-gemini_v3_sbc_setup.html
+          output: web, pdf
+
+        - title: Klipper host configuration
+          url: fly-gemini_v3_klipper.html
+          output: web, pdf
+
+      - title: MCU - Restore OEM Bootloader
+        output: web 
+        children:
+        
+        - title: Flash Bootloader
+          url: fly-gemini_v3_boot_oem.html
+          output: web, pdf 
+
+      - title: MCU Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly-gemini_v3_klipper_mcu_usb.html
+          output: web, pdf
+
+        - title: USB to CAN bridge
+          url: fly-gemini_v3_klipper_usbtocan.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-gemini_v3_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly Gemini V2
+        url: "https://teamgloomy.github.io/fly_gemini_v3_general.html"
+        output: web, pdf
+
+    - title: CAN bus trouble shooting
+      url: fly-gemini_v3_can_trouble.html
+      output: web, pdf
+
   - title: Fly Puppet
     url: fly-puppet.html
     output: web, pdf
