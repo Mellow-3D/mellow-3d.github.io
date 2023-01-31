@@ -39,8 +39,10 @@ make menuconfig
   - Bootloader offset: 32 KiB bootloader
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
-   {% if page.firmware == "can" %}
+  {% if page.firmware == "can" %}
   - CanBus Speed: 500000
+  {% else if page.firmware == "usb" %}
+
   {% else if page.firmware == "usbtocan" %}
   - CAN bus Interface: PB8/PB9
   - CanBus Speed: 500000
