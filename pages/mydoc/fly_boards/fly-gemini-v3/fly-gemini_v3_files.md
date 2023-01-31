@@ -17,3 +17,4 @@ datatable: true
 - Fly Gemini V3 Pin Diagram: [Gemini_v3_pinout.svg](https://github.com/Mellow-3D/Fly-Gemini-V3/blob/main/Hardware/Gemini_v3_pinout.svg)
 - Fly Gemini V3 Schematic PDF: [Gemini_v3_schematic.pdf](https://github.com/Mellow-3D/Fly-Gemini-V3/blob/main/Hardware/Gemini_v3_schematic.pdf)
 - CH340 Driver : [Download link](http://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+- HID Bootloader: [hid_bootloader.bin](https://github.com/Mellow-3D/Fly-Gemini-V3/tree/main/Bootloader)
