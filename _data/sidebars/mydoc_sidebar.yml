@@ -133,15 +133,15 @@ children:
 
 
     - title: Overview
-      url: fly_e3_pro_v3.html
+      url: fly-e3_pro_v3.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly_e3_pro_v3_pins.html
+      url: fly-e3_pro_v3_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly_e3_pro_v3_files.html
+      url: fly-e3_pro_v3_files.html
       output: web, pdf
 
     - title: Klipper
@@ -153,7 +153,7 @@ children:
         children:
 
         - title: CanBoot on USB
-          url: fly_e3_pro_v3_canboot_usb.html
+          url: fly-e3_pro_v3_canboot_usb.html
           output: web, pdf     
 
       - title: Klipper Firmware
@@ -161,11 +161,11 @@ children:
         children:
 
         - title: USB
-          url: fly_e3_pro_v3_klipper_usb.html
+          url: fly-e3_pro_v3_klipper_usb.html
           output: web, pdf
 
       - title: Configuration file settings
-        url: fly_e3_pro_v3_klipper_mcu_config.html
+        url: fly-e3_pro_v3_klipper_mcu_config.html
         output: web, pdf
 
     - title: Marlin

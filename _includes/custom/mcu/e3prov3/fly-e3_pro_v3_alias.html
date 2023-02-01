@@ -1,0 +1,38 @@
+[board_pins]
+aliases:
+    # Stepper drivers
+    X_EN=PE5,   X_STEP=PE3,  X_DIR=PE2,  X_CS=PE4,  # X
+    Y_EN=PE1,   Y_STEP=PB9,  Y_DIR=PB8,  Y_CS=PE0,  # Y
+    Z_EN=PC2,  Z_STEP=PA15,  Z_DIR=PD7,  Z_CS=PA8,   # Z
+    E_EN=PD6,  E_STEP=PD4,   E_DIR=PD3,  E_CS=PC14,   # E
+    E1_EN=PC15,  E1_STEP=PC13,   E1_DIR=PC0,  E1_CS=PC14,   # E
+
+    # Heaters
+    BED_OUT=PA0,
+    HEAT0=PA5,
+    HEAT1=PC6,
+
+    # Thermisors
+    BED_TEMP=PA3,
+    HEAT0_TEMP=PA4,
+    HEAT1_TEMP=PA1,
+
+    # Fans
+    FAN0=PA6, FAN1=PB6,FAN2=PA7,FAN3=PB7,
+
+    # End stops
+    X_STOP=PA2,  Y_STOP=PB10,  Z_STOP=PE9,
+
+    # EXP1 header
+    EXP1_1=PE11, EXP1_3=PA14,  EXP1_5=PE9,   EXP1_7=PE7,  EXP1_9=<GND>,
+    EXP1_2=PE12,  EXP1_4=PE6,  EXP1_6=PE10,   EXP1_8=PE8,  EXP1_10=<5V>,
+    # EXP2 header
+    EXP2_1=PB4, EXP2_3=PA10,  EXP2_5=PA9,  EXP2_7=PA13,   EXP2_9=<GND>,
+    EXP2_2=PB3, EXP2_4=PB2,  EXP2_6=PB5,  EXP2_8=<RST>, EXP2_10=<NC>,
+    # Pins EXP2_1, EXP2_6, EXP2_2 are also MISO, MOSI, SCK of bus "spi2"
+
+# See the sample-lcd.cfg file for definitions of common LCD displays.
+
+    # BL Touch
+    SERVO=PB0,   # BL Touch servo pin
+    PROBE=PC5  # BL Touch end stop pin

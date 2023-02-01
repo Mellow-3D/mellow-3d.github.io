@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "CAN bus Troubleshooting"
 sidebar: mydoc_sidebar
-permalink: fly_e3_pro_v3_can_trouble.html
+permalink: fly-e3_pro_v3_can_trouble.html
 folder: mydoc
 comments: false
 toc: true
