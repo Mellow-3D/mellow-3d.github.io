@@ -13,6 +13,10 @@ datatable: true
 
 boardname: "Fly-Super 8" 
 ver: "V 1.2" 
+processor: "STM32F407"
+
+super8_img1: "fly-super8/fly-super8_front_back.png"
+super8_cap1: "Super 8 Front and Back"
 ---
 
 

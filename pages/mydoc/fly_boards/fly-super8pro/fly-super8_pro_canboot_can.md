@@ -1,26 +1,26 @@
 ---
-title: Fly Super 8 CanBoot bootloader for USB
+title: Fly Super 8 Pro CanBoot bootloader for CAN bus
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Fly Super 8 CanBoot bootloader for USB"
+summary: "Fly Super 8 ProCanBoot bootloader for CAN bus"
 sidebar: mydoc_sidebar
-permalink: fly-super8_canboot_usb.html
+permalink: fly-super8_pro_canboot_can.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-boardname: Fly Super 8
-firmware: usb
+boardname: Fly-Super 8 Pro
+firmware: can
 ver: "V 1.2" 
-processor: "STM32F407"
-offset: "32 KiB bootloader"
-clock: "8 MHz crystal"
+processor: "STM32H723"
+offset: "128 KiB bootloader"
+clock: "25 MHz crystal"
 
-com: "USB on PA11/PA12"
+com: "CAN bus on PB8/PB9"
 
-cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_usb.png"
+cancom_img1: "fly-super8_pro/fly-super8_pro_canboot_menuconfig_can.png"
 cancom_cap1: "CanBoot Menu Config USB"
 
 cancom_img2: "fly-super8/fly-super8_dfu_jumper.png"
@@ -34,9 +34,8 @@ canburn_cap2: "Fly Super 8 burn result"
 
 ---
 
-## Configuring and installing CanBoot bootloader for USB
+## Configuring and installing CanBoot bootloader for CAN bus
 
 {% include custom/mcu/super8/super8_canboot_compile.html %}
 
 {% include custom/can/sht_links.html %}
-

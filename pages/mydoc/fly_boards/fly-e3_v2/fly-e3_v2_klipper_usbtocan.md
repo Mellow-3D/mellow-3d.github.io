@@ -15,7 +15,9 @@ datatable: true
 boardname: Fly-E3 v2
 firmware: usbtocan
 version: v1
-
+processor: "STM32F407"
+offset: "32 KiB bootloader"
+clock: "8 MHz crystal"
 
 com: "USB to CAN Bridge on PA11/PA12"
 

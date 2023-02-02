@@ -70,7 +70,7 @@ make -j 4
 #### Flash Klipper firmware with CanBoot over USB
 - Find the Serial ID
 ```
-ls -l /dev/serial/by-id/
+ls /dev/serial/by-id/
 ```
 
 - Copy the ID containing 'sb2040'
@@ -105,7 +105,7 @@ If you are updating an existing klipper build on your {{mcu}} follow these steps
 
 - Get the klipper firmware serial ID
 ```
-ls -l /dev/serial/by-id/
+ls /dev/serial/by-id/
 ```
 - Run the klipper flash_usb.py script to call the Canboot Bootloader. 
 ```
@@ -117,7 +117,7 @@ It will throw an error but that can be ignored.
 
 - Check the Serial ID
 ```
-ls -l /dev/serial/by-id/
+ls /dev/serial/by-id/
 ```
 
 - Verify the Serial ID now contains usb-CanBoot_rp2040

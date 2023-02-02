@@ -15,7 +15,9 @@ datatable: true
 boardname: Fly-Super 8
 firmware: usb
 version: "V 1.2"
-
+processor: "STM32F407"
+offset: "32 KiB bootloader"
+clock: "8 MHz crystal"
 
 com: "USB on PA11/PA12"
 

@@ -1,20 +1,29 @@
         {% capture boardname %}{{ page.boardname }}{% endcapture %}
         {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture super8_img1 %}{{page.super8_img1 }}{% endcapture %}
+    {% capture super8_cap1 %}{{page.super8_cap1 }}{% endcapture %}
+    {% capture super8_url1 %} .\images\{{ page.super8_img1 }} {% endcapture %}
+
 
 ## Overview
 
 {% 
 include image.html 
-file="fly-super8\fly-super8_front_back.png" 
-alt="Fly-Super 8 " 
-caption="Fly-Super 8 Front and back view" 
+file=super8_img1
+url=super8_url1
+alt=super8_cap1
+caption=super8_cap1
 %}
 
 This page covers any general information for the {{boardname}} boards.  
 It is currently available through [AliExpress](https://www.aliexpress.us/item/3256803049369292.html). 
-
+ 
+ {% if page.processor == "STM32H723" %}
+ - 32-bit ARM Cortex-M7 Kernel 550MHz, STM32H723ZGT6 Chip
+ {% endif %}
+{% if page.processor == "STM32F407" %}
  - 32-bit ARM Cortex-M4 series 168 MHz, STM32F407ZGT6 chip
-
+{% endif %}
  - Supported Firmware: Marlin 2.0, Reprap, and Klipper
 
  - Drivers supported: A4988, LV8729, DRV8225, TMC2208, 2209,5160, & 5160HV.

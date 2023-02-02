@@ -52,9 +52,9 @@ make menuconfig
 ```
 - Set the following settings
   - Micro Controller : STMicroelectronics STM32
-  - Processor Model: STM32F407
-  - Build: 32 Kib bootloader
-  - Clock Ref: 8 MHz crystal
+  - Processor Model: {{page.processor}}
+  - Build: {{page.offset}}
+  - Clock Ref: {{page.clock}}
   - Comm Interface - {{page.com}}
   - Application Offset 32 Kib
   {% if page.firmware == "can" %}
