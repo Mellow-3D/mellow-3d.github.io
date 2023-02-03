@@ -5,7 +5,7 @@
     {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
     {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
     {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
-
+    
     {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
     {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
     {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
@@ -18,66 +18,9 @@
     {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
     {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
 
-### Install CanBoot package
 
-- ssh to your klipper host console
 
-- Clone the CanBoot firmware to your Klipper Host
-```
-cd ~/
-git clone https://github.com/Arksine/CanBoot
-```
-- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the CAN bus software. 
-```
-[update_manager CanBoot]
-type: git_repo
-path: ~/CanBoot
-origin: https://github.com/Arksine/CanBoot.git
-is_system_service: False
-```
-
-### Compile CanBoot firmware
-
-- cd to the Canboot directory
-```
-cd CanBoot
-```
-- Run make clean
-```
-make clean
-```
-- Open menuconfig
-```
-make menuconfig
-```
-- Set the following settings
-  - Micro Controller : {{ page.micro }}
-  - Processor Model: {{page.processor}}
-  - Build: {{page.offset}}
-  - Clock Ref: {{page.clock}}
-  - Comm Interface - {{page.com}}
-  - Application Offset {{ page.appoffset }}
-  {% if page.firmware == "can" %}
-  - Can bus Speed: {{ page.canspeed }}
-  {% endif %}
-
-    {% 
-    include image.html 
-    file=cancom_img1
-    url=cancom_url1
-    alt=cancom_cap1
-    caption=cancom_cap1
-    %}
-
-- Quit and save the configuration
-
-- Run the make command to compile the firmware
-```
-make -j4
-```
-- You should now have a canboot.bin file at ~/CanBoot/out/
-
-### Flash CanBoot to the {{page.boardname}} MCU
+### Flash CanBoot to the {{ boardname }} MCU
 
 - Install the boot jumper to the Boot0 pin and 3.3v pin as pictured. 
 
@@ -103,9 +46,16 @@ lsusb
     %}
 
 - Erase and Burn the firmware , replace 0483:df11 in the following command with the USB ID copied earlier
+
+{% if page.processor == "STM32H723" %}
+```
+sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000 -d 0483:df11
+```
+{% else %}
 ```
 sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
 ```
+{% endif %}
 
 - You should get a download progress bar and File downloaded successfuly when the burning is complete. 
 
@@ -118,11 +68,8 @@ sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force
     caption=canburn_cap2
     %}
 
-- If the burn was sucessful remove the jumper from the Boot0 pin and power cycle the printer. 
+- If the burn was sucessful remove the jumper(S) from the Boot pins and power cycle the printer. 
 
 
-{% if page.firmware == "can" %}
- - The tool board is now ready to install [klipper firmware](./fly-super8_klipper_can.html). 
-{% else if page.firmware == "usb" %} 
- - The tool board is now ready to install [klipper firmware](./fly-super8_klipper_usb.html). 
-{% endif %}
+
+ - The tool board is now ready to install {{ page.klipperurl }}. 

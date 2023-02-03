@@ -15,11 +15,14 @@ datatable: true
 boardname: Fly-Super 8
 firmware: usbtocan
 version: v1
+
+micro: "STMicroelectronics STM32"
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
-
 com: "USB to CAN Bridge on PA11/PA12"
+appoffset: "32 KiB offset"
+canspeed: ""
 
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb_can_bridge.png"
@@ -40,6 +43,8 @@ klipcom_cap3: "Flash Can Query"
 
 {% include note.html content="If you are planning to use CANBoot bootloader with Klipper in USB to CAN bridge mode you will want to configure [CanBoot in USB mode](./fly-super8_canboot_usb.html)" %}
 
-{% include custom/mcu/super8/super8_klipper_compile.html %}
+{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+
+{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
 
 {% include custom/can/sht_links.html %}

@@ -36,7 +36,9 @@ klipcom_cap3: "Flash Can Query"
 
 ## Configuring and installing Klipper for CAN bus
 
-{% include custom/mcu/super8/super8_klipper_compile.html %}
+{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+
+{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
 
 {% include custom/can/sht_links.html %}
 

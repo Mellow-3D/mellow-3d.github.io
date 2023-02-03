@@ -15,11 +15,16 @@ datatable: true
 boardname: Fly-Super 8
 firmware: can
 ver: v1
+
+micro: "STMicroelectronics STM32"
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
+com: "CAN bus on PB8/PB9"
+appoffset: "32 KiB offset"
+canspeed: "500000"
 
-com: "CAN on PB8/PB9"
+
 
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_can.png"
@@ -36,7 +41,9 @@ klipcom_cap3: "Flash Can Query"
 
 ## Configuring and installing Klipper for CAN bus
 
-{% include custom/mcu/super8/super8_klipper_compile.html %}
+{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+
+{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
 
 {% include custom/can/sht_links.html %}
 

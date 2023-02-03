@@ -1,0 +1,75 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture firmware %}{{ page.firmware }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture canburn_img1 %}{{page.canburn_img1 }}{% endcapture %}
+    {% capture canburn_cap1 %}{{page.canburn_cap1 }}{% endcapture %}
+    {% capture canburn_url1 %} .\images\{{ page.canburn_img1 }} {% endcapture %}
+
+    {% capture canburn_img2 %}{{page.canburn_img2 }}{% endcapture %}
+    {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
+    {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
+
+    {% capture canburn_img3 %}{{page.canburn_img3 }}{% endcapture %}
+    {% capture canburn_cap3 %}{{page.canburn_cap3 }}{% endcapture %}
+    {% capture canburn_url3 %} .\images\{{ page.canburn_img3 }} {% endcapture %}
+
+
+
+### Flash CanBoot to the {{page.boardname}} MCU
+
+- ftp to your klipper host with an FTP client like [FileZilla](https://filezilla-project.org/)
+  - open the folder '~/CanBoot/out'
+  - download deployer.bin to your PC
+- place the MCU MiniSD card into a card reader and connect it to your PC.  
+
+- Copy the deployer.bin file to the SD card
+
+- rename deployer.bin to firmware.bin
+
+- Eject the SD card from the PC
+
+- Insert the SD card into the {{ page.boardname }} SD card Slot.
+    
+  {% 
+  include image.html 
+  file=canburn_img2
+  url=canburn_url2
+  alt=canburn_cap2
+  caption=canburn_cap2
+  %} 
+
+- Press the MCU reboot button
+    
+    {% 
+    include image.html 
+    file=canburn_img1
+    url=canburn_url1
+    alt=canburn_cap1
+    caption=canburn_cap1
+    %}
+
+- Wait a few minutes
+
+- Open a putty SSH session to your klipper host and log on
+
+{% if page.firmware == "usb" %}
+
+- run lsusb to verify the MCU has been discovered as a USB device
+
+
+  - Continue to the {{ page.klipperurl }} or {{ page.klipperurl2 }}
+
+{% elsif page.firmware == "can" %}
+
+- run canboot query verify the MCU is up on the CAN bus
+
+```
+~/CanBoot/scripts/flash_can.py -i can0 -q
+```
+
+- Note the UUID for flashing klipper with CanBoot in the {{ page.klipperurl }}
+
+{% endif %}

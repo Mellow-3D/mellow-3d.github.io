@@ -1,0 +1,66 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture firmware %}{{ page.firmware }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+
+### Install CanBoot package
+
+- ssh to your klipper host console
+
+- Clone the CanBoot firmware to your Klipper Host
+```
+cd ~/
+git clone https://github.com/Arksine/CanBoot
+```
+- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the CAN bus software. 
+```
+[update_manager CanBoot]
+type: git_repo
+path: ~/CanBoot
+origin: https://github.com/Arksine/CanBoot.git
+is_system_service: False
+```
+
+### Compile CanBoot firmware
+
+- cd to the Canboot directory
+```
+cd CanBoot
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Micro Controller : {{ page.micro }}
+  - Processor Model: {{page.processor}}
+  - Build: {{page.offset}}
+  - Clock Ref: {{page.clock}}
+  - Comm Interface - {{page.com}}
+  - Application Offset {{ page.appoffset }}
+  {% if page.firmware == "can" %}
+  - Can bus Speed: {{ page.canspeed }}
+  {% endif %}
+
+    {% 
+    include image.html 
+    file=cancom_img1
+    url=cancom_url1
+    alt=cancom_cap1
+    caption=cancom_cap1
+    %}
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+```
+make -j4
+```
+- You should now have a canboot.bin file at ~/CanBoot/out/

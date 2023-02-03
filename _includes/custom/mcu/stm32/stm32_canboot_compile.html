@@ -51,14 +51,14 @@ make clean
 make menuconfig
 ```
 - Set the following settings
-  - Micro Controller : {{ page.micro }}
+  - Micro Controller : STMicroelectronics STM32
   - Processor Model: {{page.processor}}
   - Build: {{page.offset}}
   - Clock Ref: {{page.clock}}
   - Comm Interface - {{page.com}}
-  - Application Offset {{ page.appoffset }}
+  - Application Offset 32 Kib
   {% if page.firmware == "can" %}
-  - Can bus Speed: {{ page.canspeed }}
+  - Can bus Speed: 500000
   {% endif %}
 
     {% 
