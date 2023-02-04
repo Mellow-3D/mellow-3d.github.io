@@ -20,14 +20,14 @@ ls /dev/serial/by-id/
 
 - Copy the ID containing '{{page.processor}}'
 
-- Run the make flash command to compile the firmware
+- Run the make flash command to flash the firmware
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+make flash FLASH_DEVICE= {Your serial ID here } 
 ```
 
  - Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 
@@ -97,12 +97,12 @@ ls /dev/serial/by-id/
 
 - Run the make flash command to compile the firmware
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+make flash FLASH_DEVICE={your serial id}
 ```
 
  - Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 
@@ -118,7 +118,7 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/seri
 ### Re-Flashing klipper in USB to CAN bridge mode with CanBoot.
 {% include note.html content="This is only for updating Klipper firmware on boards flashed with Klipper in USB to can bridge mode." %}
 
-- Run the canboot flash by UUID  with -r to enable CanBoot on USB firmware.
+- Run the canboot flash by UUID  with -r to enable CanBoot USB firmware.
 
 ```
 python3 ~/CanBoot/scripts/flash_can.py -i can0 -r -u { your uuid}
@@ -133,7 +133,7 @@ ls /dev/serial/by-id
 
 - Flash your new klipper bin via Canbus by serial ID
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/{your serial id}
+make flash FLASH_DEVICE={your serial id}
 ```
 - Reboot
 

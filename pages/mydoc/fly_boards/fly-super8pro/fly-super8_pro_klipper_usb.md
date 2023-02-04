@@ -29,7 +29,7 @@ canspeed: ""
 klipcom_img1: "fly-super8_pro/fly-super8_pro_klipper_menuconfig_usb.png"
 klipcom_cap1: "Klipper Menu Config USB"
 
-klipcom_img2: "fly-super8/fly-super8_klipper_usb_burn.png"
+klipcom_img2: "fly-super8/fly-super8_klipper_makeflash_burn.png"
 klipcom_cap2: "Burn Klipper firmware over USB"
 
 klipcom_img3: "fly-super8/flash-can_query.png"
