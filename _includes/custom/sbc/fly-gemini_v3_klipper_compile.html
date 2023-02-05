@@ -35,7 +35,7 @@ make menuconfig
 - Set the following settings
   - Enable extra Low Level configuration options : Checked
   - Micro Controller : STMicroelectronics STM32
-  - Processor Model: STM32F407
+  - Processor Model: STM32F405
   - Bootloader offset: 32 KiB bootloader
   - Clock Ref: 8 MHz crystal
   - Comm Interface - {{page.com}}
@@ -67,7 +67,7 @@ make -j 4
 
 - Download the script with the following command. 
 ```
-sudo wget https://cdn.mellow.klipper.cn/shell/geminiv3-flash -O /usr/bin/geminiv3-flash > /dev/null 2>&1 && sudo chmod +x /usr/bin/geminiv3-flash || echo "The operation failed
+sudo wget https://cdn.mellow.klipper.cn/shell/geminiv3-flash -O /usr/bin/geminiv3-flash > /dev/null 2>&1 && sudo chmod +x /usr/bin/geminiv3-flash || echo "The operation failed"
 ```
 
 - Run the make flash command to install the firmware ~/klipper/out/klipper.bin
@@ -75,7 +75,7 @@ sudo wget https://cdn.mellow.klipper.cn/shell/geminiv3-flash -O /usr/bin/geminiv
 sudo geminiv3-flash
 ```
 
-- Re-install the boot0 jumper on the boot0 and GND pins to force the board to boot into the klipper firmware. . If you skip this step  the MCU will boot back into the HID loader on the next boot.
+- Re-install the boot1 jumper on the boot1 and GND pins to force the board to boot into the klipper firmware. . If you skip this step  the MCU will boot back into the HID loader on the next boot.
 
 
 - Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
