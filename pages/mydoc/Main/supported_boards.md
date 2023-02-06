@@ -21,8 +21,10 @@ paging: 5
 |**[FLY E3 V2](/fly-e3_v2.html)** | **STM32F407** | 5 sockets | **12v/24v**  | 4 CNC |  **2** | Yes | **RRF/Klipper** | Optional ESP32 module |
 |**[FLY RRF E3 PRO V3.0](/fly_rrf_e3_pro_v3.html)**| **STM32F407** |5 - 2209 onboard | **12v/24v** | 4 CNC | **2** | No | **RRF/Klipper** | ESP32 |
 |**[Fly Super 8 1.3 ](/fly-super8_general.html)**| **STM32F407** | 8 sockets | **12v/24v/48v** | 10 CNC | **5** | Yes | **RRF/Klipper** | Optional ESP32 module |
+|**[Fly Super 8 Pro ](/fly-super8_pro_general.html)**| **STM32H723** | 8 sockets | **12v/24v/48v** | 10 CNC | **5** | Yes | **RRF/Klipper** | Optional ESP32 module |
 |**[Fly CDY V3 ](/fly-cdy_v3.html)**| **STM32F407** | 6 sockets | **12v/24v** | 2 CNC - 1 fixed | **3** | No | **RRF/Klipper** |ESP32 |
 |**[Fly Gemini V2](/fly-gemini_v2_general.html)**| **STM32F405** | 4 sockets | **12v/24v/48v** | 2 CNC - 2 fixed | **1** | Optional Pi Hat | **RRF/Klipper** | Optional M2WE |
+|**[Fly Gemini V3](/fly-gemini_v3_general.html)**| **STM32F405** | 4 sockets | **12v/24v/48v** | 2 CNC - 2 fixed | **1** | Yes | **RRF/Klipper** | Optional M2WE |
 |**[Fly Puppet](/fly-puppet.html)**| **RP2040** |5 sockets | **12v/24v** | 2 CNC | **1** | No | **RRF/Klipper** | Supplied by CM4 module |
 |**[Fly RPFMEX](/fly-rpfmex.html)**| **RP2040** |4- 2209 onboard | **12v/24v** | 2 CNC | **No** | No | **RRF/Klipper** | No |
 |**[FLY 407ZG](/fly_407zg.html)** | **STM32F407** | 9 sockets | **12v/24v**  | 6 CNC  - 3 fixed |  **6** | No | **RRF/Klipper/Marlin** | No |
