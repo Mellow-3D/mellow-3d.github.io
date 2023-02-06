@@ -26,6 +26,7 @@ canspeed: ""
 
 klipperurl: "[klipper firmware](./fly-super8_pro_canboot_usb.html)"
 
+klipperurl2: "or [Klipper for USB to CAN bus configuration section](fly-super8_pro_klipper_usbtocan.html)"
 
 
 cancom_img1: "fly-super8_pro/fly-super8_pro_canboot_menuconfig_usb.png"

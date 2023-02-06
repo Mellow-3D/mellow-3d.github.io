@@ -27,7 +27,7 @@ com: "USB on PA11/PA12"
 
 klipperurl: "[Klipper for USB configuration section](fly-super8_klipper_usb.html)"
 
-klipperurl2: "[Klipper for USB to CAN bus configuration section](fly-super8_klipper_usbtocan.html)"
+klipperurl2: "or [Klipper for USB to CAN bus configuration section](fly-super8_klipper_usbtocan.html)"
 
 cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_usb.png"
 cancom_cap1: "CanBoot Menuconfig"

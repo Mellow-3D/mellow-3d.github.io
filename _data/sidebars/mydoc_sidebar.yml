@@ -50,6 +50,54 @@ children:
   output: web, pdf
   children:
 
+  - title: Fly CDY V3
+    output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly-cdy_v3.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-cdy_v3_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-cdy_v3_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly-cdy_v3_klipper_usb.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-cdy_v3_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly CDY V3
+        url: "https://teamgloomy.github.io/fly_cdyv3_general.html"
+        output: web, pdf
+
   - title: Fly RRF E3 V2
     output: web, pdf
     children:

@@ -1,0 +1,37 @@
+[board_pins cdy_v3]
+aliases:
+
+    # Stepper drivers
+    X_EN=PC1, X_STEP=PE5, X_DIR=PC0, X_CS=PC15,    # X
+    Y_EN=PC14, Y_STEP=PE4,  Y_DIR=PC13,  Y_CS=PE8,  # Y
+    Z_EN=PB8,  Z_STEP=PE3, Z_DIR=PB7,  Z_CS=PB6,   # Z
+    E_EN=PD7,  E_STEP=PE2,  E_DIR=PD6,  E_CS=PD5,   # E
+    E1_EN=PD4,  E1_STEP=PE1, E1_DIR=PD3,  E1_CS=PD1,   # E1
+    E2_EN=PDO,  E2_STEP=PD0, E2_DIR=PA15,  E2_CS=PE9,   # E2
+    
+
+    # Heaters
+    BED_OUT=PB0,
+    HEAT=PA3, HEAT1=PD13, HEAT2=PD14,
+
+    # Thermisors
+    BED_TEMP=PB1,
+    HEAT_TEMP=PA3, HEAT1_TEMP=PC4, HEAT2_TEMP=PC5, 
+
+    # Fans
+    FAN0=PA0, FAN1=PA1, FAN2=PA2, 
+
+    # End stops
+    X_STOP=PC7,  Y_STOP=PD11,  Z_STOP=PB10, E_STOP=PC6, E1_STOP=PD10, E2_STOP=PB11,
+
+    # EXP1 header
+    EXP1_1=<NC>>,  EXP1_3=PB2,  EXP1_5=PE15,   EXP1_7=PA13,  EXP1_9=<GND>,
+    EXP1_2=PA9,  EXP1_4=PA10,  EXP1_6=PE14,   EXP1_8=PA14,  EXP1_10=<5V>,
+    # EXP2 header
+    EXP2_1=PA6, EXP2_3=PD8,  EXP2_5=PD9,  EXP2_7=PC13,   EXP2_9=<GND>,
+    EXP2_2=PA5, EXP2_4=PA4,  EXP2_6=PA7,  EXP2_8=<RST>, EXP2_10=<5V>,
+
+
+    # BL Touch
+    SERVO=PE6,   # BL Touch servo pin
+    PROBE=PC2  # BL Touch end stop pin
