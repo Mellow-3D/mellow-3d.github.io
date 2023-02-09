@@ -50,8 +50,6 @@ children:
   output: web, pdf
   children:
 
-# Fly CDY V3
-
   - title: Fly CDY V3
     output: web, pdf
     children:
@@ -99,8 +97,6 @@ children:
       - title: Team Gloomy RRF for Fly CDY V3
         url: "https://teamgloomy.github.io/fly_cdyv3_general.html"
         output: web, pdf
-
-# Fly E3 V2
 
   - title: Fly RRF E3 V2
     output: web, pdf
@@ -178,7 +174,6 @@ children:
       url: fly-e3_v2_can_trouble.html
       output: web, pdf
 
-# Fly E3 pro V3
 
   - title: Fly E3 Pro V3.0
     output: web, pdf
@@ -236,8 +231,6 @@ children:
       - title: Team Gloomy RRF for Fly e3 pro v3
         url: "https://teamgloomy.github.io/fly_e3_pro_v3_general.html"
         output: web, pdf
-
-# Fly Super 8
 
   - title: Fly Super 8 Versions 1, 1.1, and 1.2
     output: web, pdf
@@ -319,8 +312,6 @@ children:
       url: fly-super8_can_trouble.html
       output: web, pdf
 
-# Fly Super 8 Pro
-
   - title: Fly Super 8 Pro
     output: web, pdf
     children:
@@ -397,73 +388,9 @@ children:
       url: fly-super8_can_trouble.html
       output: web, pdf
 
-#Fly 407ZG
-
-  - title: Fly 407ZG
+  - title: Fly CDY V3
+    url: fly-cdy_v3.html
     output: web, pdf
-    children:
-
-    - title: Fly 407ZG Overview
-      url: fly_407zg.html
-      output: web, pdf
-
-    - title: Pin diagrams
-      url: fly-407zg_pins.html
-      output: web, pdf
-
-    - title: Files
-      url: fly-407zg_files.html
-      output: web, pdf
-
-    - title: Klipper
-      output: web
-      children:
-
-      - title: CanBoot Bootloader
-        output: web
-        children:
-
-        - title: CanBoot on USB
-          url: fly-407zg_canboot_usb.html
-          output: web, pdf     
-
-      - title: OEM Bootloader
-        output: web
-        children:
-
-        - title: Restore OEM Bootloader
-          url: fly-407zg_oem_bootloader.html
-          output: web, pdf     
-
-      - title: Klipper Firmware
-        output: web
-        children:
-
-        - title: USB
-          url: fly-407zg_klipper_usb.html
-          output: web, pdf
-
-      - title: Configuration file settings
-        url: fly-407zg_mcu_config.html
-        output: web, pdf
-
-    - title: Marlin
-      output: web, pdf
-      children:
-
-      - title: Coming Soon
-        url: "https://marlinfw.org/"
-        output: web, pdf
-
-    - title: RepRapFirmware
-      output: web, pdf
-      children:
-
-      - title: Team Gloomy RRF for Fly-407ZG
-        url: "https://teamgloomy.github.io/fly_407zg_general.html"
-        output: web, pdf
-
-# Fly Gemini V2
 
   - title: Fly Gemini V2
     output: web, pdf
@@ -585,8 +512,6 @@ children:
       url: fly-gemini_v2_can_trouble.html
       output: web, pdf
 
-# Fly Gemini V3
-
   - title: Fly Gemini V3
     output: web, pdf
     children:
@@ -687,16 +612,16 @@ children:
       url: fly-gemini_v3_can_trouble.html
       output: web, pdf
 
-# Fly Puppet
-
   - title: Fly Puppet
     url: fly-puppet.html
     output: web, pdf
 
-# Fly RPFMex
-
   - title: Fly RPFMEX
     url: fly-rpfmex.html
+    output: web, pdf
+
+  - title: Fly 407ZG
+    url: fly_407zg.html
     output: web, pdf
 
 #Fly CAN Section

@@ -1,0 +1,82 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture firmware %}{{ page.firmware }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+    
+    {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
+    {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
+    {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
+
+    {% capture canburn_img1 %}{{page.canburn_img1 }}{% endcapture %}
+    {% capture canburn_cap1 %}{{page.canburn_cap1 }}{% endcapture %}
+    {% capture canburn_url1 %} .\images\{{ page.canburn_img1 }} {% endcapture %}
+
+    {% capture canburn_img2 %}{{page.canburn_img2 }}{% endcapture %}
+    {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
+    {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
+
+    {% capture canburn_img3 %}{{page.canburn_img3 }}{% endcapture %}
+    {% capture canburn_cap3 %}{{page.canburn_cap3 }}{% endcapture %}
+    {% capture canburn_url3 %} .\images\{{ page.canburn_img3 }} {% endcapture %}
+
+    {% capture canburn_img4 %}{{page.canburn_img4 }}{% endcapture %}
+    {% capture canburn_cap4 %}{{page.canburn_cap4 }}{% endcapture %}
+    {% capture canburn_url4 %} .\images\{{ page.canburn_img4 }} {% endcapture %}
+
+### Install the STM32 cube programer on your PC. .
+
+- Download STM32 cube programmer from [here](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
+- Install the program
+
+
+### Flash the bootloader firmware to the {{ boardname }} MCU
+
+- Install the boot jumper to the Boot0 pin and 3.3v pins and Boot1 to GND pins as pictured. . 
+
+    {% 
+    include image.html 
+    file=cancom_img1
+    url=cancom_url1 
+    alt=cancom_cap1
+    caption=cancom_cap1
+    %}
+
+- Use a USB data cable to connect the {{ boardname }} board to your PC, Make sure that the dfu jumpers are installed before connecting the USB cable.      
+- Launch the SMTM32Cube programmer, Select USB, click the refresh circle located near'port' on the right side of the window and then click connect. 
+
+    {% 
+    include image.html 
+    file=canburn_img1
+    url=canburn_url1 
+    alt=canburn_cap1
+    caption=canburn_cap1
+    %}
+
+- Click Open File and select the STM32.bin file you downloaded earlier. 
+
+    {% 
+    include image.html 
+    file=canburn_img2
+    url=canburn_url2 
+    alt=canburn_cap2
+    caption=canburn_cap2
+    %}
+
+- Click 'download' to start the burn.
+
+- You should get a download progress bar and File downloaded complete when the burn is finished.. 
+
+    {% 
+    include image.html 
+    file=canburn_img3
+    url=canburn_url3 
+    alt=canburn_cap3
+    caption=canburn_cap3
+    %}
+
+- If the burn was sucessful remove the jumper(S) from the Boot pins and disconect the USB cable. 
+
+ - The {{boardname}} is now ready to install {{ page.klipperurl }}. 

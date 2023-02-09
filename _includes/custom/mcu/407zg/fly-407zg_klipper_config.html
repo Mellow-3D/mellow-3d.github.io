@@ -1,0 +1,200 @@
+        {% capture boardname %}{{ page.boardname }}{% endcapture %}
+        {% capture ver %}{{ page.ver }}{% endcapture %}
+
+# {{boardname}} Configuration files
+
+## {{boardname}} aliases file
+- [Download a copy of the aliases file](./files/fly-407zg/FFLY_407ZG.cfg)
+
+```
+{% include custom/mcu/407zg/FLY_407ZG_alias.html %}
+```
+
+### Motherboard model
+Please modify it based on your motherboard model
+```
+[include boards/FLY_407ZG.cfg]
+```
+
+
+### stepper_x
+```
+step_pin: X_STEP
+dir_pin: !X_DIR
+enable_pin: !X_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: !X_STOP
+position_endstop: 0
+position_max: 210
+homing_speed: 80
+
+[tmc2209 stepper_x]
+uart_pin: X_CS
+run_current: 0.800
+interpolate: False
+```
+
+### stepper_y
+```
+step_pin: Y_STEP
+dir_pin: Y_DIR
+enable_pin: !Y_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: !Y_STOP
+position_endstop: 210
+position_max: 210
+homing_speed: 50
+
+[tmc2209 stepper_y]
+uart_pin: Y_CS
+run_current: 0.800
+interpolate: False
+```
+
+### stepper_z
+```
+step_pin: Z_STEP
+dir_pin: !Z_DIR
+enable_pin: !Z_EN
+microsteps: 16
+step_pulse_duration: 0.0000004
+rotation_distance: 8
+endstop_pin: Z_STOP
+position_endstop: 0.5
+position_max: 210
+
+[tmc2209 stepper_z]
+uart_pin: Z_CS
+run_current: 0.800
+interpolate: False
+```
+
+### extruder
+```
+step_pin: E_STEP
+dir_pin: E_DIR
+enable_pin: !E_EN
+microsteps: 16
+rotation_distance: 33.500
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: HEAT0
+sensor_pin: HEAT0_TEMP
+sensor_type: EPCOS 100K B57560G104F
+control: pid
+pid_Kp: 22.2
+pid_Ki: 1.08
+pid_Kd: 114
+min_temp: 0
+max_temp: 350
+
+[tmc2209 extruder]
+uart_pin: E_CS
+run_current: 0.800
+interpolate: False
+```
+
+### extruder1
+```
+#step_pin: E1_STEP
+#dir_pin: E1_DIR
+#enable_pin: !E1_EN
+#microsteps: 16
+#rotation_distance: 33.500
+#nozzle_diameter: 0.400
+#filament_diameter: 1.750
+#heater_pin: HEAT1
+#sensor_pin:  HEAT1_TEMP
+#sensor_type: EPCOS 100K B57560G104F
+#control: pid
+#pid_Kp: 22.2
+#pid_Ki: 1.08
+#pid_Kd: 114
+#min_temp: 0
+#max_temp: 350
+
+[tmc2209 extruder1]
+uart_pin: E1_CS
+run_current: 0.800
+interpolate: False
+```
+
+### heater_bed
+```
+heater_pin: BED_OUT
+sensor_pin: BED_TEMP
+sensor_type: ATC Semitec 104GT-2
+control: watermark
+min_temp: 0
+max_temp: 200
+```
+### fan0
+
+```
+pin: FAN0
+#cycle_time: 0.50
+```
+### fan1  
+```
+pin: FAN1
+#cycle_time: 0.50
+```
+
+### heater_fan E0
+```
+pin: FAN2
+#cycle_time:
+heater: extruder
+heater_temp: 50.0
+fan_speed: 1.0
+```
+
+### heater_fan E1
+```
+#pin: FAN3
+##cycle_time:
+#heater: extruder1
+#heater_temp: 50.0
+#fan_speed: 1.0
+```
+### mcu
+```
+serial: /dev/ttyACM0
+```
+
+### mcu host
+```
+serial: /tmp/klipper_host_mcu
+```
+
+### printer
+```
+kinematics: corexy
+max_velocity: 300
+max_accel: 3000
+max_z_velocity: 5
+max_z_accel: 100
+```
+
+### temperature_sensor 407ZG-MCU
+```
+sensor_type: temperature_mcu
+```
+
+### bltouch
+```
+#sensor_pin: ^PROBE
+#control_pin: SERVO
+#pin_move_time: 0.680
+#x_offset: 0.0
+#y_offset: 2.3
+#z_offset: 2.2
+#speed: 70
+```
+
+### safe_z_home
+```
+#home_xy_position: 105,105
+```
