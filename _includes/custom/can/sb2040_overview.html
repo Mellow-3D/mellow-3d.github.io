@@ -10,7 +10,11 @@
     {% capture overurl2 %}.\images\{{page.overview_img2}}{% endcapture %}       
     {% capture overimg3 %}{{page.overview_img3}}{% endcapture %}
     {% capture overcap3 %}{{page.overview_cap3}}{% endcapture %}
-    {% capture overurl3 %}.\images\{{page.overview_img3}}{% endcapture %}    
+    {% capture overurl3 %}.\images\{{page.overview_img3}}{% endcapture %}   
+    {% capture overimg4 %}{{page.overview_img4}}{% endcapture %}
+    {% capture overcap4 %}{{page.overview_cap4}}{% endcapture %}
+    {% capture overurl4 %}.\images\{{page.overview_img4}}{% endcapture %}   
+
 
 ## Description
 
@@ -69,4 +73,12 @@ caption=overcap3
  - XT30+2 1 meter 4 wire harness
  - USB-A to USB-C Cable
 
-
+### Using SB2040 with Voron TAP
+ - Mellow recomends using HV probe input GPIO25 when used with Voron TAP.  Using GPIO28 or GPIO29 with more than 3.3v will cause the tool board temperature to display abnormally.
+  {% 
+  include image.html 
+  file=overimg4
+  url=overurl4
+  alt=overcap4
+  caption=overcap4
+  %}
