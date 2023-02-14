@@ -690,8 +690,48 @@ children:
 # Fly Puppet
 
   - title: Fly Puppet
-    url: fly-puppet.html
     output: web, pdf
+    children:
+
+    - title: Fly Puppet Overview
+      url: fly-puppet.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-puppet_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-puppet_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: SBC
+        output: web
+        children:
+
+        - title: With Fly Pi
+          url: fly-puppet_klipper_fly.html
+          output: web, pdf
+
+        - title: With Raspberry Pi 3 or 4
+          url: fly-puppet_klipper_pi4.html
+          output: web, pdf
+
+        - title: With Raspberry Pi CM4
+          url: fly-puppet_klipper_cm4.html
+          output: web, pdf
+
+      - title: RP2040 MCU Firmware
+        url: fly-puppet_klipper_mcu_fw.html
+        output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-puppet_klipper_mcu_config.html
+        output: web, pdf
 
 # Fly RPFMex
 

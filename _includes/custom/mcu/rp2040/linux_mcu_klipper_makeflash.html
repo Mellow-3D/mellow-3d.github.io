@@ -1,0 +1,18 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture host %}{{ page.host }}{% endcapture %}
+
+
+### Flash The {{host}} as a Lunix MCU
+
+- run the following command to flash the {{host}}
+```
+sudo service klipper stop
+make flash
+sudo service klipper start
+```
+
+- Add the following to your {{boardname}} printer.cfg file to connect the {{host}} as an MCU in klipper.
+```
+[mcu host]
+serial: /tmp/klipper_host_mcu
+```

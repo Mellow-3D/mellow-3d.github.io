@@ -1,0 +1,49 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture linux_mcu_img1 %}{{page.linux_mcu_img1 }}{% endcapture %}
+    {% capture linux_mcu_cap1 %}{{page.linux_mcu_cap1 }}{% endcapture %}
+    {% capture linux_mcu_url1 %} .\images\{{ page.linux_mcu_img1 }} {% endcapture %}
+
+    {% capture linux_mcu_img2 %}{{page.linux_mcu_img2 }}{% endcapture %}
+    {% capture linux_mcu_cap2 %}{{page.linux_mcu_cap2 }}{% endcapture %}
+    {% capture linux_mcu_url2 %} .\images\{{ page.klipcom_img2 }} {% endcapture %}
+
+    {% capture linux_mcu_img3 %}{{page.linux_mcu_img3 }}{% endcapture %}
+    {% capture linux_mcu_cap3 %}{{page.linux_mcu_cap3 }}{% endcapture %}
+    {% capture linux_mcu_url3 %} .\images\{{ page.linux_mcu_img3 }} {% endcapture %}
+
+
+### Compile Klipper firmware for {{page.firmware}}
+
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Enable extra Low Level configuration options : Un-Checked
+  - Micro Controller : {{ page.micro }}
+
+
+    {% 
+    include image.html 
+    file=linux_mcu_img1
+    url=linux_mcu_url1
+    alt=linux_mcu_cap1
+    caption=linux_mcu_cap1
+    %}
+
+
+- Quit and save the configuration

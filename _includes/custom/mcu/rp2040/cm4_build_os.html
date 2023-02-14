@@ -1,0 +1,43 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture host %}{{ page.host }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture cm4_img1 %}{{page.cm4_img1 }}{% endcapture %}
+    {% capture cm4_cap1 %}{{page.cm4_cap1 }}{% endcapture %}
+    {% capture cm4_url1 %} .\images\{{ page.cm4_img1 }} {% endcapture %}
+
+    {% capture cm4_img2 %}{{page.cm4_img2 }}{% endcapture %}
+    {% capture cm4_cap2 %}{{page.cm4_cap2 }}{% endcapture %}
+    {% capture cm4_url2 %} .\images\{{ page.cm4_img2 }} {% endcapture %}
+
+
+### CM4 onboard EMMC programming
+- If your CM4 does not have emmc, but use SD card, please skip this step and [start reading step 2]{./fly-puppet_klipper_cm4.html#cm4-onboard-emmc-programming}
+- Turn on DIP switches 5 and 6 on the Puppet board to connect the Pi to the Pullet USB C port. Make sure DOP switches 1 and 2 are in the OFF position.
+- Use tweezers to short-circuit PI_BOOT, as shown in the figure below. (In order to ensure the safety of the motherboard inserted into CM4, there is no pin header by default)
+    
+    
+    {% 
+    include image.html 
+    file=cm4_img1
+    url=cm4_url1
+    alt=cm4_cap1
+    caption=cm4_cap1
+    %}
+
+- Connect Fly-Puppet to the computer using a type-c data cable
+- Download [rpiboot](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)
+- Run RpiBoot directly after downloading, if everything is normal, the words success will appear as pictured below
+
+    {% 
+    include image.html 
+    file=cm4_img2
+    url=cm4_url2
+    alt=cm4_cap2
+    caption=cm4_cap2
+    %}
+
+- After running successfully, the emmc of CM4 will be directly mounted as a U disk to the system, which can be directly burned into the system
+
+.

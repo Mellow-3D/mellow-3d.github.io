@@ -1,0 +1,55 @@
+
+     {% capture sd %}{{ page.sd }}{% endcapture %}
+    
+    {% capture rpi_config_img1 %}{{page.rpi_config_img1 }}{% endcapture %}
+    {% capture rpi_config_cap1 %}{{page.rpi_config_cap1 }}{% endcapture %}
+    {% capture rpi_config_url1 %} .\images\{{ page.rpi_config_img1 }} {% endcapture %}
+
+
+    {% capture rpi_config_img2 %}{{page.rpi_config_img2 }}{% endcapture %}
+    {% capture rpi_config_cap2 %}{{page.rpi_config_cap2 }}{% endcapture %}
+    {% capture rpi_config_url2 %} .\images\{{ page.rpi_config_img2 }} {% endcapture %}
+
+### Write OS to SD or EMMC
+ - If you are using an SD card, mount the SD card on your PC. 
+ - Chose an Operating system to load, It is recommended to use mainsailos or fluiddpi
+   - [Download MainsailOS](https://github.com/mainsail-crew/MainsailOS/releases/latest)
+   - [MainsailOS Burning Tutorial](https://docs.mainsail.xyz/setup/mainsailos/pi-imager)
+   - [FluiddPi download](https://github.com/fluidd-core/FluiddPi/releases/latest)
+   - [FluiddPi Burning Tutorial](https://docs.fluidd.xyz/installation/fluiddpi)
+ - After the burning is completed, please do not start the system, complete the following settings
+
+### Post image Burn configuration
+
+#### Perform these steps before starting up the Rasberry Pi
+ - Open the mounted EMMC Drive or SD card on your PC. 
+ - Open the config.txt file in the /boot directory and add following two lines configuration
+```
+dtoverlay=pi3-miniuart-bt
+dtoverlay=dwc2,dr_mode=host
+```
+
+    {% 
+    include image.html 
+    file=rpi_config_img1
+    url=rpi_config_url1
+    alt=rpi_config_cap1
+    caption=rpi_config_cap1
+    %}
+ 
+ - Create a new blank file under the boot disk, the file name is SSH , no suffix
+ - WIFI Setup
+   - MainsailOS modify /boot/mainsailos-wpa-supplicant.txt
+   - FluiddPi modify /boot/fluiddpi-wpa-supplicant.txt
+   - Delete the # in front of these 4 lines
+   - Change ssid and psk to your WiFi name and password respectively
+
+    {% 
+    include image.html 
+    file=rpi_config_img2
+    url=rpi_config_url2
+    alt=rpi_config_cap2
+    caption=rpi_config_cap2
+    %}
+
+    - The preparations are complete, If you used an SD card now you can install the SD card into {{sd}} and start it up

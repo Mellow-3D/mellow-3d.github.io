@@ -1,0 +1,21 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture host %}{{ page.host }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture puppetpi_img1 %}{{page.puppetpi_img1 }}{% endcapture %}
+    {% capture puppetpi_cap1 %}{{page.puppetpi_cap1 }}{% endcapture %}
+    {% capture puppetpi_url1 %} .\images\{{ page.puppetpi_img1 }} {% endcapture %}
+
+
+
+### Mounting the {{host}} to the {{boardname}}
+- The {{page.host}} mounts to the sockets on the bottom of the {{page.boardname}} 
+
+    {% 
+    include image.html 
+    file=puppetpi_img1
+    url=puppetpi_url1
+    alt=puppetpi_cap1
+    caption=puppetpi_cap1
+    %}
