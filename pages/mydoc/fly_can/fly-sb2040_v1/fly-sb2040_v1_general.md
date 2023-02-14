@@ -29,6 +29,9 @@ overview_cap2: "Fly-SB2040 dimensions"
 
 overview_img3: "fly-sb2040_v1/sb2040_bom.png"
 overview_cap3: "Fly-SB2040 BOM"
+
+overview_img4: "fly-sb2040_v1/fly-sb2040_tap2.jpg"
+overview_cap4: "Mellow recomends using the HV probe input gpio25 when used with Voron TAP"
 ---
 # {{ page.mcu }} Overview
 
