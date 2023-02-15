@@ -1,5 +1,5 @@
     {% capture mcu %}{{ page.mcu }}{% endcapture %}
-
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
     {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
 
     {% capture klipcom_img1 %}{{page.klipcom_img1 }}{% endcapture %}
@@ -39,7 +39,7 @@ make clean
 make menuconfig
 ```
 - Set the following settings
-  - Enable low lever configuration options
+  - Enable low level configuration options
   - Micro Controller : Raspberry Pi RP2040
    - Build: 16 Kib bootloader
    - Comm Interface - {{page.com}}
@@ -79,7 +79,7 @@ ls /dev/serial/by-id/
   usb-CanBoot_rp2040_45503571279020E8-if00
   ```
 
-- Run the flash command to compile the firmware
+- Run the flash command to burn the firmware
 ```
 python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
 ```

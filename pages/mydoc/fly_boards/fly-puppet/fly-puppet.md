@@ -8,7 +8,7 @@ sidebar: mydoc_sidebar
 permalink: fly-puppet.html
 folder: mydoc
 comments: false
-toc: false
+toc: true
 datatable: true
 
 
@@ -22,6 +22,11 @@ fly_puppet_cap2: "Fly-puppet board dimensions"
 
 fly_puppet_img3: "fly-puppet/fly-puppet_bom.webp"
 fly_puppet_cap3: "Fly-puppet BOM"
+
+fly_puppet_img4: "fly-puppet/fly-puppet_jumpers.webp"
+fly_puppet_cap4: "Fly-puppet Jumpers"
+
+
 
 
 ---
@@ -40,6 +45,10 @@ fly_puppet_cap3: "Fly-puppet BOM"
     {% capture fly_puppet_img3 %}{{page.fly_puppet_img3 }}{% endcapture %}
     {% capture fly_puppet_cap3 %}{{page.fly_puppet_cap3 }}{% endcapture %}
     {% capture fly_puppet_url3 %} .\images\{{ page.fly_puppet_img3 }} {% endcapture %}
+
+    {% capture fly_puppet_img4 %}{{page.fly_puppet_img4 }}{% endcapture %}
+    {% capture fly_puppet_cap4 %}{{page.fly_puppet_cap4 }}{% endcapture %}
+    {% capture fly_puppet_url4 %} .\images\{{ page.fly_puppet_img4 }} {% endcapture %}
 
 ## Overview 
 
@@ -100,3 +109,24 @@ In order to meet the needs of customers using RP2040 5-axis, we made a fly-puppe
    - USB C Cable
    - Serial header pigtail
    - Jumpers
+
+### Driver mode and Fan Voltage Jumpers  
+
+   {% 
+  include image.html 
+  file=fly_puppet_img4
+  url=fly_puppet_url4
+  alt=fly_puppet_cap4
+  caption=fly_puppet_cap4
+  %}
+
+### USB DIP Switches
+
+- 6P DIP switch is used for USB control,  all of them are OFF by default.
+
+- DIP switches 1 and 2. 
+ - ON: Extend the USB of CM4 to the 4 onboard USB ports, they cannot be ON at the same time as switches 5 and 6
+- DIP switch 3 and 4
+  - ON: Connect the USB of the lower computer RP2040 to the onboard Type-c interface. Cannot be ON with switches 5 and 6 at the same time
+- DIP switch 5 and 6
+  - ON: Connect the USB of CM4 to the onboard Type-c interface for CM4 EMMC programming. Cannot be ON with switches 1,2,3 and 4 enabled.

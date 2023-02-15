@@ -1,0 +1,119 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture rp2040_img1 %}{{page.rp2040_img1 }}{% endcapture %}
+    {% capture rp2040_cap1 %}{{page.rp2040_cap1 }}{% endcapture %}
+    {% capture rp2040_url1 %} .\images\{{ page.rp2040_img1 }} {% endcapture %}
+
+    {% capture rp2040_img2 %}{{page.rp2040_img2 }}{% endcapture %}
+    {% capture rp2040_cap2 %}{{page.rp2040_cap2 }}{% endcapture %}
+    {% capture rp2040_url2 %} .\images\{{ page.rp2040_img2 }} {% endcapture %}
+
+    {% capture rp2040_img3 %}{{page.rp2040_img3 }}{% endcapture %}
+    {% capture rp2040_cap3 %}{{page.rp2040_cap3 }}{% endcapture %}
+    {% capture rp2040_url3 %} .\images\{{ page.rp2040_img3 }} {% endcapture %}
+  
+    {% capture rp2040_img4 %}{{page.rp2040_img4 }}{% endcapture %}
+    {% capture rp2040_cap4 %}{{page.rp2040_cap4 }}{% endcapture %}
+    {% capture rp2040_url4 %} .\images\{{ page.rp2040_img4 }} {% endcapture %}
+
+    {% capture rp2040_img5 %}{{page.rp2040_img5 }}{% endcapture %}
+    {% capture rp2040_cap5 %}{{page.rp2040_cap5 }}{% endcapture %}
+    {% capture rp2040_url5 %} .\images\{{ page.rp2040_img5 }} {% endcapture %}
+
+#### Compile Klipper firmware for {{page.firmware}}
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Enable low lever configuration options
+  - Micro Controller : Raspberry Pi RP2040
+  - Build: No bootloader
+  - Comm Interface - Serial on UART ( GPIO1/GPIO0 )
+  - Baud Rate: 250000
+  - GPIO Pins to set at Startup: ()
+
+  {% 
+  include image.html 
+  file=rp2040_img1
+  url=rp2040_url1
+  alt=rp2040_cap1
+  caption=rp2040_cap1
+  %}
+
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+```
+make -j 4
+```
+
+#### Flash Klipper firmware
+
+- With the power off set the {{boardname}} DIP switches 1, 2, 3, 4 to on
+and 5, 6 to off.  
+
+- If you are using a Raspberry Pi CM4 Connect the USB C cable from the {{boardname}} USB A ports to the {{boardname}} USB C port.
+- If you are using Raspberry Pi 4b,3b,3 or Fly Pi connect the USB C cable to the Pi SUB A and the {{boardname}} USB C port.
+- Install the Boot jumper for the RP2040 and power the board on. 
+
+  {% 
+  include image.html 
+  file=rp2040_img2
+  url=rp2040_url2
+  alt=rp2040_cap2
+  caption=rp2040_cap2
+  %}
+
+- SSH into the Klipper Host
+
+- Find the RP2040 ID
+```
+lsusb
+```
+
+- Copy the ID containing 'Raspberry Pi RP2 Boot'
+  - Example
+  ```
+  2e8a:0003
+  ```
+
+  {% 
+  include image.html 
+  file=rp2040_img3
+  url=rp2040_url3
+  alt=rp2040_cap3
+  caption=rp2040_cap3
+  %}
+
+- Run the flash command to compile the firmware
+```
+make flash FLASH_DEVICE=2e8a:0003
+```
+
+  {% 
+  include image.html 
+  file=rp2040_img4
+  url=rp2040_url4
+  alt=rp2040_cap4
+  caption=rp2040_cap4
+  %}
+
+
+- Shut down the {{boardname}}, Remove the boot jumper and reboot the system. 
+- Your {{boardname}} should now have klipper firmware loaded and be ready to use. 
+
