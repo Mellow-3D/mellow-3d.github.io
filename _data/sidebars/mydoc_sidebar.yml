@@ -736,8 +736,44 @@ children:
 # Fly RPFMex
 
   - title: Fly RPFMEX
-    url: fly-rpfmex.html
     output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly-rpfmex.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-rpfmex_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-rpfmex_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: CanBoot Bootloader
+        output: web
+        children:
+
+        - title: CanBoot on USB
+          url: fly-rpfmex_canboot_usb.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
+        output: web
+        children:
+
+        - title: USB
+          url: fly-rpfmex_klipper_usb.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-rpfmex_klipper_mcu_config.html
+        output: web, pdf
 
 #Fly CAN Section
 

@@ -14,5 +14,5 @@ datatable: true
 ## Fly Puppet files
 
 
-- Fly Puppet Pin Diagram: Soon
-- Fly Puppet Schematic file: Soon
+- Fly Puppet Pin Diagram: [fly_puppet_pinout.svg](https://github.com/Mellow-3D/Fly-Puppet/blob/main/Hardware/fly_puppet_pinout.svg)
+- Fly Puppet Schematic file: [Schematic_fly_puppet_2023-02-14.pdf](https://github.com/Mellow-3D/Fly-Puppet/blob/main/Hardware/Schematic_fly_puppet_2023-02-14.pdf)
