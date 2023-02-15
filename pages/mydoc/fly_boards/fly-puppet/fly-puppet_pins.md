@@ -19,6 +19,8 @@ file="fly-puppet/fly-puppet_pins.webp"
 url="./images/fly-puppet/fly-puppet_pins.webp" alt="Fly-Puppet" 
 caption="Fly-Puppet Pinout" %}
 
+<a href="https://github.com/Mellow-3D/Fly-Puppet/blob/main/Hardware/fly_puppet_pinout.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/Fly-Puppet/main/Hardware/fly_puppet_pinout.svg?sanitize=true"></a>
+
 ## Fly-Puppet Driver Pins in Firmware
 
 Driver pin numbers. They are separated by driver number.
