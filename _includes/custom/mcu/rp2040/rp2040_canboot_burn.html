@@ -1,0 +1,51 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture klipperurl %}{{ page.klipperurl }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture canburn_img1 %}{{page.canburn_img1 }}{% endcapture %}
+    {% capture canburn_cap1 %}{{page.canburn_cap1 }}{% endcapture %}
+    {% capture canburn_url1 %} .\images\{{ page.canburn_img1 }} {% endcapture %}
+
+    {% capture canburn_img2 %}{{page.canburn_img2 }}{% endcapture %}
+    {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
+    {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
+
+    {% capture canburn_img3 %}{{page.canburn_img3 }}{% endcapture %}
+    {% capture canburn_cap3 %}{{page.canburn_cap3 }}{% endcapture %}
+    {% capture canburn_url3 %} .\images\{{ page.canburn_img3 }} {% endcapture %}
+
+#### Burn CanBoot firmware to the {{boardname}}
+
+- Use a USB-C data cable to connect the {{ boardname }} board to the klipper host. 
+
+- Press the boot button while inserting the USB cable to put the {{boardname}} into boot mode. 
+
+    {% 
+    include image.html 
+    file=canburn_img1
+    url=canburn_url1 
+    alt=canburn_cap1
+    caption=canburn_cap1
+    %}
+
+- Run lsusb to see if the connection is successful. 
+```
+lsusb
+```
+    {% 
+    include image.html 
+    file=canburn_img2
+    url=canburn_url2 
+    alt=canburn_cap2
+    caption=canburn_cap2
+    %}
+
+- Flash the {{boardname}}
+```
+sudo make flash FLASH_DEVICE=2e8a:0003
+```
+
+- This will flash the CanBoot firmware image and restart the {{boardname}}.
+
+- Continue to compiling {{klipperurl}}.

@@ -1,0 +1,33 @@
+## Klipper Host CAN0 file configuration
+
+{% if page.mcu == "can-hat" %}
+The Fly OS operating system ships with a CAN0 file pre configured. You only need to edit the file if you want to use a bus speed other than 5000000. 
+{% endif %}
+
+{% include important.html content="This guide assumes you have a working Klipper host installation on a Fly Gemini, Fly Pi, Raspberry Pi or compatible device" %}
+ 
+ - SSH to your Klipper host and create a new can0 file in the /ect/network/interfaces.d folder
+
+ ```
+ sudo nano /etc/network/interfaces.d/can0
+ ```
+
+ - Enter the following information. 
+
+``` 
+allow-hotplug can0
+iface can0 can static
+ bitrate 500000
+ up ifconfig $IFACE txqueuelen 1024
+ pre-up ip link set can0 type can bitrate 500000
+ pre-up ip link set can0 txqueuelen 1024
+ ```
+{% include note.html content="Use the same bitrate you use on your can tool boards. This can be 250000, 500000 or 1000000. Bitrates of 500000 and 1000000 are prefered. " %}
+ 
+
+ - enter Ctrl+X to save the can0 file
+
+ - Reboot your klipper host. 
+
+ - This should be all you need to do if you are using a Fly UTOC-1, UTOC-3 or Mellow CANhat for the Gemini and Fly Pi. 
+ Other CAN bus adapters may need aditional configuration steps. 

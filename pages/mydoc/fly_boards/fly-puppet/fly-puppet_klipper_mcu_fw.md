@@ -13,6 +13,14 @@ datatable: true
 
 boardname: "Fly-Puppet"
 
+micro: "Raspberry Pi RP2040"
+processor: ""
+offset: "No bootloader"
+clock: ""
+com: "Serial on UART0 (GPIO1/GPIO0)"
+appoffset: ""
+canspeed: ""
+
 rp2040_img1: "fly-puppet/fly_puppet_klipper_uart_no_bootloader.png"
 rp2040_cap1: "RP2040 Make Menuconfig"
 
@@ -28,4 +36,4 @@ rp2040_cap4: "RP2040 flash results"
 ---
 ## Fly Puppet RP240 MCU Firmware
 
-{% include custom/mcu/rp2040/rp2040_klipper_compile.html %}
+{% include custom/mcu/rpfmex/fly-rpfmex_klipper_compile.html %}

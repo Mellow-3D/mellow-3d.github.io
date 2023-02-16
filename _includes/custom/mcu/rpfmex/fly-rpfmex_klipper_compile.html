@@ -67,32 +67,15 @@ make -j 4
 
 #### Flash Klipper firmware
 
-- With the power off set the {{boardname}} DIP switches 1, 2, 3, 4 to on
-and 5, 6 to off.  
-
-- If you are using a Raspberry Pi CM4 Connect the USB C cable from the {{boardname}} USB A ports to the {{boardname}} USB C port.
-- If you are using Raspberry Pi 4b,3b,3 or Fly Pi connect the USB C cable to the Pi SUB A and the {{boardname}} USB C port.
-- Install the Boot jumper for the RP2040 and power the board on. 
-
-  {% 
-  include image.html 
-  file=rp2040_img2
-  url=rp2040_url2
-  alt=rp2040_cap2
-  caption=rp2040_cap2
-  %}
-
-- SSH into the Klipper Host
-
-- Find the RP2040 ID
+- Find the Fly-RPFMEX  ID
 ```
-lsusb
+ls /dev/serial/by-id/*
 ```
 
-- Copy the ID containing 'Raspberry Pi RP2 Boot'
+- Copy the ID 
   - Example
   ```
-  2e8a:0003
+  /dev/serial/by-id/usb-canboot_rp2040_E66138935F18A528-if00
   ```
 
   {% 
@@ -105,7 +88,7 @@ lsusb
 
 - Run the flash command to compile the firmware
 ```
-make flash FLASH_DEVICE=2e8a:0003
+make flash FLASH_DEVICE={your serial id}
 ```
 
   {% 
@@ -117,6 +100,5 @@ make flash FLASH_DEVICE=2e8a:0003
   %}
 
 
-- Shut down the {{boardname}}, Remove the boot jumper and reboot the system. 
 - Your {{boardname}} should now have klipper firmware loaded and be ready to use. 
 
