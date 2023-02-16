@@ -43,11 +43,8 @@ Driver pin numbers. They are separated by driver number.
 |Pin Number|Pin Name 1|Pin Name 2|Alias|
 | :------------- |:-------------|:-------------|
 |GPIO27|xmin|xstop|X_STOP|
-|GPIO27|e0temp|t0|HEAT_TEMP|
-|GPIO28|e1temp|t1|HEAT1_TEMP|
-|GPIO28|e2temp|t2|HEAT2_TEMP|
 |GPIO12|fan1|fan1|FAN1|
-|GPIO12|fan0|fan|FAN|
+|GPIO11|fan0|fan|FAN|
 |GPIO28|ymin|ystop|Y_STOP|
 |GPIO10|neopixel|LED|
 |GPIO29|zmin|zstop|Z_STOP|
