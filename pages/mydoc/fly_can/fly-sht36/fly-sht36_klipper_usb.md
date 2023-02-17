@@ -54,11 +54,7 @@ klipcom_cap4: "Klipper CAN bus burn complete"
 
 # Setup steps
 
-### Toolboard firmware
-
-{% include custom/can/sht_canboot_compile.html %}
-
-{% include custom/can/sht_canboot_burn.html %}
+### Klipper firmware
 
 {% include custom/can/sht_klipper_compile.html %}
 

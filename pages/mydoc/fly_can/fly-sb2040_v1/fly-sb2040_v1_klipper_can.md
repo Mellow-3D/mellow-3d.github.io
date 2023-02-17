@@ -51,10 +51,6 @@ klipcom_cap5: "SB2040 120R jumper location"
 
 ### Toolboard firmware
 
-{% include custom/can/sb2040_canboot_compile.html %}
-
-{% include custom/can/sb2040_canboot_burn.html %}
-
 {% include custom/can/sb2040_klipper_compile.html %}
 
 {% include custom/can/sb2040_klipper_configure.html %}

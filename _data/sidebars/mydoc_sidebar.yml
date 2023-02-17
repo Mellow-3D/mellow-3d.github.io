@@ -805,7 +805,19 @@ children:
         url: fly-sb2040_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sb2040_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sb2040_canboot_can.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
         output: web
         children: 
 
@@ -815,7 +827,7 @@ children:
 
         - title: CAN bus
           url: fly-sb2040_klipper_can.html
-          output: web, pdf     
+          output: web, pdf   
 
       - title: Configuration file settings
         url: fly-sb2040_klipper_config.html
@@ -853,7 +865,19 @@ children:
         url: fly-sht36_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht36_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sht36_canboot_can.html
+          output: web, pdf  
+
+      - title: Klipper Firmware
         output: web
         children: 
 
@@ -902,13 +926,21 @@ children:
         url: fly-sht36_v2_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: CAN bus Configuration
+          url: fly-sht36_v2_canboot_can.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
         output: web
         children: 
 
         - title: CAN bus Configuration
           url: fly-sht36_v2_klipper_can.html
-          output: web, pdf     
+          output: web, pdf   
 
       - title: Klipper printer Configuration
         url: fly-sht36_v2_klipper_config.html
@@ -946,7 +978,19 @@ children:
         url: fly-sht42_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht42_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sht42_canboot_can.html
+          output: web, pdf  
+
+      - title: Klipper Firmware
         output: web
         children: 
 

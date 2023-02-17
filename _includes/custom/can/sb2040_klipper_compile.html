@@ -79,23 +79,24 @@ ls /dev/serial/by-id/
   usb-CanBoot_rp2040_45503571279020E8-if00
   ```
 
-- Run the flash command to burn the firmware
+- Run the make flash command to burn the firmware
 ```
-python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+sudo make flash FLASH_DEVICE={Your serial ID here } 
 ```
 
   - Example
   ```
-  python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_rp2040_45503571279020E8-if00 
+  sudo make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_rp2040_45503571279020E8-if00 
   ```
 
-  {% 
-  include image.html 
-  file=klipcom_img2
-  url=klipcom_url2
-  alt=klipcom_cap2
-  caption=klipcom_cap2
-  %}
+{% 
+include image.html 
+file=klipcom_img2
+url=klipcom_url2
+alt=klipcom_cap2
+caption=klipcom_cap2
+%}
+
 
 - Your {{ mcu }} should now have klipper firmware loaded and be ready to use. 
 
@@ -107,26 +108,12 @@ If you are updating an existing klipper build on your {{mcu}} follow these steps
 ```
 ls /dev/serial/by-id/
 ```
-- Run the klipper flash_usb.py script to call the Canboot Bootloader. 
+- Run the klipper make flash to burn the klipper FW. 
 ```
-python3 ~/klipper/scripts/flash_usb.py -t rp2040 -d /dev/serial/by-id/{your serial id} ~/klipper/out/klipper.bin
-```
-It will throw an error but that can be ignored. 
-
-- The status LED should start blinking after executing the Flash_usb script. 
-
-- Check the Serial ID
-```
-ls /dev/serial/by-id/
+sudo make flash FLASH_DEVICE={your serial id}
 ```
 
-- Verify the Serial ID now contains usb-CanBoot_rp2040
-- Example
-```
-usb-CanBoot_rp2040_45503571279020E8-if00
-```
-
-- Repeat the section [Flash Klipper firmware with CanBoot over USB](./fly-sb2040_klipper_usb.html#flash-klipper-firmware-with-canboot-over-usb) to flash with CanBoot.
+- Your {{ mcu }} should now be updated with new klipper firmware and be ready to use. 
 
 {% elsif page.firmware == "CAN bus" %}
 

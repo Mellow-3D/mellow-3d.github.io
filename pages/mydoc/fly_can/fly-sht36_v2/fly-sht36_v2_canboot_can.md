@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Klipper configuration on the Fly SHT-36 V2 for CAN bus"
 sidebar: mydoc_sidebar
-permalink: fly-sht36_v2_klipper_can.html
+permalink: fly-sht36_v2_canboot_can.html
 folder: mydoc
 comments: false
 toc: true
@@ -53,9 +53,9 @@ klipcom_cap4: "Klipper FW burn over CAN"
 
 ### Toolboard firmware
 
-{% include custom/can/sht_v2_klipper_compile.html %}
+{% include custom/can/sht_v2_canboot_compile.html %}
 
-{% include custom/can/sht_v2_klipper_configure.html %}
+{% include custom/can/sht_v2_canboot_burn.html %}
 
 {% include custom/can/sht_links.html %}
 

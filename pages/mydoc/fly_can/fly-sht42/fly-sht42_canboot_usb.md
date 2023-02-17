@@ -6,7 +6,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Klipper Configuration for the Fly SHT-42 on USB"
 sidebar: mydoc_sidebar
-permalink: fly-sht42_klipper_usb.html
+permalink: fly-sht42_canboot_usb.html
 folder: mydoc
 comments: false
 toc: true
@@ -58,9 +58,9 @@ klipcom_cap4: "Klipper CAN bus burn complete"
 
 ### Toolboard firmware
 
-{% include custom/can/sht_klipper_compile.html %}
+{% include custom/can/sht_canboot_compile.html %}
 
-{% include custom/can/sht_klipper_configure.html %}
+{% include custom/can/sht_canboot_burn.html %}
 
 {% include custom/can/sht_links.html %}
 
