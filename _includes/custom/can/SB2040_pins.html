@@ -3,6 +3,11 @@
     {% capture sb2040pins_cap1 %}{{page.sb2040pins_cap1 }}{% endcapture %}
     {% capture sb2040pins_url1 %} .\images\{{ page.sb2040pins_img1 }} {% endcapture %}
 
+
+    {% capture sb2040pins_img2 %}{{page.sb2040pins_img2 }}{% endcapture %}
+    {% capture sb2040pins_cap2 %}{{page.sb2040pins_cap2 }}{% endcapture %}
+    {% capture sb2040pins_url2 %} .\images\{{ page.sb2040pins_img2 }} {% endcapture %}
+
 ## {{page.summary}}
 
   {% 
@@ -44,5 +49,28 @@
 |**LED** |Status LED| **gpio25** | | 
 
 <div class="datatable-end"></div>
+
+### Fan Board Pins
+
+  {% 
+  include image.html 
+  file=sb2040pins_img2
+  url=sb2040pins_url2
+  alt=sb2040pins_cap2
+  caption=sb2040pins_cap2
+  %}
+
+<div class="datatable-begin"></div>
+
+| **Device** |  **Function** | **Pin number** | **Label at header** | **Label at Pad** |**Alias**|
+|:-----------|:--------------|:---------------|:----------|:----------|
+|**Fans** |Fan 0	| **gpio13** | PCF | **AGND(Part Fan)** | FAN0 |
+|**Fans** |Fan 1	| **gpio14** | HEF | **AGND(Hot End Fan)** | FAN1 |
+|**Fan PWM**| Fan 0 PWM | **gpio17** | A1 | **PWM1** | |
+|**Fan PWM**| Fan 1 PWM | **gpio16** | A2 | **PWM0** | |
+|**LED** |RGB LED | **gpio12** | LED   | **S** | RGBLED | 
+ 
+
+<div class="datatable-end"></div>  
 
 ### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sb2040_cfg}})
