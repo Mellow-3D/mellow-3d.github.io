@@ -1047,6 +1047,14 @@ children:
       url: ercf_easy-brd_v1_1.html
       output: web, pdf 
 
+  - title: Fly ERCF Easy Board CAN
+    output: web
+    children:  
+
+    - title: Overview
+      url: ercf_easy-brd_can.html
+      output: web, pdf 
+
 #SBC Section
 
 - title: Fly Small Board Computers 
@@ -1121,3 +1129,87 @@ children:
       url: fly-can_hat_v1.html
       output: web, pdf   
 
+### Display Section
+
+- title: Fly Displays 
+  output: web, pdf
+  children:
+
+  - title: Fly Mini12864
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_mini12864_general.html
+      output: web, pdf
+
+  - title: Fly TFT V1 3.5
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tft_general.html
+      output: web, pdf      
+
+  - title: FLY Marlin Wifi Beta 4.3 Touch Screen
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_marlin_wifi_general.html
+      output: web, pdf          
+
+  - title: FLY-Screen 4.3 & 7 Touch Screen
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_screen_general.html
+      output: web, pdf    
+
+### Driver Section
+
+- title: Fly Stepper Drivers 
+  output: web, pdf
+  children:
+
+  - title: Fly A4998 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_a4998_general.html
+      output: web, pdf
+
+  - title: Fly TMC2209 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tmc2209_general.html
+      output: web, pdf
+
+  - title: Fly TMC5160 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tmc5160_general.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-tmc5160_files.html
+      output: web, pdf    
+
+  - title: Fly HV-TMC5160 Pro External Driver
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_hv-tmc5160pro_general.html
+      output: web, pdf      
+
+    - title: Files
+      url: fly-tmc5160pro_files.html
+      output: web, pdf    
+      

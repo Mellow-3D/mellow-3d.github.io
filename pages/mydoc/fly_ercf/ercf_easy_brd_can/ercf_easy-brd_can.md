@@ -1,15 +1,15 @@
 ---
-title: Fly ERCF
+title: Fly ERCF CAN
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "General information regarding the Fly ERCF"
+summary: "General information regarding the Fly ERCF Easy Board CAN"
 sidebar: mydoc_sidebar
-permalink: fly_ercf.html
+permalink: ercf_easy-brd_can.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 ## Overview 
-Fly ERCF
+Fly ERCF CAN
