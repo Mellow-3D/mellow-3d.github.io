@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Klipper Configuration for the Fly SB2040 V1 on USB"
 sidebar: mydoc_sidebar
-permalink: fly-sb2040_klipper_usb.html
+permalink: fly-sb2040_canboot_usb.html
 folder: mydoc
 comments: false
 toc: true
@@ -51,8 +51,8 @@ klipcom_cap4: "Klipper FW burn over USB"
 
 ### Toolboard firmware
 
-{% include custom/can/sb2040_klipper_compile.html %}
+{% include custom/can/sb2040_canboot_compile.html %}
 
-{% include custom/can/sb2040_klipper_configure.html %}
+{% include custom/can/sb2040_canboot_burn.html %}
 
 {% include custom/can/sht_links.html %}

@@ -805,7 +805,19 @@ children:
         url: fly-sb2040_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sb2040_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sb2040_canboot_can.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
         output: web
         children: 
 
@@ -815,7 +827,7 @@ children:
 
         - title: CAN bus
           url: fly-sb2040_klipper_can.html
-          output: web, pdf     
+          output: web, pdf   
 
       - title: Configuration file settings
         url: fly-sb2040_klipper_config.html
@@ -853,7 +865,19 @@ children:
         url: fly-sht36_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht36_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sht36_canboot_can.html
+          output: web, pdf  
+
+      - title: Klipper Firmware
         output: web
         children: 
 
@@ -902,13 +926,21 @@ children:
         url: fly-sht36_v2_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: CAN bus Configuration
+          url: fly-sht36_v2_canboot_can.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
         output: web
         children: 
 
         - title: CAN bus Configuration
           url: fly-sht36_v2_klipper_can.html
-          output: web, pdf     
+          output: web, pdf   
 
       - title: Klipper printer Configuration
         url: fly-sht36_v2_klipper_config.html
@@ -946,7 +978,19 @@ children:
         url: fly-sht42_klipper.html
         output: web, pdf 
 
-      - title: Firmware
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sht42_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sht42_canboot_can.html
+          output: web, pdf  
+
+      - title: Klipper Firmware
         output: web
         children: 
 
@@ -1001,6 +1045,14 @@ children:
 
     - title: Overview
       url: ercf_easy-brd_v1_1.html
+      output: web, pdf 
+
+  - title: Fly ERCF Easy Board CAN
+    output: web
+    children:  
+
+    - title: Overview
+      url: ercf_easy-brd_can.html
       output: web, pdf 
 
 #SBC Section
@@ -1077,3 +1129,87 @@ children:
       url: fly-can_hat_v1.html
       output: web, pdf   
 
+### Display Section
+
+- title: Fly Displays 
+  output: web, pdf
+  children:
+
+  - title: Fly Mini12864
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_mini12864_general.html
+      output: web, pdf
+
+  - title: Fly TFT V1 3.5
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tft_general.html
+      output: web, pdf      
+
+  - title: FLY Marlin Wifi Beta 4.3 Touch Screen
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_marlin_wifi_general.html
+      output: web, pdf          
+
+  - title: FLY-Screen 4.3 & 7 Touch Screen
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_screen_general.html
+      output: web, pdf    
+
+### Driver Section
+
+- title: Fly Stepper Drivers 
+  output: web, pdf
+  children:
+
+  - title: Fly A4998 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_a4998_general.html
+      output: web, pdf
+
+  - title: Fly TMC2209 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tmc2209_general.html
+      output: web, pdf
+
+  - title: Fly TMC5160 Step Stick
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_tmc5160_general.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-tmc5160_files.html
+      output: web, pdf    
+
+  - title: Fly HV-TMC5160 Pro External Driver
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_hv-tmc5160pro_general.html
+      output: web, pdf      
+
+    - title: Files
+      url: fly-tmc5160pro_files.html
+      output: web, pdf    
+      

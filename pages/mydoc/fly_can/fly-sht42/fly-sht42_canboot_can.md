@@ -1,27 +1,26 @@
 ---
-
-title: Configuring the Mellow SHT-42 CAN bus tool boards for Klipper on USB
-tags: [content_types]
+title: Fly SHT42 Klipper configuration for CAN bus
+tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration for the Fly SHT-42 on USB"
+summary: "Klipper configuration on the Fly SHT-42 V1 for CAN bus"
 sidebar: mydoc_sidebar
-permalink: fly-sht42_klipper_usb.html
+permalink: fly-sht42_klipper_can.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 boardname: sht42
-firmware: usb
+firmware: can
 version: v1
 
 mcu: "SHT-42"
 
 mcufile: "SHT-42"
-com: "USB on PA11/PA12"
+com: "CAN bus on PA8/PA9"
 
-cancom_img1: "fly-sht36-42/sht_36_42_canbus_fw_usb_config.png"
-cancom_cap1: "CanBoot Menu Config USB - update this image"
+cancom_img1: "fly-sht36-42/sht_36_42_canbus_fw_can_config.png"
+cancom_cap1: "CanBoot Menu Config CAN"
 
 canburn_img1:  "fly-sht36-42/sht_42_dfu_jumper.png"
 canburn_cap1:  "DFU jumper location" 
@@ -35,18 +34,11 @@ canburn_cap3: "lsusb Results"
 canburn_img4: "fly-sht36-42/sht_36_42_canbus_usb_flash.png"
 canburn_cap4: "CanBoot burn complete"
 
-klipcom_img1: "fly-sht36-42/sht_36_42_klipper_fw_usb_config.png"
-klipcom_cap1: "Klipper Menu Config USB - update this image"
-
-klipcom_img2: "fly-sht36-42/sht_36_42_klipper_usb_flash.png"
-klipcom_cap2: "Klipper USB burn complete"
-
-klipcom_img3: "fly-sht36-42/sht_36_42_klipper_can_flash.png"
-klipcom_cap3: "Klipper verify CAN bus UUID"
+klipcom_img1: "fly-sht36-42/sht_36_42_klipper_fw_can_config.png"
+klipcom_cap1: "Klipper Menu Config CAN"
 
 klipcom_img4: "fly-sht36-42/sht_36_42_klipper_can_flash.png"
-klipcom_cap4: "Klipper CAN bus burn complete"
-
+klipcom_cap4: "Klipper FW burn over can"
 
 ---
 
@@ -58,9 +50,9 @@ klipcom_cap4: "Klipper CAN bus burn complete"
 
 ### Toolboard firmware
 
-{% include custom/can/sht_klipper_compile.html %}
+{% include custom/can/sht_canboot_compile.html %}
 
-{% include custom/can/sht_klipper_configure.html %}
+{% include custom/can/sht_canboot_burn.html %}
 
 {% include custom/can/sht_links.html %}
 
