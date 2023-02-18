@@ -3,10 +3,53 @@
     {% capture sb2040pins_cap1 %}{{page.sb2040pins_cap1 }}{% endcapture %}
     {% capture sb2040pins_url1 %} .\images\{{ page.sb2040pins_img1 }} {% endcapture %}
 
-
     {% capture sb2040pins_img2 %}{{page.sb2040pins_img2 }}{% endcapture %}
     {% capture sb2040pins_cap2 %}{{page.sb2040pins_cap2 }}{% endcapture %}
     {% capture sb2040pins_url2 %} .\images\{{ page.sb2040pins_img2 }} {% endcapture %}
+
+    {% capture sb2040pins_img3 %}{{page.sb2040pins_img3 }}{% endcapture %}
+    {% capture sb2040pins_cap3 %}{{page.sb2040pins_cap3 }}{% endcapture %}
+    {% capture sb2040pins_url3 %} .\images\{{ page.sb2040pins_img3 }} {% endcapture %}
+
+    {% capture sb2040pins_img4 %}{{page.sb2040pins_img4 }}{% endcapture %}
+    {% capture sb2040pins_cap4 %}{{page.sb2040pins_cap4 }}{% endcapture %}
+    {% capture sb2040pins_url4 %} .\images\{{ page.sb2040pins_img4 }} {% endcapture %}
+
+    {% capture sb2040pins_img5 %}{{page.sb2040pins_img5 }}{% endcapture %}
+    {% capture sb2040pins_cap5 %}{{page.sb2040pins_cap5 }}{% endcapture %}
+    {% capture sb2040pins_url5 %} .\images\{{ page.sb2040pins_img5 }} {% endcapture %}
+
+    {% capture sb2040pins_img6 %}{{page.sb2040pins_img6 }}{% endcapture %}
+    {% capture sb2040pins_cap6 %}{{page.sb2040pins_cap6 }}{% endcapture %}
+    {% capture sb2040pins_url6 %} .\images\{{ page.sb2040pins_img6 }} {% endcapture %}
+
+    {% capture sb2040pins_img7 %}{{page.sb2040pins_img7 }}{% endcapture %}
+    {% capture sb2040pins_cap7 %}{{page.sb2040pins_cap7 }}{% endcapture %}
+    {% capture sb2040pins_url7 %} .\images\{{ page.sb2040pins_img7 }} {% endcapture %}
+
+    {% capture sb2040pins_img8 %}{{page.sb2040pins_img8 }}{% endcapture %}
+    {% capture sb2040pins_cap8 %}{{page.sb2040pins_cap8 }}{% endcapture %}
+    {% capture sb2040pins_url8 %} .\images\{{ page.sb2040pins_img8 }} {% endcapture %}
+
+    {% capture sb2040pins_img9 %}{{page.sb2040pins_img9 }}{% endcapture %}
+    {% capture sb2040pins_cap9 %}{{page.sb2040pins_cap9 }}{% endcapture %}
+    {% capture sb2040pins_url9 %} .\images\{{ page.sb2040pins_img9 }} {% endcapture %}
+
+    {% capture sb2040pins_img10 %}{{page.sb2040pins_img10 }}{% endcapture %}
+    {% capture sb2040pins_cap10 %}{{page.sb2040pins_cap10 }}{% endcapture %}
+    {% capture sb2040pins_url10 %} .\images\{{ page.sb2040pins_img10 }} {% endcapture %}
+
+    {% capture sb2040pins_img11 %}{{page.sb2040pins_img11 }}{% endcapture %}
+    {% capture sb2040pins_cap11 %}{{page.sb2040pins_cap11 }}{% endcapture %}
+    {% capture sb2040pins_url11 %} .\images\{{ page.sb2040pins_img11 }} {% endcapture %}
+
+    {% capture sb2040pins_img12 %}{{page.sb2040pins_img12 }}{% endcapture %}
+    {% capture sb2040pins_cap12 %}{{page.sb2040pins_cap12 }}{% endcapture %}
+    {% capture sb2040pins_url12 %} .\images\{{ page.sb2040pins_img12 }} {% endcapture %}
+
+    {% capture sb2040pins_img13 %}{{page.sb2040pins_img13 }}{% endcapture %}
+    {% capture sb2040pins_cap13 %}{{page.sb2040pins_cap13 }}{% endcapture %}
+    {% capture sb2040pins_url13 %} .\images\{{ page.sb2040pins_img13 }} {% endcapture %}
 
 ## {{page.summary}}
 
@@ -50,6 +93,113 @@
 
 <div class="datatable-end"></div>
 
+### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sb2040_cfg}})
+
+### XT30 2+2 Wiring
+
+<div class="datatable-begin"></div>
+
+| **Color* |  **Function** |
+|:-----------|:--------------|
+|**RED** | 12/24V	|
+|**BLACK** | GND	|
+|**YELLOW**| CAN H |
+|**WHITE**| CAN L |
+ 
+<div class="datatable-end"></div> 
+
+  {% 
+  include image.html 
+  file=sb2040pins_img3
+  url=sb2040pins_url3
+  alt=sb2040pins_cap3
+  caption=sb2040pins_cap3
+  %}
+
+### Extruder Wiring
+
+  {% 
+  include image.html 
+  file=sb2040pins_img4
+  url=sb2040pins_url4
+  alt=sb2040pins_cap4
+  caption=sb2040pins_cap4
+  %}
+
+### Hotend Wiring
+
+ - The heating circuit supports a maximum current of 10A
+
+  {% 
+  include image.html 
+  file=sb2040pins_img5
+  url=sb2040pins_url5
+  alt=sb2040pins_cap5
+  caption=sb2040pins_cap5
+  %}
+
+### Z Probe Wiring
+
+#### Induction Probe
+
+ - The official recommendation of VORON is to use the Omron Omron TL-Q5MC
+
+  {% 
+  include image.html 
+  file=sb2040pins_img6
+  url=sb2040pins_url6
+  alt=sb2040pins_cap6
+  caption=sb2040pins_cap6
+  %}
+
+#### Klicky Probe
+
+ - Klicky is a third-party leveling sensor that can be made at home at a very low cost, and its performance is stable and cost-effective. The wiring method is shown in the figure below.
+
+  {% 
+  include image.html 
+  file=sb2040pins_img7
+  url=sb2040pins_url7
+  alt=sb2040pins_cap7
+  caption=sb2040pins_cap7
+  %}
+
+#### BL Touch
+
+ - BL-touch has a total of five wires, three for the first group, responsible for the power supply of the sensor and the retraction of the probe, and the second group for the ground and signal lines, which output the limit signal. Please carefully check the wiring sequence when wiring the BL-touch, the wrong wiring may permanently damage the sensor and motherboard!!! The wiring method is shown in the figure below.
+ 
+  {% 
+  include image.html 
+  file=sb2040pins_img8
+  url=sb2040pins_url8
+  alt=sb2040pins_cap8
+  caption=sb2040pins_cap8
+  %}
+
+#### Voron Tap
+
+ - Voron Tap is the latest leveling sensor solution released by the Voron team, which has the characteristics of high precision, strong stability and good adaptability. When wiring, please pay attention to the positive and negative poles can not be reversed, otherwise it will damage the Tap sensor and even the SHT tool board.
+
+  {% 
+  include image.html 
+  file=sb2040pins_img9
+  url=sb2040pins_url9
+  alt=sb2040pins_cap9
+  caption=sb2040pins_cap9
+  %}
+
+### Limit switches
+
+- There are two types of limit switches: normally open (NO) and normally closed (NC). Generally, on 3D printers, it is recommended to use normally closed (NC), so that when there is a problem with the limit switch line, the system will report an error in time, which can avoid some unnecessary crashes and avoid damage to the printer.
+
+  {% 
+  include image.html 
+  file=sb2040pins_img10
+  url=sb2040pins_url10
+  alt=sb2040pins_cap10
+  caption=sb2040pins_cap10
+  %}
+
 ### Fan Board Pins
 
   {% 
@@ -70,7 +220,35 @@
 |**Fan PWM**| Fan 1 PWM | **gpio16** | A2 | **PWM0** | |
 |**LED** |RGB LED | **gpio12** | LED   | **S** | RGBLED | 
  
-
 <div class="datatable-end"></div>  
 
-### Sample Configuration file: [{{page.mcu}}.cfg]({{page.sb2040_cfg}})
+ - SB2040 supports up to two controllable fans, fan voltage can be selected 24V, 5V, support 2, 3, 4-wire fans, wiring method is as follows.
+
+  {% 
+  include image.html 
+  file=sb2040pins_img11
+  url=sb2040pins_url11
+  alt=sb2040pins_cap11
+  caption=sb2040pins_cap11
+  %}
+
+  {% 
+  include image.html 
+  file=sb2040pins_img12
+  url=sb2040pins_url12
+  alt=sb2040pins_cap12
+  caption=sb2040pins_cap12
+  %}
+
+### RGB Wiring
+
+ - The positive and negative poles of the RGB LEDs must not be reversed, otherwise it will damage the CAN tool board.
+
+  {% 
+  include image.html 
+  file=sb2040pins_img13
+  url=sb2040pins_url13
+  alt=sb2040pins_cap13
+  caption=sb2040pins_cap13
+  %} 
+
