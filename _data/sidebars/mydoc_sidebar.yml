@@ -781,6 +781,8 @@ children:
   output: web, pdf
   children:
 
+#  Fly-SB2040
+
   - title: Fly SB2040 V1
     output: web
     children:  
@@ -792,6 +794,10 @@ children:
     - title: Pin diagrams
       url: fly-sb2040_pins.html
       output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-sb2040_120r.html
+      output: web, pdf
 
     - title: Files
       url: fly-sb2040_files.html
@@ -837,6 +843,8 @@ children:
       url: fly-sb2040_trouble.html
       output: web, pdf   
 
+# SHT-36
+
   - title: Fly SHT 36
     output: web
     children:  
@@ -848,6 +856,10 @@ children:
     - title: Pin diagrams
       url: fly-sht36_pins.html
       output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-sht36_120r.html
+      output: web, pdf  
 
     - title: Fan MOSFET
       url: fly-sht36_fan_mos.html
@@ -897,6 +909,7 @@ children:
       url: fly-sht36_trouble.html
       output: web, pdf     
 
+# sht-36v2
 
   - title: Fly SHT 36 V2
     output: web
@@ -909,6 +922,10 @@ children:
     - title: Pin diagrams
       url: fly-sht36_v2_pins.html
       output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-sht36_v2_120r.html
+      output: web, pdf
 
     - title: Fan MOSFET
       url: fly-sht36_v2_fan_mos.html
@@ -950,6 +967,8 @@ children:
       url: fly-sht36_v2_trouble.html
       output: web, pdf        
 
+# SHT-42
+
   - title: Fly SHT 42
     output: web
     children:  
@@ -961,6 +980,10 @@ children:
     - title: Pin diagrams
       url: fly-sht42_pins.html
       output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-sht42_120r.html
+      output: web, pdf
 
     - title: Fan MOSFET
       url: fly-sht42_fan_mos.html
@@ -1010,6 +1033,8 @@ children:
       url: fly-sht42_trouble.html
       output: web, pdf              
 
+# utoc
+
   - title: Fly UTOC-1 and UTOC-3
     output: web
     children:  
@@ -1021,6 +1046,10 @@ children:
     - title: Pin diagrams
       url: fly-utoc_pins.html
       output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-utoc_120r.html
+      output: web, pdf
 
     - title: Files
       url: fly-utoc_files.html

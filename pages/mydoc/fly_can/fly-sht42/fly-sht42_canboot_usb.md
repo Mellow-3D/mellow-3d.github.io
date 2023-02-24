@@ -4,7 +4,7 @@ title: Configuring the Mellow SHT-42 CAN bus tool boards for Klipper on USB
 tags: [content_types]
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper Configuration for the Fly SHT-42 on USB"
+summary: "CanBoot Configuration for the Fly SHT-42 on USB"
 sidebar: mydoc_sidebar
 permalink: fly-sht42_canboot_usb.html
 folder: mydoc

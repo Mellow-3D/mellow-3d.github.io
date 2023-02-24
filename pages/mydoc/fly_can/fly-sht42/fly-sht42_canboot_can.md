@@ -3,9 +3,9 @@ title: Fly SHT42 Klipper configuration for CAN bus
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper configuration on the Fly SHT-42 V1 for CAN bus"
+summary: "CanBootKlipper configuration on the Fly SHT-42 V1 for CAN bus"
 sidebar: mydoc_sidebar
-permalink: fly-sht42_klipper_can.html
+permalink: fly-sht42_canboot_can.html
 folder: mydoc
 comments: false
 toc: true
