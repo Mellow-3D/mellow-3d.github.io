@@ -1172,6 +1172,18 @@ children:
       url: fly_mini12864_general.html
       output: web, pdf
 
+    - title: Pin Diagram
+      url: fly_mini12864_pins.html
+      output: web, pdf
+
+    - title: Klipper Configuration
+      url: fly_mini12864_klipper.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_mini12864_files.html
+      output: web, pdf
+
   - title: Fly TFT V1 3.5
     output: web
     children:  
