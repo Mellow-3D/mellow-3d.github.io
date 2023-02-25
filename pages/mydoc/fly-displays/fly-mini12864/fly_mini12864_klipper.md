@@ -3,7 +3,7 @@ title: Fly Mini 12864 display Klipper configuration
 tags: []
 keywords: 
 last_updated: 20/10/2022
-summary: "Klipper COnfiguration for the Fly Mini 12864 Display"
+summary: "Klipper Configuration for the Fly Mini 12864 Display"
 sidebar: mydoc_sidebar
 permalink: fly_mini12864_klipper.html
 folder: mydoc
@@ -56,7 +56,7 @@ color_order: RGB
 
 ```
     # EXP1 header
-    EXP1_1=<NC>>,  EXP1_3=PB2,  EXP1_5=PE15,   EXP1_7=PA13,  EXP1_9=<GND>,
+    EXP1_1=<NC>,  EXP1_3=PB2,  EXP1_5=PE15,   EXP1_7=PA13,  EXP1_9=<GND>,
     EXP1_2=PA9,  EXP1_4=PA10,  EXP1_6=PE14,   EXP1_8=PA14,  EXP1_10=<5V>,
     # EXP2 header
     EXP2_1=PA6, EXP2_3=PD8,  EXP2_5=PD9,  EXP2_7=PC13,   EXP2_9=<GND>,
