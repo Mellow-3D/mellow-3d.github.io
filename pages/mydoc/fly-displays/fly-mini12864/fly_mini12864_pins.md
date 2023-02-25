@@ -45,16 +45,16 @@ caption=display_cap1
 
 |Socket|Pin Number|Pin Name 1|Pin Name 2|Alias|Note|
 | :------------- |:-------------|:-------------|:-------------|:-------------|:-------------|
-|EXP1|1|5v|VCC|EXP1_10||
-|EXP1|2|GND|GND|EXP1_9||
-|EXP1|3|LCD_D7|Blue|EXP1_8||
-|EXP1|4|LCD_D6|Green|EXP1_7||
-|EXP1|5|LCD_D5|Red|EXP1_6|Neopixel Pin|
-|EXP1|6|LCD_D4|LCD_RST|EXP1_5||
-|EXP1|7|LCD_RS|LCD_A0|EXP1_4||
-|EXP1|8|LCD_EN|LCD_CS|EXP1_3||
-|EXP1|9|LCD_BTN_ENC|BTN_ENC|EXP1_2||
-|EXP1|10|BEEP|BEEP|EXP1_1||
+|EXP1|10|5v|VCC|EXP1_10||
+|EXP1|9|GND|GND|EXP1_9||
+|EXP1|8|LCD_D7|Blue|EXP1_8||
+|EXP1|7|LCD_D6|Green|EXP1_7||
+|EXP1|6|LCD_D5|Red|EXP1_6|Neopixel Pin|
+|EXP1|5|LCD_D4|LCD_RST|EXP1_5||
+|EXP1|4|LCD_RS|LCD_A0|EXP1_4||
+|EXP1|3|LCD_EN|LCD_CS|EXP1_3||
+|EXP1|2|LCD_BTN_ENC|BTN_ENC|EXP1_2||
+|EXP1|1|BEEP|BEEP|EXP1_1||
 
 <div class="datatable-end"></div>
 
@@ -64,16 +64,16 @@ caption=display_cap1
 
 |Socket|Pin Number|Pin Name 1|Pin Name 2|Alias|Note|
 | :------------- |:-------------|:-------------|:-------------|:-------------|:-------------|
-|EXP2|1|KILL|KILL|EXP2_10||
-|EXP2|2|GND|GND|EXP2_9||
-|EXP2|3|RST|RST|EXP2_8||
-|EXP2|4|LCD_CD|CD|EXP2_7||
-|EXP2|5|LCD_MOSI|MOSI|EXP2_6||
-|EXP2|6|LCD_BTN_EN2|BTN_EN2|EXP2_5||
-|EXP2|7|LCD_SS|SS|EXP2_4||
-|EXP2|8|LCD_BTN_EN1|BTN_EN1|EXP2_3||
-|EXP2|9|LCD_SCK|SCK|EXP2_2||
-|EXP2|10|LCD_MISO|MISO|EXP2_1||
+|EXP2|10|KILL|KILL|EXP2_10||
+|EXP2|9|GND|GND|EXP2_9||
+|EXP2|8|RST|RST|EXP2_8||
+|EXP2|7|LCD_CD|CD|EXP2_7||
+|EXP2|6|LCD_MOSI|MOSI|EXP2_6||
+|EXP2|5|LCD_BTN_EN2|BTN_EN2|EXP2_5||
+|EXP2|4|LCD_SS|SS|EXP2_4||
+|EXP2|3|LCD_BTN_EN1|BTN_EN1|EXP2_3||
+|EXP2|2|LCD_SCK|SCK|EXP2_2||
+|EXP2|1|LCD_MISO|MISO|EXP2_1||
 
 <div class="datatable-end"></div>
 
