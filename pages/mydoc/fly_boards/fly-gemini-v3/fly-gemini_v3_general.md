@@ -95,6 +95,17 @@ caption="Fly-Gemini-V3 Fan Voltage"
 
 {% include important.html content="Fan2's voltage is also controlled by the above jumper and is not just Vin." %}
 
+### 5V Core Fan
+The Fly-Gemini-V3 features a 5v fan header for cooling the CPU. Fan control can be configured in Klipper. 
+
+{% 
+include image.html 
+file="fly-gemini-v3\fly_gemini_v3_core_fan.png" 
+alt="Fly-Gemini-V3 5VCore Fan " 
+caption="Fly-Gemini-V3 5V Core Fan"
+%}
+
+
 ### Maximum Input voltage
 
 #### Board/Bed Power

@@ -95,6 +95,16 @@ caption="Fly-Gemini-V2 Fan Voltage"
 
 {% include important.html content="Fan2's voltage is also controlled by the above jumper and is not just Vin." %}
 
+### 5V Core Fan
+The Fly-Gemini-V2 features a 5v fan header for cooling the CPU. Fan control can be configured in Klipper. 
+
+{% 
+include image.html 
+file="fly-gemini-v2\gemini_v2_mcu_core_fan.png" 
+alt="Fly-Gemini-V2 5VCore Fan " 
+caption="Fly-Gemini-V2 5V Core Fan"
+%}
+
 ### Maximum Input voltage
 
 #### Board/Bed Power
@@ -106,6 +116,7 @@ The board power input can handle voltage up to 30v.
 The driver power input can handle voltage up to 62v.
 
 {% include warning.html content="In industry, 30 volts is generally considered to be a conservative threshold value for dangerous voltage. The cautious person should regard any voltage above 30 volts as threatening, not relying on normal body resistance for protection against shock." %}
+
 
 ### Initial Installation
 

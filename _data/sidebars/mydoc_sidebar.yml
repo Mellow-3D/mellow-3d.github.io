@@ -1142,6 +1142,10 @@ children:
         url: fly_pi_klipper.html
         output: web, pdf
 
+      - title: Klipper Core Fan configuration
+        url: fly_pi_core_fan.html
+        output: web, pdf
+
   - title: Fly Pi Pro
     output: web
     children:  
