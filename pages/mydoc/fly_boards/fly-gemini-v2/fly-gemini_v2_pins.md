@@ -39,45 +39,51 @@ Driver pin numbers. They are separated into driver number.
 
 |Pin Type|0 (X)|X Alias|1 (Y)|Y Alias|2 (Z)|Z Alias|3 (E0)|EXT Alias|
 | :------------- |:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------
-|Enable Pins|B.2|X_EN|D.2|Y_EN|C.12|Z_EN|C.11|EXT_EN|
-|Step Pins|C.13|X_STEP|C.14|Y_STEP|C.15|Z_STEP|C.3|EXT_STEP|
-|Direction Pins|C.1|X_DIR|C.4|Y_DIR|C.5|Z_DIR|C.8|EXT_DIR|
-|UART Pins|B.11|X_UART|B.9|Y_UART|B.8|Z_UART|B.7|EXT_UART|
+|Enable Pins|PB2|X_EN|PD2|Y_EN|PC12|Z_EN|PC11|EXT_EN|
+|Step Pins|PC13|X_STEP|PC14|Y_STEP|PC15|Z_STEP|PC3|EXT_STEP|
+|Direction Pins|PC1|X_DIR|PC4|Y_DIR|PC5|Z_DIR|PC8|EXT_DIR|
+|UART Pins|PB11|X_UART|PB9|Y_UART|PB8|Z_UART|PB7|EXT_UART|
 
 <div class="datatable-end"></div>
 
 ## Fly-Gemini-V2 Other Pins in Firmware 
 
-If more than one pin name is availble, either name can be used in the firmware (config.g).  
-If the pins aren't in the table (due to not having a special name), then the pin itself can be used in the form of PA0, PA.0, PA_0, A0, A.0 or A_0.  
-
 <div class="datatable-begin"></div>
 
-|Pin Number|Pin Name 1|Pin Name 2|Alias|PWM Hardware Timer|
-| :------------- |:-------------|:-------------|:-------------|:-------------|
-|A.0|e0heat|he0|HE0|Timer 2|
-|A.1|probe||PROBE_1|Timer 2|
-|A.10|RX1||||
-|A.13|LCD_EN|||
-|A.14|BTN_EN2||||
-|A.15|BTN_EN1|||Timer 2|
-|A.2|bed|hbed|HE1|Timer 2|
-|A.3|xstop||LIMIT0|Timer 2|
-|A.4|BTN_ENC||||
-|A.8|LCD_D5||||
-|A.9|TX1||||
-|B.0|servo0|||Timer 3|
-|B.1|ystop||LIMIT1|Timer 3|
-|B.10|zstop||LIMIT2|Timer 2|
-|B.12|LCD_SS|||Timer 2|
-|B.13|LCD_SCK||||
-|B.14|LCD_MISO|||Timer 12|
-|B.15|LCD_MOSI|||Timer 8|
-|B.3|LCD_CD|||Timer 2|
-|C.0|e0temp|t0|TH0||
-|C.2|bedtemp|tb|TH1||
-|C.6|fan0|fan|FAN0|Timer 8|
-|C.7|fan1||FAN1|Timer 3|
+|Pin Number|Pin Name 1|Pin Name 2|Alias|
+| :------------- |:-------------|:-------------|:-------------|
+|PA0|e0heat|he0|HE0|
+|PA1|probe||PROBE_1|
+|PA10|LCD_RS|RX1|EXP1_4|
+|PA13|LCD_EN||EXP1_3|
+|PA14|LCD_BTN_EN2|BTN_EN2|EXP2_5|
+|PA15|LCD_BTN_EN1|BTN_EN1|EXP2_3|
+|PA2|bed|hbed|HE1|
+|PA3|xstop||LIMIT0|
+|PA4|LCD_ENC_SW|BTN_ENC|EXP1_2|
+|PA8|LCD_D5||EXP1_6|
+|PA9|LCD_D4|TX1|EXP1_5|
+|PB0|servo0|||
+|PB1|ystop||LIMIT1|
+|PB7|
+|PB10|zstop||LIMIT2|
+|PB12|LCD_SS||EXP2_4|
+|PB13|LCD_SCK||EXP2_2|
+|PB14|LCD_MISO||EXP2_1|
+|PB15|LCD_MOSI||EXP2_6|
+|PB3|LCD_CD||EXP2_7|
+|PC0|e0temp|t0|TH0|
+|PC2|bedtemp|tb|TH1|
+|PC6|fan0|fan|FAN0|
+|PC7|fan1||FAN1|
+|PC9|LCD_BEEP||EXP1_1|
+|\<NC> |LCD_D6||EXP1_7|
+|\<NC> |LCD_D7||EXP1_8|
+|\<GND>|LCD_GND||EXP1_9|
+|\<5V> |LCD_VCC||EXP1_10|
+|\<RST>|LCD_RST||EXP2_8|
+|\<GND>|LCD_GND||EXP2_9|
+|\<NC> |LCD_KILL||EXP2_10|
 
 <div class="datatable-end"></div>
 

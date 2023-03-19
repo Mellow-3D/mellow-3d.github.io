@@ -33,8 +33,6 @@ Driver pin numbers. They are separated into driver number.
 
 ## Fly-Gemini-V3 Other Pins in Firmware 
 
-If more than one pin name is availble, either name can be used in the firmware (config.g).  
-If the pins aren't in the table (due to not having a special name), then the pin itself can be used in the form of PA0, PA.0, PA_0, A0, A.0 or A_0.  
 
 <div class="datatable-begin"></div>
 
@@ -55,7 +53,7 @@ If the pins aren't in the table (due to not having a special name), then the pin
 |PA5|ystop||LIMIT1|
 |PA6|zstop||LIMIT2|
 |PB1|estop||LIMIT3|
-|PB10|ENC_SW||EXP1_2|
+|PB10|LCD_ENC_SW||EXP1_2|
 |PB12|LCD_SS||EXP2_4|
 |PB13|LCD_SCK||EXP2_2|
 |PB14|LCD_MISO||EXP2_1|
@@ -67,11 +65,11 @@ If the pins aren't in the table (due to not having a special name), then the pin
 |PC9|LCD_BEEP||EXP1_1|
 |\<NC> |LCD_D6||EXP1_7|
 |\<NC> |LCD_D7||EXP1_8|
-|\<GND>|GND||EXP1_9|
-|\<5V> |VCC||EXP1_10|
-|\<RST>|RST||EXP2_8|
-|\<GND>|GND||EXP2_9|
-|\<NC> |KILL||EXP2_10|
+|\<GND>|LCD_GND||EXP1_9|
+|\<5V> |LCD_VCC||EXP1_10|
+|\<RST>|LCD_RST||EXP2_8|
+|\<GND>|LCD_GND||EXP2_9|
+|\<NC> |LCD_KILL||EXP2_10|
 
 <div class="datatable-end"></div>
 
