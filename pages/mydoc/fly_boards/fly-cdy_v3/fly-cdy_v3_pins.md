@@ -59,7 +59,7 @@ Driver pin numbers. They are separated by driver number.
 |PD15|neopixel|||
 |PC2|probe||PROBE|
 |PE6|servo0||SERVO|
-|<NC>|LCD_BEEP||EXP1_1|
+|\<NC>|LCD_BEEP||EXP1_1|
 |PA9|LCD_BTN_ENC|ENC_SW|EXP1_2|
 |PB2|LCD_EN||EXP1_3|
 |PA10 |LCD_RS||EXP1_4|
@@ -67,8 +67,8 @@ Driver pin numbers. They are separated by driver number.
 |PE14|LCD_D5||EXP1_6|
 |PA13|LCD_D6||EXP1_7|
 |PA14|LCD_D7||EXP1_8|
-|<GND>|GND||EXP1_9|
-|<5V>|VCC||EXP1_10|	 
+|\<GND>|GND||EXP1_9|
+|\<5V>|VCC||EXP1_10|	 
 |PA6|LCD_MISO||EXP2_1|
 |PA5|LCD_SCK||EXP2_2|
 |PD8|LCD_BTN_EN1|RX1|EXP2_3|
@@ -76,9 +76,9 @@ Driver pin numbers. They are separated by driver number.
 |PD9|LCD_BTN_EN2|TX1|EXP2_5|
 |PA7|LCD_MOSI||EXP2_6|
 |PE13|LCD_CD||EXP2_7|
-|<RST>|RST||EXP2_8|
-|<GND>|GND||EXP2_9|
-|<NC>|KILL||EXP2_10|
+|\<RST>|RST||EXP2_8|
+|\<GND>|GND||EXP2_9|
+|\<NC>|KILL||EXP2_10|
 
 
 <div class="datatable-end"></div>
