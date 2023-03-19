@@ -15,6 +15,7 @@ datatable: true
 boardname: Fly-Super 8 Pro
 firmware: usb
 version: "V 1.2"
+notetag: "prousb"
 
 micro: "STMicroelectronics STM32"
 processor: "STM32H723"
