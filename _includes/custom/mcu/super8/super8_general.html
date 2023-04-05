@@ -16,8 +16,10 @@ caption=super8_cap1
 %}
 
 This page covers any general information for the {{boardname}} boards.  
-It is currently available through [AliExpress](https://www.aliexpress.us/item/3256803049369292.html). 
- 
+It is currently available through [AliExpress](https://www.aliexpress.us/item/3256803049369292.html).
+{% if page.processor == "STM32H723" %}
+There are two versions of the Fly-Super8Pro. One has an STM32H743 MCU and the other has an STM32H723. This is the information for the STM32H723.  
+{% endif %} 
  {% if page.processor == "STM32H723" %}
  - 32-bit ARM Cortex-M7 Kernel 550MHz, STM32H723ZGT6 Chip
  {% endif %}
@@ -44,8 +46,6 @@ It is currently available through [AliExpress](https://www.aliexpress.us/item/32
 
  - PWM Fan MOS boards can be directly replaced in case of damage.
 
-
-
 ### Driver Jumpers
 
 The jumpers should be installed as below. "Common Interpolation" should be used for standalone drivers. "SPI mode Interpolation" is supported for TMC5160 drivers. "UART mode Interpolation" should be used when using smart drivers (i.e. TMC2208, TMC2209, TMC2225 and TMC2226)
@@ -56,7 +56,6 @@ file="fly-super8\fly-super8_driver_jumpers.png"
 alt="Fly-Super 8 Driver Jumpers" 
 caption="Fly-Super 8 Driver Jumper Locations" 
 %}
-
 
 ### Driver Diag Pin
 
@@ -71,7 +70,7 @@ The {{boardname}} features 5 replacable fan mosfet modules (VS3622e) that contro
 If the MOSFET is damaged by an accidental short circuit it can easily be replaced. 
 New Fly-MOS modules can be purchased from the [Mellow store](https://www.aliexpress.us/item/3256803593540212.html)
 
-The Fan MOS design allows it to be inserted in either orientation. 
+The Fan-MOS design allows it to be inserted in either orientation. 
 
 {% 
 include image.html 
@@ -92,8 +91,6 @@ alt="Fly-Super 8 Fan Voltage"
 caption="Fly-Super 8 Fan Voltage"
 %}
 
-
-
 ### Maximum Input voltage
 
 #### Board/Bed Power
@@ -102,10 +99,14 @@ The main board and heated bed power inputs can handle voltage up to 30v.
 
 #### Driver Power
 
-{{boardname}} versions 1.1 and 1.2 both of the driver power inputs 0-2 and 3-7 can handle voltage up to 62v.
+{% if page.processor == "STM32H723" %}
+{{boardname}} version 1.3, both of the driver power inputs 0-2 and 3-7 can handle voltage up to 62v.
+{% endif %}
+{% if page.processor == "STM32F407" %}
+{{boardname}} versions 1.1, 1.2 and 1.3, both of the driver power inputs 0-2 and 3-7 can handle voltage up to 62v.
 
 {{boardname}} version 1.0 allows for up to 62 volts on the power input for Drivers 0,1 and 2. Drivers 3-7 allow up to 24 volts. 
-
+{% endif %}
 {% 
 include image.html 
 file="fly-super8\fly-super8_drive_power.png" 

@@ -32,7 +32,7 @@
     caption=cancom_cap2
     %}
 
-- Use a USB-C data cable to connect the {{ boardname }} board to the klipper host, Make sure that the dfu jumper is installed before connecting the USB cable.      
+- Use a USB-C data cable to connect the {{ boardname }} board to the klipper host. Make sure that the dfu jumper is installed before connecting the USB cable.      
 - Run lsusb to see if the connection is successful, copy the USB ID in the blue box. Note that the board is in DFU mode. 
 ```
 lsusb
@@ -46,7 +46,6 @@ lsusb
     %}
 
 - Erase and Burn the firmware , replace 0483:df11 in the following command with the USB ID copied earlier
-
 {% if page.processor == "STM32H723" %}
 ```
 sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000 -d 0483:df11
@@ -68,7 +67,7 @@ sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force
     caption=canburn_cap2
     %}
 
-- If the burn was sucessful remove the jumper(S) from the Boot pins and power cycle the printer. 
+- If the burn was sucessful remove the jumper(s) from the Boot pins and power cycle the printer. 
 
 
 

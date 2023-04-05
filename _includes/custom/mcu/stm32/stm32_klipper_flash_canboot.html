@@ -10,7 +10,7 @@
     {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
 
-   {% if page.firmware == "usb" %}
+{% if page.firmware == "usb" %}
 
 ### Flash Klipper USB firmware with CanBoot over USB
 - Find the Serial ID
@@ -18,7 +18,7 @@
 ls /dev/serial/by-id/
 ```
 
-- Copy the ID containing '{{page.processor}}'
+- Copy the ID containing '{{page.processor}}' and make a note of it for use in your printer.cfg. 
 
 - Run the make flash command to flash the firmware
 ```
@@ -42,7 +42,7 @@ make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_17003800065031
 
 {% elsif page.firmware == "can" %}
 
-### Flash Klipper CAN bus firmware with CanBoot over CAN bus
+### Flash Klipper CANbus firmware with CanBoot over CANbus
 
  - Get the {{ boardname }} UUID buy running the following script. 
  ```
@@ -64,7 +64,7 @@ Detected uuid: 8248a4b16ede, Application: CanBoot
 
  - Each device will have a unique uuid. In the above example, 8248a4b16ede is the micro-controller’s canbus uuid.
 
-- Save the UUID for the next step.
+- Save the UUID for the next step and for using in your printer.cfg file.  
 
 - Flash the klipper FW to the {{boardname}} by running the following command. 
 ```
@@ -72,7 +72,7 @@ python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {
 ```
 Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 6248a4b16ede
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
 ```
 - You should get a download progress bar and File downloaded successfuly when the burning is complete.
   {% 
@@ -93,7 +93,7 @@ python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 6
 ls /dev/serial/by-id/
 ```
 
-- Copy the ID containing 'stm32f407xb'
+- Copy the ID containing '{{page.processor}}' and make a note of it for your printer.cfg.  
 
 - Run the make flash command to compile the firmware
 ```
