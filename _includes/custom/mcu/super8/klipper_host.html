@@ -5,7 +5,7 @@
 ## Klipper Host CAN0 file configuration
 
 
-{% include important.html content="This guide assumes you have a working Klipper host installation on a Fly Gemini, Fly Pi, Raspberry Pi or compatible device" %}
+{% include important.html content="This guide assumes you have a working Klipper host installation on a Fly Gemini, Fly Pi, Raspberry Pi or compatible device. If you don't have a working installation, please use [kiauh](https://github.com/th33xitus/kiauh)" %}
  
  - SSH to your Klipper host and create a new can0 file in the /ect/network/interfaces.d folder
  ```
@@ -24,7 +24,7 @@ iface can0 can static
 {% include note.html content="Use the same bitrate you use on your can tool boards. This can be 250000, 500000 or 1000000. Bitrates of 500000 and 1000000 are prefered. " %}
  
 
- - enter Ctrl+X to save the can0 file
+ - Enter Ctrl+X to save the can0 file
 
  - Reboot your klipper host. 
 
