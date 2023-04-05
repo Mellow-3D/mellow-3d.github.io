@@ -362,7 +362,7 @@ children:
         children:
       
         - title: Step 1 - CanBoot on USB to CAN bridge
-          url: fly-super8_pro_h723_canboot_usb.html
+          url: fly-super8_pro_h723_canboot_usb2can.html
           output: web, pdf  
         
         - title: Step 2 - Klipper USB to CAN bridge
