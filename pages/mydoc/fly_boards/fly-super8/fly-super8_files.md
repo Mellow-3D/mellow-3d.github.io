@@ -13,6 +13,7 @@ datatable: true
 
 boardname: "Fly-Super 8" 
 ver: "V 1.2" 
+processor: "STM32F407"
 
 ---
 {% include custom/mcu/super8/super8_files.html %}

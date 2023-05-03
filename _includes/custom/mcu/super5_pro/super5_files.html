@@ -1,0 +1,9 @@
+        {% capture boardname %}{{ page.boardname }}{% endcapture %}
+        {% capture ver %}{{ page.ver }}{% endcapture %}
+ 
+## {{boardname}} files
+
+{% if page.processor == "STM32H723" %}
+- Fly Super 5 Pin Diagram: [Super5Pro_pinout.svg](https://github.com/Mellow-3D/Fly-Super5Pro/blob/main/Hardware/Super5Pro-Schematihttps://github.com/Mellow-3D/Fly-Super5Pro/blob/main/Hardware/Super5Pro-Pinout.svg)
+- Fly Super 5 Schematic PDF: [Schematic_Super5Pro.pdf](https://github.com/Mellow-3D/Fly-Super5Pro/blob/main/Hardware/Super5Pro-Schematic.pdf)
+{% endif %}

@@ -4,14 +4,14 @@
 # {{boardname}} Configuration files
 
 ## {{boardname}} aliases file
-- [Download a copy of the aliases file](./files/super8/super8.cfg)
+- [Download a copy of the aliases file](./files/fly-super5_pro/super5_pro.cfg)
 
 ```
-{% include custom/mcu/super8/super8_alias.html %}
+{% include custom/mcu/super5_pro/super5_alias.html %}
 ```
 ## Example Printer.cfg file
 
-- [Download a sample file containing these sections](./files/super8/super8_printer.cfg)
+- [Download a sample file containing these sections](./files/fly-super5_pro/super5_pro_printer.cfg)
 
 ### MCU
 ```
@@ -102,23 +102,6 @@ position_max: 350
 ### tmc2209 stepper_z
 ```
 uart_pin: Z_CS
-run_current: 0.800
-stealthchop_threshold: 999999
-```
-
-### stepper_z1
-```
-step_pin: Z1_STEP
-dir_pin: !Z1_DIR
-enable_pin: !Z1_EN
-microsteps: 16
-rotation_distance: 4
-step_pulse_duration: 0.000004
-```
-
-### tmc2209 stepper_z1
-```
-uart_pin: Z1_CS
 run_current: 0.800
 stealthchop_threshold: 999999
 ```

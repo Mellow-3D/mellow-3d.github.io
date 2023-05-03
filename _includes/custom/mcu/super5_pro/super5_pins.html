@@ -1,0 +1,80 @@
+        {% capture boardname %}{{ page.boardname }}{% endcapture %}
+        {% capture ver %}{{ page.ver }}{% endcapture %}
+
+## {{ page.boardname }} Pinout Diagram
+
+{% 
+include image.html 
+file="fly-super5_pro/fly-super5_pro_wiring_diagram.webp" 
+url="images/fly-super5_pro/fly-super5_pro_wiring_diagram.webp" 
+alt="Fly-Super 5 pins" 
+caption="Fly-Super 5 Pinout" 
+%}
+
+
+<a href="https://raw.githubusercontent.com/Mellow-3D/Fly-Super5Pro/f5d36ae681ef141924747fe1b15d2c3c6ee10ab3/Hardware/Super5Pro-Pinout.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/Fly-Super5Pro/f5d36ae681ef141924747fe1b15d2c3c6ee10ab3/Hardware/Super5Pro-Pinout.svg?sanitize=true" /></a>
+
+
+## {{ page.boardname }} Driver Pins in Firmware
+
+Driver pin numbers. They are separated into driver number.
+
+<div class="datatable-begin"></div>
+
+|Pin Type      |0(X)|1(Y)|2(Z)|3(E0)|4(E1)|
+| :------------- |:-------------|:-------------|:-------------|:-------------|:-------------|
+|Step Pins     |PE14|PE11|PE7 |PE4 |PE1 |
+|Direction Pins|PE15|PE12|PE8 |PE5 |PE2 |
+|Enable Pins   |PB11|PE13|PE9 |PC1 |PE3|
+|UART Pins     |PB10|PE10|PA4 |PC0 |PE0|
+
+
+<div class="datatable-end"></div>
+
+## {{ page.boardname }} Other Pins in Firmware 
+
+If more than one pin name is availble, either name can be used in the firmware (config.g).  
+If the pins aren't in the table (due to not having a special name), then the pin itself can be used in the form of PA0, PA.0, PA_0, A0, A.0 or A_0.  
+
+<div class="datatable-begin"></div>
+
+|Pin Number|Pin Name 1|Klipper Alias|
+| :------------- |:-------------|:-------------|
+|PC4|ADC0|HEAT0_TEMP|
+|PC5|ADC1|HEAT1_TEMP|
+|PB1|ADC2|BED_TEMP|
+|PB7|IO0|X_STOP|
+|PC7|IO1|Y_STOP|
+|PC6|IO2|Z_STOP|
+|PC13|IO3|E_STOP|
+|PC14|IO4||
+|PC15|IO5||
+|PB2|NEOPIXEL||
+|PE6|SERVO0|SERVO|
+|PC2|probe|PROBE|
+|PD12|heat0|HEAT0|
+|PD13|heat1|HEAT1|
+|PB0|bedout|BED_OUT|
+|PA0|fan0|FAN0|
+|PA1|fan1|FAN1|
+|PA2|fan2|FAN2|
+|PA3|fan3|FAN3|
+|PA8|BEEP|EXP1_1|
+|PA13|BTNENC|EXP1_2|
+|PA15|LCDEN|EXP1_3|
+|PA14|LCDRS|EXP1_4|
+|PD0|LCDD4|EXP1_5|
+|PD1|LCDD5|EXP1_6|
+|PD4|LCDD6|EXP1_7|
+|PD2|LCDD7|EXP1_8|
+|PB4|LCDMISO|EXP2_1|
+|PB3|LCDSCK|EXP2_2|
+|PD7|BTNEN2|EXP2_3|
+|PB6|LCDSS|EXP2_4|
+|PD6|BTNEN1|EXP2_5|
+|PB5|LCDMOSI|EXP2_6|
+|PD5|LCDCD|EXP2_7|
+
+<div class="datatable-end"></div>
+
+

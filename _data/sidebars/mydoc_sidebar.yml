@@ -237,6 +237,89 @@ children:
         url: "https://teamgloomy.github.io/fly_e3_pro_v3_general.html"
         output: web, pdf
 
+# Fly-Super5 Pro
+
+  - title: Fly-Super5 Pro
+    output: web, pdf
+    children:
+
+    - title: Overview
+      url: fly-super5_pro_general.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly-super5_pro_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-super5_pro_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper host CAN bus configuration
+        url: fly-super5_pro_klipper_host.html
+        output: web, pdf
+
+      - title: Klipper with USB
+        output: web
+        children:
+
+        - title: Step 1 - CanBoot on USB
+          url: fly-super5_pro_canboot_usb.html
+          output: web, pdf     
+
+        - title: Step 2 - Klipper on USB
+          url: fly-super5_pro_klipper_usb.html
+          output: web, pdf
+
+      - title: Klipper with USB to CAN bridge mode
+        output: web
+        children:
+      
+        - title: Step 1 - CanBoot on USB to CAN bridge
+          url: fly-super5_pro_canboot_usb2can.html
+          output: web, pdf  
+        
+        - title: Step 2 - Klipper USB to CAN bridge
+          url: fly-super5_pro_klipper_usbtocan.html
+          output: web, pdf
+
+      - title: Klipper with CANbus
+        output: web
+        children:
+
+        - title: Step 1 - CanBoot on CANbus
+          url: fly-super5_pro_canboot_can.html
+          output: web, pdf
+
+        - title: Step 2 - Klipper on CANbus
+          url: fly-super5_pro_klipper_can.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly-super5_pro_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly Super 5 Pro
+        url: "https://teamgloomy.github.io/fly_super5pro_h723_general.html"
+        output: web, pdf
+
+
 # Fly Super 8
 
   - title: Fly Super 8 Versions 1, 1.1, and 1.2

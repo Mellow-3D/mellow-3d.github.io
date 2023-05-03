@@ -1,0 +1,195 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img1 %}{{page.klipcom_img1 }}{% endcapture %}
+    {% capture klipcom_cap1 %}{{page.klipcom_cap1 }}{% endcapture %}
+    {% capture klipcom_url1 %} .\images\{{ page.klipcom_img1 }} {% endcapture %}
+
+    {% capture klipcom_img2 %}{{page.klipcom_img2 }}{% endcapture %}
+    {% capture klipcom_cap2 %}{{page.klipcom_cap2 }}{% endcapture %}
+    {% capture klipcom_url2 %} .\images\{{ page.klipcom_img2 }} {% endcapture %}
+
+    {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
+    {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
+    {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
+
+
+### Compile Klipper firmware for {{page.firmware}}
+
+{% include note.html content="Repeat these steps if a klipper update requires flashing new firmware to the MCU." %}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+```
+cd klipper
+```
+- Run make clean
+```
+make clean
+```
+- Open menuconfig
+```
+make menuconfig
+```
+- Set the following settings
+  - Enable extra Low Level configuration options : Checked
+  - Micro Controller : STMicroelectronics STM32
+  - Processor Model: {{page.processor}}
+  - Bootloader offset: {{page.offset}}
+  - Clock Ref: {{page.clock}}
+  - Comm Interface - {{page.com}}
+  {% if page.firmware == "can" %}
+  - CanBus Speed: 500000
+  {% else if page.firmware == "usb" %}
+
+  {% else if page.firmware == "usbtocan" %}
+  - CAN bus Interface: PB8/PB9
+  - CanBus Speed: 500000
+  {% endif %}
+
+    {% 
+    include image.html 
+    file=klipcom_img1
+    url=klipcom_url1
+    alt=klipcom_cap1
+    caption=klipcom_cap1
+    %}
+
+
+- Quit and save the configuration
+
+- Run Make to compile the firmware
+
+```
+make -j 4
+```
+
+{% if page.firmware == "usb" %}
+
+### Flash Klipper firmware with CanBoot over USB
+- Find the Serial ID
+```
+ls /dev/serial/by-id/
+```
+
+- Copy the ID containing '{{page.processor}}'
+
+- Run the make flash command to compile the firmware
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+```
+
+ - Example
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+```
+
+  {% 
+  include image.html 
+  file=klipcom_img2
+  url=klipcom_url2
+  alt=klipcom_cap2
+  caption=klipcom_cap2
+  %}
+
+- Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
+
+{% elsif page.firmware == "can" %}
+
+### Flash Klipper firmware with CanBoot over CAN bus
+
+ - Get the {{ boardname }} UUID buy running the following script. 
+ ```
+ ~/CanBoot/scripts/flash_can.py -i can0 -q
+ ```
+
+ - If CAN devices are detected the above command will return the following.
+```
+Detected uuid: 8248a4b16ede, Application: CanBoot
+```
+
+   {% 
+   include image.html 
+   file=klipcom_img3
+   url=klipcom_url3
+   alt=klipcom_cap3
+   caption=klipcom_cap3
+   %}
+
+ - Each device will have a unique uuid. In the above example, 8248a4b16ede is the micro-controller’s canbus uuid.
+
+- Save the UUID for the next step.
+
+- Flash the klipper FW to the {{boardname}} by running the following command. 
+```
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
+```
+Example
+```
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 6248a4b16ede
+```
+- You should get a download progress bar and File downloaded successfuly when the burning is complete.
+  {% 
+  include image.html 
+  file=klipcom_img2
+  url=klipcom_url2
+  alt=klipcom_cap2
+  caption=klipcom_cap2
+  %}
+
+- Your {{ boardname }} should now have klipper firmware loaded and be ready to use.
+
+{% else if page.firmware == "usbtocan" %}
+
+### Flash Klipper firmware with CanBoot over CAN bus
+- Find the Serial ID
+```
+ls /dev/serial/by-id/
+```
+
+- Copy the ID containing 'stm32f407xb'
+
+- Run the make flash command to compile the firmware
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d {Your serial ID here } 
+```
+
+ - Example
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+```
+
+  {% 
+  include image.html 
+  file=klipcom_img2
+  url=klipcom_url2
+  alt=klipcom_cap2
+  caption=klipcom_cap2
+  %}
+
+- Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
+
+### Re-Flashing klipper with CanBoot in USB to CAN bride mode.
+{% include note.html content="This is only for updating Klipper firmware on boards flashed with Klipper in USB to can bridge mode." %}
+
+- Run the canboot flash by UUID to enable CanBoot on USB firmware.
+
+```
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u { your uuid}
+```
+
+- Canboot will throw an error but will now appear as a USB device.
+- Get the Canboot serial ID
+```
+ls /dev/serial/by-id
+```
+- Build klipper as before ( see above )
+
+- Flash your new klipper bin via Canbus by serial ID
+```
+python3 ~/CanBoot/scripts/flash_can.py -f ~/klipper/out/klipper.bin -d /dev/serial/by-id/{your serial id}
+```
+- Reboot
+
+{% endif %}

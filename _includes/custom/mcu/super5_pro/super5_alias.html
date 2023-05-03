@@ -1,0 +1,36 @@
+[board_pins super5pro]
+aliases:
+
+    # Stepper drivers
+    X_STEP=PE2,  X_DIR=PC5,  X_EN=PF11, X_CS=PC4,   # X
+    Y_STEP=PE3,  Y_DIR=PF13, Y_EN=PF14, Y_CS=PF12,  # Y
+    Z_STEP=PE14, Z_DIR=PE8,  Z_EN=PE9,  Z_CS=PE7,   # Z
+    E_STEP=PE4,  E_DIR=PG0,  E_EN=PG1,  E_CS=PF15,  # E
+    E1_STEP=PE4, E1_DIR=PG0, E1_EN=PG1, E1_CS=PF15, # E1
+
+
+    # Heaters
+    BED_OUT=PB0,
+    HEAT0=PD12, HEAT1=PD13,
+
+    # Thermisors
+    BED_TEMP=PB1,
+    HEAT0_TEMP=PC4, HEAT1_TEMP=PC5, 
+
+    # Fans
+    FAN0=PA0, FAN1=PA1, FAN2=PA2, FAN3=PA3,
+
+    # End stops
+    X_STOP=PB7,  Y_STOP=PPC7,  Z_STOP=PC6, E_STOP=PC13,
+
+    # EXP1 header
+    EXP1_1=PA8,  EXP1_3=PA15,  EXP1_5=PD0,   EXP1_7=PD4,  EXP1_9=<GND>,
+    EXP1_2=PA13,  EXP1_4=PA14,  EXP1_6=PD1,   EXP1_8=PD3,  EXP1_10=<5V>,
+    # EXP2 header
+    EXP2_1=PB4, EXP2_3=PD7,  EXP2_5=PD6,  EXP2_7=PD5,   EXP2_9=<GND>,
+    EXP2_2=PB3, EXP2_4=PB6,  EXP2_6=PB5,  EXP2_8=<RST>, EXP2_10=<NC>,
+
+
+    # BL Touch
+    SERVO=PE6,   # BL Touch servo pin
+    PROBE=PC2  # BL Touch end stop pin
