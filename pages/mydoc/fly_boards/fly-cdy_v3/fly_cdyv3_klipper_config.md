@@ -16,6 +16,6 @@ ver: "V3"
 
 ---
 
-{% include custom/mcu/cdy_v3/fly-cdy_v3_klipper_config.html %}
+{% include custom/mcu/cdyv3/fly_cdyv3_klipper_config.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/cdyv3/fly_cdyv3_links.html %}
