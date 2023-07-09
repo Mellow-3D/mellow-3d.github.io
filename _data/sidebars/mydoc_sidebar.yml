@@ -65,7 +65,7 @@ children:
       output: web, pdf
 
     - title: Files
-      url: fly_cdy_v3_files.html
+      url: fly_cdyv3_files.html
       output: web, pdf
 
     - title: How to Reflash the Stock Bootloader
