@@ -46,7 +46,7 @@ children:
 
 #Fly Control Board section
 
-- title: Fly control boards
+- title: Fly Main Boards
   output: web, pdf
   children:
 
@@ -100,26 +100,26 @@ children:
       output: web, pdf
       children:
 
-      - title: Team Gloomy RRF for Fly CDY V3
+      - title: TeamGloomy RRF for the Fly-CDYv3
         url: "https://teamgloomy.github.io/fly_cdyv3_general.html"
         output: web, pdf
 
 # Fly E3 V2
 
-  - title: Fly RRF E3 V2
+  - title: Fly-E3-v2
     output: web, pdf
     children:
 
-    - title: Overview
-      url: fly-e3_v2.html
+    - title: Fly-E3-v2 General Information
+      url: fly_e3_v2.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly-e3_v2_pins.html
+      url: fly_e3_v2_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly-e3_v2_files.html
+      url: fly_e3_v2_files.html
       output: web, pdf
 
     - title: Klipper

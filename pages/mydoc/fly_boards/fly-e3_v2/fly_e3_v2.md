@@ -1,29 +1,29 @@
 ---
-title: Fly E3 V2 General Information
+title: Fly-E3-v2 General Information
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "General information regarding the Fly E3 V2"
+last_updated: 09/07/2023
+summary: "General information regarding the Fly-E3-v2"
 sidebar: mydoc_sidebar
-permalink: fly-e3_v2.html
+permalink: fly_e3_v2.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-boardname: Fly E3 V2
+boardname: Fly-E3-v2
 version: v2
 
 mcu: "fly-e3_v2"
 
 fly_e3_v2_img1: "fly-e3_v2/fly-e3_v2_image.webp"
-fly_e3_v2_cap1: "Fly-E3 V2 Overview"
+fly_e3_v2_cap1: "Fly-E3-v2 Overview"
 
 fly_e3_v2_img2: "fly-e3_v2/fly_e3_jumpers.png"
-fly_3_v2_cap2: "Fly-E3 Driver Jumper Locations"
+fly_3_v2_cap2: "Fly-E3-v2 Driver Jumper Locations"
 
 fly_e3_v2_img3: "fly-e3_v2/fly-e3_v2_dimensions.webp"
-fly_3_v2_cap3: "Fly-E3 dimensions"
+fly_3_v2_cap3: "Fly-E3-v2 dimensions"
 
 
 
@@ -56,10 +56,9 @@ caption=fly_e3_v2_cap1
 
 ### Overview
 This page covers any general information for the Fly-E3-v2 board.
-It is currently available through AliExpress.
+It is currently available through [AliExpress](https://s.click.aliexpress.com/e/_Dm8O04D).
 
 {% include tip.html content="You need to also buy the WiFi module from Mellow to be able to use RRF with this board." %}
-
 
 ### Features
  - 32-bit ARM Cortex-M4 series 168 MHz, STM32F407ZGT6 chip
@@ -106,3 +105,4 @@ alt=fly_e3_v2_cap3
 caption=fly_e3_v2_cap3
 %}
 
+{% include custom/mcu/e3v2/fly_e3_v2_links.html %}

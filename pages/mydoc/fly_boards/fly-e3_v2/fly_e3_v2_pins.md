@@ -2,22 +2,22 @@
 title: Fly-E3-v2 Pin Names
 tags: []
 keywords: 
-last_updated: 22/01/2023
-summary: "The pin names of the Fly-E3 V2"
+last_updated: 09/07/2023
+summary: "The pin names of the Fly-E3-v2"
 sidebar: mydoc_sidebar
-permalink: fly-e3_v2_pins.html
+permalink: fly_e3_v2_pins.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-boardname: Fly E3 V2
+boardname: Fly-E3-v2
 version: v2
 
 mcu: "fly-e3_v2"
 
 fly_e3_v2_img1: "fly-e3_v2/fly-e3_v2_pins.png"
-fly_e3_v2_cap1: "Fly-E3 V2 Pin Diagram"
+fly_e3_v2_cap1: "Fly-E3-v2 Pin Diagram"
 ---
 
     {% capture boardname %}{{ page.boardname }}{% endcapture %}
@@ -30,9 +30,9 @@ fly_e3_v2_cap1: "Fly-E3 V2 Pin Diagram"
 
 ## Fly-E3-v2 Pinout Diagram
 
-{% include important.html content="The silk screen on the back of the Fly E3 V2 has 2 errors. The EXT2 pin labeled A13 is Reset. The EXT2 pin labeled +5v is not connected. The Y driver socket STEP is PE4  and UART pin is PB6. The diagrams below are correct." %}
+{% include important.html content="The silk screen on the back of the Fly E3 V2 has 4 errors. The EXP2 pin labeled A13 is Reset. The EXP2 pin labeled +5v is not connected. The Y driver socket STEP is PE4 and UART pin is PB6. The EXP1 pins labelled E14 and E15 are swapped. The diagrams below are correct." %}
 
-<a href="https://github.com/Mellow-3D/fly-e3-v2/blob/main/Hardware/fly-e3-v2-pinout.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/fly-e3-v2/9834a966b8b740e49a75c828ad57ebbff7a626b9/Hardware/fly-e3-v2-pinout.svg?sanitize=true"></a>
+<a href="https://github.com/Mellow-3D/fly-e3-v2/blob/main/Hardware/fly-e3-v2-pinout.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/fly-e3-v2/main/Hardware/fly-e3-v2-pinout.svg?sanitize=true"></a>
 
 {% 
 include image.html
