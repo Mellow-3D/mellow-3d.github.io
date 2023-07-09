@@ -1,17 +1,17 @@
 ---
-title: Fly CDY V3 Klipper configuration
+title: Fly-CDYv3 Klipper configuration
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Sample Configuration files for the Fly-CDY V3"
+last_updated: 09/07/2023
+summary: "Sample Configuration files for the Fly-CDYv3"
 sidebar: mydoc_sidebar
-permalink: fly-cdy_v3_klipper_mcu_config.html
+permalink: fly_cdyv3_klipper_mcu_config.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 
-boardname: "Fly-CDY V3" 
+boardname: "Fly-CDYv3" 
 ver: "V3" 
 
 ---

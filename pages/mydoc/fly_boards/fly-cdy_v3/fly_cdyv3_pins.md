@@ -1,23 +1,23 @@
 ---
-title: Fly-CDY V3 Pin Names
+title: Fly-CDYv3 Pin Names
 tags: []
 keywords: 
-last_updated: 18/05/2022
-summary: "The pin names of the Fly-CDY V3"
+last_updated: 09/07/2023
+summary: "The pin names of the Fly-CDYv3"
 sidebar: mydoc_sidebar
-permalink: fly-cdy_v3_pins.html
+permalink: fly_cdyv3_pins.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 
-## Fly-CDY V3 Pinout Diagram
+## Fly-CDYv3 Pinout Diagram
 
-<a href="https://github.com/Mellow-3D/Fly-CDYv3/blob/main/Hardware/pins.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/Fly-CDYv3/d02f482a1c9e2bf6f6ddf2493f6be83915802c45/Hardware/pins.svg?sanitize=true"></a>
+<a href="https://github.com/Mellow-3D/Fly-CDYv3/blob/main/Hardware/pins.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/Fly-CDYv3/main/Hardware/pins.svg?sanitize=true"></a>
 
 
-## Fly-CDY V3 Driver Pins in Firmware
+## Fly-CDYv3 Driver Pins in Firmware
 
 Driver pin numbers. They are separated by driver number.
 
@@ -32,7 +32,7 @@ Driver pin numbers. They are separated by driver number.
 
 <div class="datatable-end"></div>
 
-## Fly-CDY V3 Other Pins in Firmware 
+## Fly-CDYv3 Other Pins in Firmware 
 
 <div class="datatable-begin"></div>
 

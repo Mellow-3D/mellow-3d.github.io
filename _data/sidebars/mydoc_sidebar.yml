@@ -50,22 +50,26 @@ children:
   output: web, pdf
   children:
 
-# Fly CDY V3
+# Fly CDYv33
 
-  - title: Fly CDY V3
+  - title: Fly-CDYv3
     output: web, pdf
     children:
 
-    - title: Overview
-      url: fly-cdy_v3.html
+    - title: Fly-CDYv3 General Information
+      url: fly_cdyv3.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly-cdy_v3_pins.html
+      url: fly_cdyv3_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly-cdy_v3_files.html
+      url: fly_cdy_v3_files.html
+      output: web, pdf
+
+    - title: How to Reflash the Stock Bootloader
+      url: fly_cdyv3_bootloader.html
       output: web, pdf
 
     - title: Klipper
@@ -77,11 +81,11 @@ children:
         children:
 
         - title: USB
-          url: fly-cdy_v3_klipper_usb.html
+          url: fly_cdyv3_klipper_usb.html
           output: web, pdf
 
       - title: Configuration file settings
-        url: fly-cdy_v3_klipper_mcu_config.html
+        url: fly_cdyv3_klipper_mcu_config.html
         output: web, pdf
 
     - title: Marlin

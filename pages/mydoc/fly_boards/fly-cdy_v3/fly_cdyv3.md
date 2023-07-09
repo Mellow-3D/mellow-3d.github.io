@@ -1,36 +1,36 @@
 ---
-title: Fly-CDY V3 General Information
+title: Fly-CDYv3 General Information
 tags: []
 keywords: 
-last_updated: 15/06/2022
-summary: "General information regarding the Fly-CDY V3"
+last_updated: 09/07/2023
+summary: "General information regarding the Fly-CDYv3"
 sidebar: mydoc_sidebar
-permalink: fly-cdy_v3.html
+permalink: fly_cdyv3.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 
 fly-cdy_v3_img1: "fly-cdy_v3/fly-cdy_v3_front_back.webp"
-ffly-cdy_v3_cap1: "Fly-CDY V3 Overview"
+ffly-cdy_v3_cap1: "Fly-CDYv3 Overview"
 
 fly-cdy_v3_img2: "fly-cdy_v3/fly-cdy_v3_z1_z2_jumper.webp"
-fly-cdy_v3_cap2: "Fly-CDY V3 Driver Z Jumper Locations"
+fly-cdy_v3_cap2: "Fly-CDYv3 Driver Z Jumper Locations"
 
 fly-cdy_v3_img3: "fly-cdy_v3/fly-cdy_v3_driver_jumpers.png"
-fly-cdy_v3_cap3: "Fly-CDY V3 Driver Jumpers"
+fly-cdy_v3_cap3: "Fly-CDYv3 Driver Jumpers"
 
 #IMG 4 not used
 fly-cdy_v3_img4: "fly-cdy_v3/fly_e3_pro_vol.png"
-fly-cdy_v3_cap4: "Fly-CDY V3 12v Jumper Locations"
+fly-cdy_v3_cap4: "Fly-CDYv3 12v Jumper Locations"
 
 fly-cdy_v3_img5: "fly-cdy_v3/fly-cdy_v3_pin_diagram.webp"
-ffly-cdy_v3_cap5: "Fly-CDY V3 IO pins"
+ffly-cdy_v3_cap5: "Fly-CDYv3 IO pins"
 
 fly-cdy_v3_img6: "fly-cdy_v3/fly-cdy_v3_dimensions.webp"
-fly-cdy_v3_cap6: "Fly-CDY V3 dimensions"
-
-
+fly-cdy_v3_cap6: "Fly-CDYv3 dimensions"
+boardname: Fly-CDYv3
+mcu: "STM32F407VGT6"
 
 ---
 
@@ -64,8 +64,8 @@ fly-cdy_v3_cap6: "Fly-CDY V3 dimensions"
 
 ## Overview
 
-This page covers any general information for the Fly-E3-Pro-v3 board.  
-It is currently available through [AliExpress](https://www.aliexpress.us/item/3256801515316741.html). 
+This page covers any general information for the Fly-CDYv3 board.  
+It is currently available through [AliExpress](https://s.click.aliexpress.com/e/_DBNB4zb). 
 
 {% 
 include image.html 
@@ -79,7 +79,7 @@ caption=fly-cdy_v3_cap1
 
  - 32-bit ARM Cortex-M4 series 168 MHz, STM32F407ZGT6 chip
  - Supported Firmware: Marlin 2.0, Reprap, and Klipper
- - Drivers supported: A4988, LV8729, DRV8225, TMC2208, 2209, & 5160
+ - Drivers supported: A4988, LV8729, DRV8225, TMC2208, TMC2209, & TMC5160
  - Drive mode support: TMC: UART, & SPI
  - Support for 6 independent motor drives, 3 extruders, and 3 PWM fans
  - All drivers support up to 24 volts.
@@ -115,15 +115,16 @@ caption=fly-cdy_v3_cap3
 
 ### Power Configuration
 
-The Fly-E3-Pro-v3 has one 24v input and one ground. 
+The Fly-CDYv3 has one 24v input and one ground. 
 
 ### Maximum Input voltage
 
-The board can handle an input voltage up to 24v.
+The board can handle an input voltage up to 32v.
 
 ### Thermistor inputs
 
-The Fly-E3-Pro-v3 supports PT100/K with an external module. The thermistor inputs use a 4k7 pullup resistor.
+Natively, the Fly-CDYv3 supports PT1000 and standard thermistors (with a 4k7 pullup resistor) and has a total of 4 temperature sensor inputs.  
+It is possible to connect a PT100 or K type thermocouple using an external module.  
 
 ### Initial Installation
 
@@ -148,3 +149,5 @@ url=fly-cdy_v3_url6
 alt=fly-cdy_v3_cap6
 caption=fly-cdy_v3_cap6
 %}
+
+{% include custom/mcu/cdyv3/fly_cdyv3_links.html %}
