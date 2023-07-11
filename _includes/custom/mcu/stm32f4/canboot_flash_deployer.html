@@ -1,0 +1,53 @@
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture cancom_img1 %}{{page.cancom_img1 }}{% endcapture %}
+    {% capture cancom_cap1 %}{{page.cancom_cap1 }}{% endcapture %}
+    {% capture cancom_url1 %} .\images\{{ page.cancom_img1 }} {% endcapture %}
+
+    {% capture cancom_img2 %}{{page.cancom_img2 }}{% endcapture %}
+    {% capture cancom_cap2 %}{{page.cancom_cap2 }}{% endcapture %}
+    {% capture cancom_url2 %} .\images\{{ page.cancom_img2 }} {% endcapture %}
+
+    {% capture cancom_img3 %}{{page.cancom_img3 }}{% endcapture %}
+    {% capture cancom_cap3 %}{{page.cancom_cap3 }}{% endcapture %}
+    {% capture cancom_url3 %} .\images\{{ page.cancom_img3 }} {% endcapture %}
+
+### Flash CanBoot to the {{page.boardname}} MCU
+
+- ftp to your klipper host with an FTP client like [FileZilla](https://filezilla-project.org/)
+  - open the folder '~/CanBoot/out'
+  - download deployer.bin to your PC
+- place the MCU MicroSD card into a card reader and connect it to your PC.  
+- ensure that the SD Card is formatted as Fat32. If in doubt use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/).  
+- Copy the deployer.bin file to the root of the SD card
+- rename deployer.bin to firmware.bin
+- Eject the SD card from the PC
+- Insert the SD card into the MCU SD card Slot.
+    
+  {% 
+  include image.html 
+  file=cancom_img2
+  url=cancom_url2
+  alt=cancom_cap2
+  caption=cancom_cap1
+  %} 
+
+- Press the {{page.boardname}} reboot button
+    
+    {% 
+    include image.html 
+    file=cancom_img3
+    url=cancom_url3
+    alt=cancom_cap3
+    caption=cancom_cap1
+    %}
+
+- Wait a few minutes
+- Open a putty SSH session to the {{boardname}} and log on
+
+- run lsusb to verify the MCU has been discovered as a USB device
+{% include image.html file="lsusb_canboot.jpg" alt="Example lsusb Output" caption="Example lsusb Output" %} 
+
+  - Continue to the [Klipper for USB configuration section]({{page.installKlipperURL}})

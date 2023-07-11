@@ -1,0 +1,61 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img2 %}{{page.klipcom_img2 }}{% endcapture %}
+    {% capture klipcom_cap2 %}{{page.klipcom_cap2 }}{% endcapture %}
+    {% capture klipcom_url2 %} .\images\{{ page.klipcom_img2 }} {% endcapture %}
+
+    {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
+    {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
+    {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
+
+### Flash Klipper USB to CAN bus bridge firmware with CanBoot over USB
+- Find the Serial ID
+```
+ls /dev/serial/by-id/
+```
+
+- Copy the ID containing '{{page.processor}}' and make a note of it for your printer.cfg.  
+
+- Run the make flash command to compile the firmware
+```
+make flash FLASH_DEVICE={your serial id}
+```
+
+ - Example
+```
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+```
+
+  {% 
+  include image.html 
+  file=klipcom_img2
+  url=klipcom_url2
+  alt=klipcom_cap2
+  caption=klipcom_cap2
+  %}
+
+- Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
+
+### Re-Flashing klipper in USB to CAN bridge mode with CanBoot.
+{% include note.html content="This is only for updating Klipper firmware on boards flashed with Klipper in USB to can bridge mode." %}
+
+- Run the canboot flash by UUID  with -r to enable CanBoot USB firmware.
+
+```
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -r -u { your uuid}
+```
+
+- Canboot loader will now appear as a USB device.
+- Get the Canboot serial ID
+```
+ls /dev/serial/by-id
+```
+- Build klipper as before ( see above )
+
+- Flash your new klipper bin via Canbus by serial ID
+```
+make flash FLASH_DEVICE={your serial id}
+```
+- Reboot

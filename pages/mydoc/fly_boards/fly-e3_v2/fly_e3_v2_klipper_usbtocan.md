@@ -1,18 +1,17 @@
 ---
-title: Fly-E3 v2 Klipper firmware in USB to Can Bridge
+title: Fly-E3v2 Klipper firmware in USB to Can Bridge Mode
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Fly-E3 v2 Klipper USB to CAN"
+last_updated: 09/07/2023
+summary: "Fly-E3-v2 Klipper USB to CAN Bridge Mode"
 sidebar: mydoc_sidebar
-permalink: fly-e3_v2_klipper_usbtocan.html
+permalink: fly_e3_v2_klipper_usbtocan.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-
-boardname: Fly-E3 v2
+boardname: Fly-E3-v2
 firmware: usbtocan
 version: v1
 processor: "STM32F407"
@@ -37,10 +36,10 @@ klipcom_cap3: "Flash Can Query"
 ## Configuring and installing Klipper for USB to CAN bridge mode
 
 
-{% include note.html content="If you are planning to use CANBoot bootloader with Klipper in USB to CAN bridge mode you will want to configure [CanBoot in USB mode](./fly-super8_canboot_usb.html)" %}
+{% include note.html content="If you are planning to use CANBoot bootloader with Klipper in USB to CAN bridge mode you will want to configure [CanBoot in USB mode](./fly_e3_v2_canboot_usb.html)" %}
 
-{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb2can.html %}
 
-{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb2can.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/e3v2/fly_e3_v2_links.html %}

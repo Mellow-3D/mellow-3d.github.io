@@ -1,18 +1,17 @@
 ---
-title: Fly-E3 v2 Klipper CAN bus  firmware
+title: Fly-E3-v2 Klipper CAN bus firmware
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Fly-E3 v2 Klipper host"
+last_updated: 11/07/2023
+summary: "Fly-E3-v2 Klipper host"
 sidebar: mydoc_sidebar
-permalink: fly-e3_v2_klipper_can.html
+permalink: fly_e3_v2_klipper_can.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-
-boardname: Fly-E3 v2
+boardname: Fly-E3-v2
 firmware: can
 ver: v2
 processor: "STM32F407"
@@ -36,7 +35,8 @@ klipcom_cap3: "Flash Can Query"
 
 ## Configuring and installing Klipper for CAN bus
 
-{% include custom/mcu/super8/super8_klipper_compile.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_can.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_can.html %}
 
+{% include custom/mcu/e3v2/fly_e3_v2_links.html %}

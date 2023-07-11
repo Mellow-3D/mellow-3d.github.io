@@ -1,18 +1,17 @@
 ---
-title: Fly-E3 v2 MCU Klipper USB firmware
+title: Fly-E3-v2 MCU Klipper USB firmware
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Fly-E3 v2 Klipper host"
+last_updated: 09/07/2023
+summary: "Fly-E3v2 Klipper host"
 sidebar: mydoc_sidebar
-permalink: fly-e3_v2_klipper_usb.html
+permalink: fly_e3_v2_klipper_usb.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-
-boardname: Fly-E3 v2
+boardname: Fly-E3-v2
 firmware: usb
 version: "V2"
 
@@ -23,7 +22,6 @@ clock: "8 MHz crystal"
 com: "USB on PA11/PA12"
 appoffset: "32 KiB offset"
 canspeed: ""
-
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb.png"
 klipcom_cap1: "Klipper Menu Config USB"
@@ -39,8 +37,8 @@ klipcom_cap3: "Flash Can Query"
 
 ## Configuring and installing Klipper for USB
 
-{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
 
-{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/e3v2/fly_e3_v2_links.html %}
