@@ -5,7 +5,7 @@ keywords:
 last_updated: 09/07/2023
 summary: "Fly-E3-v2 Klipper USB to CAN Bridge Mode"
 sidebar: mydoc_sidebar
-permalink: fly_e3_v2_klipper_usbtocan.html
+permalink: fly_e3_v2_klipper_usb2can.html
 folder: mydoc
 comments: false
 toc: true

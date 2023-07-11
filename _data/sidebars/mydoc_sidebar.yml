@@ -187,7 +187,7 @@ children:
         output: web, pdf
 
     - title: CAN bus trouble shooting
-      url: fly-e3_v2_can_trouble.html
+      url: fly_e3_v2_can_trouble.html
       output: web, pdf
 
 # Fly E3 pro V3

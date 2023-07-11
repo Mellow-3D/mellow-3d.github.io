@@ -30,7 +30,7 @@ fly_e3_v2_cap1: "Fly-E3-v2 Pin Diagram"
 
 ## Fly-E3-v2 Pinout Diagram
 
-{% include important.html content="The silk screen on the back of the Fly E3 V2 has 4 errors. The EXP2 pin labeled A13 is Reset. The EXP2 pin labeled +5v is not connected. The Y driver socket STEP is PE4 and UART pin is PB6. The EXP1 pins labelled E14 and E15 are swapped. The diagrams below are correct." %}
+{% include important.html content="The silk screen on the back of the Fly-E3-v2 has 4 errors. The EXP2 pin labeled A13 is Reset. The EXP2 pin labeled +5v is not connected. The Y driver socket STEP is PE4 and UART pin is PB6. The EXP1 pins labelled E14 and E15 are swapped. The diagrams below are correct." %}
 
 <a href="https://github.com/Mellow-3D/fly-e3-v2/blob/main/Hardware/fly-e3-v2-pinout.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/fly-e3-v2/main/Hardware/fly-e3-v2-pinout.svg?sanitize=true"></a>
 

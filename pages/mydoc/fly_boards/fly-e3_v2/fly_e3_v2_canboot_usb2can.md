@@ -36,7 +36,7 @@ installKlipperURL: "./fly_e3_v2_klipper_usb2can.html"
 installKlipperName: "Klipper for USB to CAN Bridge Mode configuration section"
 ---
 
-## Configuring and installing CanBoot bootloader for USB to CaN Bridge Mode
+## Configuring and installing CanBoot bootloader for USB to CAN Bridge Mode
 
 {% include custom/mcu/stm32f4/canboot_compile_usb_deployer.html %}
 
