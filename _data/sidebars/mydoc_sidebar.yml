@@ -210,43 +210,38 @@ children:
         url: "https://teamgloomy.github.io/fly_e3_v2_general.html"
         output: web, pdf
 
-# Fly E3 pro V3
+# Fly-E3-Pro-V3
 
-  - title: Fly E3 Pro V3.0
+  - title: Fly-E3-Pro-V3
     output: web, pdf
     children:
 
-
     - title: Overview
-      url: fly-e3_pro_v3.html
+      url: fly_e3_pro_v3.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly-e3_pro_v3_pins.html
+      url: fly_e3_pro_v3_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly-e3_pro_v3_files.html
+      url: fly_e3_pro_v3_files.html
       output: web, pdf
 
-    - title: Klipper
-      output: web
-      children:
-
-      - title: CanBoot Bootloader
+    - title: Klipper with USB
         output: web
         children:
+        
+        - title: Step 1 - CanBoot on USB
+          url: fly_e3_pro_v3_canboot_usb.html
+          output: web, pdf  
 
-        - title: CanBoot on USB
-          url: fly-e3_pro_v3_canboot_usb.html
-          output: web, pdf     
+        - title: Step 2 - Klipper on USB
+          url: fly_e3_pro_v3_klipper_usb.html
+          output: web, pdf
 
-      - title: Klipper Firmware
-        output: web
-        children:
-
-        - title: USB
-          url: fly-e3_pro_v3_klipper_usb.html
+        - title: Updating Klipper on USB
+          url: fly_e3_pro_v3_klipper_usb_updating.html
           output: web, pdf
 
       - title: Configuration file settings
@@ -265,7 +260,7 @@ children:
       output: web, pdf
       children:
 
-      - title: Team Gloomy RRF for Fly e3 pro v3
+      - title: TeamGloomy RRF for Fly-E3-Pro-V3
         url: "https://teamgloomy.github.io/fly_e3_pro_v3_general.html"
         output: web, pdf
 

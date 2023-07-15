@@ -1,18 +1,18 @@
 ---
-title: Fly-E3 Pro V3 MCU Klipper USB firmware
+title: Updating Klipper Firmware on a Fly-E3-Pro-V3 in USB mode
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Fly-E3 Pro V3 Klipper host"
+last_updated: 15/07/2023
+summary: "How to update the klipper firmware running on a Fly-E3-Pro-V3 in USB mode"
 sidebar: mydoc_sidebar
-permalink: fly-e3_pro_v3_klipper_usb.html
+permalink: fly_e3_pro_v3_klipper_usb_updating.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
 
-boardname: Fly-E3 Pro V3
+boardname: Fly-E3-Pro-V3
 firmware: usb
 version: "V3"
 
@@ -34,12 +34,16 @@ klipcom_cap2: "Burn Klipper firmware over USB"
 klipcom_img3: "fly-super8/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
 
+kconfig_name: "e3prov3"
+
 ---
 
 ## Configuring and installing Klipper for USB
 
-{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 
-{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb_updating.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb_updating.html %}
+
+{% include custom/mcu/e3prov3/fly_e3_pro_v3_links.html %}

@@ -2,10 +2,10 @@
 title: Fly-E3-Pro-v3 General Information
 tags: []
 keywords: 
-last_updated: 15/06/2022
+last_updated: 15/07/2023
 summary: "General information regarding the Fly-E3-Pro-v3"
 sidebar: mydoc_sidebar
-permalink: fly-e3_pro_v3.html
+permalink: fly_e3_pro_v3.html
 folder: mydoc
 comments: false
 toc: false
@@ -64,7 +64,7 @@ fly_e3_prov3_cap6: "Fly-E3-Pro V3 dimensions"
 ## Overview
 
 This page covers any general information for the Fly-E3-Pro-v3 board.  
-It is currently available through [AliExpress](https://www.aliexpress.com/item/1005002372751834.html). 
+It is currently available through [AliExpress](https://s.click.aliexpress.com/e/_DCEqwdT). 
 
 {% 
 include image.html 
@@ -78,7 +78,7 @@ caption=fly_e3_prov3_cap1
  - 32-bit ARM Cortex-M4 series 168 MHz, STM32F407ZGT6 chip
  - Supported Firmware: Marlin 2.0, Reprap, and Klipper
  - Drivers: Onboard TMC2209
- - Drive mode support: TMC: UART, & SPI
+ - Drive mode support: TMC UART
  - Support for 5 independent motor drives, 2 extruders, and 4 PWM fans
  - All drivers support up to 24 volts.
  - Supported Displays: serial touch screen, 12864 LCD, 2004 LCD , FLY 4.3, & 7.0 V1
@@ -155,3 +155,5 @@ url=fly_e3_prov3_url6
 alt=fly_e3_prov3_cap6
 caption=fly_e3_prov3_cap6
 %}
+
+{% include custom/mcu/e3prov3/fly_e3_pro_v3_links.html %}

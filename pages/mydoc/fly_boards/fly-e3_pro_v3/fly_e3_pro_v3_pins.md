@@ -1,25 +1,25 @@
 ---
-title: Fly-E3-Pro-v3 Pin Names
+title: Fly-E3-Pro-V3 Pin Names
 tags: []
 keywords: 
-last_updated: 18/05/2022
+last_updated: 15/07/2023
 summary: "The pin names of the Fly-E3-Pro-v3"
 sidebar: mydoc_sidebar
-permalink: fly-e3_pro_v3_pins.html
+permalink: fly_e3_pro_v3_pins.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 ---
 
-## Fly-E3-Pro-v3 Pinout Diagram
+## Fly-E3-Pro-V3 Pinout Diagram
 
 {% include image.html 
 file="fly-e3_pro_v3/fly_e3_prov3_pins.svg" 
 url="https://raw.githubusercontent.com/Mellow-3D/Fly-E3-Pro-v3/main/Hardware/fly_e3_prov3_pins.svg" alt="Fly-E3-Pro-v3" 
 caption="Fly-E3-Pro-v3 Pinout" %}
 
-## Fly-E3-Pro-v3 Driver Pins in Firmware
+## Fly-E3-Pro-V3 Driver Pins in Firmware
 
 Driver pin numbers. They are separated by driver number.
 
@@ -34,7 +34,7 @@ Driver pin numbers. They are separated by driver number.
 
 <div class="datatable-end"></div>
 
-## Fly-E3-Pro-v3 Other Pins in Firmware 
+## Fly-E3-Pro-V3 Other Pins in Firmware 
 
 <div class="datatable-begin"></div>
 
