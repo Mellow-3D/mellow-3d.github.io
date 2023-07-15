@@ -229,7 +229,7 @@ children:
       output: web, pdf
 
     - title: Klipper with USB
-        output: web
+        output: web,
         children:
         
         - title: Step 1 - CanBoot on USB
@@ -244,9 +244,9 @@ children:
           url: fly_e3_pro_v3_klipper_usb_updating.html
           output: web, pdf
 
-      - title: Configuration file settings
-        url: fly-e3_pro_v3_klipper_mcu_config.html
-        output: web, pdf
+    - title: Configuration file settings
+      url: fly-e3_pro_v3_klipper_mcu_config.html
+      output: web, pdf
 
     - title: Marlin
       output: web, pdf
