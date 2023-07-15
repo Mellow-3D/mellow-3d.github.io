@@ -13,6 +13,8 @@
     {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
     {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
+    {% capture kconfig_note %}If when running the above command you get this output <br/><br/>Using default symbol values (no 'config.{{page.kconfig_name}}') <br/><br/>Configuration saved to 'config.banana' <br/><br/>Then you need to set all the correct settings when running make menuconfig below.{% endcapture %}
+
 
 
 ### Compile Klipper Firmware for the {{page.firmware}}
@@ -28,12 +30,16 @@ cd ~/klipper
 ```
 make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
 ```
+
+{% include important.html content=kconfig_note}
+
 - Open menuconfig
 ```
 make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
 ```
 {% include note.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
-- Set the following settings
+
+- Check to make sure the following settings are set
   - Enable extra Low Level configuration options : Checked
   - Micro Controller : {{ page.micro }}
   - Processor Model: {{page.processor}}
@@ -48,8 +54,7 @@ make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
     caption=klipcom_cap1
     %}
 
-
-- Quit and save the configuration
+- Quit (and save if changes were made) the configuration
 
 - Run Make to compile the firmware
 

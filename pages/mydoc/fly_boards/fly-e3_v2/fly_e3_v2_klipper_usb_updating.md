@@ -1,11 +1,11 @@
 ---
-title: Fly-E3-v2 MCU Klipper USB firmware
+title: Updating Klipper Firmware on a Fly-E3-v2 in USB mode
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "Fly-E3v2 Klipper host"
+summary: "How to update the klipper firmware running on a Fly-E3-v2 in USB mode"
 sidebar: mydoc_sidebar
-permalink: fly_e3_v2_klipper_usb.html
+permalink: fly_e3_v2_klipper_usb_updating.html
 folder: mydoc
 comments: false
 toc: true
@@ -35,10 +35,10 @@ klipcom_cap3: "Flash Can Query"
 kconfig_name: "e3v2"
 ---
 
-## Configuring and installing Klipper for USB
+## Updating Klipper for USB
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb_updating.html %}
 
-{% include custom/mcu/stm32f4/klipper_flash_canboot_usb.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb_updating.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}

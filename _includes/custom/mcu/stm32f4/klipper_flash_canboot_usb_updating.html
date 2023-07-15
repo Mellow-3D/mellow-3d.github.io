@@ -1,0 +1,35 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipcom_img2 %}{{page.klipcom_img2 }}{% endcapture %}
+    {% capture klipcom_cap2 %}{{page.klipcom_cap2 }}{% endcapture %}
+    {% capture klipcom_url2 %} .\images\{{ page.klipcom_img2 }} {% endcapture %}
+
+    {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
+    {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
+    {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
+
+### Updating Klipper USB firmware with CanBoot over USB
+
+- Look in your printer.cfg file and make note of the serial ID for your board. 
+
+- Run the make flash command to flash the firmware
+```
+make flash FLASH_DEVICE= {Your serial ID here } 
+```
+
+ - Example
+```
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f407xb_170038000650314D35323820-if00 
+```
+
+  {% 
+  include image.html 
+  file=klipcom_img2
+  url=klipcom_url2
+  alt=klipcom_cap2
+  caption=klipcom_cap2
+  %}
+
+- Your {{ boardname }} should now have the Klipper firmware running on the board updated to the latest version.

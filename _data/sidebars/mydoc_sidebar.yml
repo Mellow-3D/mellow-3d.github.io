@@ -80,8 +80,12 @@ children:
         output: web
         children:
 
-        - title: USB
+        - title: Installing Klipper on USB
           url: fly_cdyv3_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_cdyv3_klipper_usb_updating.html
           output: web, pdf
 
       - title: Configuration file settings
@@ -142,6 +146,10 @@ children:
           url: fly_e3_v2_klipper_usb.html
           output: web, pdf
 
+        - title: Updating Klipper on USB
+          url: fly_e3_v2_klipper_usb_updating.html
+          output: web, pdf
+
       - title: Klipper with USB to CAN Bridge Mode
         output: web
         children:
@@ -154,6 +162,10 @@ children:
           url: fly_e3_v2_klipper_usb2can.html
           output: web, pdf
 
+        - title: Updating Klipper on USB to CAN Bridge Mode
+          url: fly_e3_v2_klipper_usb2can_updating.html
+          output: web, pdf
+
       - title: Klipper with CAN
         output: web
         children:  
@@ -164,6 +176,10 @@ children:
 
         - title: Step 2 - Klipper on CAN Bus
           url: fly_e3_v2_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CAN Bus
+          url: fly_e3_v2_klipper_can_updating.html
           output: web, pdf
 
       - title: Configuration file settings

@@ -1,9 +1,9 @@
 ---
-title: Fly-CDYv3 MCU Klipper USB firmware
+title: Updating Klipper Firmware on a Fly-CDYv3 in USB mode
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "Fly-CDYv3 Klipper host"
+summary: "How to update the klipper firmware running on a Fly-CDYv3 in USB mode"
 sidebar: mydoc_sidebar
 permalink: fly_cdyv3_klipper_usb.html
 folder: mydoc
@@ -40,9 +40,9 @@ klipburn_cap2: "Fly-CDYv3 reset"
 kconfig_name: "cdyv3"
 ---
 
-## Configuring and installing Klipper for USB
+## Updating Klipper for USB
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb_updating.html %}
 
 {% include custom/mcu/stm32f4/klipper_flash_sd.html %}
 

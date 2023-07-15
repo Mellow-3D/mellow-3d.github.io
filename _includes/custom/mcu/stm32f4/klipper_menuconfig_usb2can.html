@@ -26,12 +26,13 @@ cd klipper
 ```
 - Run make clean
 ```
-make clean
+make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
 ```
 - Open menuconfig
 ```
-make menuconfig
+make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
 ```
+{% include note.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 - Set the following settings
   - Enable extra Low Level configuration options : Checked
   - Micro Controller : {{ page.micro }}
@@ -56,5 +57,5 @@ make menuconfig
 - Run Make to compile the firmware
 
 ```
-make -j4
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} -j4
 ```

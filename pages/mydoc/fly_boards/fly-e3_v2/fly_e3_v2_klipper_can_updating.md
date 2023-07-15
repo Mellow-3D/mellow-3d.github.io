@@ -1,11 +1,11 @@
 ---
-title: Fly-E3-v2 Klipper CAN bus firmware
+title: Updating Klipper Firmware on a Fly-E3-v2 in CAN bus mode
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "Fly-E3-v2 Klipper host"
+summary: "How to update the klipper firmware running on a Fly-E3-v2 in CAN bus mode"
 sidebar: mydoc_sidebar
-permalink: fly_e3_v2_klipper_can.html
+permalink: fly_e3_v2_klipper_can_updating.html
 folder: mydoc
 comments: false
 toc: true
@@ -33,10 +33,10 @@ klipcom_cap3: "Flash Can Query"
 kconfig_name: "e3v2"
 ---
 
-## Configuring and installing Klipper for CAN bus
+## Updating Klipper for CAN bus
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_can.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_can_updating.html %}
 
-{% include custom/mcu/stm32f4/klipper_flash_canboot_can.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_can_updating.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}
