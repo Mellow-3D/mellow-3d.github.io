@@ -50,7 +50,7 @@ children:
   output: web, pdf
   children:
 
-# Fly CDYv33
+# Fly CDYv3
 
   - title: Fly-CDYv3
     output: web, pdf
@@ -108,7 +108,7 @@ children:
         url: "https://teamgloomy.github.io/fly_cdyv3_general.html"
         output: web, pdf
 
-# Fly E3 V2
+# Fly-E3-v2
 
   - title: Fly-E3-v2
     output: web, pdf
