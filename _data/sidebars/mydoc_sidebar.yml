@@ -126,6 +126,10 @@ children:
       url: fly_e3_v2_files.html
       output: web, pdf
 
+    - title: How to Reflash the Stock Bootloader
+      url: fly_e3_v2_bootloader.html
+      output: web, pdf
+
     - title: Klipper
       output: web
       children:
@@ -170,20 +174,24 @@ children:
         output: web
         children:  
 
-        - title: Step 1 - CanBoot on CAN bus
+        - title: Step 1 - CanBoot on CANbus
           url: fly_e3_v2_canboot_can.html
           output: web, pdf   
 
-        - title: Step 2 - Klipper on CAN Bus
+        - title: Step 2 - Klipper on CANbus
           url: fly_e3_v2_klipper_can.html
           output: web, pdf
 
-        - title: Updating Klipper on CAN Bus
+        - title: Updating Klipper on CANbus
           url: fly_e3_v2_klipper_can_updating.html
           output: web, pdf
 
       - title: Configuration file settings
         url: fly_e3_v2_klipper_mcu_config.html
+        output: web, pdf
+
+      - title: CAN bus trouble shooting
+        url: fly_e3_v2_can_trouble.html
         output: web, pdf
 
     - title: Marlin
@@ -201,10 +209,6 @@ children:
       - title: Team Gloomy RRF for Fly e3 V2
         url: "https://teamgloomy.github.io/fly_e3_v2_general.html"
         output: web, pdf
-
-    - title: CAN bus trouble shooting
-      url: fly_e3_v2_can_trouble.html
-      output: web, pdf
 
 # Fly E3 pro V3
 

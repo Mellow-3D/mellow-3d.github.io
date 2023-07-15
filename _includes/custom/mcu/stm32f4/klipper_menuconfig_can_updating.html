@@ -25,10 +25,11 @@ cd klipper
 - Run make clean
 ```
 make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
+```
 
 {% include important.html content=kconfig_note %}
 
-```
+
 - Open menuconfig
 ```
 make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}

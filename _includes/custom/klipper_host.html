@@ -21,7 +21,7 @@ iface can0 can static
  pre-up ip link set can0 type can bitrate 500000
  pre-up ip link set can0 txqueuelen 1024
  ```
-{% include note.html content="Use the same bitrate you use on your can tool boards. This can be 250000, 500000 or 1000000. Bitrates of 500000 and 1000000 are prefered. " %}
+{% include note.html content="The bitrate should match the one used on your tool boards. It can be 250000, 500000 or 1000000. Only use 250000 if you run into timeout issues and cannot fix them by improving the wiring. 500000 or 1000000 are preferred" %}
  
 
  - Enter Ctrl+X to save the can0 file
