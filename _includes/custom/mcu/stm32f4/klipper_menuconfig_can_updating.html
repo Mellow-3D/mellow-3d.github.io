@@ -13,7 +13,7 @@
     {% capture klipcom_img3 %}{{page.klipcom_img3 }}{% endcapture %}
     {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
-    {% capture kconfig_note %}If when running the above command you get this output <br/><br/>Using default symbol values (no 'config.{{page.kconfig_name}}') <br/><br/>Configuration saved to 'config.banana' <br/><br/>Then you need to set all the correct settings when running make menuconfig below.{% endcapture %}
+    {% capture kconfig_note %}If when running the above command you get this output <br/><br/>`Using default symbol values (no 'config.{{page.kconfig_name}}')` <br/><br/>`Configuration saved to 'config.{{page.kconfig_name}}' `<br/><br/>Then you need to set all the correct settings when running make menuconfig below.{% endcapture %}
 
 ### Compile Klipper firmware for {{page.firmware}}
 
@@ -26,15 +26,13 @@ cd klipper
 ```
 make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
 
-{% include important.html content=kconfig_note}
+{% include important.html content=kconfig_note %}
 
 ```
 - Open menuconfig
 ```
 make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
 ```
-
-{% include important.html content="If menuconfig opens for you to " %}
 
 - Check to make sure the following settings are set
 

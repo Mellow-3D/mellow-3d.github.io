@@ -5,7 +5,7 @@ keywords:
 last_updated: 15/07/2023
 summary: "How to update the klipper firmware running on a Fly-CDYv3 in USB mode"
 sidebar: mydoc_sidebar
-permalink: fly_cdyv3_klipper_usb.html
+permalink: fly_cdyv3_klipper_usb_updating.html
 folder: mydoc
 comments: false
 toc: true
