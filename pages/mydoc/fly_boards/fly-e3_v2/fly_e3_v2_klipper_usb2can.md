@@ -35,6 +35,7 @@ kconfig_name: "e3v2"
 
 ## Configuring and installing Klipper for USB to CAN bridge mode
 
+{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 
 {% include note.html content="If you are planning to use CANBoot bootloader with Klipper in USB to CAN bridge mode you will want to configure [CanBoot in USB mode](./fly_e3_v2_canboot_usb.html)" %}
 

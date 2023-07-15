@@ -35,6 +35,8 @@ kconfig_name: "e3v2"
 
 ## Updating Klipper for CAN bus
 
+{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
+
 {% include custom/mcu/stm32f4/klipper_menuconfig_can_updating.html %}
 
 {% include custom/mcu/stm32f4/klipper_flash_canboot_can_updating.html %}

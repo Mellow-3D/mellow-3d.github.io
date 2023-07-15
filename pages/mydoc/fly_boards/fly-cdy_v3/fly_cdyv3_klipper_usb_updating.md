@@ -42,6 +42,8 @@ kconfig_name: "cdyv3"
 
 ## Updating Klipper for USB
 
+{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
+
 {% include custom/mcu/stm32f4/klipper_menuconfig_usb_updating.html %}
 
 {% include custom/mcu/stm32f4/klipper_flash_sd.html %}
