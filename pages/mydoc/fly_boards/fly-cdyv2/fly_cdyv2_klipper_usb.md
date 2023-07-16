@@ -48,4 +48,4 @@ kconfig_name: "cdyv2"
 
 {% include custom/mcu/stm32f4/klipper_flash_sd.html %}
 
-{% include custom/mcu/cdyv3/fly_cdyv3_links.html %}
+{% include custom/mcu/cdyv2/fly_cdyv2_links.html %}

@@ -150,4 +150,4 @@ alt=fly-cdy_v3_cap6
 caption=fly-cdy_v3_cap6
 %}
 
-{% include custom/mcu/cdyv3/fly_cdyv2_links.html %}
+{% include custom/mcu/cdyv2/fly_cdyv2_links.html %}
