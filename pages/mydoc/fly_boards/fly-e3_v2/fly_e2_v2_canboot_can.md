@@ -20,7 +20,7 @@ micro: "STMicroelectronics STM32"
 offset: "32KiB bootloader"
 clock: "8 MHz crystal"
 appoffset: "32KiB offset"
-speed: "500000"
+canspeed: "500000"
 
 cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_can.png"
 cancom_cap1: "CanBoot Menu Config USB"

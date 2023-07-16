@@ -18,7 +18,7 @@ processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
 micro: "STMicroelectronics STM32"
-com: "CAN on PB8/PB9"
+com: "CAN bus (on PB8/PB9)"
 canspeed: "500000"
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_can.png"

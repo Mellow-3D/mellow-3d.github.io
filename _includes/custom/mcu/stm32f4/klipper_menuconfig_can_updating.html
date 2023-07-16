@@ -37,13 +37,13 @@ make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
 
 - Check to make sure the following settings are set
 
-  - Enable extra Low Level configuration options : Checked
+  - Enable extra low-level configuration options : Checked
   - Micro-controller Architecture : {{ page.micro }}
-  - Processor Model: {{page.processor}}
+  - Processor model: {{page.processor}}
   - Bootloader offset: {{page.offset}}
-  - Clock Ref: {{page.clock}}
-  - Comm Interface - {{page.com}}
-  - CanBus Speed: {{ page.canspeed }}
+  - Clock Reference: {{page.clock}}
+  - Communication interface - {{page.com}}
+  - CAN bus speed: {{ page.canspeed }}
 
     {% 
     include image.html 
