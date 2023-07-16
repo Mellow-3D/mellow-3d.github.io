@@ -5,7 +5,7 @@ keywords:
 last_updated: 16/07/2023
 summary: "General information for the Fly-Super8 Versions 1, 1.1, 1.2 and 1.3"
 sidebar: mydoc_sidebar
-permalink: fly_super8_general.html
+permalink: fly_super8.html
 folder: mydoc
 comments: false
 toc: true
