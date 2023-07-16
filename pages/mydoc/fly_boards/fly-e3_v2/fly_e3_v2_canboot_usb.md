@@ -14,8 +14,12 @@ datatable: true
 boardname: Fly-E3-v2
 firmware: usb
 ver: "V 2" 
-
+processor: "STM32F407"
 com: "USB on PA11/PA12"
+micro: "STMicroelectronics STM32"
+offset: "32KiB bootloader"
+clock: "8 MHz crystal"
+appoffset: "32KiB offset"
 
 cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_usb.png"
 cancom_cap1: "CanBoot Menu Config USB"

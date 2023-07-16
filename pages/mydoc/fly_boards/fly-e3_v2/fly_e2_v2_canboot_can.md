@@ -14,8 +14,13 @@ datatable: true
 boardname: Fly-E3-v2
 firmware: can
 ver: "V 1.2" 
-
+processor: "STM32F407"
 com: "CAN bus on PB8/PB9"
+micro: "STMicroelectronics STM32"
+offset: "32KiB bootloader"
+clock: "8 MHz crystal"
+appoffset: "32KiB offset"
+speed: "500000"
 
 cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_can.png"
 cancom_cap1: "CanBoot Menu Config USB"

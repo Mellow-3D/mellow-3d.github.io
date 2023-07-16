@@ -17,9 +17,9 @@ version: v1
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
-
+micro: "STMicroelectronics STM32"
 com: "USB to CAN Bridge on PA11/PA12"
-
+canspeed: "500000"
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb_can_bridge.png"
 klipcom_cap1: "Klipper Menu Config USB to CAN"

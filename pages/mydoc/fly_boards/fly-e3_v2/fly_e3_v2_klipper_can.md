@@ -1,5 +1,5 @@
 ---
-title: Fly-E3-v2 Klipper CAN bus firmware
+title: Fly-E3-v2 Klipper CANbus firmware
 tags: []
 keywords: 
 last_updated: 15/07/2023
@@ -17,15 +17,15 @@ ver: v2
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
-
+micro: "STMicroelectronics STM32"
 com: "CAN on PB8/PB9"
-
+canspeed: "500000"
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_can.png"
-klipcom_cap1: "Klipper Menu Config CAN"
+klipcom_cap1: "Klipper Menu Config CANbus"
 
 klipcom_img2: "fly-super8/fly-super8_klipper_canboot_burn.png"
-klipcom_cap2: "Burn Klipper firmware over CAN bus"
+klipcom_cap2: "Burn Klipper firmware over CANbus"
 
 klipcom_img3: "fly-super8/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
@@ -33,7 +33,7 @@ klipcom_cap3: "Flash Can Query"
 kconfig_name: "e3v2"
 ---
 
-## Configuring and installing Klipper for CAN bus
+## Configuring and installing Klipper for CANbus
 
 {% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 
