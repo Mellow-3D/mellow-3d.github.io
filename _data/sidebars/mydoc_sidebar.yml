@@ -1035,6 +1035,68 @@ children:
       url: fly-sb2040_trouble.html
       output: web, pdf   
 
+#  Fly-SB2040 v2
+
+  - title: Fly SB2040 V2
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly-sb2040_v2_general.html
+      output: web, pdf   
+
+    - title: Pin diagrams
+      url: fly-sb2040v2_pins.html
+      output: web, pdf   
+
+    - title: CAN bus termination
+      url: fly-sb2040v2_120r.html
+      output: web, pdf
+
+    - title: Files
+      url: fly-sb2040v2_files.html
+      output: web, pdf   
+
+    - title: Klipper configuration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly-sb2040_klipper.html
+        output: web, pdf 
+
+      - title: CanBoot Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sb2040_canboot_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sb2040_canboot_can.html
+          output: web, pdf     
+
+      - title: Klipper Firmware
+        output: web
+        children: 
+
+        - title: USB
+          url: fly-sb2040_klipper_usb.html
+          output: web, pdf     
+
+        - title: CAN bus
+          url: fly-sb2040_klipper_can.html
+          output: web, pdf   
+
+      - title: Configuration file settings
+        url: fly-sb2040_klipper_config.html
+        output: web, pdf
+  
+    - title: CAN bus trouble shooting
+      url: fly-sb2040_trouble.html
+      output: web, pdf   
+
 # SHT-36
 
   - title: Fly SHT 36
