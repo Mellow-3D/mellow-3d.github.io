@@ -50,6 +50,64 @@ children:
   output: web, pdf
   children:
 
+# Fly CDYv2
+
+  - title: Fly-CDYv2
+    output: web, pdf
+    children:
+
+    - title: Fly-CDYv2 General Information
+      url: fly_cdyv2.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly_cdyv2_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_cdyv2_files.html
+      output: web, pdf
+
+    - title: How to Reflash the Stock Bootloader
+      url: fly_cdyv2_bootloader.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper Firmware
+        output: web
+        children:
+
+        - title: Installing Klipper on USB
+          url: fly_cdyv2_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_cdyv2_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_cdyv2_klipper_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: TeamGloomy RRF for the Fly-CDYv2
+        url: "https://teamgloomy.github.io/fly_cdyv2_general.html"
+        output: web, pdf
+
 # Fly CDYv3
 
   - title: Fly-CDYv3
@@ -134,7 +192,7 @@ children:
       output: web
       children:
 
-      - title: Klipper host CAN bus configuration
+      - title: Klipper host CANbus configuration
         url: fly_e3_v2_klipper_host.html
         output: web, pdf
 

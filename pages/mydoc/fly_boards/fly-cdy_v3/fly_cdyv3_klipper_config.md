@@ -5,7 +5,7 @@ keywords:
 last_updated: 09/07/2023
 summary: "Sample Configuration files for the Fly-CDYv3"
 sidebar: mydoc_sidebar
-permalink: fly_cdyv3_klipper_mcu_config.html
+permalink: fly_cdyv3_klipper_config.html
 folder: mydoc
 comments: false
 toc: false
