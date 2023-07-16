@@ -5,7 +5,7 @@ keywords:
 last_updated: 16/07/2023
 summary: "Fly-Super8 CanBoot bootloader for USB"
 sidebar: mydoc_sidebar
-permalink: fly_super8_canboot_usb.html
+permalink: fly_super8_canboot_usb2can.html
 folder: mydoc
 comments: false
 toc: true
@@ -48,6 +48,8 @@ installKlipperName: "Klipper for USB to CAN Bridge Mode configuration section"
 ---
 
 ## Configuring and installing CanBoot bootloader for USB
+
+{% include warning.html content="Super 8 Version 1.0 does not support USB to CAN bridge mode." %}
 
 {% include custom/mcu/stm32f4/canboot_compile_usb_deployer.html %}
 

@@ -29,7 +29,7 @@ caption="Fly-Super8 Pinout"
 %}
 
 
-<a href="https://github.com/Mellow-3D/Fly-Super8/blob/main/Hardware/Pins.svg"><img src="https://raw.githubusercontent.com/Mellow-3D/Fly-Super8/blob/main/Hardware/Pins.svg?sanitize=true"></a>
+{% include image.html file="fly-super8/fly_super8_pins.svg" url="images/fly-super8/fly-super8_pins.svg" alt="Fly-Super8" caption="Fly-Super8 Pinout" %}
 
 
 ## {{ page.boardname }} Driver Pins in Firmware

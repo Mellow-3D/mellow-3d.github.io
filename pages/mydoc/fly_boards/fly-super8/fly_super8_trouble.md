@@ -1,9 +1,9 @@
 ---
-title: Fly-Super8 CAN bus Troubleshooting
+title: Fly-Super8 CANbus Troubleshooting
 tags: []
 keywords: 
 last_updated: 16/07/2023
-summary: "CAN bus Troubleshooting"
+summary: "CANbus Troubleshooting"
 sidebar: mydoc_sidebar
 permalink: fly_super8_can_trouble.html
 folder: mydoc
