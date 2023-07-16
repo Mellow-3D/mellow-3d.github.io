@@ -16,7 +16,7 @@ firmware: usb
 ver: "V 2" 
 
 processor: "STM32F407"
-com: "USB on PA11/PA12"
+com: "USB (on PA11/PA12)"
 micro: "STMicroelectronics STM32"
 offset: "32KiB bootloader"
 clock: "8 MHz crystal"

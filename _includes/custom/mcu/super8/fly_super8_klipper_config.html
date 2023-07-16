@@ -1,0 +1,207 @@
+        {% capture boardname %}{{ page.boardname }}{% endcapture %}
+        {% capture ver %}{{ page.ver }}{% endcapture %}
+
+# {{boardname}} Configuration files
+
+## {{boardname}} aliases file
+- [Download a copy of the aliases file](./files/super8/super8.cfg)
+
+```
+{% include custom/mcu/super8/fly_super8_alias.html %}
+```
+## Example Printer.cfg file
+
+- [Download a sample file containing these sections](./files/super8/super8_printer.cfg)
+
+### MCU
+```
+serial: */dev/serial/by-id/usb-Klipper_stm32_00000-if00*
+```
+### printer
+```
+kinematics: corexy
+max_velocity: 300  
+max_accel: 3000
+max_z_velocity: 15
+max_z_accel: 350
+square_corner_velocity: 5.0
+```
+
+### temperature_sensor {{boardname}}
+```
+sensor_type: temperature_mcu
+```
+
+## Drives
+
+
+### stepper_x
+```
+step_pin: X_STEP
+dir_pin: !X_DIR
+enable_pin: !X_EN
+rotation_distance: 32
+microsteps: 16
+step_pulse_duration: 0.000004
+full_steps_per_rotation:200  #set to 400 for 0.9 degree stepper
+endstop_pin: X_STOP
+position_endstop: 0
+position_min: 0
+position_max: 330
+homing_retract_dist: 10.0
+homing_speed: 60
+```
+### tmc5160 stepper_x
+```
+cs_pin: X_CS
+spi_bus: spi3
+run_current: 1.0
+interpolate: False
+#stealthchop_threshold: 999999
+#driver_TOFF: 0
+```
+
+### stepper_y
+```
+step_pin: Y_STEP
+dir_pin: !Y_DIR
+enable_pin: !Y_EN
+rotation_distance: 32
+microsteps: 16
+step_pulse_duration: 0.000004
+full_steps_per_rotation:200  #set to 400 for 0.9 degree stepper
+endstop_pin: Y_STOP
+position_endstop: 300
+position_min: 0
+position_max: 300
+homing_retract_dist: 10.0
+homing_speed: 60
+```
+
+### tmc5160 stepper_y
+```
+cs_pin: Y_CS
+spi_bus: spi3
+run_current: 1.50
+interpolate: False
+#stealthchop_threshold: 999999
+#driver_TOFF: 0
+```
+
+### stepper_z
+```
+step_pin: z_STEP
+dir_pin: !Z_DIR
+enable_pin: !Z_EN
+microsteps: 16
+rotation_distance: 4
+step_pulse_duration: 0.000004
+endstop_pin: probe:z_virtual_endstop
+position_max: 350
+```
+### tmc2209 stepper_z
+```
+uart_pin: Z_CS
+run_current: 0.800
+stealthchop_threshold: 999999
+```
+
+### stepper_z1
+```
+step_pin: Z1_STEP
+dir_pin: !Z1_DIR
+enable_pin: !Z1_EN
+microsteps: 16
+rotation_distance: 4
+step_pulse_duration: 0.000004
+```
+
+### tmc2209 stepper_z1
+```
+uart_pin: Z1_CS
+run_current: 0.800
+stealthchop_threshold: 999999
+```
+
+### extruder
+```
+step_pin: E_STEP
+dir_pin: !E_DIR
+enable_pin: !E_EN
+microsteps = 16
+step_pulse_duration: 0.000004
+rotation_distance: 22.23                                            # See calibrating rotation_distance on extruders doc
+gear_ratio: 50:10                                                   # For Mini Afterburner
+microsteps: 16
+nozzle_diameter = 0.400
+filament_diameter = 1.750
+heater_pin: HEAT0
+sensor_pin: HEAT0_TEMP
+sensor_type: EPCOS 100K B57560G104F
+pullup_resistor: 2200 ####
+control: pid
+pid_Kp: 22.2
+pid_Ki: 1.08
+pid_Kd: 114
+min_temp: -50
+max_temp: 350
+min_extrude_temp: 10
+```
+
+### tmc2209 extruder
+```
+uart_pin: E_CS
+run_current: 0.5
+stealthchop_threshold: 999999
+```
+
+### heater_bed
+```
+heater_pin: BED_OUT
+sensor_pin: BED_TEMP
+sensor_type: EPCOS 100K B57560G104F
+control: watermark
+min_temp: -50
+max_temp: 200
+```
+
+### fan
+```
+pin: FAN0
+#cycle_time: 0.50
+```
+
+### board_pins
+```
+aliases:
+    # EXP1 header
+    EXP1_1=PE12, EXP1_3=PB2, EXP1_5=PC14, EXP1_7=PG14, EXP1_9=<GND>,
+    EXP1_2=PE13, EXP1_4=PG8, EXP1_6=PC13, EXP1_8=PG13, EXP1_10=<5V>,
+    # EXP2 header
+    EXP2_1=PA6, EXP2_3=PB7, EXP2_5=PB6, EXP2_7=PG15,  EXP2_9=<GND>,
+    EXP2_2=PA5, EXP2_4=PA4, EXP2_6=PA7, EXP2_8=<RST>, EXP2_10=<5V>
+```
+
+## Mini 12864 LCD
+
+### display
+```
+#lcd_type: uc1701
+#cs_pin: EXP1_3
+#a0_pin: EXP1_4
+#rst_pin: EXP1_5
+#contrast: 63
+#encoder_pins: ^EXP2_5, ^!EXP2_3
+#click_pin: ^!EXP1_2
+#spi_bus: spi1
+```
+### FLY Mini12864
+```
+#[neopixel fly_mini12864]
+#pin: EXP1_6
+#chain_count: 3
+#initial_RED: 0.1
+#initial_GREEN: 0.5
+#initial_BLUE: 0.0
+#color_order: RGB
+```

@@ -15,7 +15,7 @@ boardname: Fly-E3-v2
 firmware: can
 ver: "V 1.2" 
 processor: "STM32F407"
-com: "CAN bus on PB8/PB9"
+com: "CAN bus (on PB8/PB9)"
 micro: "STMicroelectronics STM32"
 offset: "32KiB bootloader"
 clock: "8 MHz crystal"

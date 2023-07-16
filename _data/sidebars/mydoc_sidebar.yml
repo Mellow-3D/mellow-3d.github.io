@@ -353,24 +353,20 @@ children:
 
 # Fly Super 8
 
-  - title: Fly Super 8 Versions 1, 1.1, and 1.2
+  - title: Fly-Super8 Versions 1, 1.1, 1.2 and 1.3
     output: web, pdf
     children:
 
-    - title: Overview
-      url: fly-super8_general.html
-      output: web, pdf
-
-    - title: Hardware Revisions
-      url: fly-super8_revisions.html
+    - title: Fly-Super8 General Information
+      url: fly_super8.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly-super8_pins.html
+      url: fly_super8_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly-super8_files.html
+      url: fly_super8_files.html
       output: web, pdf
 
     - title: Klipper
@@ -378,39 +374,63 @@ children:
       children:
 
       - title: Klipper host CAN bus configuration
-        url: fly-super8_klipper_host.html
+        url: fly_super8_klipper_host.html
         output: web, pdf
 
-      - title: CanBoot Bootloader
+      - title: Klipper with USB
         output: web
         children:
+        
+        - title: Step 1 - CanBoot on USB
+          url: fly_super8_canboot_usb.html
+          output: web, pdf  
 
-        - title: CanBoot on USB
-          url: fly-super8_canboot_usb.html
-          output: web, pdf     
+        - title: Step 2 - Klipper on USB
+          url: fly_super8_klipper_usb.html
+          output: web, pdf
 
-        - title: CanBoot on CAN bus
-          url: fly-super8_canboot_can.html
+        - title: Updating Klipper on USB
+          url: fly_super8_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Klipper with USB to CAN Bridge Mode
+        output: web
+        children:
+      
+        - title: Step 1 - CanBoot on USB to CAN Bridge Mode
+          url: fly_super8_canboot_usb2can.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB to CAN Bridge Mode
+          url: fly_super8_klipper_usb2can.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB to CAN Bridge Mode
+          url: fly_super8_klipper_usb2can_updating.html
+          output: web, pdf
+
+      - title: Klipper with CAN
+        output: web
+        children:  
+
+        - title: Step 1 - CanBoot on CANbus
+          url: fly_super8_canboot_can.html
           output: web, pdf   
 
-      - title: Klipper Firmware
-        output: web
-        children:
-
-        - title: USB
-          url: fly-super8_klipper_usb.html
+        - title: Step 2 - Klipper on CANbus
+          url: fly_super8_klipper_can.html
           output: web, pdf
 
-        - title: CAN bus
-          url: fly-super8_klipper_can.html
-          output: web, pdf
-
-        - title: USB to CAN bridge
-          url: fly-super8_klipper_usbtocan.html
+        - title: Updating Klipper on CANbus
+          url: fly_super8_klipper_can_updating.html
           output: web, pdf
 
       - title: Configuration file settings
-        url: fly-super8_klipper_mcu_config.html
+        url: fly_super8_klipper_mcu_config.html
+        output: web, pdf
+
+      - title: CAN bus trouble shooting
+        url: fly_super8_can_trouble.html
         output: web, pdf
 
     - title: Marlin
@@ -428,10 +448,6 @@ children:
       - title: Team Gloomy RRF for Fly Super 8
         url: "https://teamgloomy.github.io/fly_super8_general.html"
         output: web, pdf
-
-    - title: CAN bus trouble shooting
-      url: fly-super8_can_trouble.html
-      output: web, pdf
 
 # Fly-Super8Pro H723
 

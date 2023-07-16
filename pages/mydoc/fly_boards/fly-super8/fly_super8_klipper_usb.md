@@ -1,11 +1,11 @@
 ---
-title: Fly-Super 8 MCU Klipper USB firmware
+title: Fly-Super8 MCU Klipper USB firmware
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "Fly-Super 8 Klipper host"
+last_updated: 16/07/2023
+summary: "Fly-Super8 Klipper host"
 sidebar: mydoc_sidebar
-permalink: fly-super8_klipper_usb.html
+permalink: fly_super8_klipper_usb.html
 folder: mydoc
 comments: false
 toc: true
@@ -20,7 +20,7 @@ micro: "STMicroelectronics STM32"
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
-com: "USB on PA11/PA12"
+com: "USB (on PA11/PA12)"
 appoffset: "32 KiB offset"
 canspeed: ""
 
@@ -34,13 +34,15 @@ klipcom_cap2: "Burn Klipper firmware over USB"
 klipcom_img3: "fly-super8/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
 
-
+kconfig_name: "super8"
 ---
 
 ## Configuring and installing Klipper for USB
 
-{% include custom/mcu/stm32/stm32_klipper_menuconfig.html %}
+{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 
-{% include custom/mcu/stm32/stm32_klipper_flash_canboot.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
 
-{% include custom/can/sht_links.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb.html %}
+
+{% include custom/mcu/super8/fly_super8_links.html %}
