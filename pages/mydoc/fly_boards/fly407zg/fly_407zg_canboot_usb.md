@@ -28,11 +28,11 @@ klipperurl2: ""
 cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_usb.png"
 cancom_cap1: "CanBoot Menuconfig"
 
-canburn_img2: "fly-407zg/fly-f407zg_sdcard.png"
-canburn_cap2: "Fly-407ZG SD card slot"
+cancom_img2: "fly-407zg/fly-f407zg_sdcard.png"
+cancom_cap2: "Fly-407ZG SD card slot"
 
-canburn_img1: "fly-407zg/fly-f407zg_reset.png"
-canburn_cap1: "Fly-407ZG Reset button"
+cancom_img3: "fly-407zg/fly-f407zg_reset.png"
+cancom_cap3: "Fly-407ZG Reset button"
 
 installKlipperURL: "./fly_407zg_klipper_usb.html"
 installKlipperName: "Klipper for USB configuration section"
