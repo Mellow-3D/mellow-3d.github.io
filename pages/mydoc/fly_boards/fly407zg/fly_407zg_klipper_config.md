@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/07/2023
 summary: "Sample Configuration files for the Fly-407ZG"
 sidebar: mydoc_sidebar
-permalink: fly-407zg_mcu_config.html
+permalink: fly_407zg_mcu_config.html
 folder: mydoc
 comments: false
 toc: true
