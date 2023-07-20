@@ -5,7 +5,7 @@ keywords:
 last_updated: 19/07/2023
 summary: "Fly-407ZG files"
 sidebar: mydoc_sidebar
-permalink: fly-407zg_files.html
+permalink: fly_407zg_files.html
 folder: mydoc
 comments: false
 toc: false

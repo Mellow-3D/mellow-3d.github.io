@@ -5,7 +5,7 @@ keywords:
 last_updated: 19/07/2023
 summary: "How to compile and install the CanBoot bootloader for USB operation on the Fly-407ZG"
 sidebar: mydoc_sidebar
-permalink: fly-407zg_canboot_usb.html
+permalink: fly_407zg_canboot_usb.html
 folder: mydoc
 comments: false
 toc: true

@@ -5,7 +5,7 @@ keywords:
 last_updated: 16/07/2023
 summary: "General information regarding the Fly-CDYv2"
 sidebar: mydoc_sidebar
-permalink: fly_cdyv3.html
+permalink: fly_cdyv2.html
 folder: mydoc
 comments: false
 toc: false

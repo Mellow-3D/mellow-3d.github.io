@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Fly-407ZG Pin map"
 sidebar: mydoc_sidebar
-permalink: fly-407zg_pins.html
+permalink: fly_407zg_pins.html
 folder: mydoc
 comments: false
 toc: true

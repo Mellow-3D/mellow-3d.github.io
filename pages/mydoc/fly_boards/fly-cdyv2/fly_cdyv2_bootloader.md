@@ -5,7 +5,7 @@ keywords:
 last_updated: 16/07/2023
 summary: "How to reflash the stock bootloader to a Fly-CDYv2"
 sidebar: mydoc_sidebar
-permalink: fly_cdyv3_bootloader.html
+permalink: fly_cdyv2_bootloader.html
 folder: mydoc
 comments: false
 toc: false
