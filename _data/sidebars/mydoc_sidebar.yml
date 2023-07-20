@@ -50,6 +50,68 @@ children:
   output: web, pdf
   children:
 
+#Fly 407ZG
+
+  - title: Fly-407ZG
+    output: web, pdf
+    children:
+
+    - title: Fly-407ZG Overview
+      url: fly_407zg.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly_407zg_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_407zg_files.html
+      output: web, pdf
+
+    - title: How to Reflash the Stock Bootloader
+      url: fly_407zg_bootloader_serial.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper with USB
+        output: web
+        children:
+        
+        - title: Step 1 - CanBoot on USB
+          url: fly_407zg_canboot_usb.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB
+          url: fly_407zg_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_407zg_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_407zg_mcu_config.html
+        output: web, pdf
+
+    - title: Marlin
+      output: web, pdf
+      children:
+
+      - title: Coming Soon
+        url: "https://marlinfw.org/"
+        output: web, pdf
+
+    - title: RepRapFirmware
+      output: web, pdf
+      children:
+
+      - title: Team Gloomy RRF for Fly-407ZG
+        url: "https://teamgloomy.github.io/fly_407zg_general.html"
+        output: web, pdf
+
 # Fly CDYv2
 
   - title: Fly-CDYv2
@@ -587,72 +649,6 @@ children:
 
       - title: Team Gloomy RRF for Fly Super 8
         url: "https://teamgloomy.github.io/fly_super8pro_h723_general.html"
-        output: web, pdf
-
-#Fly 407ZG
-
-  - title: Fly 407ZG
-    output: web, pdf
-    children:
-
-    - title: Fly 407ZG Overview
-      url: fly_407zg.html
-      output: web, pdf
-
-    - title: Pin diagrams
-      url: fly-407zg_pins.html
-      output: web, pdf
-
-    - title: Files
-      url: fly-407zg_files.html
-      output: web, pdf
-
-    - title: Klipper
-      output: web
-      children:
-
-      - title: CanBoot Bootloader
-        output: web
-        children:
-
-        - title: CanBoot on USB
-          url: fly-407zg_canboot_usb.html
-          output: web, pdf     
-
-      - title: OEM Bootloader
-        output: web
-        children:
-
-        - title: Restore OEM Bootloader
-          url: fly-407zg_oem_bootloader.html
-          output: web, pdf     
-
-      - title: Klipper Firmware
-        output: web
-        children:
-
-        - title: USB
-          url: fly-407zg_klipper_usb.html
-          output: web, pdf
-
-      - title: Configuration file settings
-        url: fly-407zg_mcu_config.html
-        output: web, pdf
-
-    - title: Marlin
-      output: web, pdf
-      children:
-
-      - title: Coming Soon
-        url: "https://marlinfw.org/"
-        output: web, pdf
-
-    - title: RepRapFirmware
-      output: web, pdf
-      children:
-
-      - title: Team Gloomy RRF for Fly-407ZG
-        url: "https://teamgloomy.github.io/fly_407zg_general.html"
         output: web, pdf
 
 # Fly Gemini V2

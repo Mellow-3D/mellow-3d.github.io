@@ -1,26 +1,28 @@
 ---
-title: Fly-CDYv3 MCU Klipper USB firmware
+title: Updating Klipper Firmware on a Fly-407ZG in USB mode
 tags: []
 keywords: 
-last_updated: 15/07/2023
-summary: "Fly-CDYv3 Klipper host"
+last_updated: 19/07/2023
+summary: "How to update the klipper firmware running on a Fly-407ZG in USB mode"
 sidebar: mydoc_sidebar
-permalink: fly_cdyv3_klipper_usb.html
+permalink: fly-407zg_klipper_usb.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-boardname: Fly-CDYv3
+
+boardname: Fly-407ZG
 firmware: usb
-version: "V3"
+version: ""
 
 micro: "STMicroelectronics STM32"
 processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
-com: "USB on PA11/PA12"
-
+com: "USB (on PA11/PA12)"
+appoffset: "32 KiB offset"
+canspeed: ""
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb.png"
 klipcom_cap1: "Klipper Menu Config USB"
@@ -31,21 +33,15 @@ klipcom_cap2: "Burn Klipper firmware over USB"
 klipcom_img3: "fly-super8/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
 
-klipburn_img1: "fly-cdy_v3/fly-cdy_v3_sd_card.png"
-klipburn_cap1: "FLy-CDYv3 SD card"
-
-klipburn_img2: "fly-cdy_v3/fly-cdy_v3_reset.png"
-klipburn_cap2: "Fly-CDYv3 reset"
-
-kconfig_name: "cdyv3"
+kconfig_name: "407zg"
 ---
 
 ## Configuring and installing Klipper for USB
 
 {% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
+{% include custom/mcu/stm32f4/klipper_menuconfig_usb_updating.html %}
 
-{% include custom/mcu/stm32f4/klipper_flash_sd.html %}
+{% include custom/mcu/stm32f4/klipper_flash_canboot_usb_updating.html %}
 
-{% include custom/mcu/cdyv3/fly_cdyv3_links.html %}
+{% include custom/mcu/407zg/fly_407zg_links.html %}

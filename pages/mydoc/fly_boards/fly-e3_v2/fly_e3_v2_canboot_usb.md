@@ -3,7 +3,7 @@ title: Fly-E3-v2 CanBoot bootloader for USB
 tags: []
 keywords: 
 last_updated: 09/07/2023
-summary: "Fly-E3-v2 CanBoot bootloader for USB"
+summary: "How to compile and install the CanBoot bootloader for USB operation on the Fly-E3-v2"
 sidebar: mydoc_sidebar
 permalink: fly_e3_v2_canboot_usb.html
 folder: mydoc

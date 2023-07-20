@@ -1,18 +1,17 @@
 ---
-title: Fly-E3-Pro-V3 MCU Klipper USB firmware
+title: Fly-CDYv3 MCU Klipper USB firmware
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "How to compile and install the klipper firmware running on a Fly-E3-Pro-V3 in USB mode"
+summary: "How to compile and install the klipper firmware running on a Fly-CDYv3 in USB mode"
 sidebar: mydoc_sidebar
-permalink: fly_e3_pro_v3_klipper_usb.html
+permalink: fly_cdyv3_klipper_usb.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 
-
-boardname: Fly-E3-Pro-V3
+boardname: Fly-CDYv3
 firmware: usb
 version: "V3"
 
@@ -21,8 +20,6 @@ processor: "STM32F407"
 offset: "32 KiB bootloader"
 clock: "8 MHz crystal"
 com: "USB on PA11/PA12"
-appoffset: "32 KiB offset"
-canspeed: ""
 
 
 klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb.png"
@@ -34,8 +31,13 @@ klipcom_cap2: "Burn Klipper firmware over USB"
 klipcom_img3: "fly-super8/flash-can_query.png"
 klipcom_cap3: "Flash Can Query"
 
-kconfig_name: "e3prov3"
+klipburn_img1: "fly-cdy_v3/fly-cdy_v3_sd_card.png"
+klipburn_cap1: "FLy-CDYv3 SD card"
 
+klipburn_img2: "fly-cdy_v3/fly-cdy_v3_reset.png"
+klipburn_cap2: "Fly-CDYv3 reset"
+
+kconfig_name: "cdyv3"
 ---
 
 ## Configuring and installing Klipper for USB
@@ -44,6 +46,6 @@ kconfig_name: "e3prov3"
 
 {% include custom/mcu/stm32f4/klipper_menuconfig_usb.html %}
 
-{% include custom/mcu/stm32f4/klipper_flash_canboot_usb.html %}
+{% include custom/mcu/stm32f4/klipper_flash_sd.html %}
 
-{% include custom/mcu/e3prov3/fly_e3_pro_v3_links.html %}
+{% include custom/mcu/cdyv3/fly_cdyv3_links.html %}

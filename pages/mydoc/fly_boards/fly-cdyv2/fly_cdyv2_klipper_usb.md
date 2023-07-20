@@ -3,7 +3,7 @@ title: Fly-CDYv2 MCU Klipper USB firmware
 tags: []
 keywords: 
 last_updated: 16/07/2023
-summary: "Fly-CDYv2 Klipper host"
+summary: "How to compile and install the klipper firmware running on a Fly-CDYv2 in USB mode"
 sidebar: mydoc_sidebar
 permalink: fly_cdyv2_klipper_usb.html
 folder: mydoc

@@ -2,7 +2,7 @@
 title: Fly-407ZG General Information
 tags: []
 keywords: 
-last_updated: 15/06/2022
+last_updated: 19/07/2023
 summary: "General information regarding the Fly-407ZG"
 sidebar: mydoc_sidebar
 permalink: fly_407zg.html
@@ -15,7 +15,7 @@ datatable: true
 ## Overview
 
 This page covers any general information for the Fly-407ZG board.  
-It is currently available through [AliExpress](https://www.aliexpress.com/item/4000609195834.html)
+It is currently available through [AliExpress](https://s.click.aliexpress.com/e/_DCwIy0h)
 
 ### Description:
 
@@ -44,7 +44,7 @@ The Fly-407ZG is supplied with 2 heatsinks. They should be installed as per the 
 
 ### Driver Jumpers
 
-The jumpers should be installed as below. "Common Interpolation" should be used for standalone drivers. "SPI mode Interpolation" is not a currently supported configuration as this port does not support SPI communication to drivers. "UART mode Interpolation" should be used when using smart drivers (i.e. TMC2208, TMC2209, TMC2225 and TMC2226)
+The jumpers should be installed as below. “Common Interpolation” should be used for standalone drivers. “SPI mode Interpolation” is supported for TMC5160 drivers. “UART mode Interpolation” should be used when using smart drivers (i.e. TMC2208, TMC2209, TMC2225 and TMC2226)
 
 {% include image.html file="fly-407zg/fly_407zg_jumpers.png" alt="Fly-407ZG Jumpers" caption="Fly-407ZG Driver Jumper Locations" %}
 
@@ -68,3 +68,4 @@ Some boards shipped are missing the bootloader.
 If your board has the Mellow logo on the back and when you place a firmware.bin file on the SD card and it doesn't get converted, then yours is one of these boards.  
 Follow the guide for [restoring the OEM bootloader.](./fly_407zg_oem_bootloader.html) 
 
+{% include custom/mcu/407zg/fly_407zg_links.html %}

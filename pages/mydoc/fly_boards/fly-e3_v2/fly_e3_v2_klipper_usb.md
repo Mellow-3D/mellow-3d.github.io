@@ -3,7 +3,7 @@ title: Fly-E3-v2 MCU Klipper USB firmware
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "Fly-E3v2 Klipper host"
+summary: "How to compile and install the klipper firmware running on a Fly-E3-v2 in USB mode"
 sidebar: mydoc_sidebar
 permalink: fly_e3_v2_klipper_usb.html
 folder: mydoc

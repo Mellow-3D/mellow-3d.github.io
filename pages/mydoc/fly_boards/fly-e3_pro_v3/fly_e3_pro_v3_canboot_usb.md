@@ -3,7 +3,7 @@ title: Fly-E3-Pro-V3 CanBoot bootloader for USB
 tags: []
 keywords: 
 last_updated: 15/07/2023
-summary: "Fly-E3-Pro-v3 CanBoot bootloader for USB"
+summary: "How to compile and install the CanBoot bootloader for USB operation on the Fly-E3-Pro-V3"
 sidebar: mydoc_sidebar
 permalink: fly_e3_pro_v3_canboot_usb.html
 folder: mydoc
