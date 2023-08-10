@@ -12,7 +12,7 @@
 
 {% if page.firmware == "usb" %}
 
-### Flash Klipper USB firmware with CanBoot over USB
+### Flash Klipper USB firmware with katapult over USB
 - Find the Serial ID
 ```
 ls /dev/serial/by-id/
@@ -27,7 +27,7 @@ make flash FLASH_DEVICE= {Your serial ID here }
 
  - Example
 ```
-make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 
@@ -42,16 +42,16 @@ make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_17003800065031
 
 {% elsif page.firmware == "can" %}
 
-### Flash Klipper CANbus firmware with CanBoot over CANbus
+### Flash Klipper CANbus firmware with katapult over CANbus
 
  - Get the {{ boardname }} UUID buy running the following script. 
  ```
- ~/CanBoot/scripts/flash_can.py -i can0 -q
+ ~/katapult/scripts/flash_can.py -i can0 -q
  ```
 
  - If CAN devices are detected the above command will return the following.
 ```
-Detected uuid: 8248a4b16ede, Application: CanBoot
+Detected uuid: 8248a4b16ede, Application: katapult
 ```
 
    {% 
@@ -68,11 +68,11 @@ Detected uuid: 8248a4b16ede, Application: CanBoot
 
 - Flash the klipper FW to the {{boardname}} by running the following command. 
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
 ```
 Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
 ```
 - You should get a download progress bar and File downloaded successfuly when the burning is complete.
   {% 
@@ -87,7 +87,7 @@ python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8
 
 {% else if page.firmware == "usbtocan" %}
 
-### Flash Klipper USB to CAN bus bridge firmware with CanBoot over USB
+### Flash Klipper USB to CAN bus bridge firmware with katapult over USB
 - Find the Serial ID
 ```
 ls /dev/serial/by-id/
@@ -102,7 +102,7 @@ make flash FLASH_DEVICE={your serial id}
 
  - Example
 ```
-make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 
@@ -115,17 +115,17 @@ make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_17003800065031
 
 - Your {{ boardname }} should now have klipper firmware loaded and be ready to use. 
 
-### Re-Flashing klipper in USB to CAN bridge mode with CanBoot.
+### Re-Flashing klipper in USB to CAN bridge mode with katapult.
 {% include note.html content="This is only for updating Klipper firmware on boards flashed with Klipper in USB to can bridge mode." %}
 
-- Run the canboot flash by UUID  with -r to enable CanBoot USB firmware.
+- Run the katapult flash by UUID  with -r to enable katapult USB firmware.
 
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -r -u { your uuid}
+python3 ~/katapult/scripts/flash_can.py -i can0 -r -u { your uuid}
 ```
 
-- Canboot loader will now appear as a USB device.
-- Get the Canboot serial ID
+- katapult loader will now appear as a USB device.
+- Get the katapult serial ID
 ```
 ls /dev/serial/by-id
 ```

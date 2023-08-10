@@ -10,7 +10,7 @@
     {% capture klipcom_cap3 %}{{page.klipcom_cap3 }}{% endcapture %}
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
 
-### Flash Klipper USB firmware with CanBoot over USB
+### Flash Klipper USB firmware with Katapult over USB
 - Find the Serial ID
 ```
 ls /dev/serial/by-id/
@@ -25,7 +25,7 @@ make flash FLASH_DEVICE= {Your serial ID here }
 
  - Example
 ```
-make flash FLASH_DEVICE=/dev/serial/by-id/usb-CanBoot_stm32f407xb_170038000650314D35323820-if00 
+make flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 

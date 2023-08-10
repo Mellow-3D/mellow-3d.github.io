@@ -14,10 +14,10 @@
     {% capture cancom_cap3 %}{{page.cancom_cap3 }}{% endcapture %}
     {% capture cancom_url3 %} .\images\{{ page.cancom_img3 }} {% endcapture %}
 
-### Flash CanBoot to the {{page.boardname}} MCU
+### Flash Katapult to the {{page.boardname}} MCU
 
 - ftp to your klipper host with an FTP client like [FileZilla](https://filezilla-project.org/)
-  - open the folder '~/CanBoot/out'
+  - open the folder '~/katapult/out'
   - download deployer.bin to your PC
 - place the MCU MicroSD card into a card reader and connect it to your PC.  
 - ensure that the SD Card is formatted as Fat32. If in doubt use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/).  
@@ -48,6 +48,6 @@
 - Open a putty SSH session to the {{boardname}} and log on
 
 - run lsusb to verify the MCU has been discovered as a USB device
-{% include image.html file="lsusb_canboot.jpg" alt="Example lsusb Output" caption="Example lsusb Output" %} 
+{% include image.html file="lsusb_katapult.jpg" alt="Example lsusb Output" caption="Example lsusb Output" %} 
 
   - Continue to the [Klipper for USB configuration section]({{page.installKlipperURL}})

@@ -11,17 +11,17 @@
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
 
 
-### Updating Klipper CANbus firmware with CanBoot over CANbus
+### Updating Klipper CANbus firmware with Katapult over CANbus
 
 - Look in your printer.cfg file and make note of the UUID for your board. 
 
 - Update the Klipper firmware on the {{boardname}} by running the following command. 
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
 ```
 Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
 ```
 - You should get a download progress bar and File downloaded successfuly when the burning is complete.
   {% 

@@ -18,29 +18,29 @@
     {% capture canburn_cap2 %}{{page.canburn_cap2 }}{% endcapture %}
     {% capture canburn_url2 %} .\images\{{ page.canburn_img2 }} {% endcapture %}
 
-### Install CanBoot package
-
+### Install the katapult package
+{% include note.html content="The bootloader software formerly known as CanBoot has been renamed to Katapult" %}
 - ssh into your klipper host console
 
-- Clone the CanBoot firmware to your Klipper Host
+- Clone the katapult firmware to your Klipper Host
 ```
 cd ~/
-git clone https://github.com/Arksine/CanBoot
+git clone https://github.com/Arksine/katapult
 ```
-- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the CAN bus software. 
+- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the katapult software. 
 ```
-[update_manager CanBoot]
+[update_manager katapult]
 type: git_repo
-path: ~/CanBoot
-origin: https://github.com/Arksine/CanBoot.git
+path: ~/katapult
+origin: https://github.com/Arksine/katapult.git
 is_system_service: False
 ```
 
-### Compile CanBoot firmware
+### Compile katapult firmware
 
-- cd to the Canboot directory
+- cd to the katapult directory
 ```
-cd CanBoot
+cd katapult
 ```
 - Run make clean
 ```
@@ -75,4 +75,4 @@ make menuconfig
 ```
 make -j4
 ```
-- You should now have a canboot.bin file at ~/CanBoot/out/
+- You should now have a katapult.bin file at ~/katapuly/out/

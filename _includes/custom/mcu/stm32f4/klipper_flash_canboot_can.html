@@ -11,16 +11,16 @@
     {% capture klipcom_url3 %} .\images\{{ page.klipcom_img3 }} {% endcapture %}
 
 
-### Flash Klipper CANbus firmware with CanBoot over CANbus
+### Flash Klipper CAN bus firmware with Katapult over CAN bus
 
 - Get the {{ boardname }} UUID buy running the following script. 
 ```
-~/CanBoot/scripts/flash_can.py -i can0 -q
+~/katapult/scripts/flash_can.py -i can0 -q
 ```
 
 - If CAN devices are detected the above command will return the following.
 ```
-Detected uuid: 8248a4b16ede, Application: CanBoot
+Detected uuid: 8248a4b16ede, Application: Katapult
 ```
 
    {% 
@@ -37,11 +37,11 @@ Detected uuid: 8248a4b16ede, Application: CanBoot
 
 - Flash the klipper FW to the {{boardname}} by running the following command. 
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
 ```
 Example
 ```
-python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
 ```
 - You should get a download progress bar and File downloaded successfuly when the burning is complete.
   {% 

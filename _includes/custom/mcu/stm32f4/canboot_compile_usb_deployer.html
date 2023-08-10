@@ -20,32 +20,32 @@
 
 ## Overview
 
-CANboot allows you to update your toolboards via USB, so no rebooting and rewiring to USB is necessary. We recommend using CANboot for this additional convenience.
+Katapult allows you to update your toolboards via USB, so no rebooting and rewiring to USB is necessary. We recommend using CANboot for this additional convenience.
 
-### Install CanBoot package
-
+### Install Katapult package
+{% include note.html content="The bootloader software formerly known as CanBoot has been renamed to Katapult" %}
 - ssh into your klipper host console
 
-- Clone the CanBoot firmware to your Klipper Host
+- Clone the Katapult firmware to your Klipper Host
 ```
 cd ~/
-git clone https://github.com/Arksine/CanBoot
+git clone https://github.com/Arksine/katapult
 ```
 - From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow moonraker to manage updates to the CAN bus software. 
 ```
-[update_manager CanBoot]
+[update_manager Katapult]
 type: git_repo
-path: ~/CanBoot
-origin: https://github.com/Arksine/CanBoot.git
+path: ~/katapult
+origin: https://github.com/Arksine/katapult.git
 is_system_service: False
 ```
 
-### Compile CanBoot firmware
+### Compile Katapult firmware
 
-- cd to the Canboot directory
+- cd to the Katapult directory
 ```
-cd CanBoot
-```
+cd katapult
+
 - Run make clean
 ```
 make clean
@@ -57,7 +57,7 @@ make menuconfig
 - Set the following settings
   - Micro-controller Architecture : {{page.micro}}
   - Processor model: {{page.processor}}
-  - Build CanBoot deployment application: {{page.offset}}
+  - Build Katapult deployment application: {{page.offset}}
   - Clock Reference: {{page.clock}}
   - Communication interface - {{page.com}}
   - Application start offset -  {{page.appoffset}}
@@ -76,4 +76,4 @@ make menuconfig
 ```
 make -j4
 ```
-- You should now have a deployer.bin file at ~/CanBoot/out/
+- You should now have a deployer.bin file at ~/katapult/out/

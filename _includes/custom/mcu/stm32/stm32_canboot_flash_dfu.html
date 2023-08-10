@@ -20,7 +20,7 @@
 
 
 
-### Flash CanBoot to the {{ boardname }} MCU
+### Flash katapult to the {{ boardname }} MCU
 
 - Install the boot jumper to the Boot0 pin and 3.3v pin as pictured. 
 
@@ -48,11 +48,11 @@ lsusb
 - Erase and Burn the firmware , replace 0483:df11 in the following command with the USB ID copied earlier
 {% if page.processor == "STM32H723" %}
 ```
-sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000 -d 0483:df11
+sudo dfu-util -a 0 -D ~/katapult/out/katapult.bin --dfuse-address 0x08000000 -d 0483:df11
 ```
 {% else %}
 ```
-sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
+sudo dfu-util -a 0 -D ~/katapult/out/katapult.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
 ```
 {% endif %}
 

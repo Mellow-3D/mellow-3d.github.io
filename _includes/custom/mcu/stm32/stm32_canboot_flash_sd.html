@@ -18,10 +18,10 @@
 
 
 
-### Flash CanBoot to the {{page.boardname}} MCU
+### Flash katapult to the {{page.boardname}} MCU
 
 - ftp to your klipper host with an FTP client like [FileZilla](https://filezilla-project.org/)
-  - open the folder '~/CanBoot/out'
+  - open the folder '~/katapult/out'
   - download deployer.bin to your PC
 - place the MCU MiniSD card into a card reader and connect it to your PC.  
 
@@ -64,12 +64,12 @@
 
 {% elsif page.firmware == "can" %}
 
-- run canboot query verify the MCU is up on the CAN bus
+- run katapult query verify the MCU is up on the CAN bus
 
 ```
-~/CanBoot/scripts/flash_can.py -i can0 -q
+~/katapult/scripts/flash_can.py -i can0 -q
 ```
 
-- Note the UUID for flashing klipper with CanBoot in the {{ page.klipperurl }}
+- Note the UUID for flashing klipper with katapult in the {{ page.klipperurl }}
 
 {% endif %}
