@@ -119,5 +119,3 @@ github: [metadata]
 
 # Copyright 2021 Google LLC
 
-incremental: true
-# incremental building of pages activated

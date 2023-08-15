@@ -1,0 +1,41 @@
+{% comment %} 
+  Below is where information is captured
+{% endcomment %}
+
+{% capture katapult_img2 %}{{page.katapult_img2 }}{% endcapture %}
+{% capture katapult_cap2 %}{{page.katapult_cap2 }}{% endcapture %}
+{% capture katapult_img2_url %} .\images\{{ page.katapult_img2 }} {% endcapture %}
+
+{% capture katapult_img3 %}{{page.katapult_img3 }}{% endcapture %}
+{% capture katapult_cap3 %}{{page.katapult_cap3 }}{% endcapture %}
+{% capture katapult_img3_url %} .\images\{{ page.katapult_img3 }} {% endcapture %}
+
+{% comment %} 
+  On to the real content
+{% endcomment %}
+
+### Burn CanBoot firmware to the {{page.boardname}}
+
+- Use a USB-C data cable to connect the {{page.boardname}} board to the klipper host.  
+
+- Press the boot button while inserting the USB cable to put the {{page.boardname}} into boot mode.  
+
+    {% include image.html file=katapult_img2 url=katapult_img2_url alt=katapult_cap2 caption=katapult_cap2 %}
+
+- Run lsusb to see if the connection is successful.  
+
+    ```text
+lsusb
+    ```
+
+    {% include image.html file=katapult_img3 url=katapult_img3_url alt=katapult_cap3 caption=katapult_cap3 %}
+
+- Flash the {{page.boardname}}
+
+    ```text
+sudo make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE=2e8a:0003
+    ```
+
+- This will flash the Katapult bootloader image and restart the {{page.boardname}}.
+
+- When the status LED starts blinking, Reboot and continue to the [Klipper for USB configuration section]({{page.installKlipperURL}})

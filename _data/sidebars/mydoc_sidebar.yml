@@ -965,30 +965,30 @@ children:
 
 #Fly CAN Section
 
-- title: Fly CAN bus Boards
+- title: Fly CANbus Boards
   output: web, pdf
   children:
 
 #  Fly-SB2040
 
-  - title: Fly SB2040 V1
+  - title: Fly-SB2040-V1
     output: web
     children:  
 
     - title: Overview
-      url: fly-sb2040_v1_general.html
+      url: fly_sb2040_v1_general.html
       output: web, pdf   
 
     - title: Pin diagrams
-      url: fly-sb2040_pins.html
+      url: fly_sb2040_v1_pins.html
       output: web, pdf   
 
-    - title: CAN bus termination
-      url: fly-sb2040_120r.html
+    - title: CANbus termination
+      url: fly_sb2040_v1_120r.html
       output: web, pdf
 
     - title: Files
-      url: fly-sb2040_files.html
+      url: fly_sb2040_v1_files.html
       output: web, pdf   
 
     - title: Klipper configuration
@@ -996,39 +996,39 @@ children:
       children:  
 
       - title: Klipper host
-        url: fly-sb2040_klipper.html
+        url: fly_sb2040_v1_klipper_host.html
         output: web, pdf 
 
-      - title: CanBoot Firmware
+      - title: Klipper with USB
         output: web
-        children: 
+        children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_sb2040_v1_canboot_usb.html
+          output: web, pdf  
 
-        - title: USB
-          url: fly-sb2040_canboot_usb.html
-          output: web, pdf     
+        - title: Step 2 - Klipper on USB
+          url: fly_sb2040_v1_klipper_usb.html
+          output: web, pdf
 
-        - title: CAN bus
-          url: fly-sb2040_canboot_can.html
-          output: web, pdf     
-
-      - title: Klipper Firmware
+      - title: Klipper with CANbus
         output: web
-        children: 
+        children:  
 
-        - title: USB
-          url: fly-sb2040_klipper_usb.html
-          output: web, pdf     
-
-        - title: CAN bus
-          url: fly-sb2040_klipper_can.html
+        - title: Step 1 - Katapult on CANbus
+          url: fly_sb2040_v1_canboot_can.html
           output: web, pdf   
 
+        - title: Step 2 - Klipper on CANbus
+          url: fly_sb2040_v1_klipper_can.html
+          output: web, pdf
+
       - title: Configuration file settings
-        url: fly-sb2040_klipper_config.html
+        url: fly_sb2040_v1_klipper_config.html
         output: web, pdf
   
-    - title: CAN bus trouble shooting
-      url: fly-sb2040_trouble.html
+    - title: CANbus trouble shooting
+      url: fly_sb2040_v1_trouble.html
       output: web, pdf   
 
 # SHT-36

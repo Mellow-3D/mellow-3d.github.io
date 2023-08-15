@@ -1,0 +1,35 @@
+
+    {% capture klipper_img2 %}{{page.klipper_img2 }}{% endcapture %}
+    {% capture klipper_cap2 %}{{page.klipper_cap2 }}{% endcapture %}
+    {% capture klipper_url2 %} .\images\{{ page.klipper_img2 }} {% endcapture %}
+
+    {% capture klipper_img3 %}{{page.klipper_img3 }}{% endcapture %}
+    {% capture klipper_cap3 %}{{page.klipper_cap3 }}{% endcapture %}
+    {% capture klipper_url3 %} .\images\{{ page.klipper_img3 }} {% endcapture %}
+
+
+### Flash Klipper USB firmware with Katapult over USB
+
+- Find the Serial ID
+
+  ```text
+ls /dev/serial/by-id/
+  ```
+
+- Copy the ID containing '{{page.mcu}}' and make a note of it for use in your printer.cfg. 
+
+- Run the make flash command to flash the firmware
+
+  ```text
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE= {Your serial ID here } 
+  ```
+
+- Example
+
+  ```text
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
+  ```
+
+  {% include image.html file=klipper_img2 url=klipper_url2 alt=klipper_cap2 caption=klipper_cap2 %}
+
+- Your {{page.boardname}} should now have klipper firmware loaded and be ready to use. 

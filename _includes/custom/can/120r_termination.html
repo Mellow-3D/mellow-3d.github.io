@@ -1,0 +1,16 @@
+{% capture 120r_img1 %}{{page.120r_img1}}{% endcapture %}
+{% capture 120r_cap1 %}{{page.120r_cap1}}{% endcapture %}
+{% capture 120r_url1 %}.\images\{{page.120r_img1}}{% endcapture %}
+
+## {{page.boardname}} CAN bus termination
+
+ - CAN bus must have two 120 ohm resistors. One at each end of the bus.
+ - Failure to correctly terminate the CAN bus cause to communication issues and instability.   
+ - No matter how many USB devices you connect on a singe bus only enable one 120 ohm resistor at each end of the bus. There is no need to add a resistor to every CAN device
+ - The resistance between CAN H and CAN L measured with the system powerd off should be 60 ohms with all CAN devices connected.
+ - If you are using a UTOC to connect to the {{page.boardname}}, you will only need to connect the {{page.boardname}}s jumper cap.
+The UTOC 120 ohm resistor is not jumpered and always enabled. 
+
+{% include image.html file=120r_img1 url=120r_url1 alt=120r_cap1 caption=120r_cap1 %}
+
+ - The {{page.boardname}} has an on-board 120 ohm resistor that is enabled by installing a jumper as shown in the picture above.

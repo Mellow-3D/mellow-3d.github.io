@@ -1,0 +1,98 @@
+{% comment %} 
+  Below is where information is captured
+{% endcomment %}
+
+{% capture katapult_img1 %}{{page.katapult_img1 }}{% endcapture %}
+{% capture katapult_cap1 %}{{page.katapult_cap1 }}{% endcapture %}
+{% capture katapult_img1_url %} .\images\{{ page.katapult_img1 }} {% endcapture %}
+
+{% comment %} 
+  On to the real content
+{% endcomment %}
+
+## Overview
+
+Katapult allows you to update your {{page.board_type}} via {{page.firmware}}, so no rebooting and rewiring is necessary. We recommend using Katapult for this additional convenience.
+
+### Install Katapult package
+
+{% include note.html content="The bootloader software formerly known as CANBoot has been renamed to Katapult" %}
+
+- ssh into your klipper host console
+
+- Clone the Katapult firmware to your Klipper Host
+
+  ```text
+  cd ~/
+  git clone https://github.com/Arksine/katapult
+  ```
+
+- From your Fluidd or Mainsail web UI Edit Moonraker.conf and add the following at the bottom to allow Moonraker to manage updates to Katapult. 
+
+  ```text
+  [update_manager Katapult]
+  type: git_repo
+  path: ~/katapult
+  origin: https://github.com/Arksine/katapult.git
+  is_system_service: False
+  ```
+
+### Compile Katapult firmware
+
+- cd to the Katapult directory
+
+  ```text
+  cd katapult
+  ```
+
+- Run make clean
+
+  ```text
+  make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
+  ```
+
+- Open menuconfig
+
+  ```text
+  make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
+  ```
+
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" %}
+- Set the following settings
+  - Micro-controller Architecture: {{page.architecture}}
+  - Flash Chip: {{page.flash}}
+  - Build Katapult deployment application: {{page.deployment}}
+  - Communication interface: {{page.communication}}
+  - CAN RX gpio number: {{page.can_rx}}
+  - CAN TX gpio number: {{page.can_tx}}
+  - CAN bus speed: {{ page.can_bus_speed }}
+  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
+  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
+  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
+  - Enable Status LED: {{page.enable_status}}
+  - Status LED GPIO Pin: {{page.status_pin}}
+{% endif %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" %}
+- Set the following settings
+  - Micro-controller Architecture: {{page.architecture}}
+  - Flash Chip: {{page.flash}}
+  - Build Katapult deployment application: {{page.deployment}}
+  - Communication interface: {{page.communication}}
+  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
+  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
+  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
+  - Enable Status LED: {{page.enable_status}}
+  - Status LED GPIO Pin: {{page.status_pin}}
+{% endif %}
+
+    {% include image.html file=katapult_img1 url=katapult_img1_url alt=katapult_cap1 caption=katapult_cap1 %}
+
+- Quit and save the configuration
+
+- Run the make command to compile the firmware
+
+  ```text
+  make KCONFIG_CONFIG=config.{{page.kconfig_name}} -j4
+  ```
+
+- You should now have a {{page.katapult_file}} file at ~/katapult/out/

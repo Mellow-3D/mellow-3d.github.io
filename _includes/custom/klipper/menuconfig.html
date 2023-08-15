@@ -1,0 +1,55 @@
+
+    {% capture klipper_img1 %}{{page.klipper_img1 }}{% endcapture %}
+    {% capture klipper_cap1 %}{{page.klipper_cap1 }}{% endcapture %}
+    {% capture klipper_url1 %} .\images\{{ page.klipper_img1 }} {% endcapture %}
+
+### Compile Klipper firmware for {{page.boardname}}
+
+- ssh to your klipper host console
+- cd to the klipper directory
+
+  ```text
+cd klipper
+  ```
+
+- Run make clean
+
+  ```text
+make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
+  ```
+
+- Open menuconfig
+
+  ```text
+make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
+  ```
+
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" %}
+- Set the following settings
+  - Enable extra low-level configuration options : {{page.low_level}}
+  - Micro-controller Architecture : {{ page.architecture }}
+  - Bootloader offset: {{page.bootloader_offset}}
+  - Communication interface: {{page.communication}}
+  - CAN RX gpio number: {{page.can_rx}}
+  - CAN TX gpio number: {{page.can_tx}}
+  - CAN bus speed: {{ page.can_bus_speed }}
+  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+{% endif %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" %}
+- Set the following settings
+  - Enable extra low-level configuration options : {{page.low_level}}
+  - Micro-controller Architecture : {{ page.architecture }}
+  - Bootloader offset: {{page.bootloader_offset}}
+  - Communication interface: {{page.communication}}
+  - USB ids: {{page.usb_ids}}
+  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+{% endif %}
+
+    {% include image.html file=klipper_img1 url=klipper_url1 alt=klipper_cap1 caption=klipper_cap1 %}
+
+- Quit and save the configuration
+- Run Make to compile the firmware
+
+  ```text
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} -j4
+  ```

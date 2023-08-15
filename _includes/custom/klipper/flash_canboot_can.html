@@ -1,0 +1,50 @@
+
+    {% capture klipper_img2 %}{{page.klipper_img2 }}{% endcapture %}
+    {% capture klipper_cap2 %}{{page.klipper_cap2 }}{% endcapture %}
+    {% capture klipper_url2 %} .\images\{{ page.klipper_img2 }} {% endcapture %}
+
+    {% capture klipper_img3 %}{{page.klipper_img3 }}{% endcapture %}
+    {% capture klipper_cap3 %}{{page.klipper_cap3 }}{% endcapture %}
+    {% capture klipper_url3 %} .\images\{{ page.klipper_img3 }} {% endcapture %}
+
+
+### Flash Klipper CANbus firmware with Katapult over CANbus
+
+{% if {{page.board_type}} == "toolboard" %}
+Connect the {{page.boardname}} to your power supply.  
+Install the 120ohm jumper if this is the only MCU on your CAN bus other than the CAN adapter used by the klipper host. See [here]({{page.120rurl}}) for more information.  
+{% endif %}
+
+- Get the {{page.boardname}} UUID buy running the following script. 
+
+  ```text
+~/katapult/scripts/flash_can.py -i can0 -q
+  ```
+
+- If CAN devices are detected the above command will return the following.
+
+  ```text
+Detected uuid: 8248a4b16ede, Application: Katapult
+  ```
+
+  {% include image.html file=klipper_img2 url=klipper_url2 alt=klipper_cap2 caption=klipper_cap2 %}
+
+- Each device will have a unique uuid. In the above example, 8248a4b16ede is the micro-controller’s canbus uuid.
+- Save the UUID for the next step and for using in your printer.cfg file.  
+- Flash the klipper firmware to the {{page.boardname}} by running the following command. 
+
+  ```text
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u {paste your UUID here}
+  ```
+
+- Example
+
+  ```text
+python3 ~/katapult/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u 8248a4b16ede
+  ```
+
+- You should get a download progress bar and File downloaded successfuly when the burning is complete.
+
+  {% include image.html file=klipper_img3 url=klipper_url3 alt=klipper_cap3 caption=klipper_cap3 %}
+
+- Your {{page.boardname}} should now have klipper firmware loaded and be ready to use.
