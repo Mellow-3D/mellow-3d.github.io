@@ -3,7 +3,7 @@
     {% capture klipper_cap1 %}{{page.klipper_cap1 }}{% endcapture %}
     {% capture klipper_url1 %} .\images\{{ page.klipper_img1 }} {% endcapture %}
 
-    {% capture kconfig_note %}If when running the above command you get this output <br/>`Using default symbol values (no 'config.{{page.kconfig_name}}')`. `Configuration saved to 'config.{{page.kconfig_name}}' `<br/>Then you need to set all the correct settings when running make menuconfig below.<br/>Otherwise, skip to flashing klipper.{% endcapture %}
+    {% capture kconfig_note %}If when running the above command you get this output <br/>`Using default symbol values (no 'config.{{page.kconfig_name}}')`. `Configuration saved to 'config.{{page.kconfig_name}}' `<br/>Then you need to set all the correct settings when running make menuconfig below.<br/>Otherwise, skip to compiling klipper.{% endcapture %}
 
 ### Compile Klipper firmware for {{page.boardname}}
 
