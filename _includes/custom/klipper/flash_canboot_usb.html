@@ -9,7 +9,7 @@
 
 
 ### Flash Klipper USB firmware with Katapult over USB
-
+{% if {{page.state}} == "install" %}
 - Find the Serial ID
 
   ```text
@@ -17,6 +17,10 @@ ls /dev/serial/by-id/
   ```
 
 - Copy the ID containing '{{page.mcu}}' and make a note of it for use in your printer.cfg. 
+{% endif %}
+{% if {{page.state}} == "update" %}
+- Look in your printer.cfg file and make note of the serial ID for your board. 
+{% endif %}
 
 - Run the make flash command to flash the firmware
 
@@ -32,4 +36,9 @@ make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE=/dev/serial/
 
   {% include image.html file=klipper_img2 url=klipper_url2 alt=klipper_cap2 caption=klipper_cap2 %}
 
-- Your {{page.boardname}} should now have klipper firmware loaded and be ready to use. 
+{% if {{page.state}} == "install" %}
+- Your {{page.boardname}} should now have klipper firmware installed and be ready to use.  
+{% endif %}
+{% if {{page.state}} == "update" %}
+- Your {{page.boardname}} should now have klipper firmware updated and be ready to use again.  
+{% endif %}

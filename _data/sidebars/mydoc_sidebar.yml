@@ -1011,6 +1011,10 @@ children:
           url: fly_sb2040_v1_klipper_usb.html
           output: web, pdf
 
+        - title: Updating Klipper on USB
+          url: fly_sb2040_v1_klipper_usb_updating.html
+          output: web, pdf
+
       - title: Klipper with CANbus
         output: web
         children:  
@@ -1021,6 +1025,10 @@ children:
 
         - title: Step 2 - Klipper on CANbus
           url: fly_sb2040_v1_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CANbus
+          url: fly_sb2040_v1_klipper_can_updating.html
           output: web, pdf
 
       - title: Configuration file settings

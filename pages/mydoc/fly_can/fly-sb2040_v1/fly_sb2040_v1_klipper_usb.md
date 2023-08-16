@@ -24,6 +24,7 @@ gpio_startup: "gpio24"
 board_type: "toolboard"
 klipper_file: "klipper.uf2"
 120rurl: "./fly_sb2040_v1_120r.html"
+state: "install"
 
 klipper_img1: "klipper/rp2040_usb_gpio24.png"
 klipper_cap1: "Klipper Menu Config USB"

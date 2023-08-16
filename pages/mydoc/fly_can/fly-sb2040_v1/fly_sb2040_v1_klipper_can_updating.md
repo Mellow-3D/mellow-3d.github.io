@@ -5,7 +5,7 @@ keywords:
 last_updated: 20/10/2022
 summary: "Klipper Configuration for the Fly-SB2040-V1 on CANbus"
 sidebar: mydoc_sidebar
-permalink: fly_sb2040_v1_klipper_can.html
+permalink: fly_sb2040_v1_klipper_can_updating.html
 folder: mydoc
 comments: false
 toc: true
@@ -26,7 +26,7 @@ gpio_startup: "gpio24"
 board_type: "toolboard"
 klipper_file: "klipper.uf2"
 120rurl: "./fly_sb2040_v1_120r.html"
-state: "install"
+state: "update"
 
 klipper_img1: "klipper/rp2040_can_gpio24.png"
 klipper_cap1: "Klipper Menu Config CAN"
