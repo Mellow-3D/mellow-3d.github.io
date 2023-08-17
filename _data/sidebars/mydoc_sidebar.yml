@@ -262,7 +262,7 @@ children:
         output: web
         children:
         
-        - title: Step 1 - CanBoot on USB
+        - title: Step 1 - Katapult on USB
           url: fly_e3_v2_canboot_usb.html
           output: web, pdf  
 

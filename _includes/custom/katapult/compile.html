@@ -86,6 +86,19 @@ Katapult allows you to update your {{page.board_type}} via {{page.firmware}}, so
   - Enable Status LED: {{page.enable_status}}
   - Status LED GPIO Pin: {{page.status_pin}}
 {% endif %}
+{% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB" %}
+- Set the following settings
+  - Micro-controller Architecture: {{page.architecture}}
+  - Processor model: {{page.processor}}
+  - Build Katapult deployment application: {{page.deployment}}
+  - Clock Reference: {{page.clock}}
+  - Communication interface: {{page.communication}}
+  - Application start offset: {{page.application_offset}}
+  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
+  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
+  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
+  - Enable Status LED: {{page.enable_status}}
+{% endif %}
 
     {% include image.html file=katapult_img1 url=katapult_img1_url alt=katapult_cap1 caption=katapult_cap1 %}
 

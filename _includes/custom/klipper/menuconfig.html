@@ -52,6 +52,17 @@ make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
   - USB ids: {{page.usb_ids}}
   - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
 {% endif %}
+{% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB" %}
+- Set the following settings
+  - Enable extra low-level configuration options : {{page.low_level}}
+  - Micro-controller Architecture : {{ page.architecture }}
+  - Processor model: {{page.processor}}
+  - Bootloader offset: {{page.bootloader_offset}}
+  - Clock Reference: {{page.clock}}
+  - Communication interface: {{page.communication}}
+  - USB ids: {{page.usb_ids}}
+  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+{% endif %}
 
     {% include image.html file=klipper_img1 url=klipper_url1 alt=klipper_cap1 caption=klipper_cap1 %}
 

@@ -10,7 +10,7 @@ folder: mydoc
 comments: false
 toc: true
 datatable: true
-boardname: Fly-S2040-V1
+boardname: Fly-SB2040-V1
 firmware: USB
 mcu: "rp2040"
 version: v1
