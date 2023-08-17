@@ -10,23 +10,23 @@ folder: mydoc
 comments: false
 toc: true
 datatable: true
-boardname: Fly-S2040-V1
+boardname: Fly-SB2040-V1
 firmware: CANbus
 mcu: "rp2040"
 version: v1
 kconfig_name: sb2040v1
-architecture: "Raspberry Pi RP2040"
-flash: "W25Q080 with CLKDIV 2"
-deployment: "Do not build"
-communication: "CAN bus"
-can_rx: 4
-can_tx: 5
-can_bus_speed: 500000
-gpio_bootloader_set: ""
-support_bootloader_entry: "*"
-enable_bootloader_gpio: ""
-enable_status: "*"
-status_pin: "gpio24"
+architecture: "(Raspberry Pi RP2040)"
+flash: "(W25Q080 with CLKDIV 2)"
+deployment: "(Do not build)"
+communication: "(CAN bus)"
+can_rx: "(4)"
+can_tx: "(5)"
+can_bus_speed: "(500000)"
+gpio_bootloader_set: "()"
+support_bootloader_entry: "[*]"
+enable_bootloader_gpio: "[&nbsp;]"
+enable_status: "[*]"
+status_pin: "(gpio24)"
 board_type: "toolboard"
 katapult_file: "katapult.uf2"
 

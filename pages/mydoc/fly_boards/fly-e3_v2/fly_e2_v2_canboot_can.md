@@ -12,30 +12,32 @@ toc: true
 datatable: true
 
 boardname: Fly-E3-v2
-firmware: can
-ver: "V 1.2" 
-processor: "STM32F407"
-com: "CAN bus (on PB8/PB9)"
-micro: "STMicroelectronics STM32"
-offset: "32KiB bootloader"
-clock: "8 MHz crystal"
-appoffset: "32KiB offset"
-canspeed: "500000"
+firmware: CANbus
+mcu: "STM32"
+version: v1
+kconfig_name: e3v2
+architecture: "(STMicroelectronics STM32)"
+processor: "(STM32F407)"
+deployment: "(32KiB bootloader)"
+clock: "(8 MHz crystal)"
+communication: "(CAN bus (on PB8/PB9))"
+application_offset: "(32KiB offset)"
+can_bus_speed: "(500000)"
+gpio_bootloader_set: "()"
+support_bootloader_entry: "[*]"
+enable_bootloader_gpio: "[&nbsp;]"
+enable_status: "[&nbsp;]"
+board_type: "mainboard"
+katapult_file: "deployer.bin"
 
-cancom_img1: "fly-super8/fly-super8_canboot_menuconfig_can.png"
-cancom_cap1: "CanBoot Menu Config USB"
+katapult_img1: "katapult/stm32f407_can_deployer_pb8pb9.png"
+katapult_cap1: "Katapult Menu Config CAN"
 
-cancom_img2: "fly-e3_v2/fly-e3_v2_sd_card.png"
-cancom_cap2: "Fly-E3-v2 SD card"
+katapult_img2: "fly-e3_v2/fly-e3_v2_sd_card.png"
+katapult_cap2: "Fly-E3-v2 SD card"
 
-cancom_img3: "fly-e3_v2/fly-e3_v2_reset.png"
-cancom_cap3: "Fly-E3-v2 reset button"
-
-canburn_img1: "fly-super8/fly-super8_pro_klipper_flash_fw_serial_usb.png"
-canburn_cap1: "Fly-E3-v2 dfu lsusb"
-
-canburn_img2: "fly-super8/fly-super8_canbus_usb_flash.png"
-canburn_cap2: "Fly-E3-v2 burn result"
+katapult_img3: "fly-e3_v2/fly-e3_v2_reset.png"
+katapult_cap3: "Fly-E3-v2 reset button"
 
 installKlipperURL: "./fly_e3_v2_klipper_can.html"
 installKlipperName: "Klipper for CANbus configuration section"
@@ -44,8 +46,8 @@ installKlipperName: "Klipper for CANbus configuration section"
 
 ## Configuring and installing CanBoot bootloader for CAN bus
 
-{% include custom/mcu/stm32f4/canboot_compile_can_deployer.html %}
+{% include custom/katapult/compile.html %}
 
-{% include custom/mcu/stm32f4/canboot_flash_deployer.html %}
+{% include custom/katapult/flash_deployer.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}

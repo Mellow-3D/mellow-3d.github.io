@@ -15,18 +15,15 @@ firmware: USB
 mcu: "rp2040"
 version: v1
 kconfig_name: sb2040v1
-architecture: "Raspberry Pi RP2040"
-flash: "W25Q080 with CLKDIV 2"
-deployment: "Do not build"
-communication: "USB"
-can_rx: 
-can_tx: 
-can_bus_speed: 
-gpio_bootloader_set: ""
-support_bootloader_entry: "*"
-enable_bootloader_gpio: ""
-enable_status: "*"
-status_pin: "gpio24"
+architecture: "(Raspberry Pi RP2040)"
+flash: "(W25Q080 with CLKDIV 2)"
+deployment: "(Do not build)"
+communication: "(USB)"
+gpio_bootloader_set: "()"
+support_bootloader_entry: "[*]"
+enable_bootloader_gpio: "[&nbsp;]"
+enable_status: "[*]"
+status_pin: "(gpio24)"
 board_type: "toolboard"
 katapult_file: "katapult.uf2"
 

@@ -15,12 +15,12 @@ firmware: USB
 mcu: "rp2040"
 version: v1
 kconfig_name: sb2040v1
-low_level: "*"
-architecture: "Raspberry Pi RP2040"
-bootloader_offset: "16KiB bootloader"
-communication: "USB"
+low_level: "[*]"
+architecture: "(Raspberry Pi RP2040)"
+bootloader_offset: "(16KiB bootloader)"
+communication: "(USB)"
 usb_ids: ""
-gpio_startup: "gpio24"
+gpio_startup: "(gpio24)"
 board_type: "toolboard"
 klipper_file: "klipper.uf2"
 120rurl: "./fly_sb2040_v1_120r.html"

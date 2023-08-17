@@ -15,14 +15,14 @@ firmware: CANbus
 mcu: "rp2040"
 version: v1
 kconfig_name: sb2040v1
-low_level: "*"
-architecture: "Raspberry Pi RP2040"
-bootloader_offset: "16KiB bootloader"
-communication: "CAN bus"
-can_rx: 4
-can_tx: 5
-can_bus_speed: 500000
-gpio_startup: "gpio24"
+low_level: "[*]"
+architecture: "(Raspberry Pi RP2040)"
+bootloader_offset: "(16KiB bootloader)"
+communication: "(CAN bus)"
+can_rx: "(4)"
+can_tx: "(5)"
+can_bus_speed: "(500000)"
+gpio_startup: "(gpio24)"
 board_type: "toolboard"
 klipper_file: "klipper.uf2"
 120rurl: "./fly_sb2040_v1_120r.html"

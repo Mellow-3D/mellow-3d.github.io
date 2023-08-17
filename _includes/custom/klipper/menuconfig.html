@@ -32,36 +32,36 @@ make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
 make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
   ```
 
-{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" and {{page.bootloader_offset}} != "(No bootloader)" %}
 - Set the following settings
-  - Enable extra low-level configuration options : {{page.low_level}}
-  - Micro-controller Architecture : {{ page.architecture }}
-  - Bootloader offset: {{page.bootloader_offset}}
-  - Communication interface: {{page.communication}}
-  - CAN RX gpio number: {{page.can_rx}}
-  - CAN TX gpio number: {{page.can_tx}}
-  - CAN bus speed: {{ page.can_bus_speed }}
-  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+  - {{page.low_level}} Enable extra low-level configuration options
+  - Micro-controller Architecture {{ page.architecture }}
+  - Bootloader offset {{page.bootloader_offset}}
+  - Communication interface {{page.communication}}
+  - {{page.can_rx}} CAN RX gpio number
+  - {{page.can_tx}} CAN TX gpio number
+  - {{page.can_bus_speed}} CAN bus speed
+  - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
 {% endif %}
-{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" and {{page.bootloader_offset}} != "(No bootloader)" %}
 - Set the following settings
-  - Enable extra low-level configuration options : {{page.low_level}}
-  - Micro-controller Architecture : {{ page.architecture }}
-  - Bootloader offset: {{page.bootloader_offset}}
-  - Communication interface: {{page.communication}}
-  - USB ids: {{page.usb_ids}}
-  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+  - {{page.low_level}} Enable extra low-level configuration options
+  - Micro-controller Architecture {{ page.architecture }}
+  - Bootloader offset {{page.bootloader_offset}}
+  - Communication interface {{page.communication}}
+  - USB ids {{page.usb_ids}}
+  - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
 {% endif %}
 {% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB" %}
 - Set the following settings
-  - Enable extra low-level configuration options : {{page.low_level}}
-  - Micro-controller Architecture : {{ page.architecture }}
-  - Processor model: {{page.processor}}
-  - Bootloader offset: {{page.bootloader_offset}}
-  - Clock Reference: {{page.clock}}
-  - Communication interface: {{page.communication}}
-  - USB ids: {{page.usb_ids}}
-  - GPIO pins to set at micro-controller startup: {{page.gpio_startup}}
+  - {{page.low_level}} Enable extra low-level configuration options
+  - Micro-controller Architecture {{ page.architecture }}
+  - Processor model {{page.processor}}
+  - Bootloader offset {{page.bootloader_offset}}
+  - Clock Reference {{page.clock}}
+  - Communication interface {{page.communication}}
+  - USB ids {{page.usb_ids}}
+  - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
 {% endif %}
 
     {% include image.html file=klipper_img1 url=klipper_url1 alt=klipper_cap1 caption=klipper_cap1 %}

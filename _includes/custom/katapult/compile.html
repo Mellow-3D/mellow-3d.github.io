@@ -59,45 +59,59 @@ Katapult allows you to update your {{page.board_type}} via {{page.firmware}}, so
   make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
   ```
 
-{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" and {{page.enable_status}} != "[&nbsp;]" %}
 - Set the following settings
-  - Micro-controller Architecture: {{page.architecture}}
-  - Flash Chip: {{page.flash}}
-  - Build Katapult deployment application: {{page.deployment}}
-  - Communication interface: {{page.communication}}
-  - CAN RX gpio number: {{page.can_rx}}
-  - CAN TX gpio number: {{page.can_tx}}
-  - CAN bus speed: {{ page.can_bus_speed }}
-  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
-  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
-  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
-  - Enable Status LED: {{page.enable_status}}
-  - Status LED GPIO Pin: {{page.status_pin}}
+  - Micro-controller Architecture {{page.architecture}}
+  - Flash Chip {{page.flash}}
+  - Build Katapult deployment application {{page.deployment}}
+  - Communication interface {{page.communication}}
+  - {{page.can_rx}} CAN RX gpio number
+  - {{page.can_tx}} CAN TX gpio number
+  - {{ page.can_bus_speed }} CAN bus speed
+  - {{page.gpio_bootloader_set}} GPIO pins to set on bootloader entry
+  - {{page.support_bootloader_entry}} Support bootloader entry on rapid double clip of reset button
+  - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
+  - {{page.enable_status}} Enable Status LED
+  - {{page.status_pin}} Status LED GPIO Pin
 {% endif %}
-{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" and {{page.enable_status}} != "[&nbsp;]" %}
 - Set the following settings
-  - Micro-controller Architecture: {{page.architecture}}
-  - Flash Chip: {{page.flash}}
-  - Build Katapult deployment application: {{page.deployment}}
-  - Communication interface: {{page.communication}}
-  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
-  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
-  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
-  - Enable Status LED: {{page.enable_status}}
-  - Status LED GPIO Pin: {{page.status_pin}}
+  - Micro-controller Architecture {{page.architecture}}
+  - Flash Chip {{page.flash}}
+  - Build Katapult deployment application {{page.deployment}}
+  - Communication interface {{page.communication}}
+  - {{page.gpio_bootloader_set}} GPIO pins to set on bootloader entry
+  - {{page.support_bootloader_entry}} Support bootloader entry on rapid double clip of reset button
+  - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
+  - {{page.enable_status}} Enable Status LED
+  - {{page.status_pin}} Status LED GPIO Pin
 {% endif %}
 {% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB" %}
 - Set the following settings
-  - Micro-controller Architecture: {{page.architecture}}
-  - Processor model: {{page.processor}}
-  - Build Katapult deployment application: {{page.deployment}}
-  - Clock Reference: {{page.clock}}
-  - Communication interface: {{page.communication}}
-  - Application start offset: {{page.application_offset}}
-  - GPIO pins to set on bootloader entry: {{page.gpio_bootloader_set}}
-  - Support bootloader entry on rapid double clip of reset button: {{page.support_bootloader_entry}}
-  - Enable bootloader entry on button (or gpio) state: {{page.enable_bootloader_gpio}}
-  - Enable Status LED: {{page.enable_status}}
+  - Micro-controller Architecture {{page.architecture}}
+  - Processor model {{page.processor}}
+  - Build Katapult deployment application {{page.deployment}}
+  - Clock Reference {{page.clock}}
+  - Communication interface {{page.communication}}
+  - Application start offset {{page.application_offset}}
+  - {{page.gpio_bootloader_set}} GPIO pins to set on bootloader entry 
+  - {{page.support_bootloader_entry}} Support bootloader entry on rapid double clip of reset button
+  - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
+  - {{page.enable_status}} Enable Status LED
+{% endif %}
+{% if {{page.mcu}} == "STM32" and {{page.firmware}} == "CANbus" %}
+- Set the following settings
+  - Micro-controller Architecture {{page.architecture}}
+  - Processor model {{page.processor}}
+  - Build Katapult deployment application {{page.deployment}}
+  - Clock Reference {{page.clock}}
+  - Communication interface {{page.communication}}
+  - Application start offset {{page.application_offset}}
+  - {{page.can_bus_speed}} CAN bus speed
+  - {{page.gpio_bootloader_set}} GPIO pins to set on bootloader entry 
+  - {{page.support_bootloader_entry}} Support bootloader entry on rapid double clip of reset button
+  - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
+  - {{page.enable_status}} Enable Status LED
 {% endif %}
 
     {% include image.html file=katapult_img1 url=katapult_img1_url alt=katapult_cap1 caption=katapult_cap1 %}
