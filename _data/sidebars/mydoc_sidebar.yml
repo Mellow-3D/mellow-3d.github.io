@@ -969,7 +969,7 @@ children:
   output: web, pdf
   children:
 
-#  Fly-SB2040
+#  Fly-SB2040-V1
 
   - title: Fly-SB2040-V1
     output: web
@@ -1037,6 +1037,76 @@ children:
   
     - title: CANbus trouble shooting
       url: fly_sb2040_v1_trouble.html
+      output: web, pdf   
+
+#  Fly-SB2040-V2
+
+  - title: Fly-SB2040-V2
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_sb2040_v2_general.html
+      output: web, pdf   
+
+    - title: Pin diagrams
+      url: fly_sb2040_v2_pins.html
+      output: web, pdf   
+
+    - title: CANbus termination
+      url: fly_sb2040_v2_120r.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_sb2040_v2_files.html
+      output: web, pdf   
+
+    - title: Klipper configuration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly_sb2040_v2_klipper_host.html
+        output: web, pdf 
+
+      - title: Klipper with USB
+        output: web
+        children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_sb2040_v2_canboot_usb.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB
+          url: fly_sb2040_v2_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_sb2040_v2_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Klipper with CANbus
+        output: web
+        children:  
+
+        - title: Step 1 - Katapult on CANbus
+          url: fly_sb2040_v2_canboot_can.html
+          output: web, pdf   
+
+        - title: Step 2 - Klipper on CANbus
+          url: fly_sb2040_v2_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CANbus
+          url: fly_sb2040_v2_klipper_can_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_sb2040_v2_klipper_config.html
+        output: web, pdf
+  
+    - title: CANbus trouble shooting
+      url: fly_sb2040_v2_trouble.html
       output: web, pdf   
 
 # SHT-36

@@ -52,7 +52,7 @@ sb2040pins_cap12:  "Fly-SB2040-V1 PWM Fans"
 sb2040pins_img13:  "fly-sb2040_v1/sb2040_rgb.png"
 sb2040pins_cap13:  "Fly-SB2040-V1 RGB LED" 
 
-sb2040_cfg: "./files/fly-sb2040.cfg"
+sb2040_cfg: "./files/fly_sb2040_v1/fly_sb2040_v1.cfg"
 ---
 
 {% include custom/can/SB2040_pins.html %}

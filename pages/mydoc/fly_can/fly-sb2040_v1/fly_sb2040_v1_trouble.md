@@ -15,7 +15,7 @@ boardname: Fly-SB2040-V1
 firmware: CAN bus
 version: v1
 
-mcu: "Fly-SB2040"
+mcu: "Fly-SB2040-V1"
 
 
 ---
