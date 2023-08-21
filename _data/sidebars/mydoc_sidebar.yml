@@ -985,6 +985,10 @@ children:
       output: web
       children:  
 
+      - title: Klipper Host Preparation
+        url: fly_adxl345_usb_klipper_host.html
+        output: web, pdf 
+
       - title: Klipper with USB
         output: web
         children:
