@@ -12,7 +12,9 @@ toc: true
 datatable: true
 ---
 
-## Edit the following sections of your printer.cfg file
+## printer.cfg File Changes
+
+Add the following line near the beginning of your printer.cfg
 
 ```text
 [include accelerometer.cfg]
@@ -23,6 +25,8 @@ This way, when the accelerometer isn't connected the whole file can be commented
 ### accelerometer.cfg
 
 - [Download a sample file containing these sections](./files/fly_adxl345_usb/accelerometer.cfg)
+
+Create a file called accerlerometer.cfg in your configuration files.  
 
 ```text
 [mcu adxl]
