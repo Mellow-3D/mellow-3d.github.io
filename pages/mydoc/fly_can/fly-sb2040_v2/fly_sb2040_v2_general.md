@@ -3,7 +3,7 @@
 title: Fly-SB2040-V2 General Information
 tags: []
 keywords: 
-last_updated: 23/07/2023
+last_updated: 21/08/2023
 summary: "General information regarding the Fly-SB2040-V2"
 sidebar: mydoc_sidebar
 permalink: fly_sb2040_v2_general.html
@@ -38,7 +38,7 @@ overview_cap3: "Fly-SB2040-V2 BOM"
 ### Description
 
 The {{page.boardname}} toolboard uses CAN communication to connect the host computer with a UTOC board, other USB to CAN adapters, Pi Hats, USB to CAN Bridge Mode in Klipper or USB. For USB use it is recommended to not to use a cable that exceeds 1 meter ( 3.2 feet ) in length.  
-The {{page.boardname}} can no longer be purchased through AliExpress as it has been replaced by the Fly-SB2040-V2
+The {{page.boardname}} is available from [AliExpress](https://s.click.aliexpress.com/e/_Dko08Nh)
 
 {% include image.html file=page.overview_img1 url=overurl1 alt=page.overview_cap1 caption=page.overview_cap1 %}
 

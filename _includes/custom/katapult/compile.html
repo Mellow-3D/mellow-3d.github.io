@@ -44,7 +44,7 @@ Katapult allows you to update your {{page.board_type}} via {{page.firmware}}, so
 - cd to the Katapult directory
 
   ```text
-  cd katapult
+  cd ~/katapult
   ```
 
 - Run make clean
@@ -85,6 +85,17 @@ Katapult allows you to update your {{page.board_type}} via {{page.firmware}}, so
   - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
   - {{page.enable_status}} Enable Status LED
   - {{page.status_pin}} Status LED GPIO Pin
+{% endif %}
+{% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "USB" and {{page.enable_status}} == "[&nbsp;]" %}
+- Set the following settings
+  - Micro-controller Architecture {{page.architecture}}
+  - Flash Chip {{page.flash}}
+  - Build Katapult deployment application {{page.deployment}}
+  - Communication interface {{page.communication}}
+  - {{page.gpio_bootloader_set}} GPIO pins to set on bootloader entry
+  - {{page.support_bootloader_entry}} Support bootloader entry on rapid double clip of reset button
+  - {{page.enable_bootloader_gpio}} Enable bootloader entry on button (or gpio) state
+  - {{page.enable_status}} Enable Status LED
 {% endif %}
 {% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB" %}
 - Set the following settings

@@ -921,6 +921,10 @@ children:
         url: fly-puppet_klipper_mcu_config.html
         output: web, pdf
 
+- title: Fly Expansion Boards
+  output: web, pdf
+  children:
+
 # Fly RPFMex
 
   - title: Fly RPFMEX
@@ -961,6 +965,44 @@ children:
 
       - title: Configuration file settings
         url: fly-rpfmex_klipper_mcu_config.html
+        output: web, pdf
+
+#  Fly-ADXL345-USB
+
+  - title: Fly-ADXL345-USB
+    output: web
+    children:  
+
+    - title: Overview
+      url: fly_adxl345_usb_general.html
+      output: web, pdf   
+
+    - title: Files
+      url: fly_adxl345_usb_files.html
+      output: web, pdf   
+
+    - title: Klipper configuration
+      output: web
+      children:  
+
+      - title: Klipper with USB
+        output: web
+        children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_adxl345_usb_canboot_usb.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB
+          url: fly_adxl345_usb_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_adxl345_usb_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_adxl345_usb_klipper_config.html
         output: web, pdf
 
 #Fly CAN Section
