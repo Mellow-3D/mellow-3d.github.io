@@ -1373,28 +1373,77 @@ children:
 
     - title: Klipper host
       url: fly-utoc_klipper.html
-      output: web, pdf      
+      output: web, pdf  
 
-#ERCF Board section
-- title: Fly ERCF Easy Board 
-  output: web, pdf
-  children:
+  #  Fly-ERCF-V1.1
 
-  - title: Fly ERCF Easy Board
+  - title: Fly-ERCF-Easy-BRD-V1.1
     output: web
     children:  
 
     - title: Overview
-      url: ercf_easy-brd_v1_1.html
-      output: web, pdf 
+      url: fly_ercf_v1.1_general.html
+      output: web, pdf   
 
-  - title: Fly ERCF Easy Board CAN
-    output: web
-    children:  
+    - title: Pin diagrams
+      url: fly_ercf_v1.1_pins.html
+      output: web, pdf   
 
-    - title: Overview
-      url: ercf_easy-brd_can.html
-      output: web, pdf 
+    - title: CANbus termination
+      url: fly_ercf_v1.1_120r.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_ercf_v1.1_files.html
+      output: web, pdf   
+
+    - title: Klipper configuration
+      output: web
+      children:  
+
+      - title: Klipper host
+        url: fly_ercf_v1.1_klipper_host.html
+        output: web, pdf 
+
+      - title: Klipper with USB
+        output: web
+        children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_ercf_v1.1_canboot_usb.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB
+          url: fly_ercf_v1.1_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_ercf_v1.1_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Klipper with CANbus
+        output: web
+        children:  
+
+        - title: Step 1 - Katapult on CANbus
+          url: fly_ercf_v1.1_canboot_can.html
+          output: web, pdf   
+
+        - title: Step 2 - Klipper on CANbus
+          url: fly_ercf_v1.1_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CANbus
+          url: fly_ercf_v1.1_klipper_can_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_ercf_v1.1_klipper_config.html
+        output: web, pdf
+  
+    - title: CANbus trouble shooting
+      url: fly_ercf_v1.1_trouble.html
+      output: web, pdf       
 
 #SBC Section
 

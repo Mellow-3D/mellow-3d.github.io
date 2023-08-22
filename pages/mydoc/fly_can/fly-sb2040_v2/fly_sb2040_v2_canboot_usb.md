@@ -36,7 +36,7 @@ katapult_cap2: "Fly-SB2040-V2 Boot Button Location"
 katapult_img3: "fly-sb2040_v1/fly-sb2040_lsusb_screenshot.png"
 katapult_cap3: "lsusb Results"
 
-installKlipperURL: "./fly_sb2040_v1_klipper_usb.html"
+installKlipperURL: "./fly_sb2040_v2_klipper_usb.html"
 installKlipperName: "Klipper for USB configuration section"
 
 ---

@@ -71,4 +71,4 @@ The {{page.boardname}} is available from [AliExpress](https://s.click.aliexpress
 - XT30+2 3 meter 4 wire harness
 - USB-A to USB-C Cable
 
-{% include custom/mcu/sb2040v1/sb2040_v1_links.html %}
+{% include custom/mcu/sb2040v2/sb2040_v2_links.html %}
