@@ -32,6 +32,10 @@ make clean KCONFIG_CONFIG=config.{{page.kconfig_name}}
 make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
   ```
 
+{% if {{page.firmware}} == "CANbus" %}
+{% include important.html content="As of FlyOS v3.1, the default CAN speed is 1000000. These instructions have been updated to reflect that speed as default. <br/> Your host system may be set up for a different default CAN speed. Use `nano /etc/network/interfaces.d/can0` to check the speed" %}
+{% endif %}
+
 {% if {{page.mcu}} == "rp2040" and {{page.firmware}} == "CANbus" and {{page.bootloader_offset}} != "(No bootloader)" %}
 - Set the following settings
   - {{page.low_level}} Enable extra low-level configuration options

@@ -2,7 +2,7 @@
 title: Fly-E3-v2 CanBoot bootloader for CAN bus
 tags: []
 keywords: 
-last_updated: 10/07/2023
+last_updated: 04/09/2023
 summary: "Fly-E3-v2 CanBoot bootloader for CAN bus"
 sidebar: mydoc_sidebar
 permalink: fly_e3_v2_canboot_can.html
@@ -22,7 +22,7 @@ deployment: "(32KiB bootloader)"
 clock: "(8 MHz crystal)"
 communication: "(CAN bus (on PB8/PB9))"
 application_offset: "(32KiB offset)"
-can_bus_speed: "(500000)"
+can_bus_speed: "(1000000)"
 gpio_bootloader_set: "()"
 support_bootloader_entry: "[*]"
 enable_bootloader_gpio: "[&nbsp;]"

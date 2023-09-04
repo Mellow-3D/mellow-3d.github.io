@@ -48,4 +48,3 @@ installKlipperName: "Klipper for USB to CAN Bridge Mode configuration section"
 {% include custom/mcu/stm32f4/canboot_flash_deployer.html %}
 
 {% include custom/can/sht_links.html %}
-

@@ -2,7 +2,7 @@
 title: Klipper Configuration for the Fly-SB2040-V1 on CANbus
 tags: []
 keywords: 
-last_updated: 20/10/2022
+last_updated: 04/09/2023
 summary: "Klipper Configuration for the Fly-SB2040-V1 on CANbus"
 sidebar: mydoc_sidebar
 permalink: fly_sb2040_v1_klipper_can.html
@@ -21,7 +21,7 @@ bootloader_offset: "(16KiB bootloader)"
 communication: "(CAN bus)"
 can_rx: "(4)"
 can_tx: "(5)"
-can_bus_speed: "(500000)"
+can_bus_speed: "(1000000)"
 gpio_startup: "(gpio24)"
 board_type: "toolboard"
 klipper_file: "klipper.uf2"

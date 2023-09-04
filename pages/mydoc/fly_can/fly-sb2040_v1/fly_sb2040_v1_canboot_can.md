@@ -2,7 +2,7 @@
 title: Katapult Configuration for the Fly-SB2040-V1 on CANbus
 tags: []
 keywords: 
-last_updated: 13/08/2023
+last_updated: 04/09/2023
 summary: "How to Configure Katapult for CANbus Operation on the Fly-SB2040-V1"
 sidebar: mydoc_sidebar
 permalink: fly_sb2040_v1_canboot_can.html
@@ -21,7 +21,7 @@ deployment: "(Do not build)"
 communication: "(CAN bus)"
 can_rx: "(4)"
 can_tx: "(5)"
-can_bus_speed: "(500000)"
+can_bus_speed: "(1000000)"
 gpio_bootloader_set: "()"
 support_bootloader_entry: "[*]"
 enable_bootloader_gpio: "[&nbsp;]"
