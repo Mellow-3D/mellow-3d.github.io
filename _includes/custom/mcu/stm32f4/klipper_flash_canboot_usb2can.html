@@ -20,12 +20,12 @@ ls /dev/serial/by-id/
 
 - Run the make flash command to compile the firmware
 ```
-make flash FLASH_DEVICE={your serial id}
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE={your serial id}
 ```
 
  - Example
 ```
-make flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE=/dev/serial/by-id/usb-katapult_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 

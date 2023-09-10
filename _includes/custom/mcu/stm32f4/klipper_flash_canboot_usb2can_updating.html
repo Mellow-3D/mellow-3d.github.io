@@ -16,12 +16,12 @@
 
 - Run the make flash command to flash the firmware
 ```
-make flash FLASH_DEVICE= {Your serial ID here } 
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE= {Your serial ID here } 
 ```
 
  - Example
 ```
-make flash FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f407xb_170038000650314D35323820-if00 
+make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash  FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f407xb_170038000650314D35323820-if00 
 ```
 
   {% 
