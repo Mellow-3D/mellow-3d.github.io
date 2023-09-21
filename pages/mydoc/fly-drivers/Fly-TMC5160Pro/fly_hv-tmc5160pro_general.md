@@ -41,8 +41,6 @@ driver_cap9: "Fly-TMC5160 Pro Stepper Adapter"
 driver_img10: "fly-5160_pro/fly-hv5160pro_bom.webp"
 driver_cap10: "Fly-TMC5160 Pro BOM"
 
-
-
 ---
 
     {% capture driver_img1 %}{{page.driver_img1 }}{% endcapture %}
@@ -100,7 +98,7 @@ driver_cap10: "Fly-TMC5160 Pro BOM"
 The HV-TMC5160 Pro V1.2 driver is made according to customer requirements. We have designed a high voltage driver to support 48V voltage, but high voltage represents a greater risk. We do not recommend customers with no technical experience to use 48V voltage. 24V has satisfied most customers.
 
 ### New features in Version 1.2
- Added a separate VSA power supply port, VSA power supply uses 12V power supply by default, add a 470uf capacitor.The matching small module adds a 12V power supply chip to supply 12V to the vsa of the 5160 chip.Of course, a larger voltage means that a larger motor can be used, which is of great help to the moving speed of the 3D printer. Please select the operating voltage with safety as the first criterion.
+Added a separate VSA power supply port, VSA power supply uses 12V power supply by default, add a 470uf capacitor.The matching small module adds a 12V power supply chip to supply 12V to the vsa of the 5160 chip.Of course, a larger voltage means that a larger motor can be used, which is of great help to the moving speed of the 3D printer. Please select the operating voltage with safety as the first criterion.
 
 
 ### Product parameters
@@ -108,18 +106,18 @@ The HV-TMC5160 Pro V1.2 driver is made according to customer requirements. We ha
  - Product name: FLY HV-TMC5160 PRO V1.2
  - Features: External high voltage TMC5160 drive
  - Input voltage: 24-48V
- - Maximum current: 6
- - Capacitor: 2*470uf
+ - Maximum output current: 6A
+ - Capacitor: 2*470µF
  - Supported Firmware:Marlin/RRF/Klipper
  - Product material: PCB copper 2oz thick, gold plated
  - Step/direction interface with microstep interpolation microPlyer
  - The highest resolution is 256 microsteps
- - StealthChop2 silent work and smooth motion
- - Resonance suppression for mid-range resonance
- - SpreadCycle high dynamic motor control chopper
- - DcStep load related speed control
- - StallGuard2 high-precision sensorless motor load detection
- - CoolStep current control, which can achieve up to 75% energy savings
+ - Resonance suppression for mid-range resonances
+ - StealthChop2™ for silent operation and smooth motion
+ - SpreadCycle™ chopper mode for highly dynamic motor control 
+ - DcStep™ load-dependent speed control
+ - StallGuard2™ high-precision sensorless motor load detection
+ - CoolStep™ current control, which can achieve up to 75% energy savings
 
 ### Dimensions
 
