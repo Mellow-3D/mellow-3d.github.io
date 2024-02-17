@@ -37,6 +37,6 @@ klipper_cap2: "Burn Klipper firmware over USB"
 
 {% include custom/klipper/menuconfig.html %}
 
-{% include custom/klipper/flash_canboot_usb.html %}
+{% include custom/klipper/flash_katapult_usb.html %}
 
 {% include custom/mcu/sb2040v1/sb2040_v1_links.html %}

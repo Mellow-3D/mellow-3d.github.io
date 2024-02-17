@@ -36,6 +36,6 @@ klipper_cap2: "Burn Klipper firmware over USB"
 
 {% include custom/klipper/menuconfig.html %}
 
-{% include custom/klipper/flash_canboot_usb.html %}
+{% include custom/klipper/flash_katapult_usb.html %}
 
 {% include custom/mcu/adxl345_usb/adxl345_usb_links.html %}

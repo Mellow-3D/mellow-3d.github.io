@@ -43,6 +43,6 @@ klipper_cap3: "Burn Klipper firmware over CANbus"
 
 {% include custom/klipper/menuconfig.html %}
 
-{% include custom/klipper/flash_canboot_can.html %}
+{% include custom/klipper/flash_katapult_can.html %}
 
 {% include custom/mcu/sb2040v2/sb2040_v2_links.html %}

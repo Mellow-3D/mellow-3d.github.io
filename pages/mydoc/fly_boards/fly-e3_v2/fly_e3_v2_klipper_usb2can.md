@@ -40,6 +40,6 @@ klipper_cap2: "Burn Klipper firmware over USB"
 
 {% include custom/klipper/menuconfig.html %}
 
-{% include custom/klipper/flash_canboot_usb.html %}
+{% include custom/klipper/flash_katapult_usb.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}

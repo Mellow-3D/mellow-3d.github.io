@@ -43,6 +43,6 @@ klipper_cap3: "Burn Klipper firmware over CANbus"
 
 {% include custom/klipper/menuconfig.html %}
 
-{% include custom/klipper/flash_canboot_can.html %}
+{% include custom/klipper/flash_katapult_can.html %}
 
 {% include custom/mcu/ercf_v1.1/ercf_v1.1_links.html %}
