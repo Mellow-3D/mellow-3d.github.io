@@ -1,25 +1,25 @@
 ---
-title: Fly-RPFMEX Pin Names
+title: Fly-RPFMex Pin Names
 tags: []
 keywords: 
-last_updated: 18/05/2022
-summary: "The pin names of the Fly-RPFMEX"
+last_updated: 17/02/2024
+summary: "The pin names of the Fly-RPFMex"
 sidebar: mydoc_sidebar
-permalink: fly-rpfmex_pins.html
+permalink: fly_rpfmex_pins.html
 folder: mydoc
 comments: false
 toc: true
 datatable: true
 ---
 
-## Fly-RPFMEX Pinout Diagram
+## Fly-RPFMex Pinout Diagram
 
 {% include image.html 
 file="fly-rpfmex/fly-rpfmex_pins.webp" 
 url="./images/fly-rpfmex/fly-rpfmex_pins.webp" alt="Fly-rpfmex" 
 caption="Fly-rpfmex Pinout" %}
 
-## Fly-RPFMEX Driver Pins in Firmware
+## Fly-RPFMex Driver Pins in Firmware
 
 Driver pin numbers. They are separated by driver number.
 
@@ -35,7 +35,7 @@ Driver pin numbers. They are separated by driver number.
 
 <div class="datatable-end"></div>
 
-## Fly-rpfmex Other Pins in Firmware 
+## Fly-RPFMex Other Pins in Firmware
 
 <div class="datatable-begin"></div>
 
@@ -48,6 +48,5 @@ Driver pin numbers. They are separated by driver number.
 |GPIO28|ymin|ystop|Y_STOP|
 |GPIO10|neopixel|LED|
 |GPIO29|zmin|zstop|Z_STOP|
-
 
 <div class="datatable-end"></div>

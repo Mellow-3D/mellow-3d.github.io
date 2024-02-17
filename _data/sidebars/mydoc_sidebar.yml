@@ -932,7 +932,7 @@ children:
     children:
 
     - title: Overview
-      url: fly-rpfmex.html
+      url: fly_rpfmex.html
       output: web, pdf
 
     - title: Pin diagrams
@@ -940,31 +940,31 @@ children:
       output: web, pdf
 
     - title: Files
-      url: fly-rpfmex_files.html
+      url: fly_rpfmex_files.html
       output: web, pdf
 
     - title: Klipper
       output: web
       children:
 
-      - title: CanBoot Bootloader
+      - title: Klipper with USB
         output: web
         children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_rpfmex_katapult_usb.html
+          output: web, pdf  
 
-        - title: CanBoot on USB
-          url: fly-rpfmex_canboot_usb.html
-          output: web, pdf     
+        - title: Step 2 - Klipper on USB
+          url: fly_rpfmex_klipper_usb.html
+          output: web, pdf
 
-      - title: Klipper Firmware
-        output: web
-        children:
-
-        - title: USB
-          url: fly-rpfmex_klipper_usb.html
+        - title: Updating Klipper on USB
+          url: fly_rpfmex_klipper_usb_updating.html
           output: web, pdf
 
       - title: Configuration file settings
-        url: fly-rpfmex_klipper_mcu_config.html
+        url: fly_rpfmex_klipper_mcu_config.html
         output: web, pdf
 
 #  Fly-ADXL345-USB

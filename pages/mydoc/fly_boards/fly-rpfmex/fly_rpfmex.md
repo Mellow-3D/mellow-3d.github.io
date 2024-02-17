@@ -1,17 +1,17 @@
 ---
-title: Fly RPFMex General Information
+title: Fly-RPFMex General Information
 tags: []
 keywords: 
-last_updated: 20/10/2022
-summary: "General information regarding the Fly RPFMex"
+last_updated: 17/02/2024
+summary: "General information regarding the Fly-RPFMex"
 sidebar: mydoc_sidebar
-permalink: fly-rpfmex.html
+permalink: fly_rpfmex.html
 folder: mydoc
 comments: false
 toc: false
 datatable: true
 
-boardname: "Fly RPFMEX"
+boardname: "Fly-RPFMex"
 
 fly_rpfmex_img1: "fly-rpfmex/fly_rpfmex.png"
 fly_rpfmex_cap1: "Fly-rpfmex board"
@@ -40,7 +40,7 @@ fly_rpfmex_cap3: "Fly-rpfmex BOM"
     {% capture fly_rpfmex_cap3 %}{{page.fly_rpfmex_cap3 }}{% endcapture %}
     {% capture fly_rpfmex_url3 %} .\images\{{ page.fly_rpfmex_img3 }} {% endcapture %}
 
-## Overview 
+## Overview
 
   {% 
   include image.html 
@@ -51,24 +51,25 @@ fly_rpfmex_cap3: "Fly-rpfmex BOM"
   %}
 
 ## Description
+
 This page covers any general information for the {{boardname}} board.  
-Avaliable from the Mellow store on [Aiexpress](https://www.aliexpress.us/item/3256804203395779.html)
+Avaliable from the Mellow store on [Aiexpress](https://s.click.aliexpress.com/e/_DExIMyZ)
 
 In order to meet the customer for expanding Gemini, we made a 4-axis expansion board. The original Gemini 4-axis board can be expanded to 8-axis to meet the needs of more 3D printers. This expansion board would have limited functionality in a stand alone configuration as a 3D printer motherboard because it does not include heating and temperature measurement functions.
 
 ### Features
 
- - MCU: RPI RP2040
- - Communication: USB
- - 12/24V input
- - 2A 5V power supply
- - Drivers: 4 - TMC2209 onboard drivers
-  - Sensorless Homing is not supported
- - Interfaces
-  - 2 CNC Fans with replacable Fly MOS.
-  - 1 Full power fan
-  - RGB LED port 
-  - 3 Limit switch inputs
+- MCU: RPI RP2040
+- Communication: USB
+- 12/24V input
+- 2A 5V power supply
+- Drivers: 4 - TMC2209 onboard drivers
+- Sensorless Homing is not supported
+- Interfaces
+- 2 CNC Fans with replacable Fly MOS.
+- 1 Full power fan
+- RGB LED port
+- 3 Limit switch inputs
 
 ### Dimensions
 
@@ -90,8 +91,8 @@ In order to meet the customer for expanding Gemini, we made a 4-axis expansion b
   caption=fly_rpfmex_cap3
   %}
 
-   - Fly RPFMEX Board
-   - 4 heatinks for TMC2209 drivers
-   - JST-XH connectors and crimp terminals
-   - Fly MOS
-   - USB C Cable
+- Fly RPFMEX Board
+- 4 heatinks for TMC2209 drivers
+- JST-XH connectors and crimp terminals
+- Fly MOS
+- USB C Cable
