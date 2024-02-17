@@ -67,6 +67,30 @@ make menuconfig KCONFIG_CONFIG=config.{{page.kconfig_name}}
   - USB ids {{page.usb_ids}}
   - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
 {% endif %}
+{% if {{page.mcu}} == "STM32" and {{page.firmware}} == "USB2CAN" %}
+- Set the following settings
+  - {{page.low_level}} Enable extra low-level configuration options
+  - Micro-controller Architecture {{ page.architecture }}
+  - Processor model {{page.processor}}
+  - Bootloader offset {{page.bootloader_offset}}
+  - Clock Reference {{page.clock}}
+  - Communication interface {{page.communication}}
+  - CAN bus interface {{page.can_bus_interface}}
+  - USB ids {{page.usb_ids}}
+  - {{page.can_bus_speed}} CAN bus speed
+  - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
+{% endif %}
+{% if {{page.mcu}} == "STM32" and {{page.firmware}} == "CANbus" %}
+- Set the following settings
+  - {{page.low_level}} Enable extra low-level configuration options
+  - Micro-controller Architecture {{ page.architecture }}
+  - Processor model {{page.processor}}
+  - Bootloader offset {{page.bootloader_offset}}
+  - Clock Reference {{page.clock}}
+  - Communication interface {{page.communication}}
+  - {{page.can_bus_speed}} CAN bus speed
+  - {{page.gpio_startup}} GPIO pins to set at micro-controller startup
+{% endif %}
 
     {% include image.html file=klipper_img1 url=klipper_url1 alt=klipper_cap1 caption=klipper_cap1 %}
 

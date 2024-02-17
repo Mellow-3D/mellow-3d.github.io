@@ -2,7 +2,7 @@
 title: Updating Klipper Firmware on a Fly-E3-v2 in USB to CAN Bridge mode
 tags: []
 keywords: 
-last_updated: 15/07/2023
+last_updated: 17/02/2024
 summary: "How to update the klipper firmware running on a Fly-E3-v2 in USB to CAN Bridge mode"
 sidebar: mydoc_sidebar
 permalink: fly_e3_v2_klipper_usb2can_updating.html
@@ -12,34 +12,34 @@ toc: true
 datatable: true
 
 boardname: Fly-E3-v2
-firmware: usbtocan
-version: v1
-processor: "STM32F407"
-offset: "32 KiB bootloader"
-clock: "8 MHz crystal"
-micro: "STMicroelectronics STM32"
-com: "USB to CAN bus bridge (USB on PA11/PA12)"
-canspeed: "500000"
-caninterface: "CAN bus (on PB8/PB9)"
+firmware: USB2CAN
+mcu: "STM32"
+kconfig_name: e3v2
+low_level: "[*]"
+architecture: "(STMicroelectronics STM32)"
+processor: "(STM32F407)"
+bootloader_offset: "(32KiB bootloader)"
+clock: "(8 MHz crystal)"
+communication: "(USB to CAN bus bridge (USB on PA11/PA12))"
+can_bus_interface: "(CAN bus (on PB8/PB9))"
+usb_ids: ""
+can_bus_speed: "(1000000)"
+gpio_startup: "()"
+board_type: "mainboard"
+klipper_file: "klipper.bin"
+state: "update"
 
-klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_usb_can_bridge.png"
-klipcom_cap1: "Klipper Menu Config USB to CAN"
+klipper_img1: "klipper/stm32f407_usb2can_pb8pb9.png"
+klipper_cap1: "Klipper Menu Config USB to CAN Bridge Mode"
 
-klipcom_img2: "fly-super8/fly-super8_klipper_usb_burn.png"
-klipcom_cap2: "Burn Klipper firmware over USB"
-
-klipcom_img3: "fly-super8/flash-can_query.png"
-klipcom_cap3: "Flash Can Query"
-
-kconfig_name: "e3v2"
+klipper_img2: "fly-super8/fly-super8_klipper_makeflash_burn.png"
+klipper_cap2: "Burn Klipper firmware over USB"
 ---
 
-## Updating Klipper for USB to CAN Bridge mode
+## Configuring and installing Klipper for USB
 
-{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
+{% include custom/klipper/menuconfig.html %}
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_usb2can_updating.html %}
-
-{% include custom/mcu/stm32f4/klipper_flash_canboot_usb2can_updating.html %}
+{% include custom/klipper/flash_canboot_usb.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}

@@ -1,9 +1,9 @@
 ---
-title: Fly-E3-v2 Klipper CANbus firmware
+title: Fly-E3v2 Klipper firmware for CAN
 tags: []
 keywords: 
-last_updated: 15/07/2023
-summary: "Fly-E3-v2 Klipper host"
+last_updated: 17/02/2024
+summary: "How to compile and install the klipper firmware running on a Fly-E3-v2 for CAN"
 sidebar: mydoc_sidebar
 permalink: fly_e3_v2_klipper_can.html
 folder: mydoc
@@ -12,33 +12,35 @@ toc: true
 datatable: true
 
 boardname: Fly-E3-v2
-firmware: can
-ver: v2
-processor: "STM32F407"
-offset: "32 KiB bootloader"
-clock: "8 MHz crystal"
-micro: "STMicroelectronics STM32"
-com: "CAN bus (on PB8/PB9)"
-canspeed: "500000"
+firmware: CANbus
+mcu: "STM32"
+kconfig_name: e3v2
+low_level: "[*]"
+architecture: "(STMicroelectronics STM32)"
+processor: "(STM32F407)"
+bootloader_offset: "(32KiB bootloader)"
+clock: "(8 MHz crystal)"
+communication: "(CAN bus (on PB8/PB9))"
+can_bus_speed: "(1000000)"
+gpio_startup: "()"
+board_type: "mainboard"
+klipper_file: "klipper.bin"
+state: "install"
 
-klipcom_img1: "fly-super8/fly-super8_klipper_menuconfig_can.png"
-klipcom_cap1: "Klipper Menu Config CANbus"
+klipper_img1: "klipper/stm32f407_can_pb8pb9.png"
+klipper_cap1: "Klipper Menu Config CAN"
 
-klipcom_img2: "fly-super8/fly-super8_klipper_canboot_burn.png"
-klipcom_cap2: "Burn Klipper firmware over CANbus"
+klipper_img2: "fly-super8/flash-can_query.png"
+klipper_cap2: "Flash Can Query"
 
-klipcom_img3: "fly-super8/flash-can_query.png"
-klipcom_cap3: "Flash Can Query"
-
-kconfig_name: "e3v2"
+klipper_img3: "fly-super8/fly-super8_klipper_canboot_burn.png"
+klipper_cap3: "Burn Klipper firmware over CANbus"
 ---
 
-## Configuring and installing Klipper for CANbus
+## Configuring and installing Klipper for CAN bus
 
-{% include tip.html content="To read more about the KCONFIG_CONFIG option, see [here](https://docs.vorondesign.com/community/howto/drachenkatze/automating_klipper_mcu_updates.html)" %}
+{% include custom/klipper/menuconfig.html %}
 
-{% include custom/mcu/stm32f4/klipper_menuconfig_can.html %}
-
-{% include custom/mcu/stm32f4/klipper_flash_canboot_can.html %}
+{% include custom/klipper/flash_canboot_can.html %}
 
 {% include custom/mcu/e3v2/fly_e3_v2_links.html %}
