@@ -1,0 +1,49 @@
+    {% capture boardname %}{{ page.boardname }}{% endcapture %}
+    {% capture firmware %}{{ page.firmware }}{% endcapture %}
+    {% capture ver %}{{ page.ver }}{% endcapture %}
+    {% capture mcu %}{{ page.mcu }}{% endcapture %}
+    {% capture mcufile %}{{ page.mcufile }}{% endcapture %}
+
+    {% capture klipburn_img2 %}{{page.klipburn_img2 }}{% endcapture %}
+    {% capture klipburn_cap2 %}{{page.klipburn_cap2 }}{% endcapture %}
+    {% capture kklipburn_url2 %} .\images\{{ page.klipburn_img2 }} {% endcapture %}
+
+    {% capture klipburn_img1 %}{{page.klipburn_img1 }}{% endcapture %}
+    {% capture klipburn_cap1 %}{{page.klipburn_cap1 }}{% endcapture %}
+    {% capture klipburn_url1 %} .\images\{{ page.klipburn_img1 }} {% endcapture %}
+
+### Flash Klipper to the {{page.boardname}} MCU
+
+- ftp to your klipper host with an FTP client like [FileZilla](https://filezilla-project.org/)
+  - open the folder '~/klipper/out'.
+  - download klipper.bin to your PC.
+- place the MCU MicroSD card into a card reader and connect it to your PC.  
+- ensure that the SD Card is formatted as Fat32. If in doubt use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/).  
+- Copy the klipper.bin file to the root of the SD card.
+- rename klipper.bin to firmware.bin
+- Eject the SD card from the PC
+- Insert the SD card into the {{ page.boardname }} SD card Slot.
+    
+  {% 
+  include image.html 
+  file=klipburn_img1
+  url=klipburn_url1
+  alt=klipburn_cap1
+  caption=klipburn_cap1
+  %} 
+
+- Press the MCU reboot button
+    
+    {% 
+    include image.html 
+    file=klipburn_img2
+    url=klipburn_url2
+    alt=klipburn_cap2
+    caption=klipburn_cap2
+    %}
+
+- Wait a few minutes
+
+- Open a putty SSH session to your klipper host and log on
+
+- run lsusb to verify the MCU has been discovered as a klipper device
