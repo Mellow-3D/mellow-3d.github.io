@@ -390,20 +390,24 @@ children:
 
 # Fly-Super5 Pro
 
-  - title: Fly-Super5 Pro
+  - title: Fly-Super5Pro
     output: web, pdf
     children:
 
     - title: Overview
-      url: fly-super5_pro_general.html
+      url: fly_super5_pro_general.html
       output: web, pdf
 
     - title: Pin diagrams
-      url: fly-super5_pro_pins.html
+      url: fly_super5_pro_pins.html
       output: web, pdf
 
     - title: Files
-      url: fly-super5_pro_files.html
+      url: fly_super5_pro_files.html
+      output: web, pdf
+
+    - title: How to Reflash the Stock Bootloader
+      url: fly_super5_pro_bootloader.html
       output: web, pdf
 
     - title: Klipper
@@ -411,47 +415,59 @@ children:
       children:
 
       - title: Klipper host CAN bus configuration
-        url: fly-super5_pro_klipper_host.html
+        url: fly_super5_pro_klipper_host.html
         output: web, pdf
 
       - title: Klipper with USB
         output: web
         children:
 
-        - title: Step 1 - CanBoot on USB
-          url: fly-super5_pro_canboot_usb.html
+        - title: Step 1 - Katapult on USB
+          url: fly_super5_pro_katapult_usb.html
           output: web, pdf     
 
         - title: Step 2 - Klipper on USB
-          url: fly-super5_pro_klipper_usb.html
+          url: fly_super5_pro_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_super5_pro_klipper_usb_updating.html
           output: web, pdf
 
       - title: Klipper with USB to CAN bridge mode
         output: web
         children:
       
-        - title: Step 1 - CanBoot on USB to CAN bridge
-          url: fly-super5_pro_canboot_usb2can.html
+        - title: Step 1 - Katapult on USB to CAN bridge
+          url: fly_super5_pro_katapult_usb2can.html
           output: web, pdf  
         
         - title: Step 2 - Klipper USB to CAN bridge
-          url: fly-super5_pro_klipper_usbtocan.html
+          url: fly_super5_pro_klipper_usb2can.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB to CAN bridge
+          url: fly_super5_pro_klipper_usb2can_updating.html
           output: web, pdf
 
       - title: Klipper with CANbus
         output: web
         children:
 
-        - title: Step 1 - CanBoot on CANbus
-          url: fly-super5_pro_canboot_can.html
+        - title: Step 1 - Katapult on CANbus
+          url: fly_super5_pro_katapult_can.html
           output: web, pdf
 
         - title: Step 2 - Klipper on CANbus
-          url: fly-super5_pro_klipper_can.html
+          url: fly_super5_pro_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CAN 
+          url: fly_super5_pro_klipper_can_updating.html
           output: web, pdf
 
       - title: Configuration file settings
-        url: fly-super5_pro_klipper_mcu_config.html
+        url: fly_super5_pro_klipper_mcu_config.html
         output: web, pdf
 
     - title: Marlin
