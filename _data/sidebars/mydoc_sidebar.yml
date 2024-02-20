@@ -953,6 +953,88 @@ children:
         url: fly-puppet_klipper_mcu_config.html
         output: web, pdf
 
+# Fly-D5
+
+  - title: Fly-D5
+    output: web, pdf
+    children:
+
+    - title: Fly-D5 General Information
+      url: fly_d5.html
+      output: web, pdf
+
+    - title: Pin diagrams
+      url: fly_d5_pins.html
+      output: web, pdf
+
+    - title: Files
+      url: fly_d5_files.html
+      output: web, pdf
+
+    - title: Klipper
+      output: web
+      children:
+
+      - title: Klipper host CANbus configuration
+        url: fly_d5_klipper_host.html
+        output: web, pdf
+
+      - title: Klipper with USB
+        output: web
+        children:
+        
+        - title: Step 1 - Katapult on USB
+          url: fly_d5_katapult_usb.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB
+          url: fly_d5_klipper_usb.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB
+          url: fly_d5_klipper_usb_updating.html
+          output: web, pdf
+
+      - title: Klipper with USB to CAN Bridge Mode
+        output: web
+        children:
+      
+        - title: Step 1 - Katapult on USB to CAN Bridge Mode
+          url: fly_d5_katapult_usb2can.html
+          output: web, pdf  
+
+        - title: Step 2 - Klipper on USB to CAN Bridge Mode
+          url: fly_d5_klipper_usb2can.html
+          output: web, pdf
+
+        - title: Updating Klipper on USB to CAN Bridge Mode
+          url: fly_d5_klipper_usb2can_updating.html
+          output: web, pdf
+
+      - title: Klipper with CAN
+        output: web
+        children:  
+
+        - title: Step 1 - Katapult on CAN bus
+          url: fly_d5_katapult_can.html
+          output: web, pdf   
+
+        - title: Step 2 - Klipper on CAN bus
+          url: fly_d5_klipper_can.html
+          output: web, pdf
+
+        - title: Updating Klipper on CAN bus
+          url: fly_d5_klipper_can_updating.html
+          output: web, pdf
+
+      - title: Configuration file settings
+        url: fly_d5_klipper_mcu_config.html
+        output: web, pdf
+
+      - title: CANbus trouble shooting
+        url: fly_d5_can_trouble.html
+        output: web, pdf
+
 - title: Fly Expansion Boards
   output: web, pdf
   children:

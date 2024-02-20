@@ -1,0 +1,55 @@
+{% capture katapult_img2 %}{{page.katapult_img2 }}{% endcapture %}
+{% capture katapult_cap2 %}{{page.katapult_cap2 }}{% endcapture %}
+{% capture katapult_img2_url %} .\images\{{ page.katapult_img2 }} {% endcapture %}
+
+{% capture katapult_img3 %}{{page.katapult_img3 }}{% endcapture %}
+{% capture katapult_cap3 %}{{page.katapult_cap3 }}{% endcapture %}
+{% capture katapult_img3_url %} .\images\{{ page.katapult_img3 }} {% endcapture %}
+
+{% capture katapult_img4 %}{{page.katapult_img4 }}{% endcapture %}
+{% capture katapult_cap4 %}{{page.katapult_cap4 }}{% endcapture %}
+{% capture katapult_img4_url %} .\images\{{ page.katapult_img4 }} {% endcapture %}
+
+### Enter DFU Mode
+
+{% if {{page.dfu_method}} == "buttons" %}
+Method 1: After the motherboard is completely powered off, press and hold Boot, use the TypeC cable to connect the D5 motherboard to the host computer, and then release Boot
+
+Method 2: After connecting to the host computer using the TypeC cable, press and hold the Boot button, then press the reset button, release the reset button, and finally release the Boot button.
+{% endif %}
+
+{% include image.html file=katapult_img4 url=katapult_img4_url alt=katapult_cap4 caption=katapult_cap4 %} 
+
+### Flash Katapult to the {{page.boardname}} MCU
+
+make sure dfu-util is installed.
+
+```text
+sudo apt install dfu-util -y
+```
+
+run lsusb to verify the board has been detected in DFU mode.
+
+```text
+lsusb
+```
+
+{% include tip.html content="If the board does not appear as a DFU device, please follow the instructions again to enter DFU mode." %}
+
+{% include image.html file=katapult_img2 url=katapult_img2_url alt=katapult_cap2 caption=katapult_cap2 %} 
+
+Flash katapult
+
+```text
+sudo make KCONFIG_CONFIG=config.{{page.kconfig_name}} flash FLASH_DEVICE=0483:df11
+```
+
+This will flash the Katapult bootloader image and restart the {{page.boardname}}.
+
+{% include image.html file=katapult_img3 url=katapult_img3_url alt=katapult_cap3 caption=katapult_cap3 %}
+
+run lsusb to verify the MCU has been discovered as a USB device
+
+{% include image.html file="lsusb_katapult.jpg" alt="Example lsusb Output" caption="Example lsusb Output" %} 
+
+Continue to the [{{page.installKlipperName}}]({{page.installKlipperURL}})
