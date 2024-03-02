@@ -1,0 +1,270 @@
+        {% capture boardname %}{{ page.boardname }}{% endcapture %}
+        {% capture ver %}{{ page.ver }}{% endcapture %}
+
+# {{boardname}} Configuration files
+
+## {{boardname}} aliases file
+- [Download a copy of the aliases file](./files/fly-dp5/FLY_DP5.cfg)
+
+```text
+{% include custom/mcu/dp5/fly_dp5_alias.html %}
+```
+
+## Example Printer.cfg file
+
+- [Download a sample file containing these sections](./files/fly-dp5/fly-dp5_printer.cfg)
+
+### Motherboard model
+
+Please modify it based on your motherboard model
+
+```text
+[include boards/FLY_DP5.cfg]
+```
+
+### mcu
+
+```text
+serial: /dev/serial/by-id/{your serial ID here}
+```
+
+### mcu host
+
+```text
+serial: /tmp/klipper_host_mcu
+```
+
+### virtual_sdcard
+
+```text
+path: ~/printer_data/gcodes
+```
+
+### printer
+
+```text
+kinematics: corexy
+max_velocity: 300
+max_accel: 3000
+max_z_velocity: 5
+max_z_accel: 100
+```
+
+### temperature_sensor FLY-D5
+
+```text
+sensor_type: temperature_host
+```
+
+## Drives
+
+### stepper_x
+
+```text
+step_pin: D0_STEP
+dir_pin: !D0_DIR
+enable_pin: !D0_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: !D0_STOP
+position_endstop: 120
+position_max: 120
+homing_speed: 40
+```
+
+### stepper_y
+
+```text
+step_pin: D1_STEP
+dir_pin: D1_DIR
+enable_pin: !D1_EN
+microsteps: 16
+rotation_distance: 40
+endstop_pin: !D1_STOP
+position_endstop: 120
+position_max: 120
+homing_speed: 40
+```
+
+### stepper_z
+
+```text
+step_pin: D2_STEP
+dir_pin: !D2_DIR
+enable_pin: !D2_EN
+microsteps: 16
+rotation_distance: 8
+endstop_pin: D2_STOP
+position_endstop: 0.5
+position_max: 120
+```
+### extruder
+
+```text
+step_pin: D3_STEP
+dir_pin: D3_DIR
+enable_pin: !D3_EN
+microsteps: 16
+rotation_distance: 33.5
+#gear_ratio: 50:10
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: HEAT0
+sensor_pin: HEAT0_TEMP
+sensor_type: ATC Semitec 104GT-2
+control: pid
+pid_Kp: 22.2
+pid_Ki: 1.08
+pid_Kd: 114
+min_temp: 0
+max_temp: 350
+```
+
+## BED
+
+### heater_bed
+
+```text
+heater_pin: BED_OUT
+sensor_pin: BED_TEMP
+sensor_type: ATC Semitec 104GT-2
+control: watermark
+min_temp: 0
+max_temp: 200
+```
+
+## FANs
+
+### fan
+
+```text
+pin: FAN0
+#cycle_time: 0.50
+```
+
+### fan_generic fan1
+
+```text
+pin: FAN1
+```
+
+## TMC2209 configuration./2209/2225
+
+### tmc2209 stepper_x
+
+```text
+uart_pin: D0_CS
+run_current: 0.800
+interpolate: False
+```
+
+### tmc2209 stepper_y
+
+```text
+uart_pin: D1_CS
+run_current: 0.800
+interpolate: False
+```
+
+### tmc2209 stepper_z
+
+```text
+uart_pin: D2_CS
+run_current: 0.800
+interpolate: False
+```
+
+### tmc2209 extruder
+
+```text
+uart_pin: D3_CS
+run_current: 0.800
+interpolate: False
+```
+
+## TMC5160 configuration
+
+### tmc5160 stepper_x
+
+```text
+cs_pin: D0_CS
+spi_bus: spi2  ##^Gemini v1.1
+diag1_pin: D0_STOP
+run_current: 0.800
+interpolate: False
+```
+
+### tmc5160 stepper_y
+
+```text
+cs_pin: D1_CS
+spi_bus: spi2  ##^Gemini v1.1
+diag1_pin: D1_STOP
+run_current: 0.800
+interpolate: False
+```
+
+### tmc5160 stepper_z
+
+```text
+cs_pin: D2_CS
+spi_bus: spi2  ##^Gemini v1.1
+diag1_pin: D2_STOP
+run_current: 0.650
+interpolate: False
+```
+
+### tmc5160 extruder
+
+```text
+cs_pin: D3_CS
+spi_bus: spi2  ##^Gemini v1.1
+run_current: 0.800
+interpolate: False
+```
+
+## BLTouch
+
+### bltouch
+
+```text
+sensor_pin: ^D3_STOP
+control_pin: SERVO
+pin_move_time: 0.680
+x_offset: 0.0
+y_offset: 2.3
+z_offset: 2.2
+speed: 70
+```
+
+### safe_z_home
+
+```text
+home_xy_position: 105,105
+```
+
+## Mini 12864 LCD
+
+### display
+
+```text
+lcd_type: uc1701
+cs_pin: EXP1_3
+a0_pin: EXP1_4
+rst_pin: EXP1_5
+contrast: 63
+encoder_pins: ^EXP2_5, ^!EXP2_3
+click_pin: ^!EXP1_2
+spi_bus: spi1
+```
+
+### neopixel fly_mini12864
+
+```text
+pin: EXP1_6
+chain_count: 3
+initial_RED: 0.1
+initial_GREEN: 0.5
+initial_BLUE: 0.0
+color_order: RGB
+```
