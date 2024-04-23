@@ -1,0 +1,5 @@
+{
+    "name": "Ruby",
+    "image": "mcr.microsoft.com/devcontainers/ruby:3",
+    "onCreateCommand": "bundle install"
+}  
