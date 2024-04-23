@@ -49,6 +49,8 @@ mcu_oem_bootloader_cap4: "Connect USB cable to the USB C port in the red box"
 {% capture mcu_oem_bootloader_cap4 %}{{page.mcu_oem_bootloader_cap4 }}{% endcapture %}
 {% capture mcu_oem_bootloader_url4 %} ./images/{{ page.mcu_oem_bootloader_img4 }}{% endcapture %}
 
+{% include warning.html content="**You don't need to flash the bootloader in order to update the Klipper firmware**. Follow the guide for flashing the MCU for either [USB](./fly-gemini_v3_klipper_mcu_usb.html) or [USB to CAN bridge mode](./fly-gemini_v3_klipper_usbtocan.html) instead." %}
+
 ### Install the DFU jumpers
 
 - Install the boot0 and boot1 jumpers as shown.
